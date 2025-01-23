@@ -1,0 +1,71 @@
+import IconPaperAirplane from '@/components/icons/IconPaperAirplane'
+import IconPuzzle from '@/components/icons/IconPuzzle'
+import IconRocket from '@/components/icons/IconRocket'
+import IconStars from '@/components/icons/IconStars'
+import { AccordionSidebarContentProps } from '@/types/accordion.types'
+
+export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
+  {
+    id: 1,
+    title: 'Activities & Games',
+    icon: <IconPuzzle classes='h-6 w-6' />,
+    links: [
+      { linkId: '1-1', contentTitle: 'Memory Cards', link: '/' },
+      { linkId: '1-2', contentTitle: 'Choose Correct Spelling', link: '/' },
+      {
+        linkId: '1-3',
+        contentTitle: 'Crazy Check Up',
+        link: '/'
+      },
+      { linkId: '1-4', contentTitle: 'Find Your Partner', link: '/' },
+      {
+        linkId: '1-5',
+        contentTitle: 'Review Hunt',
+        link: '/'
+      },
+      { linkId: '1-6', contentTitle: 'Grammar Mistakes', link: '/' }
+    ]
+  },
+  {
+    id: 2,
+    title: 'Worksheets',
+    icon: <IconPaperAirplane classes='h-6 w-6' />,
+    links: [
+      { linkId: '2-1', contentTitle: 'Scrambled Words', link: '/' },
+      { linkId: '2-2', contentTitle: 'Scrambled Sentences', link: '/' },
+      { linkId: '2-3', contentTitle: 'Bingo', link: '/' },
+      { linkId: '2-4', contentTitle: 'Wordsearch', link: '/' },
+      { linkId: '2-5', contentTitle: 'Interviews', link: '/' },
+      { linkId: '2-6', contentTitle: 'Cryptogram', link: '/' }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Projected Games',
+    icon: <IconRocket classes='h-6 w-6' />,
+    links: [
+      { linkId: '3-1', contentTitle: 'Scrambled Words', link: '/' },
+      { linkId: '3-2', contentTitle: 'Scrambled Sentences', link: '/' },
+      { linkId: '3-3', contentTitle: 'Spot It!', link: '/' },
+      { linkId: '3-4', contentTitle: 'Jeopardy', link: '/' },
+      { linkId: '3-5', contentTitle: 'Memory Game', link: '/' },
+      { linkId: '3-6', contentTitle: 'Minefield', link: '/' },
+      { linkId: '3-7', contentTitle: 'Picture Reveal', link: '/' }
+    ]
+  },
+  {
+    id: 4,
+    title: 'Presentations',
+    icon: <IconStars classes='h-6 w-6' />,
+    links: [
+      { linkId: '4-1', contentTitle: 'Grammar Explainers', link: '/' },
+      {
+        linkId: '4-2',
+        contentTitle: 'Reading Skill Explainers',
+        link: '/'
+      },
+      { linkId: '4-3', contentTitle: 'Phonics Introductions', link: '/' },
+      { linkId: '4-4', contentTitle: 'General Presentation', link: '/' }
+    ]
+  }
+]

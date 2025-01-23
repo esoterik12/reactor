@@ -1,14 +1,14 @@
-import { ReactElement } from 'react'
+import { ReactNode } from 'react'
 
 interface PageContainerProps {
-  children: ReactElement
+  children: ReactNode
   customClasses?: string
 }
 
 const PageContainer = ({ children, customClasses }: PageContainerProps) => {
   return (
     <main
-      className={`${customClasses} 'flex h-[calc(100vh-56px)] flex-col items-center justify-center`}
+      className={`${customClasses} h-[calc(100vh-56px)]`}
     >
       {children}
     </main>

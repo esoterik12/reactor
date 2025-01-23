@@ -1,20 +1,20 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import IconLogo from '../icons/IconLogo'
 
 const Logo = async () => {
   return (
-    <div className="my-2 ml-2">
+    <div className='my-3 ml-4'>
       <Link
-        href="/"
-        className="flex flex-row items-center gap-1 text-xl tracking-wide"
+        href='/'
+        className='flex flex-row items-center gap-1 text-xl tracking-wide'
       >
-        <div className="flex flex-row items-center w-60">
-          <Image className="mx-2" src="/logo.png" alt="logo" height={40} width={40} />
-          <p className="ml-1 hidden md:block">Adaptive Tutor</p>
+        <div className='flex w-60 flex-row items-center'>
+          <IconLogo classes='h-8 w-8' />
+          <p className='ml-2 hidden md:block'>Reactor</p>
         </div>
       </Link>
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo
