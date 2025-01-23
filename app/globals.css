@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Text Colors */
+  .header-text {
+    @apply text-zinc-900 dark:text-zinc-100;
+  }
+  .paragraph-text {
+    @apply text-zinc-600 dark:text-zinc-400;
+  }
+  .button-text {
+    @apply text-white dark:text-white;
+  }
+  .primary-text {
+    @apply text-sky-500;
+  }
+  .secondary-text {
+    @apply text-amber-500;
+  }
+  .tertiary-text {
+    @apply text-emerald-400;
+  }
+  /* Container Colors */
+  .container-background {
+    @apply bg-zinc-50 dark:bg-zinc-800;
+  }
+  .page-background {
+    @apply bg-neutral-200 dark:bg-zinc-700;
+  }
+  .primary-background {
+    @apply bg-sky-500;
+  }
+  .secondary-background {
+    @apply bg-amber-500;
+  }
+  .tertiary-background {
+    @apply bg-emerald-400;
+  }
+  /* Text Sizing */
+  .header-large {
+    @apply text-4xl font-bold;
+  }
+  .header {
+    @apply text-3xl font-semibold leading-relaxed;
+  }
+  .subheader {
+    @apply text-2xl font-semibold;
+  }
+  .large-text {
+    @apply text-lg;
+  }
+  .normal-text {
+    @apply text-base font-normal;
+  }
+  .small-text {
+    @apply text-sm;
+  }
+  /* Link Styles */
+  .link {
+    @apply hover:cursor-pointer hover:underline;
+  }
+  /* Effects & Borders */
+  .transition-effect {
+    @apply transition-all duration-300 hover:text-amber-300 hover:underline dark:hover:text-red-300;
+  }
+  .hover-effect {
+    @apply transition-colors duration-300 ease-in-out hover:bg-zinc-300 dark:hover:bg-zinc-600;
+  }
+  .hover-effect-primary {
+    @apply transition-colors duration-300 ease-in-out hover:bg-sky-400 dark:hover:bg-sky-600;
+  }
+  .hover-effect-secondary {
+    @apply transition-colors duration-300 ease-in-out hover:bg-amber-400 dark:hover:bg-amber-600;
+  }
+  .hover-effect-tertiary {
+    @apply transition-colors duration-300 ease-in-out hover:bg-emerald-300 dark:hover:bg-emerald-500;
+  }
+  .container-border {
+    @apply rounded-xl;
+  }
+  .button-border {
+    @apply rounded-2xl border border-zinc-300 dark:border-zinc-600;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
