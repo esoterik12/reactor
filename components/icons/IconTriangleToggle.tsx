@@ -5,10 +5,6 @@ interface AnimateIcon {
   icon: React.ReactNode
 }
 
-/**
- * A small triangle icon that points right by default
- * and rotates to point down when isOpen is true.
- */
 const AnimateIcon: React.FC<AnimateIcon> = ({ isOpen, icon }) => {
   // Define the rotation animation for closed and open states
   const triangleVariants = {
