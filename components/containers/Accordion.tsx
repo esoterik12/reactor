@@ -1,8 +1,8 @@
 'use client'
-import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import AnimateIcon from '../icons/IconTriangleToggle'
 import { AccordionSidebarContentProps } from '@/types/accordion.types'
+import SidebarLink from '../layout/SidebarLink'
 
 interface AccordionProps {
   i: number
@@ -51,9 +51,9 @@ const Accordion = ({ i, links, expanded, setExpanded }: AccordionProps) => {
             >
               <div className='px-4'>
                 {links.links.map(link => (
-                  <p key={link.linkId} className='paragraph-text m-2'>
-                    {link.contentTitle}
-                  </p>
+                  <SidebarLink key={link.linkId} href={link.link}>
+                    <p className='m-2'>{link.contentTitle}</p>
+                  </SidebarLink>
                 ))}
               </div>
             </motion.div>
@@ -64,26 +64,4 @@ const Accordion = ({ i, links, expanded, setExpanded }: AccordionProps) => {
   )
 }
 
-export const AccordionStack = ({
-  accordionContent
-}: {
-  accordionContent: AccordionSidebarContentProps[]
-}) => {
-  // This approach is if you only want max one section open at a time. If you want multiple
-  // sections to potentially be open simultaneously, they can all be given their own `useState`.
-  const [expanded, setExpanded] = useState<false | number>(false)
-
-  return (
-    <div className='flex w-full flex-col'>
-      {accordionContent.map((links, idx) => (
-        <Accordion
-          key={links.id}
-          links={links}
-          i={idx}
-          expanded={expanded}
-          setExpanded={setExpanded}
-        />
-      ))}
-    </div>
-  )
-}
+export default Accordion

@@ -9,7 +9,7 @@ const GoogleSignIn = () => {
       customClasses='w-20 h-9 p-1 container-background button-border hover-effect'
       handleClick={() => signIn('google')}
     >
-      <p className='primary-text'>Sign In</p>
+      <p className=''>Sign In</p>
     </DefaultButton>
   )
 }

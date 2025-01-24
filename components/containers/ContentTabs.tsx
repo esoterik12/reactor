@@ -26,7 +26,7 @@ const ContentTabs = () => {
             key={`${tab}-${index}`}
             className={`relative z-10 w-[180px] border-b-2 py-2 text-center ${
               activeTab === index
-                ? 'border-sky-500' // Bring the button border above
+                ? 'border-sky-500'
                 : 'paragraph-text border-transparent'
             }`}
             onClick={() => setActiveTab(index)}

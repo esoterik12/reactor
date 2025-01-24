@@ -21,8 +21,8 @@ export default async function NavHeader() {
           <NavLink href='/design'>
             <p>Design</p>
           </NavLink>
-          <NavLink className='' href='/create'>
-            <p>Create</p>
+          <NavLink className='' href='/content'>
+            <p>Content</p>
           </NavLink>
           <ThemeButton />
           {session && <SignOut />}

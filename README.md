@@ -34,6 +34,8 @@ This should be easy to copy and update dependencies and quickly begin a new proj
   callbacks get a userId from mongo or make a new user entry with an id and
   store the id in the session for access on client-side.
 
+- NextAuth server session is accessed in content/layout.tsx and provided down to the client though AccordionStack.tsx
+
 
 ### MongoDB / Mongoose Integration
 
@@ -58,3 +60,9 @@ This should be easy to copy and update dependencies and quickly begin a new proj
 - npm i next-themes
 - wrap layout in <ThemeProvider>
 - Add attribute='class' defaultTheme='dark' props to ThemeProvider
+
+
+### ReduxToolKit
+
+- Redux state providers are only applied through the /content/layout.tsx and not through the App wide providers component
+- The layout.tsx also accesses the user object and passes it to the client side through AccordionStack.tsx to use in context

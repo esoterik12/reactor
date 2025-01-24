@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CreateMainPage = () => {
+const CreateMainPage = async () => {
   return <div>CreateMainPage</div>
 }
 

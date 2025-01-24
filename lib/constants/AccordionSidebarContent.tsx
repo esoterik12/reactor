@@ -10,8 +10,8 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
     title: 'Activities & Games',
     icon: <IconPuzzle classes='h-6 w-6' />,
     links: [
-      { linkId: '1-1', contentTitle: 'Memory Cards', link: '/' },
-      { linkId: '1-2', contentTitle: 'Choose Correct Spelling', link: '/' },
+      { linkId: '1-1', contentTitle: 'Memory Cards', link: '/content/memorycards' },
+      { linkId: '1-2', contentTitle: 'Choose Correct Spelling', link: '/content/choosecorrectspelling' },
       {
         linkId: '1-3',
         contentTitle: 'Crazy Check Up',

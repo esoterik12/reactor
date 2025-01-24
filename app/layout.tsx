@@ -10,8 +10,8 @@ const late = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "Adaptive Tutor",
-  description: "Adaptive and personalized assignments generated and distributed to your students.",
+  title: "Reactor",
+  description: "Content generation and lesson planning application.",
 };
 
 export default function RootLayout({
