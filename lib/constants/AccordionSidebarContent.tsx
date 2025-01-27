@@ -4,18 +4,28 @@ import IconRocket from '@/components/icons/IconRocket'
 import IconStars from '@/components/icons/IconStars'
 import { AccordionSidebarContentProps } from '@/types/accordion.types'
 
+const root = '/content'
+
 export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
   {
     id: 1,
     title: 'Activities & Games',
     icon: <IconPuzzle classes='h-6 w-6' />,
     links: [
-      { linkId: '1-1', contentTitle: 'Memory Cards', link: '/content/memorycards' },
-      { linkId: '1-2', contentTitle: 'Choose Correct Spelling', link: '/content/choosecorrectspelling' },
+      {
+        linkId: '1-1',
+        contentTitle: 'Memory Cards',
+        link: `${root}/memorycards`
+      },
+      {
+        linkId: '1-2',
+        contentTitle: 'Choose Correct Spelling',
+        link: `${root}/choosecorrectspelling`
+      },
       {
         linkId: '1-3',
         contentTitle: 'Crazy Check Up',
-        link: '/'
+        link: `${root}/crazycheckup`
       },
       { linkId: '1-4', contentTitle: 'Find Your Partner', link: '/' },
       {

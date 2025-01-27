@@ -5,11 +5,11 @@ interface DefaultButtonProps {
   children: ReactElement
   isDisabled?: boolean
   customClasses?: string
-  handleClick?: MouseEventHandler<HTMLButtonElement>
+  handleClick?: MouseEventHandler<HTMLButtonElement> | (() => void)
   btnType?: 'button' | 'submit'
   id?: string
-  'aria-label'?: string
-  'data-action'?: string
+  ariaLabel?: string
+  dataAction?: string
   role?: string
 }
 
@@ -19,15 +19,19 @@ const DefaultButton = ({
   customClasses,
   handleClick,
   btnType,
-  id
+  id,
+  ariaLabel,
+  role
 }: DefaultButtonProps) => {
   return (
     <button
       onClick={handleClick}
       type={btnType || 'button'}
       id={id}
-      className={`custom-hover-effect rounded-lg disabled:cursor-not-allowed ${customClasses}`}
+      className={`custom-hover-effect disabled:cursor-not-allowed ${customClasses}`}
       disabled={isDisabled}
+      aria-label={ariaLabel}
+      role={role}
     >
       {children}
     </button>

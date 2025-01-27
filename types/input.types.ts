@@ -1,0 +1,20 @@
+export interface ContentFormInput {
+  title: string
+  // TODO: Temporary any state
+  // This will be objects that can match content types in the future
+  primaryInputContent: string
+  secondaryInputContent?: string
+}
+
+// New content info types below
+export interface InfoTextData {
+  levelSelectionInfo: InfoTextObject
+  primaryInputInfo: InfoTextObject
+  secondaryInputInfo?: InfoTextObject
+}
+
+export interface InfoTextObject {
+  title: string
+  inputInfo: string
+  inputExample?: string
+}

@@ -4,14 +4,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 // This automatically sets the user into state when the content page is opened through the Accordion client side component
 
 export interface ContentInputState {
-  currentContentId: string | null
   user: UserState | null
   title: string | null
   contentType: string | null
   levelSelection: string | null
-  // TODO: Temporary any state
-  // This will be objects that can match content types in the future
-  inputContent: any
+  primaryInputContent: string | null
+  secondaryInputContent: string | null
   error: string | null
 }
 
@@ -25,13 +23,21 @@ interface SetErrorPayload {
   error: string
 }
 
+export interface SetInputPayload {
+  title: string | null
+  contentType: string | null
+  levelSelection: string | null
+  primaryInputContent: string | null
+  secondaryInputContent?: string | null
+}
+
 const initialContentInputState: ContentInputState = {
-  currentContentId: null,
   user: null,
   title: null,
   contentType: null,
   levelSelection: null,
-  inputContent: null,
+  primaryInputContent: null,
+  secondaryInputContent: null,
   error: null
 }
 
@@ -39,12 +45,14 @@ const inputSlice = createSlice({
   name: 'input',
   initialState: initialContentInputState,
   reducers: {
-    setInput(state, action: PayloadAction<ContentInputState>) {
-      state.currentContentId = action.payload.currentContentId
+    setInput(state, action: PayloadAction<SetInputPayload>) {
       state.title = action.payload.title
       state.contentType = action.payload.contentType
       state.levelSelection = action.payload.levelSelection
-      state.inputContent = action.payload.inputContent
+      state.primaryInputContent = action.payload.primaryInputContent
+      if (action.payload.secondaryInputContent) {
+        state.secondaryInputContent = action.payload.secondaryInputContent
+      }
     },
     setUser(state, action: PayloadAction<UserState>) {
       state.user = action.payload

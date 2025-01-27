@@ -20,9 +20,8 @@ export const AccordionStack = ({
   const [expanded, setExpanded] = useState<false | number>(false)
 
   useEffect(() => {
-    console.log('triggering userEffect for setUser')
     dispatch(setUser({ username, userEmail, userImage }))
-  }, [dispatch, username, userEmail, userEmail])
+  }, [dispatch, username, userEmail, userImage])
 
   return (
     <div className='flex w-full flex-col'>
