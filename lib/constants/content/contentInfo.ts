@@ -13,7 +13,7 @@ export const memoryCardsGeneratedInfo = {
       'Provide a description of the content you would like the cards to contain. Being specific and giving a few examples will improve the results.',
     inputExample:
       "For example: 'Generate cards based around different rhyming pairs that use short vowel sounds like cat, rat, clock, sock.'"
-  },
+  }
 }
 
 export const memoryCardsManualInfo = {
@@ -24,7 +24,7 @@ export const memoryCardsManualInfo = {
       'Provide and even number of words in a comma-separated list with matching words listed together.',
     inputExample:
       "For example, 'cat, bat, log, dog' would make two pairs with the first and second being a matching pair and the third and fourth being the next mathching piar."
-  },
+  }
 }
 
 // Choose Correct Spelling
@@ -53,4 +53,45 @@ export const chooseSpellingManualInfo = {
     inputExample: "For example, 'cat, kat, help, hlep' would create two pairs."
   },
   secondaryInputInfo: spellingSecretMessage
+}
+
+// Crazy Check Up
+export const crazyCheckUpInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input words',
+    inputInfo:
+      'Provide a comma-separated list of words that can be used to generate Crazy Check Up commands. You can also enter some suggestions with each word to improve the results.',
+    inputExample:
+      'For example: legislation (write something), amendments (ask others for opinions), community, characteristics.'
+  }
+}
+
+// Find Your Patner
+export const findYourPartnerGeneratedInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Describe content',
+    inputInfo:
+      'Provide a description of the content you would like the activity to contain. Being specific and giving a few examples will improve the results.',
+    inputExample:
+      "For example: 'Generate matching pairs based around different rhyming pairs that use short vowel sounds like cat, rat, clock, sock.'"
+  },
+  secondaryInputInfo: {
+    title: 'Matching criteria',
+    inputInfo: 'Specify how you would like the pairs to be matched.',
+    inputExample:
+      'For example: rhyming, synonyms, antonyms, definitions, sentence blanks, etc.'
+  }
+}
+
+export const findYourPartnerManualInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input words',
+    inputInfo:
+      'Provide and even number of words in a comma-separated list with matching words listed together.',
+    inputExample:
+      "For example, 'cat, bat, log, dog' would make two pairs with the first and second being a matching pair and the third and fourth being the next mathching piar."
+  }
 }

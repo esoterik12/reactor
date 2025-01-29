@@ -2,33 +2,28 @@
 import ContentTabs from '@/components/containers/ContentTabs'
 import ContentForm from '@/components/input/ContentForm'
 import {
-  memoryCardsGeneratedInfo,
-  memoryCardsManualInfo
+  findYourPartnerGeneratedInfo,
+  findYourPartnerManualInfo
 } from '@/lib/constants/content/contentInfo'
 import { baseContentSchema } from '@/lib/zod/contentInput.schema'
 
-const tabs = [
-  'Generate Content',
-  'Manual Input',
-  'Curriculum Selector',
-  'Content Guide'
-]
+const tabs = ['Generate Content', 'Manual Input', 'Curriculum Selector', 'Content Guide']
 
-const MemoryCardsPage = () => {
+const FindYourPartnerPage = () => {
   const tabContent = [
     <ContentForm
       key='Tab 1'
       formType='generated'
       zodSchema={baseContentSchema}
-      info={memoryCardsGeneratedInfo}
-      contentType='Memory Cards'
+      info={findYourPartnerGeneratedInfo}
+      contentType='Find Your Partner'
     />,
     <ContentForm
       key='Tab 2'
       formType='manual'
       zodSchema={baseContentSchema}
-      info={memoryCardsManualInfo}
-      contentType='Memory Cards'
+      info={findYourPartnerManualInfo}
+      contentType='Find Your Partner'
       watchComponent='pairs'
     />,
     <p key='Tab 3'>Tab 3</p>,
@@ -38,4 +33,4 @@ const MemoryCardsPage = () => {
   return <ContentTabs tabs={tabs} tabContent={tabContent} />
 }
 
-export default MemoryCardsPage
+export default FindYourPartnerPage

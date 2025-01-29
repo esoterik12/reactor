@@ -27,13 +27,21 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
         contentTitle: 'Crazy Check Up',
         link: `${root}/crazycheckup`
       },
-      { linkId: '1-4', contentTitle: 'Find Your Partner', link: '/' },
+      {
+        linkId: '1-4',
+        contentTitle: 'Find Your Partner',
+        link: `${root}/findyourpartner`
+      },
       {
         linkId: '1-5',
         contentTitle: 'Review Hunt',
-        link: '/'
+        link: `${root}/reviewhunt`
       },
-      { linkId: '1-6', contentTitle: 'Grammar Mistakes', link: '/' }
+      {
+        linkId: '1-6',
+        contentTitle: 'Grammar Mistakes',
+        link: `${root}/grammarmistakes`
+      }
     ]
   },
   {

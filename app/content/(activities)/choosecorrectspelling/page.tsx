@@ -8,7 +8,7 @@ import {
 import { chooseCorrectSpellingSchema } from '@/lib/zod/contentInput.schema'
 import ContentForm from '@/components/input/ContentForm'
 
-const tabs = ['Generate Content', 'Manual Input', 'Curriculum Selector']
+const tabs = ['Generate Content', 'Manual Input', 'Curriculum Selector', 'Content Guide']
 
 const ChooseCorrectSpellingPage = () => {
   const tabContent = [
@@ -26,7 +26,8 @@ const ChooseCorrectSpellingPage = () => {
       info={chooseSpellingManualInfo}
       contentType='Choose Correct Spelling'
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <p key='Tab 3'>Tab 3</p>,
+    <p key='Tab 4'>Tab 4</p>
   ]
 
   return <ContentTabs tabs={tabs} tabContent={tabContent} />

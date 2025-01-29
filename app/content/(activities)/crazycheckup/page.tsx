@@ -1,14 +1,11 @@
 'use client'
 import ContentTabs from '@/components/containers/ContentTabs'
 import React from 'react'
-import {
-  chooseSpellingGeneratedInfo,
-  
-} from '@/lib/constants/content/contentInfo'
+import { crazyCheckUpInfo } from '@/lib/constants/content/contentInfo'
 import { baseContentSchema } from '@/lib/zod/contentInput.schema'
 import ContentForm from '@/components/input/ContentForm'
 
-const tabs = ['Generate Content', 'Curriculum Selector']
+const tabs = ['Generate Content', 'Curriculum Selector', 'Content Guide']
 
 const CrazyCheckUpPage = () => {
   const tabContent = [
@@ -16,10 +13,11 @@ const CrazyCheckUpPage = () => {
       key='Tab 1'
       formType='generated'
       zodSchema={baseContentSchema}
-      info={chooseSpellingGeneratedInfo}
+      info={crazyCheckUpInfo}
       contentType='Crazy Check Up'
     />,
-    <p key='Tab 2'>Tab 1</p>
+    <p key='Tab 2'>Tab 2</p>,
+    <p key='Tab 3'>Tab 3</p>
   ]
 
   return <ContentTabs tabs={tabs} tabContent={tabContent} />

@@ -66,3 +66,13 @@ This should be easy to copy and update dependencies and quickly begin a new proj
 
 - Redux state providers are only applied through the /content/layout.tsx and not through the App wide providers component
 - The layout.tsx also accesses the user object and passes it to the client side through AccordionStack.tsx to use in context
+
+### Content forms: react-hook-form
+
+- Content forms are based around `/input/ContentForm.tsx` (based on react-hook-form and zod)
+- The form takes a formType to determine if it is a manual or generated version
+- It takes a zodSchema that can be applied to:
+  - primaryInput
+  - secondaryInput
+- Both inputs are designing to simply take strings and this should be sufficient for the input of 90% of content generation pages
+- ContentForm takes `info` content which is used to provide some titles and tooltip content to guide usage
