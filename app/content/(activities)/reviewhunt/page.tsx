@@ -2,24 +2,24 @@
 import ContentTabs from '@/components/containers/ContentTabs'
 import React from 'react'
 import {
-  crazyCheckUpInfo,
+  reviewHuntInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import { baseContentSchema } from '@/lib/zod/contentInput.schema'
+import { huntAndMistakesSchema } from '@/lib/zod/contentInput.schema'
 import ContentForm from '@/components/input/ContentForm'
-import IconCrazyCheckUp from '@/components/icons/content/IconCrazyCheckUp'
+import IconReviewHunt from '@/components/icons/content/IconReviewHunt'
 
 const tabs = ['Generate Content', 'Curriculum Selector', 'Content Guide']
 
-const CrazyCheckUpPage = () => {
+const ReviewHuntPage = () => {
   const tabContent = [
     <ContentForm
       key='Tab 1'
-      icon={<IconCrazyCheckUp classes={contentIconStyles} />}
+      icon={<IconReviewHunt classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={baseContentSchema}
-      info={crazyCheckUpInfo}
-      contentType='Crazy Check Up'
+      zodSchema={huntAndMistakesSchema}
+      info={reviewHuntInfo}
+      contentType='Review Hunt'
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>
@@ -28,4 +28,4 @@ const CrazyCheckUpPage = () => {
   return <ContentTabs tabs={tabs} tabContent={tabContent} />
 }
 
-export default CrazyCheckUpPage
+export default ReviewHuntPage

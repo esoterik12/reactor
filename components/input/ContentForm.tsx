@@ -11,16 +11,18 @@ import {
   InfoTextData,
   InfoTextObject
 } from '@/types/input.types'
-import IconMemoryContent from '../icons/content/IconMemoryContent'
-import IconInfo from '../icons/IconInfo'
 import { defaultValues } from '@/lib/constants/content/defaultFormValues'
 import { ZodSchema } from 'zod'
 import { levelSelections } from '@/lib/constants/LevelSelections'
 import { Dropdown } from './Dropdown'
 import SelectWatchComponent from './watchComponents/SelectWatchComponent'
+import { TextareaInput } from './TextareaInput'
+import ContentInfoButton from '../buttons/ContentInfoButton'
+import InfoTooltip from '../containers/InfoTooltip'
 
 interface ContentFormProps {
   formType: 'manual' | 'generated' | 'curriculum'
+  icon: React.ReactNode
   zodSchema: ZodSchema
   info: InfoTextData
   contentType: string
@@ -29,6 +31,7 @@ interface ContentFormProps {
 
 const ContentForm = ({
   formType,
+  icon,
   zodSchema,
   info,
   contentType,
@@ -55,7 +58,6 @@ const ContentForm = ({
   })
 
   const handleSubmitButton = (data: ContentFormInput) => {
-    console.log('handleSubmitButton clicked')
     console.log('data in handleSubmitButton: ', data)
 
     dispatch(
@@ -84,13 +86,13 @@ const ContentForm = ({
         onSubmit={handleSubmit(handleSubmitButton)}
       >
         <div>
-          <div className='flex flex-row gap-2'>
-            <IconMemoryContent classes='w-7 h-7 paragraph-text' />
-            <p className='large-text mb-4'>{contentType}</p>
+          <div className='mb-4 flex flex-row items-center gap-2'>
+            {icon}
+            <p className='large-text'>{contentType}</p>
           </div>
           <div className='flex flex-row'>
             <div className='w-[65%]'>
-              <h3 className='paragraph-text mb-2'>1. Add a title:</h3>
+              <h3 className='paragraph-text mb-2'>Title:</h3>
               <InputField
                 type='text'
                 id='inputTitle'
@@ -103,14 +105,10 @@ const ContentForm = ({
             {formType === 'generated' && (
               <div className='w-[35%] pl-8'>
                 <div className='flex flex-row items-center justify-between'>
-                  <h3 className='paragraph-text mb-2'>
-                    2. Select content level:
-                  </h3>
-                  <DefaultButton
+                  <h3 className='paragraph-text mb-2'>Content level:</h3>
+                  <ContentInfoButton
                     handleClick={() => handleSelectInfo('levelSelectionInfo')}
-                  >
-                    <IconInfo classes='h-5 w-5 primary-text mb-1' />
-                  </DefaultButton>
+                  />
                 </div>
                 <Dropdown
                   placeholder='Select Level'
@@ -126,13 +124,11 @@ const ContentForm = ({
           <div className='w-full'>
             <div className='flex flex-row items-center justify-between'>
               <h3 className='paragraph-text mb-2'>
-                2. {info.primaryInputInfo.title}:
+                {info.primaryInputInfo.title}:
               </h3>
-              <DefaultButton
+              <ContentInfoButton
                 handleClick={() => handleSelectInfo('primaryInputInfo')}
-              >
-                <IconInfo classes='h-5 w-5 primary-text mb-1' />
-              </DefaultButton>
+              />
             </div>
             <InputField
               type='text'
@@ -146,13 +142,11 @@ const ContentForm = ({
               <>
                 <div className='flex flex-row items-center justify-between'>
                   <h3 className='paragraph-text mb-2'>
-                    3. {info.secondaryInputInfo.title}:
+                    {info.secondaryInputInfo.title}:
                   </h3>
-                  <DefaultButton
+                  <ContentInfoButton
                     handleClick={() => handleSelectInfo('secondaryInputInfo')}
-                  >
-                    <IconInfo classes='h-5 w-5 primary-text mb-1' />
-                  </DefaultButton>
+                  />
                 </div>
                 <InputField
                   type='text'
@@ -165,6 +159,53 @@ const ContentForm = ({
               </>
             )}
           </div>
+
+          {/* Textarea Paste Input */}
+          {info.textareaInputInfo && (
+            <>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='paragraph-text mb-2'>
+                  {info.textareaInputInfo.title}:
+                </h3>
+                <ContentInfoButton
+                  handleClick={() => handleSelectInfo('textareaInputInfo')}
+                />
+              </div>
+              <div>
+                <TextareaInput
+                  id='textareaInput'
+                  placeholder=''
+                  inputClasses='resize-none w-full h-14 p-1'
+                  error={errors.textareaInputContent}
+                  {...register('textareaInputContent')}
+                />
+              </div>
+            </>
+          )}
+
+          {/* Number of Questions */}
+          {info.numberOfContent && (
+            <div>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='paragraph-text mb-2'>
+                  {info.numberOfContent.title}:
+                </h3>
+                {info.numberOfContent.inputInfo && (
+                  <ContentInfoButton
+                    handleClick={() => handleSelectInfo('numberOfContent')}
+                  />
+                )}
+              </div>
+              <InputField
+                type='text'
+                id='inputContent'
+                placeholder=''
+                inputClasses='p-1 w-32'
+                error={errors.numberOfContent}
+                {...register('numberOfContent')}
+              />
+            </div>
+          )}
 
           {/* Watch Components: */}
           {currentPrimaryInput && watchComponent && (
@@ -187,7 +228,8 @@ const ContentForm = ({
       </form>
       {/* Tooltip Info Right side */}
       <div className='flex w-[35%] flex-col px-4 py-4'>
-        <div className='h-full rounded-lg px-4'>
+        <InfoTooltip info={selectedInfo} />
+        {/* <div className='h-full rounded-lg px-4'>
           <div className='large-text flex flex-row'>
             <h3>{selectedInfo !== null && selectedInfo.title}</h3>
           </div>
@@ -197,7 +239,7 @@ const ContentForm = ({
           <p className='paragraph-text mt-2'>
             {selectedInfo !== null && selectedInfo.inputExample}
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -3,9 +3,11 @@ import ContentTabs from '@/components/containers/ContentTabs'
 import ContentForm from '@/components/input/ContentForm'
 import {
   memoryCardsGeneratedInfo,
-  memoryCardsManualInfo
+  memoryCardsManualInfo,
+  contentIconStyles
 } from '@/lib/constants/content/contentInfo'
 import { baseContentSchema } from '@/lib/zod/contentInput.schema'
+import IconMemoryCards from '@/components/icons/content/IconMemoryCards'
 
 const tabs = [
   'Generate Content',
@@ -18,6 +20,7 @@ const MemoryCardsPage = () => {
   const tabContent = [
     <ContentForm
       key='Tab 1'
+      icon={<IconMemoryCards classes={contentIconStyles} />}
       formType='generated'
       zodSchema={baseContentSchema}
       info={memoryCardsGeneratedInfo}
@@ -25,6 +28,7 @@ const MemoryCardsPage = () => {
     />,
     <ContentForm
       key='Tab 2'
+      icon={<IconMemoryCards classes={contentIconStyles} />}
       formType='manual'
       zodSchema={baseContentSchema}
       info={memoryCardsManualInfo}

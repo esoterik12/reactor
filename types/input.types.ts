@@ -4,6 +4,8 @@ export interface ContentFormInput {
   // This will be objects that can match content types in the future
   primaryInputContent: string
   secondaryInputContent?: string
+  textareaInputContent?: string
+  numberOfContent?: number
 }
 
 // New content info types below
@@ -11,10 +13,12 @@ export interface InfoTextData {
   levelSelectionInfo: InfoTextObject
   primaryInputInfo: InfoTextObject
   secondaryInputInfo?: InfoTextObject
+  textareaInputInfo?: InfoTextObject
+  numberOfContent?: InfoTextObject
 }
 
 export interface InfoTextObject {
   title: string
-  inputInfo: string
+  inputInfo?: string
   inputExample?: string
 }

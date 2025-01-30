@@ -1,3 +1,5 @@
+export const contentIconStyles = 'w-6 h-6 paragraph-text'
+
 export const levelSelectionInfo = {
   title: 'Level Selecetion',
   inputInfo:
@@ -93,5 +95,45 @@ export const findYourPartnerManualInfo = {
       'Provide and even number of words in a comma-separated list with matching words listed together.',
     inputExample:
       "For example, 'cat, bat, log, dog' would make two pairs with the first and second being a matching pair and the third and fourth being the next mathching piar."
+  }
+}
+
+// Review Hunt
+export const reviewHuntInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input concepts',
+    inputInfo:
+      'Provide a comma-separated list of concepts within the content that you want the questions to focus on.',
+    inputExample:
+      'For example: articles, demonstratives, adjextives, and proper adjectives'
+  },
+  textareaInputInfo: {
+    title: 'Paste content',
+    inputInfo:
+      'Paste in content from a textbook, workbook, or assignment that you want to base your review questions around.'
+  },
+  numberOfContent: {
+    title: 'Number of questions'
+  }
+}
+
+// Review Hunt
+export const grammarMistakesInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input concepts',
+    inputInfo:
+      'Provide a comma-separated list of concepts within the content that you want sentences to be based on.',
+    inputExample:
+      'For example: regular and irregular past tense verbs, subject-verb agreement, future simple tense'
+  },
+  textareaInputInfo: {
+    title: 'Paste content',
+    inputInfo:
+      'Paste in content from a textbook, workbook, or assignment that you want to base your sentences around.'
+  },
+  numberOfContent: {
+    title: 'Number of sentences'
   }
 }

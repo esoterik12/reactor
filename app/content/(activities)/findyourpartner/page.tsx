@@ -1,18 +1,26 @@
 'use client'
 import ContentTabs from '@/components/containers/ContentTabs'
+import IconFindYourPartner from '@/components/icons/content/IconFindYourPartner'
 import ContentForm from '@/components/input/ContentForm'
 import {
   findYourPartnerGeneratedInfo,
-  findYourPartnerManualInfo
+  findYourPartnerManualInfo,
+  contentIconStyles
 } from '@/lib/constants/content/contentInfo'
 import { baseContentSchema } from '@/lib/zod/contentInput.schema'
 
-const tabs = ['Generate Content', 'Manual Input', 'Curriculum Selector', 'Content Guide']
+const tabs = [
+  'Generate Content',
+  'Manual Input',
+  'Curriculum Selector',
+  'Content Guide'
+]
 
 const FindYourPartnerPage = () => {
   const tabContent = [
     <ContentForm
       key='Tab 1'
+      icon={<IconFindYourPartner classes={contentIconStyles} />}
       formType='generated'
       zodSchema={baseContentSchema}
       info={findYourPartnerGeneratedInfo}
@@ -20,6 +28,7 @@ const FindYourPartnerPage = () => {
     />,
     <ContentForm
       key='Tab 2'
+      icon={<IconFindYourPartner classes={contentIconStyles} />}
       formType='manual'
       zodSchema={baseContentSchema}
       info={findYourPartnerManualInfo}
