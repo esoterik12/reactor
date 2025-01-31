@@ -19,12 +19,15 @@ import SelectWatchComponent from './watchComponents/SelectWatchComponent'
 import { TextareaInput } from './TextareaInput'
 import ContentInfoButton from '../buttons/ContentInfoButton'
 import InfoTooltip from '../containers/InfoTooltip'
+// import { useRouter } from 'next/navigation'
+import processInputContent from '@/lib/actions/processInputContent'
 
 interface ContentFormProps {
   formType: 'manual' | 'generated' | 'curriculum'
   icon: React.ReactNode
   zodSchema: ZodSchema
   info: InfoTextData
+  contentTitle: string
   contentType: string
   watchComponent?: 'pairs'
 }
@@ -34,10 +37,12 @@ const ContentForm = ({
   icon,
   zodSchema,
   info,
+  contentTitle,
   contentType,
   watchComponent
 }: ContentFormProps) => {
   const dispatch = useAppDispatch()
+  // const router = useRouter()
   // const [loading, setLoading] = useState(false)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
@@ -57,18 +62,33 @@ const ContentForm = ({
     defaultValues
   })
 
-  const handleSubmitButton = (data: ContentFormInput) => {
+  const handleSubmitButton = async (data: ContentFormInput) => {
     console.log('data in handleSubmitButton: ', data)
+
+    const generationResults = await processInputContent({
+      // title: data.title,
+      contentType,
+      levelSelection: selectedLevel || 'No level selection',
+      primaryInputContent: data.primaryInputContent,
+      secondaryInputContent: data.secondaryInputContent,
+      textareaInput: data.textareaInputContent,
+      numberOfContent: data.numberOfContent || null
+    })
 
     dispatch(
       setInput({
         title: data.title,
         contentType,
-        levelSelection: null,
+        levelSelection: selectedLevel,
         primaryInputContent: data.primaryInputContent,
-        secondaryInputContent: data.secondaryInputContent
+        secondaryInputContent: data.secondaryInputContent,
+        textareaInput: data.textareaInputContent
       })
     )
+
+    console.log('generationResults', generationResults)
+
+    // router.push('/content/download')
   }
 
   const handleSelectInfo = (infoKey: InfoTextDataKey) => {
@@ -88,7 +108,7 @@ const ContentForm = ({
         <div>
           <div className='mb-4 flex flex-row items-center gap-2'>
             {icon}
-            <p className='large-text'>{contentType}</p>
+            <p className='large-text'>{contentTitle}</p>
           </div>
           <div className='flex flex-row'>
             <div className='w-[65%]'>
@@ -132,7 +152,7 @@ const ContentForm = ({
             </div>
             <InputField
               type='text'
-              id='inputContent'
+              id='primaryInputContent'
               placeholder=''
               inputClasses='p-1 w-full'
               error={errors.primaryInputContent}
@@ -150,7 +170,7 @@ const ContentForm = ({
                 </div>
                 <InputField
                   type='text'
-                  id='inputContent'
+                  id='secondaryInputContent'
                   placeholder=''
                   inputClasses='p-1 w-full'
                   error={errors.secondaryInputContent}
@@ -229,17 +249,6 @@ const ContentForm = ({
       {/* Tooltip Info Right side */}
       <div className='flex w-[35%] flex-col px-4 py-4'>
         <InfoTooltip info={selectedInfo} />
-        {/* <div className='h-full rounded-lg px-4'>
-          <div className='large-text flex flex-row'>
-            <h3>{selectedInfo !== null && selectedInfo.title}</h3>
-          </div>
-          <p className='paragraph-text mt-2'>
-            {selectedInfo !== null && selectedInfo.inputInfo}
-          </p>
-          <p className='paragraph-text mt-2'>
-            {selectedInfo !== null && selectedInfo.inputExample}
-          </p>
-        </div> */}
       </div>
     </section>
   )

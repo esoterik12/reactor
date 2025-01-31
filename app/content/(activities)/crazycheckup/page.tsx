@@ -19,7 +19,8 @@ const CrazyCheckUpPage = () => {
       formType='generated'
       zodSchema={baseContentSchema}
       info={crazyCheckUpInfo}
-      contentType='Crazy Check Up'
+      contentTitle='Crazy Check Up'
+      contentType='crazyCheckUp'
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>

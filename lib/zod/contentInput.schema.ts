@@ -25,6 +25,13 @@ export const chooseCorrectSpellingSchema = z.object({
     })
 })
 
+// Generated Memory and Find Your Partner Schema
+export const generatePairsSchema = baseContentSchema.extend({
+  secondaryInputContent: z
+    .string()
+    .min(1, { message: 'You must enter matching criteria.' })
+})
+
 // Combines the baseContentSchema with a textareaInputCOntent validation to be used
 // in reviewHunt, grammarMistakes and others
 export const textareaContentSchema = baseContentSchema.extend({

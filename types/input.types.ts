@@ -5,7 +5,7 @@ export interface ContentFormInput {
   primaryInputContent: string
   secondaryInputContent?: string
   textareaInputContent?: string
-  numberOfContent?: number
+  numberOfContent?: number | null
 }
 
 // New content info types below

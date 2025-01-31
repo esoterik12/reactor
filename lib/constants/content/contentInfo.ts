@@ -15,6 +15,11 @@ export const memoryCardsGeneratedInfo = {
       'Provide a description of the content you would like the cards to contain. Being specific and giving a few examples will improve the results.',
     inputExample:
       "For example: 'Generate cards based around different rhyming pairs that use short vowel sounds like cat, rat, clock, sock.'"
+  },
+  secondaryInputInfo: {
+    title: 'Matching criteria',
+    inputInfo: 'Specify how you would like the pairs to be matched.',
+    inputExample: 'For example: rhyming, synonyms, antonyms, definitions, etc.'
   }
 }
 
@@ -84,6 +89,9 @@ export const findYourPartnerGeneratedInfo = {
     inputInfo: 'Specify how you would like the pairs to be matched.',
     inputExample:
       'For example: rhyming, synonyms, antonyms, definitions, sentence blanks, etc.'
+  },
+  numberOfContent: {
+    title: 'Number of pairs'
   }
 }
 
@@ -118,7 +126,7 @@ export const reviewHuntInfo = {
   }
 }
 
-// Review Hunt
+// Grammar Mistakes
 export const grammarMistakesInfo = {
   levelSelectionInfo,
   primaryInputInfo: {

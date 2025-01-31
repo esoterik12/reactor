@@ -19,7 +19,8 @@ const ReviewHuntPage = () => {
       formType='generated'
       zodSchema={huntAndMistakesSchema}
       info={reviewHuntInfo}
-      contentType='Review Hunt'
+      contentTitle='Review Hunt'
+      contentType='reviewHunt'
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>

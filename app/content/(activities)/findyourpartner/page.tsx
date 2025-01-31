@@ -24,7 +24,8 @@ const FindYourPartnerPage = () => {
       formType='generated'
       zodSchema={baseContentSchema}
       info={findYourPartnerGeneratedInfo}
-      contentType='Find Your Partner'
+      contentType='findYourPartner'
+      contentTitle='Find Your Partner'
     />,
     <ContentForm
       key='Tab 2'
@@ -32,7 +33,8 @@ const FindYourPartnerPage = () => {
       formType='manual'
       zodSchema={baseContentSchema}
       info={findYourPartnerManualInfo}
-      contentType='Find Your Partner'
+      contentType='findYourPartner'
+      contentTitle='Find Your Partner'
       watchComponent='pairs'
     />,
     <p key='Tab 3'>Tab 3</p>,

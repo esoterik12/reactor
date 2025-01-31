@@ -10,6 +10,8 @@ export interface ContentInputState {
   levelSelection: string | null
   primaryInputContent: string | null
   secondaryInputContent: string | null
+  textareaInput: string | null
+  numberOfContent: number | null
   error: string | null
 }
 
@@ -29,6 +31,8 @@ export interface SetInputPayload {
   levelSelection: string | null
   primaryInputContent: string | null
   secondaryInputContent?: string | null
+  textareaInput?: string | null
+  numberOfContent?: number | null
 }
 
 const initialContentInputState: ContentInputState = {
@@ -38,6 +42,8 @@ const initialContentInputState: ContentInputState = {
   levelSelection: null,
   primaryInputContent: null,
   secondaryInputContent: null,
+  textareaInput: null,
+  numberOfContent: null,
   error: null
 }
 
@@ -52,6 +58,12 @@ const inputSlice = createSlice({
       state.primaryInputContent = action.payload.primaryInputContent
       if (action.payload.secondaryInputContent) {
         state.secondaryInputContent = action.payload.secondaryInputContent
+      }
+      if (action.payload.textareaInput) {
+        state.textareaInput = action.payload.textareaInput
+      }
+      if (action.payload.numberOfContent) {
+        state.numberOfContent = action.payload.numberOfContent
       }
     },
     setUser(state, action: PayloadAction<UserState>) {

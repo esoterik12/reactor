@@ -19,7 +19,8 @@ const GrammarMistakesPage = () => {
       formType='generated'
       zodSchema={huntAndMistakesSchema}
       info={grammarMistakesInfo}
-      contentType='Grammar Mistakes'
+      contentType='grammarMistakes'
+      contentTitle='Grammar Mistakes'
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>

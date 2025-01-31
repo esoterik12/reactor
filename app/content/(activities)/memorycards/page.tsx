@@ -6,7 +6,10 @@ import {
   memoryCardsManualInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import { baseContentSchema } from '@/lib/zod/contentInput.schema'
+import {
+  baseContentSchema,
+  generatePairsSchema
+} from '@/lib/zod/contentInput.schema'
 import IconMemoryCards from '@/components/icons/content/IconMemoryCards'
 
 const tabs = [
@@ -22,9 +25,10 @@ const MemoryCardsPage = () => {
       key='Tab 1'
       icon={<IconMemoryCards classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={baseContentSchema}
+      zodSchema={generatePairsSchema}
       info={memoryCardsGeneratedInfo}
-      contentType='Memory Cards'
+      contentTitle='Memory Cards'
+      contentType='memoryCards'
     />,
     <ContentForm
       key='Tab 2'
@@ -32,7 +36,8 @@ const MemoryCardsPage = () => {
       formType='manual'
       zodSchema={baseContentSchema}
       info={memoryCardsManualInfo}
-      contentType='Memory Cards'
+      contentTitle='Memory Cards'
+      contentType='memoryCards'
       watchComponent='pairs'
     />,
     <p key='Tab 3'>Tab 3</p>,

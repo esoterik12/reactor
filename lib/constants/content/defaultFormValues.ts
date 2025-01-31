@@ -1,5 +1,7 @@
 export const defaultValues = {
   title: '',
-  inputContent: '',
-  secondaryInputContent: ''
+  primaryInputContent: '',
+  secondaryInputContent: '',
+  textareaInputContent: '',
+  numberOfContent: null
 }

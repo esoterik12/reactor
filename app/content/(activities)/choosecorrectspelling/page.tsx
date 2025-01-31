@@ -25,7 +25,8 @@ const ChooseCorrectSpellingPage = () => {
       formType='generated'
       zodSchema={chooseCorrectSpellingSchema}
       info={chooseSpellingGeneratedInfo}
-      contentType='Choose Correct Spelling'
+      contentTitle='Choose Correct Spelling'
+      contentType='chooseCorrectSpelling'
     />,
     <ContentForm
       key='Tab 2'
@@ -33,7 +34,8 @@ const ChooseCorrectSpellingPage = () => {
       formType='manual'
       zodSchema={chooseCorrectSpellingSchema}
       info={chooseSpellingManualInfo}
-      contentType='Choose Correct Spelling'
+      contentTitle='Choose Correct Spelling'
+      contentType='chooseCorrectSpelling'
     />,
     <p key='Tab 3'>Tab 3</p>,
     <p key='Tab 4'>Tab 4</p>
