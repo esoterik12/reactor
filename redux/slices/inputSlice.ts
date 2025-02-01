@@ -12,6 +12,7 @@ export interface ContentInputState {
   secondaryInputContent: string | null
   textareaInput: string | null
   numberOfContent: number | null
+  generatedContent: any
   error: string | null
 }
 
@@ -33,6 +34,7 @@ export interface SetInputPayload {
   secondaryInputContent?: string | null
   textareaInput?: string | null
   numberOfContent?: number | null
+  generatedContent?: any
 }
 
 const initialContentInputState: ContentInputState = {
@@ -44,6 +46,7 @@ const initialContentInputState: ContentInputState = {
   secondaryInputContent: null,
   textareaInput: null,
   numberOfContent: null,
+  generatedContent: null,
   error: null
 }
 
@@ -64,6 +67,9 @@ const inputSlice = createSlice({
       }
       if (action.payload.numberOfContent) {
         state.numberOfContent = action.payload.numberOfContent
+      }
+      if (action.payload.generatedContent) {
+        state.generatedContent = action.payload.generatedContent
       }
     },
     setUser(state, action: PayloadAction<UserState>) {

@@ -19,8 +19,9 @@ import SelectWatchComponent from './watchComponents/SelectWatchComponent'
 import { TextareaInput } from './TextareaInput'
 import ContentInfoButton from '../buttons/ContentInfoButton'
 import InfoTooltip from '../containers/InfoTooltip'
-// import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import processInputContent from '@/lib/actions/processInputContent'
+import { AppError } from '@/lib/errors/AppError'
 
 interface ContentFormProps {
   formType: 'manual' | 'generated' | 'curriculum'
@@ -42,7 +43,7 @@ const ContentForm = ({
   watchComponent
 }: ContentFormProps) => {
   const dispatch = useAppDispatch()
-  // const router = useRouter()
+  const router = useRouter()
   // const [loading, setLoading] = useState(false)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
@@ -65,30 +66,37 @@ const ContentForm = ({
   const handleSubmitButton = async (data: ContentFormInput) => {
     console.log('data in handleSubmitButton: ', data)
 
-    const generationResults = await processInputContent({
-      // title: data.title,
-      contentType,
-      levelSelection: selectedLevel || 'No level selection',
-      primaryInputContent: data.primaryInputContent,
-      secondaryInputContent: data.secondaryInputContent,
-      textareaInput: data.textareaInputContent,
-      numberOfContent: data.numberOfContent || null
-    })
-
-    dispatch(
-      setInput({
-        title: data.title,
+    try {
+      const generationResults = await processInputContent({
         contentType,
-        levelSelection: selectedLevel,
+        levelSelection: selectedLevel || 'No level selection',
         primaryInputContent: data.primaryInputContent,
         secondaryInputContent: data.secondaryInputContent,
-        textareaInput: data.textareaInputContent
+        textareaInput: data.textareaInputContent,
+        numberOfContent: data.numberOfContent || null
       })
-    )
 
-    console.log('generationResults', generationResults)
-
-    // router.push('/content/download')
+      if (generationResults.code === 200) {
+        dispatch(
+          setInput({
+            title: data.title,
+            contentType,
+            levelSelection: selectedLevel,
+            primaryInputContent: data.primaryInputContent,
+            secondaryInputContent: data.secondaryInputContent,
+            textareaInput: data.textareaInputContent,
+            generatedContent: generationResults.result
+          })
+        )
+      } else {
+        throw new AppError(400, 'Error generation content.')
+      }
+    } catch (error) {
+      console.log('error in handleSubmitButton in ContentForm.tsx: ', error)
+      throw new AppError(400, 'Error generation content.')
+    } finally {
+      router.push('/content/download')
+    }
   }
 
   const handleSelectInfo = (infoKey: InfoTextDataKey) => {

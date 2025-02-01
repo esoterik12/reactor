@@ -4,7 +4,6 @@ import { AppError } from '../errors/AppError'
 import generateContent from './generateContent'
 
 interface ProcessInputContentProps {
-  // title: string
   contentType: string
   levelSelection: string
   primaryInputContent: string
@@ -14,7 +13,6 @@ interface ProcessInputContentProps {
 }
 
 export default async function processInputContent({
-  // title,
   contentType,
   levelSelection,
   primaryInputContent,
@@ -57,7 +55,6 @@ export default async function processInputContent({
         break
 
       case 'memoryCards':
-        console.log('memory')
         generationMessage = messageFunction({
           data: JSON.stringify(primaryInputContent),
           matchingCriteria: secondaryInputContent || 'Missing matching criteria'
