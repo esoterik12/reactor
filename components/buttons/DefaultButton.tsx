@@ -1,8 +1,8 @@
 'use client'
-import React, { MouseEventHandler, ReactElement } from 'react'
+import React, { MouseEventHandler, ReactNode } from 'react'
 
 interface DefaultButtonProps {
-  children: ReactElement
+  children: ReactNode
   isDisabled?: boolean
   customClasses?: string
   handleClick?: MouseEventHandler<HTMLButtonElement> | (() => void)

@@ -93,4 +93,44 @@ project
 - ContentForm takes `info` content which is used to provide some titles and
   tooltip content to guide usage
 
+### react-pdf
 
+useBlobDownloader.tsx @react-pdf/renderer provides StyleSheet to create
+basePageStyles.ts and content-specific styling react-pdf has a few limitations
+and cannot use all CSS styles server rendered PDFs are made in `/components/pdf`
+folder
+
+### Edit functionality:
+
+Generated content is stored in state: 
+- It has a title and its contentType as well as different kinds of data representing the generated content -simple: array of
+objects with wordOne and wordTwo / or correctWord and incorrectWord or
+correctSentence and incorrectSentence => sometimes it's short as in a word,
+sometimes it's long as in a sentence -simple: array of sentences (like check up)
+-complex: array of sentence with blank, possible answers, correct answer
+
+Possibly require separate components to edit each content type
+
+Type A1: `correctSpelling` + `memory` + `find your partner` can all uses a 2 cols by X rows grid of short inputs
+  - Other content: `scrambled words`
+
+Type A2: `grammarMistakes` requires a similar structure to A1, but with 1 col and grouped correct and incorrect sentence
+  - Other content: `scrambled sentences`
+
+Type B: `check up` requires a simple 1 col by x row but with long inputs
+  - Other content: `interview`
+
+Type C: `reviewHunt` requires a complex structure but will be reused as a multiple choice structure
+  - Other content
+
+Type D: `bingo` + `scrambled words` + `wordsearch` + `spot it` generated versions will need an edit word like 5 by X grid
+
+The system:
+- A reusable edit page that can be added to the path of each content page `/content/contentType/edit`
+   - Similar to the content input pages, each edit page will load a zod schema that can be passed to the edit component
+- A set of input fields (probably using `InptuField.tsx` will work, that takes tailwind classes depending on content)
+- Create edit components that can be .mapped with generated content like:
+  - `EditPairs.tsx` for Type A1 with props like 'cols' or 'rows' depending on how the content type A1 or A2
+  - `EditSentences.tsx` for Type B - simple single wide input
+  - `EditMultipleChoice.tsx` for Type C - long sentence edit, 2x2 grid of options, correct answer => above type will require a
+- The above edit components will be used in the edit pages 

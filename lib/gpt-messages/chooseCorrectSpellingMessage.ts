@@ -1,12 +1,12 @@
 import { correctSpellingStructure } from '../constants/return-structure/correctSpellingStructure'
 
-interface ChooseCorrectSpellingMessage {
+export interface ChooseCorrectSpellingMessageProps {
   data: string
 }
 
 export default function chooseCorrectSpellingMessage({
   data
-}: ChooseCorrectSpellingMessage) {
+}: ChooseCorrectSpellingMessageProps) {
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(correctSpellingStructure)}

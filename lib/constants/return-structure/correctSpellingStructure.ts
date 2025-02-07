@@ -1,34 +1,36 @@
-export const correctSpellingStructure = [
-  {
-    correctWord: 'grape',
-    incorrectWord: 'grap'
-  },
-  {
-    correctWord: 'cake',
-    incorrectWord: 'cak'
-  },
-  {
-    correctWord: 'play',
-    incorrectWord: 'playe'
-  },
-  {
-    correctWord: 'sea',
-    incorrectWord: 'seee'
-  },
-  {
-    correctWord: 'moon',
-    incorrectWord: 'mon'
-  },
-  {
-    correctWord: 'light',
-    incorrectWord: 'lite'
-  },
-  {
-    correctWord: 'fake',
-    incorrectWord: 'fayke'
-  },
-  {
-    correctWord: 'rain',
-    incorrectWord: 'raine'
-  }
-]
+export const correctSpellingStructure = {
+  data: [
+    {
+      wordOne: 'grape',
+      wordTwo: 'grap'
+    },
+    {
+      wordOne: 'cake',
+      wordTwo: 'cak'
+    },
+    {
+      wordOne: 'play',
+      wordTwo: 'playe'
+    },
+    {
+      wordOne: 'sea',
+      wordTwo: 'seee'
+    },
+    {
+      wordOne: 'moon',
+      wordTwo: 'mon'
+    },
+    {
+      wordOne: 'light',
+      wordTwo: 'lite'
+    },
+    {
+      wordOne: 'fake',
+      wordTwo: 'fayke'
+    },
+    {
+      wordOne: 'rain',
+      wordTwo: 'raine'
+    }
+  ]
+}

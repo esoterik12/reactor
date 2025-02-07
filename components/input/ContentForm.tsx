@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { SetStateAction, useState } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from './InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -19,31 +19,33 @@ import SelectWatchComponent from './watchComponents/SelectWatchComponent'
 import { TextareaInput } from './TextareaInput'
 import ContentInfoButton from '../buttons/ContentInfoButton'
 import InfoTooltip from '../containers/InfoTooltip'
-import { useRouter } from 'next/navigation'
 import processInputContent from '@/lib/actions/processInputContent'
 import { AppError } from '@/lib/errors/AppError'
 
-interface ContentFormProps {
+interface ContentFormProps<T> {
   formType: 'manual' | 'generated' | 'curriculum'
   icon: React.ReactNode
   zodSchema: ZodSchema
   info: InfoTextData
+  levelSelectionEnabled?: boolean
   contentTitle: string
   contentType: string
   watchComponent?: 'pairs'
+  setContent: React.Dispatch<SetStateAction<T | null>>
 }
 
-const ContentForm = ({
+export function ContentForm<T>({
   formType,
   icon,
   zodSchema,
   info,
+  levelSelectionEnabled = true,
   contentTitle,
   contentType,
-  watchComponent
-}: ContentFormProps) => {
+  watchComponent,
+  setContent
+}: ContentFormProps<T>) {
   const dispatch = useAppDispatch()
-  const router = useRouter()
   // const [loading, setLoading] = useState(false)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
@@ -76,6 +78,10 @@ const ContentForm = ({
         numberOfContent: data.numberOfContent || null
       })
 
+      console.log('generationResults: ', generationResults)
+
+      // TODO: This currently sends a lot of data to context, not used at the
+      // moment, may be wise to remove
       if (generationResults.code === 200) {
         dispatch(
           setInput({
@@ -85,8 +91,18 @@ const ContentForm = ({
             primaryInputContent: data.primaryInputContent,
             secondaryInputContent: data.secondaryInputContent,
             textareaInput: data.textareaInputContent,
-            generatedContent: generationResults.result
+            generatedContent:
+              generationResults.result.data || generationResults.result.pairs
           })
+        )
+        // TODO: generation functions are returning objects with different names
+        setContent(
+          generationResults.result.data ||
+            generationResults.result.pairs ||
+            generationResults.result.commands ||
+            generationResults.result.questions ||
+            generationResults.result.sentencePairings ||
+            generationResults.result.sentences
         )
       } else {
         throw new AppError(400, 'Error generation content.')
@@ -95,7 +111,6 @@ const ContentForm = ({
       console.log('error in handleSubmitButton in ContentForm.tsx: ', error)
       throw new AppError(400, 'Error generation content.')
     } finally {
-      router.push('/content/download')
     }
   }
 
@@ -130,7 +145,7 @@ const ContentForm = ({
                 {...register('title')}
               />
             </div>
-            {formType === 'generated' && (
+            {formType === 'generated' && levelSelectionEnabled && (
               <div className='w-[35%] pl-8'>
                 <div className='flex flex-row items-center justify-between'>
                   <h3 className='paragraph-text mb-2'>Content level:</h3>
@@ -201,7 +216,7 @@ const ContentForm = ({
               </div>
               <div>
                 <TextareaInput
-                  id='textareaInput'
+                  id='textareaInputContent'
                   placeholder=''
                   inputClasses='resize-none w-full h-14 p-1'
                   error={errors.textareaInputContent}
@@ -261,5 +276,3 @@ const ContentForm = ({
     </section>
   )
 }
-
-export default ContentForm

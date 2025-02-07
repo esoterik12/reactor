@@ -9,9 +9,11 @@ interface InputFieldProps {
   id: string
   type: string
   label?: string
+  errorType?: 'textBelow' | 'highlightInput'
   placeholder: string
   labelClasses?: string
   inputClasses?: string
+  containerClasses?: string
   error: FieldError | undefined
   maxLength?: number
 }
@@ -27,16 +29,18 @@ const InputField: React.ForwardRefExoticComponent<
       id,
       label,
       placeholder,
+      errorType = 'textBelow',
       labelClasses,
       inputClasses,
+      containerClasses = 'w-full',
       error,
       ...rest
     },
     ref
   ) => (
-    <div>
+    <div className={`${containerClasses}`}>
       {label && (
-        <label htmlFor={id} className={`${labelClasses} block p-1 font-medium`}>
+        <label htmlFor={id} className={`${labelClasses} block font-medium`}>
           {label}
         </label>
       )}
@@ -47,14 +51,16 @@ const InputField: React.ForwardRefExoticComponent<
         id={id}
         tabIndex={-1}
         placeholder={placeholder}
-        className={`${inputClasses} page-background input-border`}
+        className={`${inputClasses} page-background ${errorType === 'highlightInput' && error ? 'input-error-border' : 'input-border'}`}
         {...rest}
       />
-      <div className='ml-1 mr-1 min-h-8 p-1'>
-        {error && (
-          <p className='paragraph-text text-[12px]'>{error.message}</p>
-        )}
-      </div>
+      {errorType === 'textBelow' && (
+        <div className='ml-1 mr-1 min-h-8 p-1'>
+          {error && (
+            <p className='secondary-text text-[12px]'>{error.message}</p>
+          )}
+        </div>
+      )}
     </div>
   )
 )

@@ -1,7 +1,12 @@
 'use server'
-
 import { AppError } from '../errors/AppError'
 import generateContent from './generateContent'
+import chooseCorrectSpellingMessage from '../gpt-messages/chooseCorrectSpellingMessage'
+import crazyCheckUpMessage from '../gpt-messages/crazyCheckUpMessage'
+import findYourPartnerMessage from '../gpt-messages/findYourPartnerMessage'
+import grammarMistakesMessage from '../gpt-messages/grammarMistakesMessage'
+import memoryCardsMessage from '../gpt-messages/memoryCardsMessage'
+import reviewHuntMessage from '../gpt-messages/reviewHuntMessage'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -22,53 +27,60 @@ export default async function processInputContent({
 }: ProcessInputContentProps) {
   let generationMessage: string = ''
 
-  const moduleFunction = await import(`../gpt-messages/${contentType}Message`)
-  const messageFunction = moduleFunction.default
+  console.log('contentType', contentType)
 
   try {
     switch (contentType) {
       case 'chooseCorrectSpelling':
-        generationMessage = messageFunction({
-          data: JSON.stringify(primaryInputContent)
+        generationMessage = chooseCorrectSpellingMessage({
+          data: primaryInputContent
         })
         break
 
       case 'crazyCheckUp':
-        generationMessage = messageFunction({
-          data: JSON.stringify(primaryInputContent),
-          levelSelection: levelSelection
+        generationMessage = crazyCheckUpMessage({
+          data: primaryInputContent,
+          levelSelection
         })
         break
 
       case 'findYourPartner':
-        generationMessage = messageFunction({
-          data: JSON.stringify(primaryInputContent),
-          matchingCriteria: secondaryInputContent || 'Missing matching criteria'
+        generationMessage = findYourPartnerMessage({
+          data: primaryInputContent,
+          matchingCriteria:
+            secondaryInputContent || 'Missing matching criteria',
+          numberOfContent: numberOfContent || 8,
+          levelSelection
         })
         break
 
       case 'grammarMistakes':
-        generationMessage = messageFunction({
+        generationMessage = grammarMistakesMessage({
           grammarConceptDescription: JSON.stringify(primaryInputContent),
-          numberOfMistakesPerSentence: numberOfContent || 1
+          numberOfContent,
+          levelSelection,
+          textareaInput,
         })
         break
 
       case 'memoryCards':
-        generationMessage = messageFunction({
+        generationMessage = memoryCardsMessage({
           data: JSON.stringify(primaryInputContent),
-          matchingCriteria: secondaryInputContent || 'Missing matching criteria'
+          matchingCriteria:
+            secondaryInputContent || 'Missing matching criteria',
+          levelSelection
         })
         break
 
       case 'reviewHunt':
-        generationMessage = messageFunction({
-          data: JSON.stringify(primaryInputContent),
+        generationMessage = reviewHuntMessage({
+          data: primaryInputContent,
           concepts: JSON.stringify(textareaInput),
-          levelSelection: levelSelection,
+          levelSelection,
           numberOfQuestions: numberOfContent || 8
         })
-
+        break
+        
       default:
         throw new AppError(404, `Unsupported content type: ${contentType}`)
     }
