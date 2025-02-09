@@ -1,0 +1,117 @@
+{
+  "level": 4,
+  "unit": 4,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "A _____________ is an account given in a particular way.",
+          "answer": "version"
+        },
+        {
+          "prompt": "_____________ means “in the end” or “finally.”",
+          "answer": "eventually"
+        },
+        {
+          "prompt": "To _____________ means “to reach agreement by having each side give up some of its demands.”",
+          "answer": "compromise"
+        },
+        {
+          "prompt": "A _____________ is a sense of obligation toward something.",
+          "answer": "commitment"
+        },
+        {
+          "prompt": "_____________ are formal changes made according to official procedures.",
+          "answer": "amendments"
+        },
+        {
+          "prompt": "A _____________ is a government that is run by the people who live under it.",
+          "answer": "democracy"
+        },
+        {
+          "prompt": "_____________ means “laws that are made or passed.”",
+          "answer": "legislation"
+        },
+        {
+          "prompt": "A _____________ is a special right or benefit held by a certain group of people.",
+          "answer": "privilege"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "A _____________ is a period of ten years.",
+          "answer": "decade"
+        },
+        {
+          "prompt": "When something is _____________, it is shining or glowing.",
+          "answer": "gleaming"
+        },
+        {
+          "prompt": "_____________ means to have looked at or explored in order to find out and bring back more information.",
+          "answer": "scouted"
+        },
+        {
+          "prompt": "To have _____________ is to have turned and twisted the body.",
+          "answer": "squirmed"
+        },
+        {
+          "prompt": "_____________ is puttering or keeping busy in an aimless way.",
+          "answer": "tinkering"
+        },
+        {
+          "prompt": "_____________ is the use of science for practical purposes, especially in engineering and industry.",
+          "answer": "technology"
+        },
+        {
+          "prompt": "_____________ is the work that uses scientific knowledge for practical things such as building bridges and dams.",
+          "answer": "engineering"
+        },
+        {
+          "prompt": "_____________ is the act of giving instructions, ordering, or commanding.",
+          "answer": "directing"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "When something is a _____________, it is a great victory or success.",
+          "answer": "triumph"
+        },
+        {
+          "prompt": "A _____________ object stays in one place in the air.",
+          "answer": "hovering"
+        },
+        {
+          "prompt": "To _____________ something is to work hard to achieve a goal.",
+          "answer": "attain"
+        },
+        {
+          "prompt": "_____________ means “hanging or swinging loosely.\"",
+          "answer": "dangling"
+        },
+        {
+          "prompt": "When you repeat words, you are using _____________.",
+          "answer": "repetition"
+        },
+        {
+          "prompt": "A _____________ in a poem can contain any number of lines.",
+          "answer": "stanza"
+        },
+        {
+          "prompt": "If I say the tree is scrawny, the _____________ is different from saying the tree is thin.",
+          "answer": "connotation"
+        },
+        {
+          "prompt": "The _____________ of joyful is “full of joy.”",
+          "answer": "denotation"
+        }
+      ]
+    }
+  ]
+}

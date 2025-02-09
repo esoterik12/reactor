@@ -1,0 +1,22 @@
+{
+  "levels": [
+    {
+      "id": 4,
+      "title": "Level 4",
+      "units": [
+        {
+          "id": 1,
+          "title": "Unit 1",
+          "vocabUrl": "level4/level4_unit1_vocab.json",
+          "spellingUrl": "level4/level4_unit1_spelling.json"
+        },
+        {
+          "id": 2,
+          "title": "Unit 2",
+          "vocabUrl": "level4/level4_unit2_vocab.json",
+          "spellingUrl": "level4/level4_unit2_spelling.json"
+        }
+      ]
+    }
+  ]
+}

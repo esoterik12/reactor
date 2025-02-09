@@ -1,0 +1,193 @@
+{
+  "level": 3,
+  "unit": 6,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "He ________ with her answer.", "answer": "disagreed" },
+        { "prompt": "Some people ________ spiders.", "answer": "dislike" },
+        {
+          "prompt": "The magician made the rabbit ________.",
+          "answer": "disappear"
+        },
+        {
+          "prompt": "My family bought tickets at the ________.",
+          "answer": "presale"
+        },
+        { "prompt": "Little children go to ________.", "answer": "preschool" },
+        { "prompt": "Did you ________ the carrots?", "answer": "precook" },
+        {
+          "prompt": "This song sounds like the ________ song.",
+          "answer": "previous"
+        },
+        {
+          "prompt": "Danielle wanted to ________ the treehouse.",
+          "answer": "rebuild"
+        },
+        { "prompt": "Jason will ________ later.", "answer": "return" },
+        { "prompt": "The store will ________ used books.", "answer": "resell" },
+        { "prompt": "You must ________ your name.", "answer": "reprint" },
+        { "prompt": "I want to ________ my presents.", "answer": "unwrap" },
+        {
+          "prompt": "She was ________ at the chess match.",
+          "answer": "unlucky"
+        },
+        { "prompt": "The child ________ the string.", "answer": "untied" },
+        { "prompt": "Our team is still ________.", "answer": "unbeaten" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "Andy was ________ to help with the work.",
+          "answer": "able"
+        },
+        { "prompt": "My favorite color is ________.", "answer": "purple" },
+        { "prompt": "Can you answer this ________?", "answer": "riddle" },
+        { "prompt": "Hold the basket by the ________.", "answer": "handle" },
+        { "prompt": "An ________ is a large bird.", "answer": "eagle" },
+        { "prompt": "This ________ is hard to solve.", "answer": "puzzle" },
+        {
+          "prompt": "There are walls around the ________.",
+          "answer": "castle"
+        },
+        {
+          "prompt": "There is a ________ bit of snow on the ground.",
+          "answer": "little"
+        },
+        { "prompt": "That ________ was sour!", "answer": "pickle" },
+        { "prompt": "Wipe your face with the ________.", "answer": "towel" },
+        { "prompt": "I paid a ________ for this apple.", "answer": "nickel" },
+        { "prompt": "The ________ has a long neck.", "answer": "camel" },
+        { "prompt": "We will ________ a long way.", "answer": "travel" },
+        { "prompt": "The train went through a ________.", "answer": "tunnel" },
+        {
+          "prompt": "The ________ stored nuts for winter.",
+          "answer": "squirrel"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "She ________ why the window was broken.",
+          "answer": "explained"
+        },
+        { "prompt": "________ there until I return.", "answer": "remain" },
+        {
+          "prompt": "Joan was ________ a book for class.",
+          "answer": "reading"
+        },
+        {
+          "prompt": "She painted each ________ carefully.",
+          "answer": "detail"
+        },
+        {
+          "prompt": "You must ________ the dirty shirts.",
+          "answer": "presoak"
+        },
+        { "prompt": "The zoo had only one baby ________.", "answer": "monkey" },
+        { "prompt": "Denis read the ________ news story.", "answer": "brief" },
+        {
+          "prompt": "The ________ still liked the children’s book.",
+          "answer": "preteen"
+        },
+        { "prompt": "She talked ________ his test score.", "answer": "about" },
+        {
+          "prompt": "My mother is ________ me to invite a friend over.",
+          "answer": "allowing"
+        },
+        { "prompt": "Do not ________ about the food!", "answer": "complain" },
+        { "prompt": "My class ________ recess.", "answer": "enjoys" },
+        {
+          "prompt": "There was ________ in the king’s cup.",
+          "answer": "poison"
+        },
+        {
+          "prompt": "She often ________ what she said before.",
+          "answer": "repeats"
+        },
+        { "prompt": "Winning the lottery seemed ________.", "answer": "unreal" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "The cramp from swimming was ________.",
+          "answer": "severe"
+        },
+        { "prompt": "The campers came ________.", "answer": "prepared" },
+        {
+          "prompt": "________ your thoughts about the story.",
+          "answer": "declare"
+        },
+        { "prompt": "We will write the songs ________.", "answer": "later" },
+        { "prompt": "She is a talented ________.", "answer": "writer" },
+        { "prompt": "My house doesn’t have a ________.", "answer": "cellar" },
+        { "prompt": "The horse traveled in a ________.", "answer": "trailer" },
+        {
+          "prompt": "I met my favorite ________ at the bookstore!",
+          "answer": "author"
+        },
+        { "prompt": "Her mom was a nice ________.", "answer": "person" },
+        {
+          "prompt": "Will someone take us to the ________?",
+          "answer": "circus"
+        },
+        { "prompt": "I like the taste of ________.", "answer": "garlic" },
+        {
+          "prompt": "The teacher asked us to pick a ________.",
+          "answer": "partner"
+        },
+        {
+          "prompt": "We want to ________ the historic site.",
+          "answer": "restore"
+        },
+        { "prompt": "This girl is my ________.", "answer": "sister" },
+        { "prompt": "That ________ could play anyone.", "answer": "actor" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Be ________ not to break the glass.",
+          "answer": "careful"
+        },
+        { "prompt": "The boy has a ________ smile.", "answer": "cheerful" },
+        {
+          "prompt": "The museum workers were very ________.",
+          "answer": "helpful"
+        },
+        { "prompt": "Flamingos are ________.", "answer": "colorful" },
+        {
+          "prompt": "Cold is ________ to tropical birds.",
+          "answer": "harmful"
+        },
+        { "prompt": "One cub was a ________ sight.", "answer": "pitiful" },
+        { "prompt": "Will the shot be ________?", "answer": "painless" },
+        { "prompt": "The help she gave was ________.", "answer": "priceless" },
+        { "prompt": "The baby tiger was ________.", "answer": "helpless" },
+        { "prompt": "She had a ________ night.", "answer": "sleepless" },
+        {
+          "prompt": "The ________ days caused a drought.",
+          "answer": "rainless"
+        },
+        { "prompt": "We had to look on ________.", "answer": "helplessly" },
+        { "prompt": "The lions slept ________.", "answer": "peacefully" },
+        {
+          "prompt": "Hanna picked up the vase ________.",
+          "answer": "carefully"
+        },
+        {
+          "prompt": "You must dress ________ for the weather.",
+          "answer": "wisely"
+        }
+      ]
+    }
+  ]
+}

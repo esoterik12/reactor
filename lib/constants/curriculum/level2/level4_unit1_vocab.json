@@ -1,0 +1,114 @@
+{
+  "level": 4,
+  "unit": 1,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "To ___________ means to make different or change.",
+          "answer": "alter"
+        },
+        {
+          "prompt": "To ___________ means to fall down or cave in.",
+          "answer": "collapse"
+        },
+        {
+          "prompt": "A ___________ is a difficult or dangerous situation.",
+          "answer": "crisis"
+        },
+        {
+          "prompt": "___________ is great damage or ruin.",
+          "answer": "destruction"
+        },
+        {
+          "prompt": "A ___________ is something that can cause harm or injury.",
+          "answer": "hazard"
+        },
+        {
+          "prompt": "Something ___________ is very harsh or serious.",
+          "answer": "severe"
+        },
+        {
+          "prompt": "Something ___________ is of a great amount or size.",
+          "answer": "substantial"
+        },
+        {
+          "prompt": "___________ means not able to tell beforehand.",
+          "answer": "unpredictable"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "To be ___________ means to be responsible.",
+          "answer": "accountable"
+        },
+        {
+          "prompt": "To ___________ means to give one’s opinion or to inform.",
+          "answer": "advise"
+        },
+        {
+          "prompt": "To act ___________ means to try anything to change a hopeless situation.",
+          "answer": "desperately"
+        },
+        {
+          "prompt": "If you ___________ , you waited or stopped, especially because of feeling unsure.",
+          "answer": "hesitated"
+        },
+        {
+          "prompt": "To be ___________ means to be made to feel ashamed or foolish.",
+          "answer": "humiliated"
+        },
+        {
+          "prompt": "An ___________ is a person or thing that stirs the mind, feelings, or imagination.",
+          "answer": "inspiration"
+        },
+        {
+          "prompt": "To have ___________ is to have respect for oneself.",
+          "answer": "self-esteem"
+        },
+        { "prompt": "___________ means 'uneasily.'", "answer": "uncomfortably" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Something that is ___________ is new or done in a new way.",
+          "answer": "innovative"
+        },
+        {
+          "prompt": "To be ___________ is to be sympathetic.",
+          "answer": "compassionate"
+        },
+        {
+          "prompt": "An ___________ is something difficult or important that a person plans or tries to do.",
+          "answer": "enterprise"
+        },
+        {
+          "prompt": "To be ___________ is to be extraordinary.",
+          "answer": "exceptional"
+        },
+        {
+          "prompt": "___________ are money that is ready for use.",
+          "answer": "funds"
+        },
+        {
+          "prompt": "A ___________ is a series of actions performed when making or doing something.",
+          "answer": "process"
+        },
+        {
+          "prompt": "A ___________ is a fixed way or method of doing something.",
+          "answer": "routine"
+        },
+        {
+          "prompt": "An ___________ is something someone decides to do or start.",
+          "answer": "undertaking"
+        }
+      ]
+    }
+  ]
+}

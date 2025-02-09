@@ -1,0 +1,117 @@
+{
+  "level": 4,
+  "unit": 3,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "When something is _____________ , it is given out as a task.",
+          "answer": "assigned"
+        },
+        {
+          "prompt": "_____________ is a willingness and happiness to share in an unselfish way.",
+          "answer": "generosity"
+        },
+        {
+          "prompt": "To do something _____________ is to do it carefully or with extreme caution.",
+          "answer": "gingerly"
+        },
+        {
+          "prompt": "To be _____________ is to show the qualities of being an adult.",
+          "answer": "mature"
+        },
+        {
+          "prompt": "_____________ are groups of people who join together for a purpose.",
+          "answer": "organizations"
+        },
+        {
+          "prompt": "The _____________ are the people who live in a particular place.",
+          "answer": "residents"
+        },
+        {
+          "prompt": "To be _____________ is to be spread or thrown about.",
+          "answer": "scattered"
+        },
+        {
+          "prompt": "When you are _____________ , you are very careful with making choices.",
+          "answer": "selective"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "A _____________ is a plan to refuse buying from or dealing with a person, nation, or business.",
+          "answer": "boycott"
+        },
+        {
+          "prompt": "_____________ is support that inspires hope and confidence.",
+          "answer": "encouragement"
+        },
+        {
+          "prompt": "To _____________ means to carry out or finish.",
+          "answer": "fulfill"
+        },
+        {
+          "prompt": "An _____________ is a lack of justice or fairness.",
+          "answer": "injustice"
+        },
+        {
+          "prompt": "People who are _____________ are treated badly by others.",
+          "answer": "mistreated"
+        },
+        {
+          "prompt": "People _____________ when they object to something.",
+          "answer": "protest"
+        },
+        {
+          "prompt": "A _____________ person has the abilities needed to do something.",
+          "answer": "qualified"
+        },
+        {
+          "prompt": "Someone who is _____________ had his or her name placed on a list.",
+          "answer": "registered"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "_____________ are improvements that move an idea ahead.",
+          "answer": "advancements"
+        },
+        {
+          "prompt": "_____________ is the science and business of raising crops and farm animals.",
+          "answer": "agriculture"
+        },
+        {
+          "prompt": "_____________ are qualities that identify a person or thing.",
+          "answer": "characteristics"
+        },
+        {
+          "prompt": "A _____________ is a worried interest in something.",
+          "answer": "concern"
+        },
+        {
+          "prompt": "To _____________ is to have a different opinion about something.",
+          "answer": "disagree"
+        },
+        {
+          "prompt": "To _____________ is to receive from a parent or other relative.",
+          "answer": "inherit"
+        },
+        {
+          "prompt": "When something is _____________ , it is common or widespread.",
+          "answer": "prevalent"
+        },
+        {
+          "prompt": "_____________ is the act of fighting against something.",
+          "answer": "resistance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "level": 4,
+  "unit": 2,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "Something _____________ is hidden by looking like its surroundings.",
+          "answer": "camouflaged"
+        },
+        {
+          "prompt": "To _____________ is to flow or let flow in small drops.",
+          "answer": "dribble"
+        },
+        {
+          "prompt": "Something _____________ is very unusual or remarkable.",
+          "answer": "extraordinary"
+        },
+        {
+          "prompt": "Something _____________ harms or kills by chemical action.",
+          "answer": "poisonous"
+        },
+        {
+          "prompt": "To _____________ is to leap or spring suddenly in attack.",
+          "answer": "pounce"
+        },
+        {
+          "prompt": "A _____________ is an animal that lives by hunting other animals for food.",
+          "answer": "predator"
+        },
+        {
+          "prompt": "An animal that is hunted by another animal is its _____________.",
+          "answer": "prey"
+        },
+        {
+          "prompt": "_____________ are rapid motions back and forth or up and down.",
+          "answer": "vibrations"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "To be _____________ means to feel bothered or irritated.",
+          "answer": "annoyed"
+        },
+        {
+          "prompt": "An _____________ is a way of thinking, acting, or feeling.",
+          "answer": "attitude"
+        },
+        {
+          "prompt": "A _____________ is a noisy disturbance.",
+          "answer": "commotion"
+        },
+        {
+          "prompt": "A _____________ person is grouchy or in a bad mood.",
+          "answer": "cranky"
+        },
+        {
+          "prompt": "Something _____________ is well known because it has been heard or seen before.",
+          "answer": "familiar"
+        },
+        {
+          "prompt": "To be _____________ is to feel disappointed by being kept from doing something.",
+          "answer": "frustrated"
+        },
+        {
+          "prompt": "_____________ people care only about themselves.",
+          "answer": "selfish"
+        },
+        {
+          "prompt": "A _____________ is something that someone does particularly well or gives extra attention to.",
+          "answer": "specialty"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "_____________ is the ability to do something in a new way.",
+          "answer": "creative"
+        },
+        {
+          "prompt": "If something is _____________, it is easily broken.",
+          "answer": "brittle"
+        },
+        {
+          "prompt": "_____________ things describe or tell about something.",
+          "answer": "descriptive"
+        },
+        {
+          "prompt": "_____________ means extended to full length.",
+          "answer": "outstretched"
+        },
+        {
+          "prompt": "“The stars are diamonds” is a _____________ because it compares two unlike things.",
+          "answer": "metaphor"
+        },
+        {
+          "prompt": "“My hands are as cold as ice” is a _____________ because it compares two things using like or as.",
+          "answer": "simile"
+        },
+        {
+          "prompt": "Snail and tale are words that _____________.",
+          "answer": "rhyme"
+        },
+        {
+          "prompt": "_____________ is the pattern of syllables in a line of poetry.",
+          "answer": "meter"
+        }
+      ]
+    }
+  ]
+}

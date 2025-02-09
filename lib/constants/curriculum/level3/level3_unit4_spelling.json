@@ -1,0 +1,169 @@
+{
+  "level": 3,
+  "unit": 4,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "Eat the soup with a ________.", "answer": "spoon" },
+        { "prompt": "A ________ is bigger than a duck.", "answer": "goose" },
+        {
+          "prompt": "Brenda hid in an empty ________ on the train.",
+          "answer": "booth"
+        },
+        {
+          "prompt": "Kyle was full of ________ when his friend moved away.",
+          "answer": "gloom"
+        },
+        { "prompt": "It is ________ to yell.", "answer": "rude" },
+        { "prompt": "I can float on a rubber ________.", "answer": "tube" },
+        {
+          "prompt": "Your library books are ________ back today.",
+          "answer": "due"
+        },
+        {
+          "prompt": "We need ________ to solve the mystery!",
+          "answer": "clues"
+        },
+        { "prompt": "Tell me a ________ story for once.", "answer": "truey" },
+        {
+          "prompt": "________ your food before swallowing it.",
+          "answer": "chew"
+        },
+        {
+          "prompt": "How do you celebrate the Fourth of ________?",
+          "answer": "July"
+        },
+        { "prompt": "Take a ________ at this picture.", "answer": "look" },
+        { "prompt": "Mr. Dean ________ my hand.", "answer": "shook" },
+        { "prompt": "My ________ has blue paper.", "answer": "notebook" },
+        { "prompt": "You ________ try the game again.", "answer": "could" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "It has been two ________ since that party.",
+          "answer": "years"
+        },
+        {
+          "prompt": "I had no idea you and your brother are ________!",
+          "answer": "twins"
+        },
+        {
+          "prompt": "She collected the ________ at the end of class.",
+          "answer": "trays"
+        },
+        { "prompt": "How many ________ are in America?", "answer": "states" },
+        {
+          "prompt": "After the fire, all I saw were ________.",
+          "answer": "ashes"
+        },
+        { "prompt": "________ can be dangerous.", "answer": "foxes" },
+        { "prompt": "How many ________ are in a yard?", "answer": "inches" },
+        { "prompt": "How many legs do ________ have?", "answer": "flies" },
+        {
+          "prompt": "There are many ________ in California.",
+          "answer": "cities"
+        },
+        { "prompt": "I love to watch ________ run.", "answer": "ponies" },
+        {
+          "prompt": "There are ________ of flowers growing in the forest.",
+          "answer": "bunches"
+        },
+        {
+          "prompt": "Mom told me to stay away from ________ while walking home.",
+          "answer": "alleys"
+        },
+        {
+          "prompt": "I planned many ________ for the school year.",
+          "answer": "lunches"
+        },
+        { "prompt": "I love to eat ________.", "answer": "cherries" },
+        { "prompt": "I will buy ________ for my mother.", "answer": "daisies" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "Who ________ you how to cook?", "answer": "taught" },
+        { "prompt": "The man ________ heavy boxes.", "answer": "hauls" },
+        { "prompt": "The heavy rain ________ a flood.", "answer": "caused" },
+        { "prompt": "We ________ for five minutes.", "answer": "paused" },
+        {
+          "prompt": "The birds each made a loud ________.",
+          "answer": "squawk"
+        },
+        {
+          "prompt": "The ________ was made with crayons.",
+          "answer": "drawing"
+        },
+        { "prompt": "The baby can ________ now.", "answer": "crawl" },
+        { "prompt": "The shiny new bike was ________.", "answer": "flawless" },
+        { "prompt": "Who will mow the ________?", "answer": "lawn" },
+        { "prompt": "The soup needs ________ and pepper.", "answer": "salt" },
+        { "prompt": "Everyone ________ about the movie.", "answer": "talked" },
+        { "prompt": "The ________ at school are long.", "answer": "halls" },
+        { "prompt": "Danica drank the ________ with ice.", "answer": "water" },
+        { "prompt": "I ________ a new book.", "answer": "bought" },
+        {
+          "prompt": "Teddy apologized for his ________ actions.",
+          "answer": "thoughtless"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "We had a bake ________ in school.", "answer": "sale" },
+        { "prompt": "The boat has a ________.", "answer": "sail" },
+        { "prompt": "________ soup is red.", "answer": "beet" },
+        { "prompt": "Norah ________ Kate in the race.", "answer": "beat" },
+        { "prompt": "Sue ________ on a donkey.", "answer": "rode" },
+        { "prompt": "We drove on the dirt ________.", "answer": "road" },
+        { "prompt": "Have you ever ________ a boat?", "answer": "rowed" },
+        { "prompt": "The dog wagged ________ tail.", "answer": "its" },
+        { "prompt": "________ time to go home.", "answer": "it’s" },
+        { "prompt": "The dog needs ________ help.", "answer": "your" },
+        { "prompt": "________ on time for the show.", "answer": "you’re" },
+        {
+          "prompt": "________ feet were sore from running.",
+          "answer": "their"
+        },
+        { "prompt": "________ helping the animals.", "answer": "they’re" },
+        { "prompt": "The baby needs ________ and quiet.", "answer": "peace" },
+        { "prompt": "I ate a ________ of an apple.", "answer": "piece" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "The tiger hid in the bush, preparing to ________.",
+          "answer": "pounce"
+        },
+        {
+          "prompt": "We ________ the dirty dishes in the sink.",
+          "answer": "placed"
+        },
+        { "prompt": "The board game came with ________.", "answer": "dice" },
+        { "prompt": "Give me fifty ________, please.", "answer": "cents" },
+        { "prompt": "What is the ________ of this book?", "answer": "price" },
+        { "prompt": "Rockets travel in ________.", "answer": "space" },
+        { "prompt": "The field ________ ate our wheat.", "answer": "mice" },
+        { "prompt": "His ________ has a hardwood desk.", "answer": "office" },
+        { "prompt": "The job paid a good ________.", "answer": "wage" },
+        { "prompt": "What is your ________?", "answer": "age" },
+        { "prompt": "We like going to new ________.", "answer": "gyms" },
+        { "prompt": "He is as tall as a ________.", "answer": "giant" },
+        {
+          "prompt": "Tim ________ his clothes after school.",
+          "answer": "changes"
+        },
+        { "prompt": "I’ll give her the ________.", "answer": "message" },
+        { "prompt": "How many ________ have you read?", "answer": "pages" }
+      ]
+    }
+  ]
+}

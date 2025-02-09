@@ -1,0 +1,117 @@
+{
+  "level": 4,
+  "unit": 6,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "Something that is _____________ is able to be replaced or restored.",
+          "answer": "renewable"
+        },
+        {
+          "prompt": "Something that is _____________ is hard or impossible to believe.",
+          "answer": "incredible"
+        },
+        {
+          "prompt": "When something is _____________ , it is changed in its character or condition.",
+          "answer": "converted"
+        },
+        {
+          "prompt": "When you _____________ something, you use it up or destroy it.",
+          "answer": "consume"
+        },
+        {
+          "prompt": "_____________ are the results of an action or condition.",
+          "answer": "Consequences"
+        },
+        {
+          "prompt": "A _____________ is an unplanned or unexpected situation in which something happens at the same time or in the same way.",
+          "answer": "coincidence"
+        },
+        {
+          "prompt": "When something is _____________ , it is changed in its character or condition.",
+          "answer": "converted"
+        },
+        {
+          "prompt": "When something is _____________ , it is put in place and ready for use or service.",
+          "answer": "installed"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "_____________ means to have withdrawn or moved back.",
+          "answer": "Retreated"
+        },
+        {
+          "prompt": "When something is _____________ , it can make someone angry or impatient.",
+          "answer": "irritating"
+        },
+        {
+          "prompt": "_____________ means to lose or have to give up because of some fault, accident, or mistake.",
+          "answer": "Forfeit"
+        },
+        {
+          "prompt": "_____________ is the power to put up with hardships or difficulties.",
+          "answer": "Endurance"
+        },
+        {
+          "prompt": "_____________ are people from whom one is descended.",
+          "answer": "Ancestors"
+        },
+        {
+          "prompt": "_____________ means looked down on as worthless, or scorned.",
+          "answer": "Despised"
+        },
+        {
+          "prompt": "To _____________ means to show or feel great respect for a person or thing.",
+          "answer": "honor"
+        },
+        {
+          "prompt": "_____________ means having or showing strong feeling, purpose, or effort.",
+          "answer": "Intensity"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "_____________ poems have irregular lines and lack a metrical pattern and rhyme scheme.",
+          "answer": "free verse"
+        },
+        {
+          "prompt": "_____________ is the use of sensory words to create a picture in the reader’s mind.",
+          "answer": "imagery"
+        },
+        {
+          "prompt": "A _____________ , such as “the lake is a mirror,” compares two unlike things without using like or as.",
+          "answer": "metaphor"
+        },
+        {
+          "prompt": "A person’s _____________ include his or her ancestors.",
+          "answer": "roots"
+        },
+        {
+          "prompt": "_____________ is a cloud of tiny drops of water or other liquid in the air.",
+          "answer": "Mist"
+        },
+        {
+          "prompt": "_____________ is a quality that makes one person or thing different from others.",
+          "answer": "Individuality"
+        },
+        {
+          "prompt": "To _____________ means to eat quickly, in large chunks.",
+          "answer": "gobble"
+        },
+        {
+          "prompt": "_____________ is giving human characteristics to anything that is not human.",
+          "answer": "Personification"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "level": 4,
+  "unit": 2,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "Will you ___________ the drain?", "answer": "unblock" },
+        { "prompt": "An ___________ kangaroo is small.", "answer": "unborn" },
+        { "prompt": "___________ the gate to go in.", "answer": "Unchain" },
+        { "prompt": "I will ___________ the dishwasher.", "answer": "unload" },
+        { "prompt": "We ___________ the door to go in.", "answer": "unlock" },
+        {
+          "prompt": "There was a ___________ on dog food.",
+          "answer": "recall"
+        },
+        {
+          "prompt": "I have to ___________ all the math.",
+          "answer": "relearn"
+        },
+        { "prompt": "___________ your used books.", "answer": "resell" },
+        { "prompt": "We had to ___________ the clothes.", "answer": "rewash" },
+        {
+          "prompt": "Please ___________ the ball of yarn.",
+          "answer": "rewind"
+        },
+        {
+          "prompt": "The artist's painting was ___________ .",
+          "answer": "imperfect"
+        },
+        {
+          "prompt": "We had to go the ___________ way to avoid the traffic accident.",
+          "answer": "indirect"
+        },
+        {
+          "prompt": "The math answer was ___________ .",
+          "answer": "incorrect"
+        },
+        { "prompt": "Breaking the law is ___________ .", "answer": "illegal" },
+        {
+          "prompt": "That movie star tends to ___________ .",
+          "answer": "overact"
+        },
+        { "prompt": "Don’t ___________ the coffee.", "answer": "overheat" },
+        { "prompt": "We took the ___________ downtown.", "answer": "subway" },
+        {
+          "prompt": "We had to ___________ the ingredients.",
+          "answer": "premix"
+        },
+        { "prompt": "Let’s ___________ where to meet.", "answer": "preplan" },
+        { "prompt": "We did not ___________ the meal.", "answer": "supersize" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "I have ___________ shirts at home.", "answer": "thrity" },
+        {
+          "prompt": "We walked the ___________ of the bridge.",
+          "answer": "width"
+        },
+        {
+          "prompt": "The ___________ towns are very cold.",
+          "answer": "northern"
+        },
+        { "prompt": "My sister is in ___________ grade.", "answer": "fifth" },
+        { "prompt": "Which hat should I ___________ ?", "answer": "choose" },
+        { "prompt": "Do not ___________ the hot pan!", "answer": "touch" },
+        {
+          "prompt": "The ___________ made a special dessert.",
+          "answer": "chef"
+        },
+        {
+          "prompt": "She has a ___________ to win the prize.",
+          "answer": "chance"
+        },
+        {
+          "prompt": "The ___________ struck out everyone.",
+          "answer": "pitcher"
+        },
+        {
+          "prompt": "The ___________ smells of baked bread.",
+          "answer": "kitchen"
+        },
+        {
+          "prompt": "I ___________ a picture of my house.",
+          "answer": "sketched"
+        },
+        {
+          "prompt": "I like ___________ on my hamburger.",
+          "answer": "ketchup"
+        },
+        {
+          "prompt": "Will the lion ___________ the food away?",
+          "answer": "snatch"
+        },
+        {
+          "prompt": "___________ relaxes your muscles.",
+          "answer": "stretching"
+        },
+        {
+          "prompt": "We need to ___________ to the hospital.",
+          "answer": "rush"
+        },
+        {
+          "prompt": "He began to ___________ about his chores.",
+          "answer": "whine"
+        },
+        {
+          "prompt": "The classroom is a ___________ of activity.",
+          "answer": "whirl"
+        },
+        {
+          "prompt": "___________ the king his royal crown.",
+          "answer": "bring"
+        },
+        { "prompt": "We made a bar ___________ in class.", "answer": "graph" },
+        {
+          "prompt": "That is an old ___________ of our town.",
+          "answer": "photo"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "Can you ___________ this paper?", "answer": "shred" },
+        {
+          "prompt": "Did you hear her ___________ with joy?",
+          "answer": "shriek"
+        },
+        { "prompt": "We ate ___________ for dinner.", "answer": "shrimp" },
+        {
+          "prompt": "We can ___________ the large picture.",
+          "answer": "shrink"
+        },
+        {
+          "prompt": "I read the ___________ for the play.",
+          "answer": "script"
+        },
+        {
+          "prompt": "A ___________ will hold the picture up.",
+          "answer": "screw"
+        },
+        {
+          "prompt": "The car might ___________ to a halt.",
+          "answer": "screech"
+        },
+        {
+          "prompt": "Try to ___________ up this mess.",
+          "answer": "straighten"
+        },
+        {
+          "prompt": "Use the ___________ to carry the backpack.",
+          "answer": "straps"
+        },
+        {
+          "prompt": "In class, we studied a ___________ of hair.",
+          "answer": "strand"
+        },
+        { "prompt": "Seeds ___________ in the spring.", "answer": "sprout" },
+        {
+          "prompt": "I like to ___________ out on the couch.",
+          "answer": "sprawl"
+        },
+        { "prompt": "I ___________ out of bed.", "answer": "sprang" },
+        { "prompt": "We were ___________ in the pool.", "answer": "splashing" },
+        {
+          "prompt": "The broken pen left a ___________ of ink.",
+          "answer": "splotch"
+        },
+        {
+          "prompt": "It was a ___________ to win the game.",
+          "answer": "thrill"
+        },
+        {
+          "prompt": "I felt a ___________ of pain in my head.",
+          "answer": "throb"
+        },
+        {
+          "prompt": "I ate ice cream for my sore ___________ .",
+          "answer": "throat"
+        },
+        {
+          "prompt": "Practice ___________ by finding the lowest price before buying something.",
+          "answer": "thrift"
+        },
+        { "prompt": "Go ___________ that first door.", "answer": "through" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "He threw a ___________ at the board.", "answer": "dart" },
+        {
+          "prompt": "The ___________ let us enter the gate.",
+          "answer": "guard"
+        },
+        { "prompt": "He won the attendance ___________ .", "answer": "award" },
+        {
+          "prompt": "Are the animals in the ___________ ?",
+          "answer": "backyard"
+        },
+        {
+          "prompt": "I don’t like to ___________ with you.",
+          "answer": "argue"
+        },
+        { "prompt": "The fire threw off a ___________ .", "answer": "spark" },
+        { "prompt": "Her arrow hit the ___________ .", "answer": "target" },
+        {
+          "prompt": "It was ___________ to bring a sweater.",
+          "answer": "smart"
+        },
+        {
+          "prompt": "A battery has an electric ___________ .",
+          "answer": "charge"
+        },
+        { "prompt": "The ___________ we bought is soft.", "answer": "carpet" },
+        { "prompt": "Water made the wood ___________ .", "answer": "warp" },
+        { "prompt": "Shut the ___________ when you leave.", "answer": "door" },
+        { "prompt": "We passed by an old ___________ .", "answer": "fort" },
+        { "prompt": "I work best in the ___________ .", "answer": "morning" },
+        { "prompt": "The ___________ had pretty feathers.", "answer": "stork" },
+        { "prompt": "The telephone ___________ is broken.", "answer": "cord" },
+        { "prompt": "I was ___________ out after the game.", "answer": "worn" },
+        {
+          "prompt": "If it is ___________ outside, we stay in.",
+          "answer": "stormy"
+        },
+        {
+          "prompt": "Is the ___________ of the apple edible?",
+          "answer": "core"
+        },
+        {
+          "prompt": "Please don’t ___________ me with that story again.",
+          "answer": "bore"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "The ___________ boy missed school.", "answer": "sickly" },
+        {
+          "prompt": "There were ___________ any pears left.",
+          "answer": "hardly"
+        },
+        { "prompt": "Let’s run ___________ to the bus.", "answer": "quickly" },
+        { "prompt": "Walk ___________ on the ice.", "answer": "slowly" },
+        {
+          "prompt": "He wrapped his foot ___________ .",
+          "answer": "carefully"
+        },
+        {
+          "prompt": "The parade is a ___________ event.",
+          "answer": "wonderful"
+        },
+        { "prompt": "The poem was ___________ .", "answer": "beautiful" },
+        {
+          "prompt": "The athlete was very ___________ .",
+          "answer": "graceful"
+        },
+        { "prompt": "A ___________ of honey is sweet.", "answer": "spoonful" },
+        {
+          "prompt": "The ___________ hid him from view.",
+          "answer": "darkness"
+        },
+        {
+          "prompt": "The empty bag looked ___________ .",
+          "answer": "shapeless"
+        },
+        { "prompt": "The actress looked ___________ .", "answer": "ageless" },
+        {
+          "prompt": "An ___________ can last a long time.",
+          "answer": "illness"
+        },
+        { "prompt": "His ___________ knew no bounds.", "answer": "goodness" },
+        { "prompt": "The ___________ couch was new.", "answer": "spotless" },
+        { "prompt": "The haircut was ___________ .", "answer": "painless" },
+        {
+          "prompt": "Video games were her ___________ .",
+          "answer": "weakness"
+        },
+        { "prompt": "The ___________ blue looks black.", "answer": "darkest" },
+        { "prompt": "The sky was ___________ at dusk.", "answer": "clearest" },
+        {
+          "prompt": "He thanked his ___________ mother.",
+          "answer": "thoughtful"
+        }
+      ]
+    }
+  ]
+}

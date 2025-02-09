@@ -1,0 +1,117 @@
+{
+  "level": 3,
+  "unit": 6,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "A person who ________with others gave them information or ideas.",
+          "answer": "communicated"
+        },
+        {
+          "prompt": "Something ________is very important or necessary.",
+          "answer": "essential"
+        },
+        {
+          "prompt": "A ________is something a person wants and tries to get or become.",
+          "answer": "goal"
+        },
+        {
+          "prompt": "A person who is ________has a reason for doing something.",
+          "answer": "motivated"
+        },
+        {
+          "prompt": "A ________ job requires special education.",
+          "answer": "professional"
+        },
+        {
+          "prompt": "________ is the careful study of a topic to find and learn facts.",
+          "answer": "research"
+        },
+        {
+          "prompt": "When something is ________, it is important.",
+          "answer": "serious"
+        },
+        {
+          "prompt": "A ________ knows a great deal about something.",
+          "answer": "specialist"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "________ means afraid or frightened.",
+          "answer": "alarmed"
+        },
+        {
+          "prompt": "________ is a great suffering of the mind or agony.",
+          "answer": "anguish"
+        },
+        {
+          "prompt": "Something that is ________ needs to be done, had, or used.",
+          "answer": "necessary"
+        },
+        {
+          "prompt": "When you are ________, you think about one thing all the time and nothing else.",
+          "answer": "obsessed"
+        },
+        {
+          "prompt": "When you ________something, you have or own it.",
+          "answer": "possess"
+        },
+        {
+          "prompt": "A ________ is something given or received in return for something done.",
+          "answer": "reward"
+        },
+        {
+          "prompt": "A ________ can be money, jewels, or anything else that is valuable.",
+          "answer": "treasure"
+        },
+        {
+          "prompt": "________ is a having a lot of money or valuable things.",
+          "answer": "wealth"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "________ is something that interests and amuses a person.",
+          "answer": "entertainment"
+        },
+        {
+          "prompt": "Something that is ________ is funny and makes people laugh.",
+          "answer": "humorous"
+        },
+        {
+          "prompt": "Something that is ________ is very silly or foolish.",
+          "answer": "ridiculous"
+        },
+        {
+          "prompt": "Something that ________, slid or glided like a snake.",
+          "answer": "slithered"
+        },
+        {
+          "prompt": "A ________ is a poem that tells a story.",
+          "answer": "narrative poem"
+        },
+        {
+          "prompt": "Words that ________ end in the same sound.",
+          "answer": "rhyme"
+        },
+        {
+          "prompt": "A ________ is a regular pattern of sounds that is repeated.",
+          "answer": "rhythm"
+        },
+        {
+          "prompt": "A ________ is a group of lines arranged in a pattern of rhyme or rhythm.",
+          "answer": "stanza"
+        }
+      ]
+    }
+  ]
+}

@@ -19,11 +19,7 @@ const AnimateIcon: React.FC<AnimateIcon> = ({ isOpen, icon }) => {
   }
 
   return (
-    <motion.svg
-      width='20'
-      height='20'
-      viewBox='0 0 10 10'
-      // Animate based on the isOpen prop
+    <motion.div
       animate={isOpen ? 'open' : 'closed'}
       variants={triangleVariants}
       // Ensure the rotation pivots around the center
@@ -32,7 +28,7 @@ const AnimateIcon: React.FC<AnimateIcon> = ({ isOpen, icon }) => {
     >
       {/* A simple right-pointing triangle */}
       {icon}
-    </motion.svg>
+    </motion.div>
   )
 }
 

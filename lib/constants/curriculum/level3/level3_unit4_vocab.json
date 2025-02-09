@@ -1,0 +1,111 @@
+{
+  "level": 3,
+  "unit": 4,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "An ________ is something that you worked hard to finish or learn.",
+          "answer": "achievement"
+        },
+        {
+          "prompt": "If you ________, you said you were sorry.",
+          "answer": "apologized"
+        },
+        {
+          "prompt": "When you give something your ________, you watch, listen, or concentrate on it.",
+          "answer": "attention"
+        },
+        {
+          "prompt": "An ________ is a group of people gathered to hear or see something.",
+          "answer": "audience"
+        },
+        {
+          "prompt": "When you have ________, you have trust or faith in something or someone.",
+          "answer": "confidence"
+        },
+        {
+          "prompt": "When you feel ________, you feel shy, uncomfortable, or ashamed.",
+          "answer": "embarrassed"
+        },
+        {
+          "prompt": "If you ________ something, you became fully aware of it.",
+          "answer": "realized"
+        },
+        {
+          "prompt": "________ are natural abilities or skills.",
+          "answer": "talents"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "To________ is to give a warning or signal.",
+          "answer": "alert"
+        },
+        {
+          "prompt": "A ________ is a situation in which people or animals are trying to be more successful than others.",
+          "answer": "competition"
+        },
+        {
+          "prompt": "An ________ is the place that surrounds a living thing and affects its survival.",
+          "answer": "environment"
+        },
+        {
+          "prompt": "Something that is ________ is very good.",
+          "answer": "excellent"
+        },
+        {
+          "prompt": "To ________ is to like something better than another thing.",
+          "answer": "prefer"
+        },
+        {
+          "prompt": "________ is when something is kept safe.",
+          "answer": "protection"
+        },
+        {
+          "prompt": "To be________ is to belong to the same family.",
+          "answer": "related"
+        },
+        {
+          "prompt": "________ is something that protects or covers something else.",
+          "answer": "shelter"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "________ means willing to risk danger in order to have exciting or unusual experiences.",
+          "answer": "adventurous"
+        },
+        { "prompt": "________ means very brave.", "answer": "courageous" },
+        {
+          "prompt": "________ means the same as “very.”",
+          "answer": "extremely"
+        },
+        { "prompt": "________means strange or unusual.", "answer": "weird" },
+        {
+          "prompt": "________ is a form of poetry that does not have a regular pattern of rhyme and rhythm.",
+          "answer": "free verse"
+        },
+        {
+          "prompt": "A ________ is a poem that tells a story.",
+          "answer": "narrative poem"
+        },
+        {
+          "prompt": "________ means that words or phrases in a poem are repeated for effect.",
+          "answer": "repetition"
+        },
+        {
+          "prompt": "To ________ means to end with the same sound",
+          "answer": "rhyme"
+        }
+      ]
+    }
+  ]
+}

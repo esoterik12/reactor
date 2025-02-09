@@ -1,0 +1,117 @@
+{
+  "level": 4,
+  "unit": 5,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "Something _____________ is usual or normal for that person, thing, or group",
+          "answer": "typical"
+        },
+        {
+          "prompt": "To _____________ is to stick closely.",
+          "answer": "cling"
+        },
+        {
+          "prompt": "To _____________ is to mix with a liquid and become part of the liquid.",
+          "answer": "dissolves"
+        },
+        {
+          "prompt": "Something _____________ contains very small bits of sand or stone.",
+          "answer": "gritty"
+        },
+        {
+          "prompt": "_____________ means “moist” or “full of water vapor.”",
+          "answer": "humid"
+        },
+        {
+          "prompt": "To _____________ is to make something look bigger than it really is.",
+          "answer": "magnify"
+        },
+        {
+          "prompt": "A _____________ is a device for looking at things that are too small to be seen with the naked eye.",
+          "answer": "microscope"
+        },
+        {
+          "prompt": "To _____________ is to mix or come together.",
+          "answer": "mingle"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "To _____________ means to turn or spin around rapidly",
+          "answer": "whirl"
+        },
+        {
+          "prompt": "_____________ means hard to please and picky.",
+          "answer": "Fussy"
+        },
+        {
+          "prompt": "To _____________ means to say or show something.",
+          "answer": "express"
+        },
+        {
+          "prompt": "To _____________ means to surround or form a circle around.",
+          "answer": "encircle"
+        },
+        {
+          "prompt": "An _____________ is a strong feeling such as love, hate, happiness, sorrow, or fear.",
+          "answer": "emotion"
+        },
+        {
+          "prompt": "A _____________ is a bunch of picked flowers.",
+          "answer": "bouquet"
+        },
+        {
+          "prompt": "_____________ are pictures of people, usually showing only the face and upper part of the body.",
+          "answer": "portraits"
+        },
+        {
+          "prompt": "Something that _____________ shines in quick, bright flashes.",
+          "answer": "sparkles"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "To _____________ something is to discover it, or make it known.",
+          "answer": "uncover"
+        },
+        {
+          "prompt": "Something that is _____________ is very large or great.",
+          "answer": "tremendous"
+        },
+        {
+          "prompt": "To _____________ something means to keep a record.",
+          "answer": "document"
+        },
+        {
+          "prompt": "_____________ is the study of the way humans lived a long time ago.",
+          "answer": "Archaeology"
+        },
+        {
+          "prompt": "An _____________ is a period of time in history, often starting with an important event.",
+          "answer": "era"
+        },
+        {
+          "prompt": "_____________ is proof of something.",
+          "answer": "Evidence"
+        },
+        {
+          "prompt": "An _____________ is a journey made for a particular reason.",
+          "answer": "expedition"
+        },
+        {
+          "prompt": "To be _____________ means to last a long time without changing.",
+          "answer": "permanent"
+        }
+      ]
+    }
+  ]
+}

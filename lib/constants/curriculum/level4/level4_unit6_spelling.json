@@ -1,0 +1,371 @@
+{
+  "level": 4,
+  "unit": 6,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "The people were _____________ when the car drove down the bumpy road.",
+          "answer": "shaken"
+        },
+        {
+          "prompt": "We came across a _____________ ship.",
+          "answer": "sunken"
+        },
+        {
+          "prompt": "There are _____________ kids on my team.",
+          "answer": "eleven"
+        },
+        {
+          "prompt": "The scarf was _____________ out of wool.",
+          "answer": "woven"
+        },
+        {
+          "prompt": "They plan to _____________ our street.",
+          "answer": "widen"
+        },
+        { "prompt": "I have never _____________ a horse.", "answer": "ridden" },
+        {
+          "prompt": "It cannot be _____________ that he stole the money.",
+          "answer": "proven"
+        },
+        {
+          "prompt": "Do you go to the beach _____________ ?",
+          "answer": "often"
+        },
+        {
+          "prompt": "A _____________ made a nest in our tree.",
+          "answer": "robin"
+        },
+        {
+          "prompt": "My _____________ is visiting from Mexico.",
+          "answer": "cousin"
+        },
+        {
+          "prompt": "There is a _____________ in this cookie.",
+          "answer": "raisin"
+        },
+        {
+          "prompt": "I ate a warm blueberry _____________ .",
+          "answer": "muffin"
+        },
+        {
+          "prompt": "I spotted a _____________ at the zoo.",
+          "answer": "penguin"
+        },
+        {
+          "prompt": "Please push the elevator _____________ .",
+          "answer": "button"
+        },
+        {
+          "prompt": "I gave a _____________ for being late.",
+          "answer": "reason"
+        },
+        {
+          "prompt": "I am wearing green _____________ socks.",
+          "answer": "cotton"
+        },
+        {
+          "prompt": "I pulled my brother in a _____________ .",
+          "answer": "wagon"
+        },
+        {
+          "prompt": "The _____________ slept in a nest full of gold coins and jewels.",
+          "answer": "dragon"
+        },
+        {
+          "prompt": "Paul and I have a lot in _____________ .",
+          "answer": "common"
+        },
+        { "prompt": "We saw a dinosaur _____________ .", "answer": "skeleton" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "He tripped on a tree _____________ .", "answer": "root" },
+        {
+          "prompt": "We took the quickest _____________ home.",
+          "answer": "route"
+        },
+        {
+          "prompt": "My dog wagged his _____________ excitedly.",
+          "answer": "tail"
+        },
+        {
+          "prompt": "Have you heard the _____________ of Paul Bunyan?",
+          "answer": "tale"
+        },
+        {
+          "prompt": "Do you like to _____________ in the ocean?",
+          "answer": "wade"
+        },
+        {
+          "prompt": "The baby _____________ seven pounds.",
+          "answer": "weighted"
+        },
+        {
+          "prompt": "The _____________ lives in the castle.",
+          "answer": "prince"
+        },
+        {
+          "prompt": "She _____________ her letters carefully.",
+          "answer": "prints"
+        },
+        {
+          "prompt": "We saw a _____________ run into the woods.",
+          "answer": "doe"
+        },
+        {
+          "prompt": "It’s fun to roll out cookie _____________ .",
+          "answer": "dough"
+        },
+        {
+          "prompt": "That _____________ has large antlers.",
+          "answer": "moose"
+        },
+        {
+          "prompt": "I tasted the chocolate _____________ .",
+          "answer": "mousse"
+        },
+        { "prompt": "_____________ been here all day.", "answer": "We've" },
+        { "prompt": "Can you _____________ on a loom?", "answer": "weave" },
+        { "prompt": "_____________ coming to the party?", "answer": "Who's" },
+        {
+          "prompt": "_____________ jacket is on the floor?",
+          "answer": "Whose"
+        },
+        {
+          "prompt": "He acts _____________ outside of school.",
+          "answer": "bolder"
+        },
+        { "prompt": "We climbed over a _____________ .", "answer": "boulder" },
+        {
+          "prompt": "Have _____________ with your brother.",
+          "answer": "patience"
+        },
+        {
+          "prompt": "My doctor is kind to her _____________ .",
+          "answer": "patients"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "Bad news did not _____________ her.",
+          "answer": "discourage"
+        },
+        {
+          "prompt": "My dog will never _____________ me.",
+          "answer": "disappoint"
+        },
+        {
+          "prompt": "He stared at her in total _____________ .",
+          "answer": "disbelief"
+        },
+        {
+          "prompt": "Would you _____________ someone who stole from you?",
+          "answer": "distrust"
+        },
+        {
+          "prompt": "Some fans were being _____________ .",
+          "answer": "disloyal"
+        },
+        {
+          "prompt": "Did you _____________ your gloves?",
+          "answer": "misplace"
+        },
+        { "prompt": "I did not _____________ the jar.", "answer": "mislabel" },
+        {
+          "prompt": "My compass will not _____________ me.",
+          "answer": "mislead"
+        },
+        { "prompt": "I tried not to _____________ .", "answer": "misstep" },
+        {
+          "prompt": "She was careful not to _____________ the items on the list.",
+          "answer": "misnumber"
+        },
+        {
+          "prompt": "The _____________ milk is healthier.",
+          "answer": "nonfat"
+        },
+        {
+          "prompt": "_____________ books include facts.",
+          "answer": "Nonfiction"
+        },
+        {
+          "prompt": "The baby’s talk was all _____________ .",
+          "answer": "nonsense"
+        },
+        {
+          "prompt": "We are taking a _____________ flight.",
+          "answer": "nonstop"
+        },
+        {
+          "prompt": "Ned was _____________ to fix the TV.",
+          "answer": "unable"
+        },
+        {
+          "prompt": "_____________ the iron after using it.",
+          "answer": "Unplug"
+        },
+        {
+          "prompt": "I felt _____________ about my answer.",
+          "answer": "uncertain"
+        },
+        {
+          "prompt": "This is a very _____________ chair.",
+          "answer": "uncomportable"
+        },
+        { "prompt": "Did you _____________ the secret?", "answer": "uncover" },
+        {
+          "prompt": "His hands were _____________ after digging in the garden.",
+          "answer": "unclean"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "This toy has a _____________ controller.",
+          "answer": "wireless"
+        },
+        { "prompt": "The forecast was _____________ .", "answer": "sunny" },
+        {
+          "prompt": "That little kitten is very _____________ .",
+          "answer": "furry"
+        },
+        {
+          "prompt": "I was really _____________ to be chosen.",
+          "answer": "lucky"
+        },
+        { "prompt": "The dog is small but _____________ .", "answer": "hairy" },
+        {
+          "prompt": "I _____________ have enough time to finish.",
+          "answer": "barely"
+        },
+        { "prompt": "The food was _____________ .", "answer": "tasteless" },
+        { "prompt": "I ate a _____________ of peanuts.", "answer": "handful" },
+        {
+          "prompt": "The dry land seemed _____________ .",
+          "answer": "lifeless"
+        },
+        {
+          "prompt": "Swimming was part of her new _____________ plan.",
+          "answer": "fitness"
+        },
+        {
+          "prompt": "_____________ we will win the car!",
+          "answer": "Hopefully"
+        },
+        {
+          "prompt": "Her smile showed her _____________ .",
+          "answer": "happiness"
+        },
+        {
+          "prompt": "After lunch, his _____________ made him feel sleepy.",
+          "answer": "fullness"
+        },
+        {
+          "prompt": "The song’s mood was _____________ .",
+          "answer": "sorrowful"
+        },
+        {
+          "prompt": "We _____________ played with the puppy.",
+          "answer": "gently"
+        },
+        {
+          "prompt": "_____________ kept me out of school.",
+          "answer": "sickness"
+        },
+        { "prompt": "The chorus sang _____________ .", "answer": "joyfully" },
+        {
+          "prompt": "I had a day of _____________ wandering.",
+          "answer": "aimless"
+        },
+        {
+          "prompt": "The race left me _____________ .",
+          "answer": "breathless"
+        },
+        { "prompt": "I _____________ hope you win.", "answer": "certainly" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "My grade remained _____________ .",
+          "answer": "unchanged"
+        },
+        {
+          "prompt": "An _____________ man saved the baby.",
+          "answer": "unnamed"
+        },
+        {
+          "prompt": "I will _____________ the facts of the case.",
+          "answer": "restate"
+        },
+        {
+          "prompt": "He put the car into _____________ and began to back up.",
+          "answer": "reverse"
+        },
+        {
+          "prompt": "Mr. Jones is an _____________ visitor.",
+          "answer": "infrequent"
+        },
+        { "prompt": "Jan bought _____________ ink.", "answer": "invisible" },
+        { "prompt": "I used a _____________ phone card.", "answer": "prepaid" },
+        {
+          "prompt": "Don’t _____________ your teacher.",
+          "answer": "displease"
+        },
+        {
+          "prompt": "We took _____________ to fix the problem.",
+          "answer": "action"
+        },
+        {
+          "prompt": "It was a popular _____________ .",
+          "answer": "establishment"
+        },
+        { "prompt": "I sat in an _____________ chair.", "answer": "oversized" },
+        {
+          "prompt": "It is unwise to _____________ others.",
+          "answer": "prejudge"
+        },
+        {
+          "prompt": "Dad uses the _____________ daily.",
+          "answer": "interstate"
+        },
+        {
+          "prompt": "Those two streets _____________ .",
+          "answer": "intersect"
+        },
+        {
+          "prompt": "I had to _____________ the soccer ball.",
+          "answer": "deflate"
+        },
+        {
+          "prompt": "The council meets _____________ .",
+          "answer": "semiweekly"
+        },
+        {
+          "prompt": "Brad _____________ helped at the party.",
+          "answer": "happily"
+        },
+        {
+          "prompt": "The boy’s _____________ was obvious.",
+          "answer": "kindness"
+        },
+        { "prompt": "I _____________ cleaned my room.", "answer": "finally" },
+        {
+          "prompt": "Jed was _____________ about the test.",
+          "answer": "fearful"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "level": 3,
+  "unit": 5,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        { "prompt": "________means the position of belonging to a country, with rights and responsibilities.", "answer": "citizenship" },
+        { "prompt": "When something is ________, it goes on without stopping.", "answer": "continued" },
+        { "prompt": "Something ________is courageous and bold.", "answer": "daring" },
+        { "prompt": "When you are ________, you are filled with great fear or horror.", "answer": "horrified" },
+        { "prompt": "You ________ when you join with others or take part in something.", "answer": "participate" },
+        { "prompt": "To have ________ means to have suggested something to others for their consideration.", "answer": "proposed" },
+        { "prompt": "________ is the state of not being honest or fair.", "answer": "unfairness" },
+        { "prompt": "To ________ means to pause when being unsure.", "answer": "waver" }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        { "prompt": "When you ________ to something, you confess to it.", "answer": "admit" },
+        { "prompt": "When you ________, you trade things for other things without using money.", "answer": "barter" },
+        { "prompt": "If you ________ something, you thought about it carefully before making a decision.", "answer": "considered" },
+        { "prompt": "A ________ is something you made.", "answer": "creation" },
+        { "prompt": "When something is ________, it is not big or important.", "answer": "humble" },
+        { "prompt": "Something that is ________ is very beautiful and grand.", "answer": "magnificent" },
+        { "prompt": "A ________ is an amount you paid for something.", "answer": "payment" },
+        { "prompt": "To do something ________ is to do it unwillingly or with hesitation.", "answer": "reluctantly" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "________ is being able to be active; power.", "answer": "energy" },
+        { "prompt": "If something is ________, it is made by nature, without any care from humans.", "answer": "natural" },
+        { "prompt": "________is the act of spoiling something or making it impure.", "answer": "pollution" },
+        { "prompt": "To ________ something means to make it or show it.", "answer": "produce" },
+        { "prompt": "Something that is ________ is able to be created again.", "answer": "renewable" },
+        { "prompt": "When you ________ something, you find something else to take its place.", "answer": "replace" },
+        { "prompt": "________ are forces that bring something about or cause it to exist.", "answer": "sources" },
+        { "prompt": "________ describes a custom or belief that is handed down from generation to generation.", "answer": "traditional" }
+      ]
+    }
+  ]
+}

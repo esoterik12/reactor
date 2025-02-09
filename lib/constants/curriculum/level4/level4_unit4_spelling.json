@@ -1,0 +1,317 @@
+{
+  "level": 4,
+  "unit": 4,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "I never _____________ the cheese.", "answer": "tasted" },
+        {
+          "prompt": "The dog is _____________ the newspaper.",
+          "answer": "ripped"
+        },
+        { "prompt": "The storm _____________ us indoors.", "answer": "forced" },
+        {
+          "prompt": "The acrobats were _____________ across the stage.",
+          "answer": "flipping"
+        },
+        {
+          "prompt": "He _____________ his pencil on the table.",
+          "answer": "tapped"
+        },
+        {
+          "prompt": "The gymnast _____________ over the bar.",
+          "answer": "flipped"
+        },
+        {
+          "prompt": "I was too _____________ to ride the horse.",
+          "answer": "scared"
+        },
+        {
+          "prompt": "I _____________ down the bus at my stop.",
+          "answer": "flagged"
+        },
+        {
+          "prompt": "I could not wear _____________ pants.",
+          "answer": "ripped"
+        },
+        { "prompt": "She _____________ down the path.", "answer": "skipped" },
+        { "prompt": "He was _____________ on the wall.", "answer": "tapping" },
+        {
+          "prompt": "I _____________ fifty dollars last year.",
+          "answer": "saved"
+        },
+        { "prompt": "They were _____________ stones.", "answer": "skipping" },
+        { "prompt": "Stop _____________ your brother!", "answer": "scaring" },
+        {
+          "prompt": "Mom was _____________ down a taxi.",
+          "answer": "flagging"
+        },
+        {
+          "prompt": "We _____________ the election in class.",
+          "answer": "discussed"
+        },
+        {
+          "prompt": "I am _____________ money to buy a mitt.",
+          "answer": "saving"
+        },
+        {
+          "prompt": "My sister is _____________ the soup.",
+          "answer": "tasting"
+        },
+        {
+          "prompt": "He is _____________ me to go to the party.",
+          "answer": "forcing"
+        },
+        { "prompt": "We are _____________ our plans.", "answer": "discussing" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "Your joke was _____________ than mine.",
+          "answer": "funnier"
+        },
+        {
+          "prompt": "Nine _____________ live on our street.",
+          "answer": "families"
+        },
+        {
+          "prompt": "He has a bank full of _____________.",
+          "answer": "pennies"
+        },
+        {
+          "prompt": "I was _____________ that we’d be late.",
+          "answer": "worried"
+        },
+        {
+          "prompt": "Smiling, my mom _____________, “Yes.”",
+          "answer": "replied"
+        },
+        {
+          "prompt": "The jellybean flavors were _____________.",
+          "answer": "varied"
+        },
+        {
+          "prompt": "My sister _____________ Jim next week.",
+          "answer": "marries"
+        },
+        { "prompt": "A student _____________ books.", "answer": "carries" },
+        { "prompt": "We _____________ made it on time.", "answer": "easily" },
+        {
+          "prompt": "That’s the _____________ story I’ve heard.",
+          "answer": "silliest"
+        },
+        {
+          "prompt": "I felt _____________ before the test.",
+          "answer": "jumpier"
+        },
+        {
+          "prompt": "My bag is _____________ than yours.",
+          "answer": "emptier"
+        },
+        { "prompt": "We are _____________ on weekends.", "answer": "merrier" },
+        { "prompt": "Has she _____________ to college?", "answer": "applied" },
+        {
+          "prompt": "We sat _____________ next to the fire.",
+          "answer": "cozily"
+        },
+        {
+          "prompt": "We all felt bad, but Mike was the _____________.",
+          "answer": "sorriest"
+        },
+        {
+          "prompt": "The princess smiled _____________.",
+          "answer": "prettily"
+        },
+        {
+          "prompt": "My cousin is _____________ than I am.",
+          "answer": "lazier"
+        },
+        { "prompt": "I am _____________ when it snows.", "answer": "happiest" },
+        {
+          "prompt": "Jon was the dizziest boy on the ride.",
+          "answer": "dizziest"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "I am in a silly _____________.", "answer": "mood" },
+        {
+          "prompt": "Flower pots sit on our front _____________.",
+          "answer": "stoop"
+        },
+        { "prompt": "Cars _____________ down the highway.", "answer": "zoom" },
+        {
+          "prompt": "The boat’s _____________ can help you.",
+          "answer": "crew"
+        },
+        {
+          "prompt": "We used the meat in our _____________.",
+          "answer": "stew"
+        },
+        {
+          "prompt": "Measure the paper with a _____________.",
+          "answer": "ruler"
+        },
+        {
+          "prompt": "Some farmers call vegetables _____________.",
+          "answer": "produce"
+        },
+        {
+          "prompt": "The newspaper had a special _____________.",
+          "answer": "issue"
+        },
+        {
+          "prompt": "Allison is a talented math _____________.",
+          "answer": "tutor"
+        },
+        {
+          "prompt": "Her dad saw the _____________ in the story.",
+          "answer": "truth"
+        },
+        { "prompt": "The banana was _____________.", "answer": "bruised" },
+        {
+          "prompt": "The peaches were _____________ and sweet.",
+          "answer": "juicy"
+        },
+        {
+          "prompt": "That store only sells men’s _____________.",
+          "answer": "suits"
+        },
+        { "prompt": "Stand with that _____________.", "answer": "group" },
+        {
+          "prompt": "_____________ have a party tomorrow.",
+          "answer": "you'll"
+        },
+        { "prompt": "That is a _____________ house.", "answer": "huge" },
+        { "prompt": "The _____________ stole a computer.", "answer": "crook" },
+        { "prompt": "Do you like _____________ sweaters?", "answer": "wool" },
+        { "prompt": "He _____________ my hairbrush.", "answer": "used" },
+        { "prompt": "We _____________ leave now.", "answer": "should" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "The car made _____________ yesterday.",
+          "answer": "noises"
+        },
+        { "prompt": "We heard _____________ outside.", "answer": "voices" },
+        {
+          "prompt": "The snow day made us _____________.",
+          "answer": "rejoice"
+        },
+        {
+          "prompt": "It will _____________ Mike if you keep interrupting him.",
+          "answer": "annoy"
+        },
+        {
+          "prompt": "Don’t _____________ those old letters!",
+          "answer": "destroy"
+        },
+        { "prompt": "They took a _____________ to China.", "answer": "voyage" },
+        { "prompt": "We dumped a _____________ of dirt.", "answer": "mound" },
+        { "prompt": "We drove _____________  to Florida.", "answer": "south" },
+        {
+          "prompt": "My kitten weighs about a _____________.",
+          "answer": "pound"
+        },
+        {
+          "prompt": "The _____________ followed the scent.",
+          "answer": "hound"
+        },
+        { "prompt": "Put your money in the _____________.", "answer": "pouch" },
+        {
+          "prompt": "We collected a _____________ cans.",
+          "answer": "thousand"
+        },
+        {
+          "prompt": "I wound the rope _____________ the tree.",
+          "answer": "wound"
+        },
+        { "prompt": "I’m a _____________ when I’m tired.", "answer": "grouch" },
+        {
+          "prompt": "I read a story about a _____________.",
+          "answer": "cowboy"
+        },
+        {
+          "prompt": "The wedding _____________ was beautiful.",
+          "answer": "gown"
+        },
+        { "prompt": "You _____________ when you are sad.", "answer": "frown" },
+        { "prompt": "Why are the dogs _____________?", "answer": "howling" },
+        { "prompt": "A daisy is a _____________.", "answer": "flower" },
+        {
+          "prompt": "The princess hid in the _____________.",
+          "answer": "tower"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "The player _____________ the ball.", "answer": "caught" },
+        { "prompt": "We have _____________ about speeding.", "answer": "laws" },
+        {
+          "prompt": "The cartoon was _____________ quickly.",
+          "answer": "drawn"
+        },
+        { "prompt": "We bought a huge _____________.", "answer": "strawberry" },
+        {
+          "prompt": "We filled the barn with _____________.",
+          "answer": "straw"
+        },
+        {
+          "prompt": "We watched in _____________ as the magician disappeared.",
+          "answer": "awe"
+        },
+        { "prompt": "I knitted a warm _____________.", "answer": "shawl" },
+        {
+          "prompt": "Liz had to _____________ the length of the dress.",
+          "answer": "alter"
+        },
+        {
+          "prompt": "The police asked us to _____________ our car.",
+          "answer": "halt"
+        },
+        { "prompt": "We were _____________ during gym.", "answer": "talking" },
+        {
+          "prompt": "A _____________ waited to cross the street.",
+          "answer": "walker"
+        },
+        {
+          "prompt": "Our teacher bought new _____________.",
+          "answer": "chalk"
+        },
+        {
+          "prompt": "I took a picture of a _____________ of corn.",
+          "answer": "stalk"
+        },
+        {
+          "prompt": "Dad looked _____________ next to the redwood tree.",
+          "answer": "small"
+        },
+        { "prompt": "The radio show had a _____________.", "answer": "caller" },
+        {
+          "prompt": "The _____________ knocked down trees.",
+          "answer": "squall"
+        },
+        {
+          "prompt": "She was sick with a bad _____________.",
+          "answer": "cough"
+        },
+        { "prompt": "They _____________the unfair rules.", "answer": "fought" },
+        {
+          "prompt": "I _____________ the game had started.",
+          "answer": "thought"
+        },
+        { "prompt": "We marked every answer _____________.", "answer": "false" }
+      ]
+    }
+  ]
+}

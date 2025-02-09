@@ -1,26 +1,28 @@
 'use client'
 import { useSelect, UseSelectStateChange } from 'downshift'
 import clsx from 'clsx'
-import DefaultButton from '../buttons/DefaultButton'
-import IconChevronRight from '../icons/IconChevronRight'
-import IconChevronLeft from '../icons/IconChevronLeft'
 
 interface CustomDropdown {
   dropdownItems: string[]
   selectedItem: string | null
   setSelectedItem: React.Dispatch<React.SetStateAction<string | null>>
   placeholder: string
+  // Secondary state is added so a change to primary state can also reset the secondary state
+  secondaryState?: string | null
+  setSecondaryState?: React.Dispatch<React.SetStateAction<string | null>>
+  prefix?: string
   width?: string
 }
-
-type Direction = 'left' | 'right'
 
 export function Dropdown({
   dropdownItems,
   selectedItem,
   setSelectedItem,
   placeholder,
-  width = 'w-full'
+  secondaryState,
+  setSecondaryState,
+  width = 'w-full',
+  prefix = 'Level'
 }: CustomDropdown) {
   function itemToString(item: string | null) {
     return item ? item : ''
@@ -28,6 +30,11 @@ export function Dropdown({
 
   const handleSelectedItemChange = (changes: UseSelectStateChange<string>) => {
     const newSelectedItem = changes.selectedItem || null
+
+    if (secondaryState !== undefined && setSecondaryState) {
+      setSecondaryState(null)
+    }
+
     setSelectedItem(newSelectedItem)
   }
 
@@ -45,40 +52,8 @@ export function Dropdown({
       onSelectedItemChange: handleSelectedItemChange
     })
 
-    const handleStudentScroll = (direction: Direction) => {
-      const currentIndex = dropdownItems.findIndex(
-        item => item === selectedItem
-      )
-      if (currentIndex === -1) {
-        setSelectedItem(
-          direction === 'left'
-            ? dropdownItems[dropdownItems.length - 1]
-            : dropdownItems[0]
-        )
-        return
-      }
-
-      let newIndex: number
-
-      if (direction === 'right') {
-        newIndex = (currentIndex + 1) % dropdownItems.length
-      } else {
-        newIndex =
-          (currentIndex - 1 + dropdownItems.length) % dropdownItems.length
-      }
-
-      setSelectedItem(dropdownItems[newIndex])
-    }
-
     return (
       <div className='page-background input-border flex flex-row items-center px-2'>
-        <DefaultButton
-          ariaLabel='Scroll left'
-          handleClick={() => handleStudentScroll('left')}
-          customClasses='mr-2'
-        >
-          <IconChevronLeft classes='h-6 w-6 muted-text transition-effect' />
-        </DefaultButton>
         <div className='relative w-full'>
           {/* width is being passed as md:w-[XYZpx] */}
           <div className={`flex ${width} flex-col gap-1 rounded-xl`}>
@@ -90,7 +65,7 @@ export function Dropdown({
               {selectedItem ? (
                 <div className='flex w-full flex-row justify-between'>
                   <p>
-                    {selectedItem !== 'None' && 'Level '}
+                    {selectedItem !== 'None' && `${prefix} `}
                     {selectedItem}
                   </p>
                 </div>
@@ -117,21 +92,14 @@ export function Dropdown({
                   key={item}
                   {...getItemProps({ item, index })}
                 >
-                                    <p>
-                    {item !== 'None' && 'Level '}
+                  <p>
+                    {item !== 'None' && `${prefix} `}
                     {item}
                   </p>
                 </li>
               ))}
           </ul>
         </div>
-        <DefaultButton
-          ariaLabel='Scroll right'
-          handleClick={() => handleStudentScroll('right')}
-          customClasses='ml-2'
-        >
-          <IconChevronRight classes='h-6 w-6 muted-text transition-effect' />
-        </DefaultButton>
       </div>
     )
   }

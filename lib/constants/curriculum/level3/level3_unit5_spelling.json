@@ -1,0 +1,136 @@
+{
+  "level": 3,
+  "unit": 5,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "Does that ______ fly?", "answer": "airplane" },
+        { "prompt": "We go to school in the ______.", "answer": "daytime" },
+        { "prompt": "Today is Juan’s ______.", "answer": "birthday" },
+        { "prompt": "________ ended at six o’clock.", "answer": "daylight" },
+        { "prompt": "Erin’s ______ suits her.", "answer": "hairdo" },
+        { "prompt": "________ keeps moving my chair!", "answer": "somebody" },
+        { "prompt": "Dad built a ______.", "answer": "birdhouse" },
+        { "prompt": "I went ______ on the beach.", "answer": "barefoot" },
+        { "prompt": "The car’s ______ is broken.", "answer": "headlight" },
+        { "prompt": "I will arrive ______ tonight.", "answer": "sometime" },
+        { "prompt": "________ opened the door.", "answer": "someone" },
+        { "prompt": "Did you read the ______?", "answer": "newspaper" },
+        { "prompt": "The ______ in town are wide.", "answer": "sidewalks" },
+        { "prompt": "Our coach handed us a ______.", "answer": "basketball" },
+        { "prompt": "Two horses pulled the ______.", "answer": "stagecoach" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "She ______ all of her goldfish.", "answer": "names" },
+        { "prompt": "He ______ his dog Max.", "answer": "named" },
+        {
+          "prompt": "She is ______ the people in the band.",
+          "answer": "naming"
+        },
+        { "prompt": "Alex ______ he can learn to ski.", "answer": "hopes" },
+        {
+          "prompt": "Beatrice ______ that she could go to school.",
+          "answer": "hoped"
+        },
+        { "prompt": "People are ______ for peace.", "answer": "hoping" },
+        { "prompt": "Mimi ______ in the show.", "answer": "dances" },
+        { "prompt": "She ______ with her friend.", "answer": "danced" },
+        { "prompt": "________ together is fun.", "answer": "dancing" },
+        { "prompt": "The baby ______ her toys.", "answer": "drops" },
+        { "prompt": "I ______ my book.", "answer": "dropped" },
+        { "prompt": "I am always ______ my pen.", "answer": "dropping" },
+        { "prompt": "She ______ the food in foil.", "answer": "wraps" },
+        { "prompt": "He ______ his arms around his pet.", "answer": "wrapped" },
+        { "prompt": "Anna is ______ a gift.", "answer": "wrapping" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "The ______ is full of paper.", "answer": "basket" },
+        { "prompt": "Our pet is a ______.", "answer": "rabbit" },
+        { "prompt": "The math ______ was very advanced.", "answer": "lesson" },
+        { "prompt": "The ______ needs a stamp.", "answer": "letter" },
+        {
+          "prompt": "I will ______ my friends to the party.",
+          "answer": "invite"
+        },
+        { "prompt": "My ______ is nine o’clock.", "answer": "bedtime" },
+        { "prompt": "A whale is a ______.", "answer": "mammal" },
+        { "prompt": "What is your telephone ______?", "answer": "number" },
+        { "prompt": "Who is that ______ with a hat?", "answer": "fellow" },
+        { "prompt": "This ______ is about heroes.", "answer": "chapter" },
+        { "prompt": "________ the signs to the exit.", "answer": "follow" },
+        { "prompt": "The boy solved the ______.", "answer": "problem" },
+        { "prompt": "The ______ laid an egg.", "answer": "chicken" },
+        { "prompt": "Do you like bread and ______?", "answer": "butter" },
+        { "prompt": "Please pass me a ______.", "answer": "napkin" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "She always ______ to win.", "answer": "tries" },
+        { "prompt": "I ______ to draw that picture.", "answer": "tried" },
+        { "prompt": "We are ______ to fix this.", "answer": "trying" },
+        { "prompt": "It always ______ faster in the sun.", "answer": "dries" },
+        { "prompt": "Do you like ______ cranberries?", "answer": "dried" },
+        { "prompt": "The pictures are still ______.", "answer": "drying" },
+        { "prompt": "Francine ______ home after school.", "answer": "hurries" },
+        {
+          "prompt": "Justin ______ to finish his shopping.",
+          "answer": "hurried"
+        },
+        { "prompt": "We are ______.", "answer": "hurrying" },
+        {
+          "prompt": "The good student ______ for all her tests.",
+          "answer": "studies"
+        },
+        { "prompt": "We ______ all afternoon.", "answer": "studied" },
+        {
+          "prompt": "I like ______ artwork at the museum.",
+          "answer": "studying"
+        },
+        { "prompt": "Who ______ on your team?", "answer": "plays" },
+        {
+          "prompt": "My neighbor ______ basketball with the pros.",
+          "answer": "played"
+        },
+        { "prompt": "You are not ______ that game again!", "answer": "playing" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "He is the ______ of the plane.", "answer": "pilot" },
+        { "prompt": "She had lunch at the ______.", "answer": "diner" },
+        {
+          "prompt": "The ______ was my favorite animal at the zoo.",
+          "answer": "tiger"
+        },
+        { "prompt": "John did a ______ for his friend.", "answer": "favor" },
+        {
+          "prompt": "There was a ______ tree in the backyard.",
+          "answer": "lemon"
+        },
+        { "prompt": "We live on ______ Earth.", "answer": "planet" },
+        { "prompt": "Put a ______ on the pot.", "answer": "cover" },
+        { "prompt": "It is ______ under the tree.", "answer": "shady" },
+        { "prompt": "The team designed a ______.", "answer": "robot" },
+        { "prompt": "Snails have ______ shells.", "answer": "tiny" },
+        { "prompt": "He reads the ______ on the jar.", "answer": "label" },
+        { "prompt": "Animals like ______ homes.", "answer": "cozy" },
+        {
+          "prompt": "We had to be ______ so the baby would not wake up.",
+          "answer": "silent"
+        },
+        { "prompt": "The ______ weaves a web.", "answer": "spider" },
+        { "prompt": "The lake is ______.", "answer": "frozen" }
+      ]
+    }
+  ]
+}

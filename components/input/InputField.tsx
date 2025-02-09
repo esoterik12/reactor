@@ -13,6 +13,7 @@ interface InputFieldProps {
   placeholder: string
   labelClasses?: string
   inputClasses?: string
+  isDisabled?: boolean
   containerClasses?: string
   error: FieldError | undefined
   maxLength?: number
@@ -32,6 +33,7 @@ const InputField: React.ForwardRefExoticComponent<
       errorType = 'textBelow',
       labelClasses,
       inputClasses,
+      isDisabled,
       containerClasses = 'w-full',
       error,
       ...rest
@@ -52,6 +54,7 @@ const InputField: React.ForwardRefExoticComponent<
         tabIndex={-1}
         placeholder={placeholder}
         className={`${inputClasses} page-background ${errorType === 'highlightInput' && error ? 'input-error-border' : 'input-border'}`}
+        disabled={isDisabled}
         {...rest}
       />
       {errorType === 'textBelow' && (

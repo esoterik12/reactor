@@ -1,4 +1,4 @@
-export const contentIconStyles = 'w-6 h-6 paragraph-text'
+export const contentIconStyles = 'w-6 h-6 paragraph-text primary-text'
 
 export const levelSelectionInfo = {
   title: 'Level Selecetion',

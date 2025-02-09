@@ -14,6 +14,7 @@ interface ITextareaInputProps {
   inputClasses?: string
   error: FieldError | undefined
   maxLength?: number
+  isDisabled: boolean
 }
 
 const TextareaInput: React.ForwardRefExoticComponent<
@@ -28,16 +29,14 @@ const TextareaInput: React.ForwardRefExoticComponent<
       labelClasses,
       inputClasses,
       error,
+      isDisabled,
       ...rest
     },
     ref
   ) => (
     <div className={`${containerClasses}`}>
       {label && (
-        <label
-          htmlFor={id}
-          className={`${labelClasses} block p-1 font-medium`}
-        >
+        <label htmlFor={id} className={`${labelClasses} block p-1 font-medium`}>
           {label}
         </label>
       )}
@@ -45,11 +44,12 @@ const TextareaInput: React.ForwardRefExoticComponent<
         ref={ref}
         id={id}
         placeholder={placeholder}
-        className={`${inputClasses} block rounded-md border page-background input-border`}
+        className={`${inputClasses} page-background input-border block rounded-md border`}
+        disabled={isDisabled}
         {...rest}
       />
-      <div className='min-h-8 ml-1.5 mr-1 p-1'>
-        <p className='text-[12px] text-primary-500'>
+      <div className='ml-1 mr-1 min-h-8 p-1'>
+        <p className='secondary-text text-[12px]'>
           {error ? error.message : '\u00A0'}
         </p>{' '}
       </div>

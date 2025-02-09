@@ -46,7 +46,7 @@ export function ContentForm<T>({
   setContent
 }: ContentFormProps<T>) {
   const dispatch = useAppDispatch()
-  // const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
 
@@ -66,6 +66,7 @@ export function ContentForm<T>({
   })
 
   const handleSubmitButton = async (data: ContentFormInput) => {
+    setLoading(true)
     console.log('data in handleSubmitButton: ', data)
 
     try {
@@ -111,6 +112,7 @@ export function ContentForm<T>({
       console.log('error in handleSubmitButton in ContentForm.tsx: ', error)
       throw new AppError(400, 'Error generation content.')
     } finally {
+      setLoading(false)
     }
   }
 
@@ -123,7 +125,7 @@ export function ContentForm<T>({
   // const currentSecondaryInput = watch('secondaryInputContent')
 
   return (
-    <section className='item- flex h-full w-full flex-row'>
+    <section className='flex h-full w-full flex-row'>
       <form
         className='flex h-full w-[65%] flex-col justify-between p-4'
         onSubmit={handleSubmit(handleSubmitButton)}
@@ -143,6 +145,7 @@ export function ContentForm<T>({
                 inputClasses='p-1 w-full'
                 error={errors.title}
                 {...register('title')}
+                isDisabled={loading}
               />
             </div>
             {formType === 'generated' && levelSelectionEnabled && (
@@ -180,6 +183,7 @@ export function ContentForm<T>({
               inputClasses='p-1 w-full'
               error={errors.primaryInputContent}
               {...register('primaryInputContent')}
+              isDisabled={loading}
             />
             {info.secondaryInputInfo && (
               <>
@@ -198,6 +202,7 @@ export function ContentForm<T>({
                   inputClasses='p-1 w-full'
                   error={errors.secondaryInputContent}
                   {...register('secondaryInputContent')}
+                  isDisabled={loading}
                 />
               </>
             )}
@@ -221,6 +226,7 @@ export function ContentForm<T>({
                   inputClasses='resize-none w-full h-14 p-1'
                   error={errors.textareaInputContent}
                   {...register('textareaInputContent')}
+                  isDisabled={loading}
                 />
               </div>
             </>
@@ -246,6 +252,7 @@ export function ContentForm<T>({
                 inputClasses='p-1 w-32'
                 error={errors.numberOfContent}
                 {...register('numberOfContent')}
+                isDisabled={loading}
               />
             </div>
           )}
@@ -263,6 +270,7 @@ export function ContentForm<T>({
           btnType='submit'
           handleClick={handleSubmit(handleSubmitButton)}
           customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
+          isDisabled={loading}
         >
           <p className='button-text'>
             {formType === 'manual' ? 'Create' : 'Generate'}
