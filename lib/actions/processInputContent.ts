@@ -59,7 +59,7 @@ export default async function processInputContent({
           grammarConceptDescription: JSON.stringify(primaryInputContent),
           numberOfContent,
           levelSelection,
-          textareaInput,
+          textareaInput
         })
         break
 
@@ -80,7 +80,7 @@ export default async function processInputContent({
           numberOfQuestions: numberOfContent || 8
         })
         break
-        
+
       default:
         throw new AppError(404, `Unsupported content type: ${contentType}`)
     }

@@ -11,7 +11,7 @@ import { ContentForm } from '@/components/input/ContentForm'
 import IconChooseCorrectSpelling from '@/components/icons/content/IconChooseCorrectSpelling'
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
-import CurriculumSelector from '@/components/input/CurriculumSelector'
+import {CurriculumSelector} from '@/components/input/CurriculumSelector'
 
 const tabs = [
   'Generate Content',
@@ -46,9 +46,11 @@ const ChooseCorrectSpellingPage = () => {
       setContent={setContent}
     />,
     <CurriculumSelector
-      key='Tab 1'
+      key='Tab 3'
       contentTitle='Choose Correct Spelling'
+      contentType='chooseCorrectSpelling'
       icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
+      setContent={setContent}
     />,
     <p key='Tab 4'>Tab 4</p>
   ]

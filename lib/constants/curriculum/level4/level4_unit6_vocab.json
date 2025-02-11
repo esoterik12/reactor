@@ -23,7 +23,7 @@
         },
         {
           "prompt": "_____________ are the results of an action or condition.",
-          "answer": "Consequences"
+          "answer": "consequences"
         },
         {
           "prompt": "A _____________ is an unplanned or unexpected situation in which something happens at the same time or in the same way.",
@@ -44,7 +44,7 @@
       "words": [
         {
           "prompt": "_____________ means to have withdrawn or moved back.",
-          "answer": "Retreated"
+          "answer": "retreated"
         },
         {
           "prompt": "When something is _____________ , it can make someone angry or impatient.",
@@ -52,19 +52,19 @@
         },
         {
           "prompt": "_____________ means to lose or have to give up because of some fault, accident, or mistake.",
-          "answer": "Forfeit"
+          "answer": "forfeit"
         },
         {
           "prompt": "_____________ is the power to put up with hardships or difficulties.",
-          "answer": "Endurance"
+          "answer": "endurance"
         },
         {
           "prompt": "_____________ are people from whom one is descended.",
-          "answer": "Ancestors"
+          "answer": "ancestors"
         },
         {
           "prompt": "_____________ means looked down on as worthless, or scorned.",
-          "answer": "Despised"
+          "answer": "despised"
         },
         {
           "prompt": "To _____________ means to show or feel great respect for a person or thing.",
@@ -72,7 +72,7 @@
         },
         {
           "prompt": "_____________ means having or showing strong feeling, purpose, or effort.",
-          "answer": "Intensity"
+          "answer": "intensity"
         }
       ]
     },
@@ -97,11 +97,11 @@
         },
         {
           "prompt": "_____________ is a cloud of tiny drops of water or other liquid in the air.",
-          "answer": "Mist"
+          "answer": "mist"
         },
         {
           "prompt": "_____________ is a quality that makes one person or thing different from others.",
-          "answer": "Individuality"
+          "answer": "individuality"
         },
         {
           "prompt": "To _____________ means to eat quickly, in large chunks.",
@@ -109,7 +109,7 @@
         },
         {
           "prompt": "_____________ is giving human characteristics to anything that is not human.",
-          "answer": "Personification"
+          "answer": "personification"
         }
       ]
     }

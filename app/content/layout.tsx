@@ -30,7 +30,10 @@ const CreatePageLayout = async ({
 
   return (
     <ContextProvider>
-      <PageContainer customClasses='py-2 px-2 flex flex-row '>
+      <PageContainer
+        screenHeight={true}
+        customClasses='pb-2 px-2 flex flex-row '
+      >
         <section className='h-full w-[18%] min-w-[200px] border-r border-zinc-300 pr-2 dark:border-zinc-600'>
           <AccordionStack
             username={serverSession.user.name}

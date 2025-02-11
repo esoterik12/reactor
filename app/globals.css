@@ -13,6 +13,9 @@
   .button-text {
     @apply text-white dark:text-white;
   }
+  .label-text {
+    @apply small-text paragraph-text;
+  }
   .primary-text {
     @apply text-sky-500;
   }

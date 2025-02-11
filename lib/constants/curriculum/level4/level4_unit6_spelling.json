@@ -129,9 +129,9 @@
           "prompt": "I tasted the chocolate _____________ .",
           "answer": "mousse"
         },
-        { "prompt": "_____________ been here all day.", "answer": "We've" },
+        { "prompt": "_____________ been here all day.", "answer": "we've" },
         { "prompt": "Can you _____________ on a loom?", "answer": "weave" },
-        { "prompt": "_____________ coming to the party?", "answer": "Who's" },
+        { "prompt": "_____________ coming to the party?", "answer": "who's" },
         {
           "prompt": "_____________ jacket is on the floor?",
           "answer": "Whose"
@@ -194,7 +194,7 @@
         },
         {
           "prompt": "_____________ books include facts.",
-          "answer": "Nonfiction"
+          "answer": "nonfiction"
         },
         {
           "prompt": "The baby’s talk was all _____________ .",
@@ -210,7 +210,7 @@
         },
         {
           "prompt": "_____________ the iron after using it.",
-          "answer": "Unplug"
+          "answer": "unplug"
         },
         {
           "prompt": "I felt _____________ about my answer.",
@@ -218,7 +218,7 @@
         },
         {
           "prompt": "This is a very _____________ chair.",
-          "answer": "uncomportable"
+          "answer": "uncomfortable"
         },
         { "prompt": "Did you _____________ the secret?", "answer": "uncover" },
         {

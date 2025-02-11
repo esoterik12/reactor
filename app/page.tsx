@@ -9,6 +9,7 @@ export default function Home() {
         </header>
         <main className=''>
           <p>This is an example project.</p>
+          <p>ADD RIDDLES.</p>
         </main>
       </>
     </PageContainer>

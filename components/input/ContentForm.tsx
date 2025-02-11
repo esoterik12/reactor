@@ -79,8 +79,6 @@ export function ContentForm<T>({
         numberOfContent: data.numberOfContent || null
       })
 
-      console.log('generationResults: ', generationResults)
-
       // TODO: This currently sends a lot of data to context, not used at the
       // moment, may be wise to remove
       if (generationResults.code === 200) {
@@ -137,7 +135,7 @@ export function ContentForm<T>({
           </div>
           <div className='flex flex-row'>
             <div className='w-[65%]'>
-              <h3 className='paragraph-text mb-2'>Title:</h3>
+              <h3 className='label-text mb-0.5'>Title:</h3>
               <InputField
                 type='text'
                 id='inputTitle'
@@ -151,7 +149,7 @@ export function ContentForm<T>({
             {formType === 'generated' && levelSelectionEnabled && (
               <div className='w-[35%] pl-8'>
                 <div className='flex flex-row items-center justify-between'>
-                  <h3 className='paragraph-text mb-2'>Content level:</h3>
+                  <h3 className='label-text mb-0.5'>Content level:</h3>
                   <ContentInfoButton
                     handleClick={() => handleSelectInfo('levelSelectionInfo')}
                   />
@@ -169,7 +167,7 @@ export function ContentForm<T>({
           {/* Primary Input */}
           <div className='w-full'>
             <div className='flex flex-row items-center justify-between'>
-              <h3 className='paragraph-text mb-2'>
+              <h3 className='label-text mb-0.5'>
                 {info.primaryInputInfo.title}:
               </h3>
               <ContentInfoButton
@@ -188,7 +186,7 @@ export function ContentForm<T>({
             {info.secondaryInputInfo && (
               <>
                 <div className='flex flex-row items-center justify-between'>
-                  <h3 className='paragraph-text mb-2'>
+                  <h3 className='label-text mb-0.5'>
                     {info.secondaryInputInfo.title}:
                   </h3>
                   <ContentInfoButton
@@ -212,7 +210,7 @@ export function ContentForm<T>({
           {info.textareaInputInfo && (
             <>
               <div className='flex flex-row items-center justify-between'>
-                <h3 className='paragraph-text mb-2'>
+                <h3 className='label-text mb-0.5'>
                   {info.textareaInputInfo.title}:
                 </h3>
                 <ContentInfoButton
@@ -236,7 +234,7 @@ export function ContentForm<T>({
           {info.numberOfContent && (
             <div>
               <div className='flex flex-row items-center justify-between'>
-                <h3 className='paragraph-text mb-2'>
+                <h3 className='label-text mb-0.5'>
                   {info.numberOfContent.title}:
                 </h3>
                 {info.numberOfContent.inputInfo && (

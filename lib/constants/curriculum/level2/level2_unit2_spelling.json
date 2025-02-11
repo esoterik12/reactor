@@ -1,0 +1,247 @@
+{
+  "level": 2,
+  "unit": 2,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "You can pack the books in this _____________.",
+          "answer": "box"
+        },
+        {
+          "prompt": "The _____________ runs through the woods.",
+          "answer": "fox"
+        },
+        {
+          "prompt": "Will you take the _____________ for a walk?",
+          "answer": "dog"
+        },
+        {
+          "prompt": "I use a key to _____________ the door.",
+          "answer": "lock"
+        },
+        {
+          "prompt": "We make popcorn in a big _____________.",
+          "answer": "pot"
+        },
+        {
+          "prompt": "She ordered an ice cream _____________.",
+          "answer": "cone"
+        },
+        { "prompt": "My _____________ is near the park.", "answer": "home" },
+        {
+          "prompt": "You breathe through your _____________.",
+          "answer": "nose"
+        },
+        { "prompt": "Why did you _____________ my arm?", "answer": "poke" },
+        {
+          "prompt": "We tie the boat to the dock with a _____________.",
+          "answer": "rope"
+        },
+        {
+          "prompt": "Set the bag on the _____________ of the desk.",
+          "answer": "side"
+        },
+        { "prompt": "We got in _____________ at the shop.", "answer": "line" },
+        { "prompt": "Do you _____________ a pet?", "answer": "have" },
+        { "prompt": "Take _____________ your hat.", "answer": "off" },
+        { "prompt": "I _____________ my dog to the vet.", "answer": "took" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "A _____________ is a strong animal.", "answer": "mule" },
+        {
+          "prompt": "If you _____________ two things, you put them together.",
+          "answer": "fuse"
+        },
+        { "prompt": "A _____________ is a fruit.", "answer": "plum" },
+        { "prompt": "We will _____________ crayons today.", "answer": "use" },
+        { "prompt": "We _____________ holes for the plants.", "answer": "dug" },
+        {
+          "prompt": "The bear _____________ went into the den.",
+          "answer": "cub"
+        },
+        { "prompt": "I like to _____________ when I work.", "answer": "hum" },
+        { "prompt": "The puppy is _____________!", "answer": "cute" },
+        { "prompt": "I _____________ be home at 5:00.", "answer": "must" },
+        {
+          "prompt": "We had a lot of _____________ at the party.",
+          "answer": "fun"
+        },
+        {
+          "prompt": "I used a _____________ to pull the cart.",
+          "answer": "rope"
+        },
+        {
+          "prompt": "I cover my _____________ when I sneeze.",
+          "answer": "nose"
+        },
+        {
+          "prompt": "_____________ at the bird in the tree!",
+          "answer": "look"
+        },
+        {
+          "prompt": "The answer to the question is _____________.",
+          "answer": "yes"
+        },
+        {
+          "prompt": "The dogs ate all of _____________ food.",
+          "answer": "their"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "This is my favorite _____________.", "answer": "place" },
+        {
+          "prompt": "Don't stand too close to the _____________.",
+          "answer": "edge"
+        },
+        { "prompt": "Can you _____________ this letter?", "answer": "trace" },
+        { "prompt": "Put this _____________ in your glass.", "answer": "ice" },
+        {
+          "prompt": "My bag is so full it has a _____________.",
+          "answer": "bulge"
+        },
+        {
+          "prompt": "The leaders have a red _____________.",
+          "answer": "badge"
+        },
+        { "prompt": "I want to fly in _____________.", "answer": "space" },
+        {
+          "prompt": "Can you see it, or is it out of _____________?",
+          "answer": "range"
+        },
+        {
+          "prompt": "We keep pet _____________ at my school.",
+          "answer": "mice"
+        },
+        { "prompt": "Anna’s cat sleeps in a _____________.", "answer": "cage" },
+        {
+          "prompt": "We rode a _____________ on my aunt’s farm.",
+          "answer": "mule"
+        },
+        { "prompt": "That puppy is _____________!", "answer": "cute" },
+        {
+          "prompt": "My brother took the trash _____________.",
+          "answer": "out"
+        },
+        {
+          "prompt": "I helped my dad _____________ the car.",
+          "answer": "wash"
+        },
+        {
+          "prompt": "We _____________ a bird outside the window.",
+          "answer": "saw"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "_____________ the fruit before it goes in the salad.",
+          "answer": "chop"
+        },
+        { "prompt": "I can _____________ the ball.", "answer": "catch" },
+        {
+          "prompt": "The table is in the _____________ of a square.",
+          "answer": "shape"
+        },
+        {
+          "prompt": "Dave will throw out the _____________ today.",
+          "answer": "trash"
+        },
+        { "prompt": "I just got a _____________ call.", "answer": "phone" },
+        { "prompt": "_____________ is a very funny joke.", "answer": "that" },
+        { "prompt": "The bee did not _____________ us.", "answer": "sting" },
+        {
+          "prompt": "The book was _____________ and easy to read.",
+          "answer": "thin"
+        },
+        {
+          "prompt": "I will _____________ food to the park.",
+          "answer": "bring"
+        },
+        { "prompt": "You can dance _____________ I sing.", "answer": "while" },
+        {
+          "prompt": "I put my favorite book in a safe _____________.",
+          "answer": "place"
+        },
+        {
+          "prompt": "I will wear my winner’s _____________ to school.",
+          "answer": "badge"
+        },
+        { "prompt": "The movie begins at _____________.", "answer": "seven" },
+        {
+          "prompt": "The computer _____________ turned on.",
+          "answer": "isn’t"
+        },
+        {
+          "prompt": "I have to wake up _____________ for school.",
+          "answer": "early"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Our dogs _____________ at the door to go out.",
+          "answer": "scratch"
+        },
+        {
+          "prompt": "How did Mike _____________ his knee?",
+          "answer": "scrape"
+        },
+        {
+          "prompt": "The flowers bloom in the _____________.",
+          "answer": "spring"
+        },
+        {
+          "prompt": "The queen sits on her _____________.",
+          "answer": "throne"
+        },
+        {
+          "prompt": "My dog has a white _____________ on his back.",
+          "answer": "stripe"
+        },
+        {
+          "prompt": "We heard a _____________ noise outside.",
+          "answer": "strange"
+        },
+        {
+          "prompt": "Dad uses a machine to _____________ paper into bits.",
+          "answer": "shred"
+        },
+        {
+          "prompt": "There is a big _____________ growing near the mailbox.",
+          "answer": "shrub"
+        },
+        {
+          "prompt": "Connie jumped into the pool and made a big _____________.",
+          "answer": "splash"
+        },
+        {
+          "prompt": "We _____________ the apple into two halves.",
+          "answer": "split"
+        },
+        { "prompt": "Who will _____________ the ball?", "answer": "catch" },
+        { "prompt": "Did that wasp _____________ you?", "answer": "sting" },
+        { "prompt": "The Moon is _____________ from Earth.", "answer": "far" },
+        {
+          "prompt": "I picked a pretty _____________ for my mom.",
+          "answer": "flower"
+        },
+        {
+          "prompt": "We will not go _____________ the game ends.",
+          "answer": "until"
+        }
+      ]
+    }
+  ]
+}

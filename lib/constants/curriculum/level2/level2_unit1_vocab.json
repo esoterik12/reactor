@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 1,
+  "vocabulary": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "When things are put _____________, they are moved to one side.",
+          "answer": "aside"
+        },
+        {
+          "prompt": "People of the same _____________ share the same way of life at a certain time in history.",
+          "answer": "culture"
+        },
+        {
+          "prompt": "I am _____________ when I treat my friends in a just and honest way.",
+          "answer": "fair"
+        },
+        {
+          "prompt": "When people are _____________, they are asked in a nice way to do something or to go somewhere.",
+          "answer": "invited"
+        },
+        {
+          "prompt": "_____________ is the way we speak, read, write, or sign.",
+          "answer": "language"
+        },
+        {
+          "prompt": "When you _____________ for something, you beg or argue to get what you want.",
+          "answer": "plead"
+        },
+        {
+          "prompt": "When something _____________, it scampers or runs quickly.",
+          "answer": "scurries"
+        },
+        {
+          "prompt": "When I _____________, I give part of something I have to someone else.",
+          "answer": "share"
+        }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "_____________ are things someone or something does.",
+          "answer": "actions"
+        },
+        {
+          "prompt": "When you are _____________, you are scared of something.",
+          "answer": "afraid"
+        },
+        {
+          "prompt": "When you _____________ on someone, you need or count on them.",
+          "answer": "depend"
+        },
+        {
+          "prompt": "When you act _____________, you act in a fearful or restless way.",
+          "answer": "nervously"
+        },
+        {
+          "prompt": "_____________ means looked hard or looked closely at something.",
+          "answer": "peered"
+        },
+        {
+          "prompt": "When something is done _____________, it is done in the best possible way.",
+          "answer": "perfectly"
+        },
+        {
+          "prompt": "When you _____________ something, you save it from danger.",
+          "answer": "rescue"
+        },
+        {
+          "prompt": "A _____________ is something that is private or not known by many people.",
+          "answer": "secret"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "When you _____________ something, you look at it closely to make sure it is right.",
+          "answer": "check"
+        },
+        {
+          "prompt": "When you _____________, you decide on one thing rather than another.",
+          "answer": "choose"
+        },
+        {
+          "prompt": "Your _____________ are small jobs that you do around the house.",
+          "answer": "chores"
+        },
+        {
+          "prompt": "The _____________ of something is how much you have to pay for it.",
+          "answer": "cost"
+        },
+        {
+          "prompt": "_____________ are people who buy something from a store or company.",
+          "answer": "customers"
+        },
+        {
+          "prompt": "_____________ are the work that people do to earn money.",
+          "answer": "jobs"
+        },
+        {
+          "prompt": "When you _____________, you use money to buy or pay for something.",
+          "answer": "spend"
+        },
+        {
+          "prompt": "_____________ are equipment used to make or repair things.",
+          "answer": "tools"
+        }
+      ]
+    }
+  ]
+}

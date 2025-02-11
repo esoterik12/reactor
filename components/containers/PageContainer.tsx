@@ -3,12 +3,17 @@ import { ReactNode } from 'react'
 interface PageContainerProps {
   children: ReactNode
   customClasses?: string
+  screenHeight?: boolean
 }
 
-const PageContainer = ({ children, customClasses }: PageContainerProps) => {
+const PageContainer = ({
+  children,
+  customClasses,
+  screenHeight = true
+}: PageContainerProps) => {
   return (
     <main
-      className={`${customClasses} h-[calc(100vh-56px)]`}
+      className={`${customClasses} ${screenHeight ? 'h-[calc(100vh-56px)]' : ''} `}
     >
       {children}
     </main>

@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 2,
+  "vocabulary": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "An _____________ is a person or animal that is fully grown.",
+          "answer": "adult"
+        },
+        {
+          "prompt": "If something is _____________, it is living.",
+          "answer": "alive"
+        },
+        {
+          "prompt": "If something is _____________, there is something all over it.",
+          "answer": "covered"
+        },
+        {
+          "prompt": "_____________ is thick animal hair. Something that is giant is very large.",
+          "answer": "fur"
+        },
+        {
+          "prompt": "Something that is _____________ is very large.",
+          "answer": "giant"
+        },
+        {
+          "prompt": "When animals _____________ each other, they clean each other.",
+          "answer": "groom"
+        },
+        {
+          "prompt": "A _____________ is any warm-blooded animal that feeds milk to its babies.",
+          "answer": "mammal"
+        },
+        {
+          "prompt": "_____________ are the children or young of people or animals.",
+          "answer": "offspring"
+        }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "If you _____________ something, you think it is true.",
+          "answer": "believe"
+        },
+        {
+          "prompt": "When food is _____________, it tastes very good.",
+          "answer": "delicious"
+        },
+        {
+          "prompt": "If you _____________, you eat a large or fancy meal.",
+          "answer": "feast"
+        },
+        {
+          "prompt": "When you are _____________ of something, you like it a lot.",
+          "answer": "fond"
+        },
+        {
+          "prompt": "_____________ are things you can learn from.",
+          "answer": "lessons"
+        },
+        {
+          "prompt": "If something is _____________, it is wonderful or outstanding.",
+          "answer": "remarkable"
+        },
+        {
+          "prompt": "If you _____________ something, you grab it quickly.",
+          "answer": "snatch"
+        },
+        {
+          "prompt": "When you tell _____________, you tell made-up tales.",
+          "answer": "stories"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "When you _____________ , you act in a way that is good or correct.",
+          "answer": "behave"
+        },
+        {
+          "prompt": "_____________ are the soft things that cover a bird’s body.",
+          "answer": "feathers"
+        },
+        {
+          "prompt": "If something is _____________ , it is moving up and down.",
+          "answer": "flapping"
+        },
+        {
+          "prompt": "When you _____________ your feelings, you tell or show how you feel about something.",
+          "answer": "express"
+        },
+        {
+          "prompt": "A _____________ is a form of writing that expresses imagination or feelings.",
+          "answer": "poem"
+        },
+        {
+          "prompt": "When two words _____________ , they have the same ending sounds.",
+          "answer": "rhyme"
+        },
+        {
+          "prompt": "_____________ is the repeating accents, or beats, in a poem.",
+          "answer": "rhythm"
+        },
+        {
+          "prompt": "_____________ is the use of rich, colorful, exact words.",
+          "answer": "word choice"
+        }
+      ]
+    }
+  ]
+}

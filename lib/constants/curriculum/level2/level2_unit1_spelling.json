@@ -1,0 +1,199 @@
+{
+  "level": 2,
+  "unit": 1,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "Jim __________ a pet cat.", "answer": "has" },
+        { "prompt": "See the dog __________ its tail.", "answer": "wag" },
+        { "prompt": "Pam has a __________ cut on her leg.", "answer": "bad" },
+        { "prompt": "Ben is __________ today.", "answer": "six" },
+        { "prompt": "__________ you play with me?", "answer": "will" },
+        { "prompt": "Kim __________ with me at lunch.", "answer": "sat" },
+        { "prompt": "I __________ some books in my bag.", "answer": "had" },
+        { "prompt": "Dad can __________ my bike.", "answer": "fix" },
+        { "prompt": "I like __________ a lot.", "answer": "him" },
+        { "prompt": "What can we do __________ it rains?", "answer": "if" },
+        { "prompt": "__________ you walk the dog?", "answer": "can" },
+        { "prompt": "Joe __________ a home run.", "answer": "hit" },
+        { "prompt": "__________ did the cat climb the tree?", "answer": "why" },
+        { "prompt": "What will you have __________ lunch?", "answer": "for" },
+        { "prompt": "Please __________ me put my toys away", "answer": "help" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "We __________ home.", "answer": "went" },
+        {
+          "prompt": "__________ your teacher if you need to leave the class.",
+          "answer": "tell"
+        },
+        {
+          "prompt": "I feed my __________ hamster every day.",
+          "answer": "pet"
+        },
+        {
+          "prompt": "It is Lily’s __________ to sweep the room.",
+          "answer": "job"
+        },
+        { "prompt": "The __________ made it hard to see.", "answer": "fog" },
+        { "prompt": "Jay is __________ going to the party.", "answer": "not" },
+        {
+          "prompt": "Who can __________ the rope the hardest?",
+          "answer": "tug"
+        },
+        { "prompt": "The __________ had just one room.", "answer": "hut" },
+        { "prompt": "Fill the __________ with water.", "answer": "tub" },
+        {
+          "prompt": "Do you want your hamburger on a __________?",
+          "answer": "bun"
+        },
+        {
+          "prompt": "My mom can __________ the broken pedal on my bike.",
+          "answer": "fix"
+        },
+        { "prompt": "My best friend __________ a pet frog.", "answer": "has" },
+        {
+          "prompt": "We need __________ more point to win the game.",
+          "answer": "one"
+        },
+        {
+          "prompt": "Do you want the peach __________ the apple?",
+          "answer": "or"
+        },
+        {
+          "prompt": "I can __________ my house from the park.",
+          "answer": "see"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "He fell in the __________ and hurt his knee.",
+          "answer": "grass"
+        },
+        { "prompt": "The baby __________ on the toys.", "answer": "trips" },
+        { "prompt": "There is a __________ in that cup.", "answer": "crack" },
+        { "prompt": "I __________ have my baby blanket.", "answer": "still" },
+        { "prompt": "The Sun sets in the __________.", "answer": "west" },
+        { "prompt": "Abby wore a __________ to the party.", "answer": "mask" },
+        {
+          "prompt": "My parents __________ during my games.",
+          "answer": "clap"
+        },
+        {
+          "prompt": "Trent __________ to study after school.",
+          "answer": "plans"
+        },
+        { "prompt": "Drink __________ with your dinner.", "answer": "milk" },
+        {
+          "prompt": "Do you need a __________ with those pants?",
+          "answer": "belt"
+        },
+        {
+          "prompt": "I cannot see through all of this __________.",
+          "answer": "fog"
+        },
+        {
+          "prompt": "Can you bring me a __________ of water?",
+          "answer": "tub"
+        },
+        {
+          "prompt": "There is a softball field __________ my house.",
+          "answer": "by"
+        },
+        { "prompt": "__________ wants to play on my team.", "answer": "he" },
+        { "prompt": "Do you know where __________ went?", "answer": "she" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "Meg gave me a __________ of nuts.", "answer": "bag" },
+        { "prompt": "I wore a red __________ to school.", "answer": "cap" },
+        { "prompt": "I like __________ for breakfast.", "answer": "ham" },
+        {
+          "prompt": "Mom will __________ a cake for my party.",
+          "answer": "bake"
+        },
+        { "prompt": "John __________ a sandwich for lunch.", "answer": "ate" },
+        {
+          "prompt": "Jill was __________ when it rained on Sunday.",
+          "answer": "mad"
+        },
+        {
+          "prompt": "My desk is at the __________ of the room.",
+          "answer": "back"
+        },
+        { "prompt": "I like my pretty blue __________.", "answer": "cape" },
+        {
+          "prompt": "The sweater was __________ from red wool.",
+          "answer": "made"
+        },
+        { "prompt": "Sam and Pam __________ the leaves.", "answer": "rake" },
+        { "prompt": "It is __________ light outside.", "answer": "still" },
+        {
+          "prompt": "I like to wear a black __________ with this dress.",
+          "answer": "belt"
+        },
+        {
+          "prompt": "Tina was the last person to get __________ the car.",
+          "answer": "into"
+        },
+        {
+          "prompt": "Brett waited until she was __________.",
+          "answer": "done"
+        },
+        {
+          "prompt": "What would you like to do for __________ birthday?",
+          "answer": "your"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "What __________ you say?", "answer": "did" },
+        { "prompt": "The fish has a big __________.", "answer": "fin" },
+        { "prompt": "I will __________ an apple.", "answer": "pick" },
+        { "prompt": "We stand in __________ for a ticket.", "answer": "line" },
+        {
+          "prompt": "The __________ brings water to the house.",
+          "answer": "pipe"
+        },
+        {
+          "prompt": "I cannot see the __________ of my nose.",
+          "answer": "tip"
+        },
+        { "prompt": "You must __________ the cake batter.", "answer": "mix" },
+        {
+          "prompt": "There are __________ people in the car.",
+          "answer": "five"
+        },
+        {
+          "prompt": "We will cross to the other __________ of the street.",
+          "answer": "side"
+        },
+        { "prompt": "Let’s __________ up the hill.", "answer": "hike" },
+        { "prompt": "The hero wears a __________.", "answer": "cape" },
+        {
+          "prompt": "Do you want to taste the cookies I __________?",
+          "answer": "made"
+        },
+        { "prompt": "I will open __________ of the windows.", "answer": "all" },
+        {
+          "prompt": "We can sing __________ song we want to.",
+          "answer": "any"
+        },
+        {
+          "prompt": "The boy __________ he is late for school.",
+          "answer": "says"
+        }
+      ]
+    }
+  ]
+}
