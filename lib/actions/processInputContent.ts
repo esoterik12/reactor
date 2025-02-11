@@ -68,7 +68,8 @@ export default async function processInputContent({
           data: JSON.stringify(primaryInputContent),
           matchingCriteria:
             secondaryInputContent || 'Missing matching criteria',
-          levelSelection
+          levelSelection,
+          numberOfContent
         })
         break
 

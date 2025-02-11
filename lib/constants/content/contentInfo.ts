@@ -20,6 +20,9 @@ export const memoryCardsGeneratedInfo = {
     title: 'Matching criteria',
     inputInfo: 'Specify how you would like the pairs to be matched.',
     inputExample: 'For example: rhyming, synonyms, antonyms, definitions, etc.'
+  },
+  numberOfContent: {
+    title: 'Number of pairs'
   }
 }
 

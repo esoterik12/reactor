@@ -104,7 +104,7 @@ export function ContentForm<T>({
             generationResults.result.sentences
         )
       } else {
-        throw new AppError(400, 'Error generation content.')
+        throw new AppError(400, 'Error generating content.')
       }
     } catch (error) {
       console.log('error in handleSubmitButton in ContentForm.tsx: ', error)

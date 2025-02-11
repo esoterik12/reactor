@@ -1,7 +1,5 @@
 export interface ContentFormInput {
   title: string
-  // TODO: Temporary any state
-  // This will be objects that can match content types in the future
   primaryInputContent: string
   secondaryInputContent?: string
   textareaInputContent?: string

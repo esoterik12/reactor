@@ -18,31 +18,28 @@ import filterCurriculumWords from '@/lib/utils/filterCurriculimWords'
 import WeekWordsContainer from '../containers/WeekWordsContainer'
 import { motion, AnimatePresence } from 'framer-motion'
 import { RefButton } from '../buttons/RefButton'
+import { CurriculumSelectorForm } from '@/types/curriculumSelector.types'
+import { defaultSelectorValues } from '@/lib/constants/content/defaultSelectorValues'
+import { InputField } from './InputField'
+import { ZodSchema } from 'zod'
+import { InfoTextData } from '@/types/input.types'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { TextareaInput } from './TextareaInput'
+import GeneratingContent from '../shared/GeneratingContent'
 
 interface CurriculumSelectorProps<T> {
   icon: React.ReactNode
+  zodSchema: ZodSchema
+  info: InfoTextData
   contentTitle: string
   contentType: string
   setContent: React.Dispatch<SetStateAction<T | null>>
 }
 
-export interface CurriculumSelectorForm {
-  spellingWeeks: {
-    week1: boolean
-    week2: boolean
-    week3: boolean
-    week4: boolean
-    week5: boolean
-  }
-  vocabWeeks: {
-    week12: boolean
-    week34: boolean
-    week5: boolean
-  }
-}
-
 export function CurriculumSelector<T>({
   icon,
+  zodSchema,
+  info,
   contentTitle,
   contentType,
   setContent
@@ -56,25 +53,15 @@ export function CurriculumSelector<T>({
   const {
     control,
     watch,
-    reset
-    // formState: { errors }
+    reset,
+    register,
+    handleSubmit,
+    formState: { errors }
   } = useForm<CurriculumSelectorForm>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    defaultValues: {
-      spellingWeeks: {
-        week1: false,
-        week2: false,
-        week3: false,
-        week4: false,
-        week5: false
-      },
-      vocabWeeks: {
-        week12: false,
-        week34: false,
-        week5: false
-      }
-    }
+    resolver: zodResolver(zodSchema),
+    defaultValues: defaultSelectorValues
   })
 
   const watchSpelling = watch('spellingWeeks')
@@ -100,7 +87,7 @@ export function CurriculumSelector<T>({
     fetchUnitData()
   }, [level, unit, reset])
 
-  const handleGenerate = async () => {
+  const handleGenerateButton = async (data: CurriculumSelectorForm) => {
     setLoading(true)
 
     if (level && unit && unitData) {
@@ -123,11 +110,21 @@ export function CurriculumSelector<T>({
           wordsToFilter
         })
 
+        console.log('data', data)
+
         const generationResults = await processInputContent({
           contentType,
           levelSelection: level || 'No selection',
-          primaryInputContent: JSON.stringify(filteredWords)
+          primaryInputContent: JSON.stringify(filteredWords),
+          secondaryInputContent: data.secondaryInputContent,
+          textareaInput: data.textareaInputContent,
+          numberOfContent: data.numberOfContent || null
         })
+
+        console.log(
+          'generationResults in CurriculumSelector.tsx: ',
+          generationResults
+        )
 
         setContent(generationResults.result.data)
       } catch (error) {
@@ -140,13 +137,16 @@ export function CurriculumSelector<T>({
   }
 
   return (
-    <section className='flex min-h-screen flex-col'>
+    <section className='flex min-h-[600px] flex-col'>
       <div className='mb-2 flex items-center gap-2 px-4 pt-4'>
         {icon}
         <h2 className='large-text'>{contentTitle}</h2>
       </div>
       {/* Left Panel: Selectors & Checkboxes */}
-      <div className='border-color w-full border-b px-4 pb-4'>
+      <form
+        onSubmit={handleSubmit(handleGenerateButton)}
+        className='border-color w-full border-b px-4 pb-4'
+      >
         {/* Dropdowns */}
         <div className='mt-2 flex flex-row gap-x-10'>
           <div className='w-[150px]'>
@@ -220,16 +220,95 @@ export function CurriculumSelector<T>({
           </div>
         </div>
 
-        <DefaultButton
-          ariaLabel='Submit button'
-          btnType='button'
-          handleClick={handleGenerate}
-          customClasses='w-[150px] mt-6 button-border primary-background p-1 hover-effect-primary'
-          isDisabled={loading}
-        >
-          <p className='button-text'>Generate</p>
-        </DefaultButton>
-      </div>
+        {/* Title and Inputs */}
+        <div className='mt-6 flex flex-row gap-10'>
+          <div className='w-[340px]'>
+            <h3 className='label-text mb-0.5'>Title:</h3>
+            <InputField
+              type='text'
+              id='inputTitle'
+              placeholder=''
+              inputClasses='p-1 w-full'
+              error={errors.title}
+              {...register('title')}
+              isDisabled={loading}
+            />
+          </div>
+
+          {info.secondaryInputInfo && (
+            <div className='w-[410px]'>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='label-text mb-0.5'>
+                  {info.secondaryInputInfo.title}:
+                </h3>
+              </div>
+              <InputField
+                type='text'
+                id='secondaryInputContent'
+                placeholder=''
+                inputClasses='p-1 w-full'
+                error={errors.secondaryInputContent}
+                {...register('secondaryInputContent')}
+                isDisabled={loading}
+              />
+            </div>
+          )}
+
+          {/* Textarea Paste Input */}
+          {info.textareaInputInfo && (
+            <>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='label-text mb-0.5'>
+                  {info.textareaInputInfo.title}:
+                </h3>
+              </div>
+              <div>
+                <TextareaInput
+                  id='textareaInputContent'
+                  placeholder=''
+                  inputClasses='resize-none w-full h-14 p-1'
+                  error={errors.textareaInputContent}
+                  {...register('textareaInputContent')}
+                  isDisabled={loading}
+                />
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Number of Questions */}
+        {info.numberOfContent && (
+          <div>
+            <div className='flex flex-row items-center justify-between'>
+              <h3 className='label-text mb-0.5'>
+                {info.numberOfContent.title}:
+              </h3>
+            </div>
+            <InputField
+              type='text'
+              id='numberOfContent'
+              placeholder=''
+              inputClasses='p-1 w-[150px]'
+              error={errors.numberOfContent}
+              {...register('numberOfContent')}
+              isDisabled={loading}
+            />
+          </div>
+        )}
+
+        {/* Submit */}
+        <div>
+          <DefaultButton
+            ariaLabel='Submit button'
+            btnType='submit'
+            handleClick={handleSubmit(handleGenerateButton)}
+            customClasses='w-[150px] mt-2 button-border primary-background p-1 hover-effect-primary'
+            isDisabled={loading}
+          >
+            <p className='button-text'>Generate</p>
+          </DefaultButton>
+        </div>
+      </form>
 
       {/* Right Panel: Word Display */}
       {/* This maps over ALL unit data spelling content and creates a div for each spelling week
@@ -238,7 +317,9 @@ export function CurriculumSelector<T>({
       */}
       <div className='p-4'>
         {loading ? (
-          <div className='text-center text-lg'>Loading...</div>
+          <div className='text-center'>
+            <GeneratingContent />
+          </div>
         ) : unitData ? (
           <motion.div
             layout

@@ -1,5 +1,9 @@
 import { z } from 'zod'
 
+// All schemas that use CurriculumSelector have an extension using
+// omit from zod to remove primary input requirement since it is
+// filled with the unitData from JSON files
+
 export const baseContentSchema = z.object({
   title: z
     .string()
@@ -11,6 +15,7 @@ export const baseContentSchema = z.object({
     .max(1000, { message: 'You can only input up to 1000 characters.' })
 })
 
+// Choose correct spelling schemas
 export const chooseCorrectSpellingSchema = z.object({
   title: z.string().min(1, { message: 'Title is required.' }),
   primaryInputContent: z
@@ -21,9 +26,13 @@ export const chooseCorrectSpellingSchema = z.object({
   secondaryInputContent: z
     .string()
     .refine(value => value.replace(/\s+/g, '').length >= 15, {
-      message: 'Must be at least 15 non-whitespace characters in length.'
+      message:
+        'The message must be at least 15 non-whitespace characters in length.'
     })
 })
+
+export const chooseCorrectSpellingSelectorSchema =
+  chooseCorrectSpellingSchema.omit({ primaryInputContent: true })
 
 // Manual Memory and Manual Find Your Partner Schema
 export const manualPairsSchema = z.object({
@@ -43,7 +52,18 @@ export const generatePairsSchema = baseContentSchema.extend({
   secondaryInputContent: z
     .string()
     .min(1, { message: 'You must enter matching criteria.' })
-    .max(1000, { message: 'You can only input up to 1000 characters.' })
+    .max(1000, { message: 'You can only input up to 1000 characters.' }),
+  numberOfContent: z.coerce
+    .number({
+      required_error: 'Number of content is required.',
+      invalid_type_error: 'Must be a number.'
+    })
+    .min(4, { message: 'Generate at least 4.' })
+    .max(24, { message: 'Generate at most 24.' })
+})
+
+export const memorySelectorSchama = generatePairsSchema.omit({
+  primaryInputContent: true
 })
 
 // Generated Find Your Partner Schema

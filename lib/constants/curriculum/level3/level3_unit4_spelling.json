@@ -25,7 +25,7 @@
           "prompt": "We need ________ to solve the mystery!",
           "answer": "clues"
         },
-        { "prompt": "Tell me a ________ story for once.", "answer": "truey" },
+        { "prompt": "Tell me a ________ story for once.", "answer": "true" },
         {
           "prompt": "________ your food before swallowing it.",
           "answer": "chew"

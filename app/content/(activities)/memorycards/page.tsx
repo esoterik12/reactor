@@ -9,11 +9,13 @@ import {
 } from '@/lib/constants/content/contentInfo'
 import {
   manualPairsSchema,
-  generatePairsSchema
+  generatePairsSchema,
+  memorySelectorSchama
 } from '@/lib/zod/contentInput.schema'
 import IconMemoryCards from '@/components/icons/content/IconMemoryCards'
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
+import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 
 const tabs = [
   'Generate Content',
@@ -47,7 +49,15 @@ const MemoryCardsPage = () => {
       watchComponent='pairs'
       setContent={setContent}
     />,
-    <p key='Tab 3'>Tab 3</p>,
+    <CurriculumSelector
+      key='Tab 3'
+      contentTitle='Choose Correct Spelling'
+      contentType='memoryCards'
+      icon={<IconMemoryCards classes={contentIconStyles} />}
+      setContent={setContent}
+      zodSchema={memorySelectorSchama}
+      info={memoryCardsGeneratedInfo}
+    />,
     <p key='Tab 4'>Tab 4</p>
   ]
 

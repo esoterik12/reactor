@@ -4,12 +4,14 @@ interface MemoryCardsMessage {
   data: string
   matchingCriteria: string | null
   levelSelection: string
+  numberOfContent: number | null | undefined
 }
 
 export default function memoryCardsMessage({
   data,
   matchingCriteria,
-  levelSelection
+  levelSelection,
+  numberOfContent = 8
 }: MemoryCardsMessage) {
   const structure = pairStructure
 
@@ -23,10 +25,11 @@ export default function memoryCardsMessage({
       And the following matching criteria:
       ${matchingCriteria}
 
-      And generate a set of pairs where the pairs are words or phrases you create according to the matching crieteria of: ${matchingCriteria}.
+      And generate ${numberOfContent} of pairs where the pairs are words or phrases you create according to the matching crieteria of: ${matchingCriteria}.
 
-      Try to ensure there are 8 pairs in total and that language corresponds 
-      to a grade level of ${levelSelection}.
+      If there are more words in the input data than ${numberOfContent}, remove some words.
+
+      Try to ensure that the language used corresponds to a grade level of ${levelSelection}.
 
       Return valid JSON only.
     `

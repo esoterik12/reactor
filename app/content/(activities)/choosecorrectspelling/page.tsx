@@ -6,12 +6,15 @@ import {
   chooseSpellingManualInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import { chooseCorrectSpellingSchema } from '@/lib/zod/contentInput.schema'
+import {
+  chooseCorrectSpellingSchema,
+  chooseCorrectSpellingSelectorSchema
+} from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconChooseCorrectSpelling from '@/components/icons/content/IconChooseCorrectSpelling'
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
-import {CurriculumSelector} from '@/components/input/CurriculumSelector'
+import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 
 const tabs = [
   'Generate Content',
@@ -51,6 +54,8 @@ const ChooseCorrectSpellingPage = () => {
       contentType='chooseCorrectSpelling'
       icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
       setContent={setContent}
+      zodSchema={chooseCorrectSpellingSelectorSchema}
+      info={chooseSpellingManualInfo}
     />,
     <p key='Tab 4'>Tab 4</p>
   ]
