@@ -15,13 +15,7 @@ import IconChooseCorrectSpelling from '@/components/icons/content/IconChooseCorr
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
-
-const tabs = [
-  'Generate Content',
-  'Manual Input',
-  'Curriculum Selector',
-  'Content Guide'
-]
+import { allTabs } from '@/lib/constants/tabOptions'
 
 const ChooseCorrectSpellingPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -33,7 +27,6 @@ const ChooseCorrectSpellingPage = () => {
       formType='generated'
       zodSchema={chooseCorrectSpellingSchema}
       info={chooseSpellingGeneratedInfo}
-      levelSelectionEnabled={false}
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
       setContent={setContent}
@@ -47,6 +40,7 @@ const ChooseCorrectSpellingPage = () => {
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
       setContent={setContent}
+      levelSelectionEnabled={false}
     />,
     <CurriculumSelector
       key='Tab 3'
@@ -63,7 +57,7 @@ const ChooseCorrectSpellingPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={tabs} tabContent={tabContent} />
+        <ContentTabs tabs={allTabs} tabContent={tabContent} />
       ) : (
         <EditWordPairsForm
           firstWordLabel='Correct word'

@@ -146,7 +146,7 @@ export function ContentForm<T>({
                 isDisabled={loading}
               />
             </div>
-            {formType === 'generated' && levelSelectionEnabled && (
+            {levelSelectionEnabled && (
               <div className='w-[35%] pl-8'>
                 <div className='flex flex-row items-center justify-between'>
                   <h3 className='label-text mb-0.5'>Content level:</h3>

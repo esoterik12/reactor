@@ -148,3 +148,14 @@ export const grammarMistakesInfo = {
     title: 'Number of sentences'
   }
 }
+
+// Riddles
+export const riddlesInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Riddle content:',
+    inputInfo:
+      'Provide a comma-separated list of words you would like to create riddles for. You can provide phrases or full sentences as well as long as each is separated by a comma, just consider their feasability as answers to a riddle.',
+    inputExample: 'For example: camouflage, evolution, predator'
+  }
+}

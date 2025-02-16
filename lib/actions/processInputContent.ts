@@ -7,6 +7,7 @@ import findYourPartnerMessage from '../gpt-messages/findYourPartnerMessage'
 import grammarMistakesMessage from '../gpt-messages/grammarMistakesMessage'
 import memoryCardsMessage from '../gpt-messages/memoryCardsMessage'
 import reviewHuntMessage from '../gpt-messages/reviewHuntMessage'
+import riddlesMessage from '../gpt-messages/riddlesMessage'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -79,6 +80,13 @@ export default async function processInputContent({
           concepts: JSON.stringify(textareaInput),
           levelSelection,
           numberOfQuestions: numberOfContent || 8
+        })
+        break
+
+      case 'riddles':
+        generationMessage = riddlesMessage({
+          data: primaryInputContent,
+          levelSelection
         })
         break
 

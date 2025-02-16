@@ -11,8 +11,7 @@ import { ContentForm } from '@/components/input/ContentForm'
 import IconReviewHunt from '@/components/icons/content/IconReviewHunt'
 import EditMultipleChoice from '@/components/edit/EditMutlipleChoice'
 import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
-
-const tabs = ['Generate Content', 'Curriculum Selector', 'Content Guide']
+import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const ReviewHuntPage = () => {
   const [content, setContent] = useState<EditMultipleChoiceValues | null>(null)
@@ -35,7 +34,7 @@ const ReviewHuntPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={tabs} tabContent={tabContent} />
+        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
         <EditMultipleChoice generatedContent={content} />
       )}

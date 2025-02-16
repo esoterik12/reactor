@@ -137,7 +137,7 @@ export function CurriculumSelector<T>({
   }
 
   return (
-    <section className='flex min-h-[600px] flex-col'>
+    <section className='flex min-h-[613px] flex-col'>
       <div className='mb-2 flex items-center gap-2 px-4 pt-4'>
         {icon}
         <h2 className='large-text'>{contentTitle}</h2>
@@ -145,7 +145,7 @@ export function CurriculumSelector<T>({
       {/* Left Panel: Selectors & Checkboxes */}
       <form
         onSubmit={handleSubmit(handleGenerateButton)}
-        className='border-color w-full border-b px-4 pb-4'
+        className='border-color w-full border-b px-4 pb-2'
       >
         {/* Dropdowns */}
         <div className='mt-2 flex flex-row gap-x-10'>
@@ -221,7 +221,7 @@ export function CurriculumSelector<T>({
         </div>
 
         {/* Title and Inputs */}
-        <div className='mt-6 flex flex-row gap-10'>
+        <div className='mt-8 flex flex-row gap-10'>
           <div className='w-[340px]'>
             <h3 className='label-text mb-0.5'>Title:</h3>
             <InputField
@@ -276,33 +276,32 @@ export function CurriculumSelector<T>({
           )}
         </div>
 
-        {/* Number of Questions */}
-        {info.numberOfContent && (
-          <div>
-            <div className='flex flex-row items-center justify-between'>
-              <h3 className='label-text mb-0.5'>
-                {info.numberOfContent.title}:
-              </h3>
+        {/* Form Bottom Submit & # of content */}
+        <div className='flex flex-row gap-10 items-centers'>
+          {/* Number of Questions */}
+          {info.numberOfContent && (
+            <div>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='label-text mb-0.5'>
+                  {info.numberOfContent.title}:
+                </h3>
+              </div>
+              <InputField
+                type='text'
+                id='numberOfContent'
+                placeholder=''
+                inputClasses='p-1 w-[150px]'
+                error={errors.numberOfContent}
+                {...register('numberOfContent')}
+                isDisabled={loading}
+              />
             </div>
-            <InputField
-              type='text'
-              id='numberOfContent'
-              placeholder=''
-              inputClasses='p-1 w-[150px]'
-              error={errors.numberOfContent}
-              {...register('numberOfContent')}
-              isDisabled={loading}
-            />
-          </div>
-        )}
-
-        {/* Submit */}
-        <div>
+          )}
           <DefaultButton
             ariaLabel='Submit button'
             btnType='submit'
             handleClick={handleSubmit(handleGenerateButton)}
-            customClasses='w-[150px] mt-2 button-border primary-background p-1 hover-effect-primary'
+            customClasses='w-[150px] h-9 my-5 button-border primary-background p-1 hover-effect-primary'
             isDisabled={loading}
           >
             <p className='button-text'>Generate</p>

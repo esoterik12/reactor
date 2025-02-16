@@ -41,6 +41,11 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
         linkId: '1-6',
         contentTitle: 'Grammar Mistakes',
         link: `${root}/grammarmistakes`
+      },
+      {
+        linkId: '1-7',
+        contentTitle: 'Riddles',
+        link: `${root}/riddles`
       }
     ]
   },

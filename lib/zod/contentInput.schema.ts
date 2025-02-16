@@ -4,6 +4,7 @@ import { z } from 'zod'
 // omit from zod to remove primary input requirement since it is
 // filled with the unitData from JSON files
 
+// Used in several content types like crazy check up manual
 export const baseContentSchema = z.object({
   title: z
     .string()
@@ -91,6 +92,12 @@ export const textareaContentSchema = baseContentSchema.extend({
     })
 })
 
+// This is used in Crazy Check Up Selector / Riddles Selector and others for
+export const baseContentSelectorSchema = baseContentSchema.omit({
+  primaryInputContent: true
+})
+
+//
 export const huntAndMistakesSchema = textareaContentSchema.extend({
   numberOfContent: z.coerce
     .number({

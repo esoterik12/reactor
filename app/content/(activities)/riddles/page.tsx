@@ -1,43 +1,43 @@
 'use client'
 import { useState } from 'react'
 import ContentTabs from '@/components/containers/ContentTabs'
-import React from 'react'
 import {
-  crazyCheckUpInfo,
-  contentIconStyles
+  contentIconStyles,
+  riddlesInfo
 } from '@/lib/constants/content/contentInfo'
 import {
   baseContentSchema,
   baseContentSelectorSchema
 } from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
-import IconCrazyCheckUp from '@/components/icons/content/IconCrazyCheckUp'
-import EditSentencesForm from '@/components/edit/EditSentencesForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
+import IconRiddles from '@/components/icons/content/IconRiddles'
+import EditSentencesForm from '@/components/edit/EditSentencesForm'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
-const CrazyCheckUpPage = () => {
+const RiddlesPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
 
   const tabContent = [
     <ContentForm
       key='Tab 1'
-      icon={<IconCrazyCheckUp classes={contentIconStyles} />}
+      icon={<IconRiddles classes={contentIconStyles} />}
       formType='generated'
       zodSchema={baseContentSchema}
-      info={crazyCheckUpInfo}
-      contentTitle='Crazy Check Up'
-      contentType='crazyCheckUp'
+      info={riddlesInfo}
+      levelSelectionEnabled={true}
+      contentTitle='Riddles'
+      contentType='riddles'
       setContent={setContent}
     />,
     <CurriculumSelector
       key='Tab 2'
-      contentTitle='Crazy Check Up'
-      contentType='crazyCheckUp'
-      icon={<IconCrazyCheckUp classes={contentIconStyles} />}
+      contentTitle='Riddles'
+      contentType='riddles'
+      icon={<IconRiddles classes={contentIconStyles} />}
       setContent={setContent}
       zodSchema={baseContentSelectorSchema}
-      info={crazyCheckUpInfo}
+      info={riddlesInfo}
     />,
     <p key='Tab 3'>Tab 3</p>
   ]
@@ -53,4 +53,4 @@ const CrazyCheckUpPage = () => {
   )
 }
 
-export default CrazyCheckUpPage
+export default RiddlesPage

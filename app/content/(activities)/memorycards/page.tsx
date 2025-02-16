@@ -16,13 +16,7 @@ import IconMemoryCards from '@/components/icons/content/IconMemoryCards'
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
-
-const tabs = [
-  'Generate Content',
-  'Manual Input',
-  'Curriculum Selector',
-  'Content Guide'
-]
+import { allTabs } from '@/lib/constants/tabOptions'
 
 const MemoryCardsPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -48,10 +42,11 @@ const MemoryCardsPage = () => {
       contentType='memoryCards'
       watchComponent='pairs'
       setContent={setContent}
+      levelSelectionEnabled={false}
     />,
     <CurriculumSelector
       key='Tab 3'
-      contentTitle='Choose Correct Spelling'
+      contentTitle='Memory Cards'
       contentType='memoryCards'
       icon={<IconMemoryCards classes={contentIconStyles} />}
       setContent={setContent}
@@ -64,7 +59,7 @@ const MemoryCardsPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={tabs} tabContent={tabContent} />
+        <ContentTabs tabs={allTabs} tabContent={tabContent} />
       ) : (
         <EditWordPairsForm
           firstWordLabel='Word one'

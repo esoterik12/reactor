@@ -5,6 +5,7 @@ import {
 } from '@/lib/constants/curriculum/curriculumSelectorValues'
 import React, { SetStateAction } from 'react'
 import { motion } from 'framer-motion'
+import HideWeekButton from '../buttons/HideWeekButton'
 
 type Props = {
   weekItem: SpellingWeek | VocabWeek
@@ -53,10 +54,17 @@ const WeekWordsContainer = ({
             y: { duration: 0.35, ease: 'easeInOut' }
           }}
         >
-          <h4 className='mb-2 text-sm font-medium'>
-            {title}
-            {weekName}
-          </h4>
+          <div className='mb-2 flex flex-row items-center justify-between'>
+            <h4 className='text-sm font-medium'>
+              {title}
+              {weekName}
+            </h4>
+            <HideWeekButton
+              weekItem={weekItem}
+              wordsToFilter={wordsToFilter}
+              setWordsToFilter={setWordsToFilter}
+            />
+          </div>
 
           <div className={`grid grid-cols-${columnNumber}`}>
             {weekItem.words.map((word, spIndex) => (
@@ -67,7 +75,9 @@ const WeekWordsContainer = ({
               >
                 <p
                   className={
-                    wordsToFilter.includes(word.answer) ? 'text-zinc-600' : ''
+                    wordsToFilter.includes(word.answer)
+                      ? 'text-zinc-300 dark:text-zinc-600'
+                      : ''
                   }
                 >
                   {word.answer.toLowerCase()}

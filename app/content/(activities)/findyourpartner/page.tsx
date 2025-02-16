@@ -14,13 +14,7 @@ import {
 } from '@/lib/zod/contentInput.schema'
 import { WordPairings } from '@/lib/zod/contentEdit.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
-
-const tabs = [
-  'Generate Content',
-  'Manual Input',
-  'Curriculum Selector',
-  'Content Guide'
-]
+import { allTabs } from '@/lib/constants/tabOptions'
 
 const FindYourPartnerPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -46,6 +40,7 @@ const FindYourPartnerPage = () => {
       contentTitle='Find Your Partner'
       watchComponent='pairs'
       setContent={setContent}
+      levelSelectionEnabled={false}
     />,
     <p key='Tab 3'>Tab 3</p>,
     <p key='Tab 4'>Tab 4</p>
@@ -54,7 +49,7 @@ const FindYourPartnerPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={tabs} tabContent={tabContent} />
+        <ContentTabs tabs={allTabs} tabContent={tabContent} />
       ) : (
         <EditWordPairsForm
           firstWordLabel='Word one'

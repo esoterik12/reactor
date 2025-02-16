@@ -1,6 +1,6 @@
 'use client'
 import { motion, AnimatePresence } from 'framer-motion'
-import AnimateIcon from '../icons/IconTriangleToggle'
+import AnimateIcon from '../icons/AnimateIcon'
 import { AccordionSidebarContentProps } from '@/types/accordion.types'
 import SidebarLink from '../layout/SidebarLink'
 

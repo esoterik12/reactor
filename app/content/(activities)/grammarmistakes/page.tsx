@@ -14,8 +14,7 @@ import {
   editSentencePairsSchema
 } from '@/lib/zod/editSentencePairs.schema'
 import EditSentencePairsForm from '@/components/edit/EditSentencePairsForm'
-
-const tabs = ['Generate Content', 'Curriculum Selector', 'Content Guide']
+import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const GrammarMistakesPage = () => {
   const [content, setContent] = useState<EditSentencePairs | null>(null)
@@ -38,7 +37,7 @@ const GrammarMistakesPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={tabs} tabContent={tabContent} />
+        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
         <EditSentencePairsForm
           firstWordLabel='Correct sentence'
