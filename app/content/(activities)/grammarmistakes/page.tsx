@@ -18,6 +18,10 @@ import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const GrammarMistakesPage = () => {
   const [content, setContent] = useState<EditSentencePairs | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm<EditSentencePairs>
@@ -29,6 +33,7 @@ const GrammarMistakesPage = () => {
       contentType='grammarMistakes'
       contentTitle='Grammar Mistakes'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>
@@ -44,6 +49,7 @@ const GrammarMistakesPage = () => {
           secondWordLabel='Incorrect sentence'
           generatedContent={content}
           zodSchema={editSentencePairsSchema}
+          metaData={metaData}
         />
       )}
     </>

@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { useState, useCallback } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -9,18 +9,28 @@ import {
   editPairsSchema,
   WordPairings
 } from '@/lib/zod/contentEdit.schema'
+import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
+import { EditMetaDataProps } from '@/types/input.types'
+import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
+import InlineError from '../shared/InlineError'
 
 interface EditPairsFormProps {
   firstWordLabel: string
   secondWordLabel: string
   generatedContent: WordPairings
+  metaData: EditMetaDataProps
 }
 
 const EditWordPairsForm = ({
   firstWordLabel = 'First word',
   secondWordLabel = 'Second word',
-  generatedContent
+  generatedContent,
+  metaData
 }: EditPairsFormProps) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  const { linkRef, downloadBlob } = useBlobDownloader()
+
   const {
     register,
     handleSubmit,
@@ -32,10 +42,46 @@ const EditWordPairsForm = ({
     defaultValues: { wordPairings: generatedContent }
   })
 
-  const handleSubmitButton = (data: EditPairsFormValues) => {
-    console.log('handleSubmitButton clicked')
-    console.log('data in handleSubmitButton: ', data)
-  }
+  const handleSubmitButton = useCallback(
+    async (data: EditPairsFormValues) => {
+      setIsLoading(true)
+      setError(null)
+      const pdfData = {
+        data: {
+          title: metaData.title,
+          content: JSON.stringify(data)
+        },
+        pdfType: capitalizeFirstLetter(metaData.contentType)
+      }
+
+      try {
+        const response = await fetch('/api/generate-pdf', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ pdfData })
+        })
+
+        if (!response.ok) {
+          const errorData = await response.json()
+          throw new Error(errorData.error || 'Failed to generate PDF.')
+        }
+
+        const blob = await response.blob()
+        const fileName = `${metaData.title} - ${capitalizeFirstLetter(
+          metaData.contentType
+        )}.pdf`
+        downloadBlob(blob, fileName)
+      } catch (error) {
+        setError('An unexpected error occurred.')
+        console.log('error', error)
+      } finally {
+        setIsLoading(false)
+      }
+    },
+    [metaData, downloadBlob]
+  )
 
   return (
     <div className='container-background flex h-full flex-col rounded-lg'>
@@ -97,13 +143,29 @@ const EditWordPairsForm = ({
             </div>
           ))}
         </div>
-        <DefaultButton
-          btnType='submit'
-          handleClick={handleSubmit(handleSubmitButton)}
-          customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
-        >
-          <p className='button-text'>Submit</p>
-        </DefaultButton>
+        <div className='ml-10 mt-4 flex flex-row'>
+          <DefaultButton
+            btnType='submit'
+            handleClick={handleSubmit(handleSubmitButton)}
+            customClasses='w-32 button-border primary-background p-1 hover-effect-primary'
+            isDisabled={isLoading}
+          >
+            {isLoading ? (
+              <span>Loading...</span>
+            ) : (
+              <p className='button-text'>Submit</p>
+            )}
+          </DefaultButton>
+          {error && (
+            <InlineError classes=''>
+              <p>{error}</p>
+            </InlineError>
+          )}
+        </div>
+        {/* Hidden download link */}
+        <a ref={linkRef} className='hidden'>
+          Download
+        </a>
       </form>
     </div>
   )

@@ -18,6 +18,10 @@ import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const CrazyCheckUpPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm
@@ -29,6 +33,7 @@ const CrazyCheckUpPage = () => {
       contentTitle='Crazy Check Up'
       contentType='crazyCheckUp'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <CurriculumSelector
       key='Tab 2'
@@ -36,6 +41,7 @@ const CrazyCheckUpPage = () => {
       contentType='crazyCheckUp'
       icon={<IconCrazyCheckUp classes={contentIconStyles} />}
       setContent={setContent}
+      setMetaData={setMetaData}
       zodSchema={baseContentSelectorSchema}
       info={crazyCheckUpInfo}
     />,
@@ -47,7 +53,7 @@ const CrazyCheckUpPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditSentencesForm generatedContent={content} />
+        <EditSentencesForm generatedContent={content} metaData={metaData} />
       )}
     </>
   )

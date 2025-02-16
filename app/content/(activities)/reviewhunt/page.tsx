@@ -15,6 +15,10 @@ import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const ReviewHuntPage = () => {
   const [content, setContent] = useState<EditMultipleChoiceValues | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm
@@ -26,6 +30,7 @@ const ReviewHuntPage = () => {
       contentTitle='Review Hunt'
       contentType='reviewHunt'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <p key='Tab 2'>Tab 2</p>,
     <p key='Tab 3'>Tab 3</p>
@@ -36,7 +41,7 @@ const ReviewHuntPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditMultipleChoice generatedContent={content} />
+        <EditMultipleChoice generatedContent={content} metaData={metaData} />
       )}
     </>
   )

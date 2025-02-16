@@ -6,15 +6,20 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { editSentencesSchema } from '@/lib/zod/contentEdit.schema'
 import { z } from 'zod'
+import { EditMetaDataProps } from '@/types/input.types'
 
 interface EditSentencesFormProps {
   generatedContent: string[]
+  metaData: EditMetaDataProps
 }
 
 // Infer the form values from the schema
 type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
 
-const EditSentencesForm = ({ generatedContent }: EditSentencesFormProps) => {
+const EditSentencesForm = ({
+  generatedContent,
+  metaData
+}: EditSentencesFormProps) => {
   const {
     register,
     handleSubmit,
@@ -29,6 +34,7 @@ const EditSentencesForm = ({ generatedContent }: EditSentencesFormProps) => {
   const handleSubmitButton = (data: EditSentencesFormValues) => {
     console.log('handleSubmitButton clicked')
     console.log('data in handleSubmitButton: ', data)
+    console.log('metaData', metaData)
     // Here you can process the data (e.g., send it to an API)
   }
 

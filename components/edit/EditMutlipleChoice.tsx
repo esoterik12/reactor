@@ -7,15 +7,20 @@ import { editMultipleChoice } from '@/lib/zod/contentEdit.schema'
 import { z } from 'zod'
 import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
 import EditQuestionForm from './EditQuestionForm'
+import { EditMetaDataProps } from '@/types/input.types'
 
 interface EditMultipleChoiceProps {
   generatedContent: EditMultipleChoiceValues
+  metaData: EditMetaDataProps
 }
 
 // Infer the form values from the schema.
 type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoice>
 
-const EditMultipleChoice = ({ generatedContent }: EditMultipleChoiceProps) => {
+const EditMultipleChoice = ({
+  generatedContent,
+  metaData
+}: EditMultipleChoiceProps) => {
   const {
     register,
     control,
@@ -39,6 +44,7 @@ const EditMultipleChoice = ({ generatedContent }: EditMultipleChoiceProps) => {
 
   const handleSubmitButton = (data: EditMultipleChoiceFormValues) => {
     console.log('Form Data:', data)
+    console.log('metaData', metaData)
   }
 
   return (

@@ -19,6 +19,10 @@ import { allTabs } from '@/lib/constants/tabOptions'
 
 const ChooseCorrectSpellingPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm
@@ -30,6 +34,7 @@ const ChooseCorrectSpellingPage = () => {
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <ContentForm
       key='Tab 2'
@@ -40,6 +45,7 @@ const ChooseCorrectSpellingPage = () => {
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
       setContent={setContent}
+      setMetaData={setMetaData}
       levelSelectionEnabled={false}
     />,
     <CurriculumSelector
@@ -48,6 +54,7 @@ const ChooseCorrectSpellingPage = () => {
       contentType='chooseCorrectSpelling'
       icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
       setContent={setContent}
+      setMetaData={setMetaData}
       zodSchema={chooseCorrectSpellingSelectorSchema}
       info={chooseSpellingManualInfo}
     />,
@@ -63,6 +70,7 @@ const ChooseCorrectSpellingPage = () => {
           firstWordLabel='Correct word'
           secondWordLabel='Incorrect word'
           generatedContent={content}
+          metaData={metaData}
         />
       )}
     </>

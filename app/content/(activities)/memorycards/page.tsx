@@ -20,6 +20,10 @@ import { allTabs } from '@/lib/constants/tabOptions'
 
 const MemoryCardsPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm<WordPairings>
@@ -31,6 +35,7 @@ const MemoryCardsPage = () => {
       contentTitle='Memory Cards'
       contentType='memoryCards'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <ContentForm
       key='Tab 2'
@@ -42,6 +47,7 @@ const MemoryCardsPage = () => {
       contentType='memoryCards'
       watchComponent='pairs'
       setContent={setContent}
+      setMetaData={setMetaData}
       levelSelectionEnabled={false}
     />,
     <CurriculumSelector
@@ -50,6 +56,7 @@ const MemoryCardsPage = () => {
       contentType='memoryCards'
       icon={<IconMemoryCards classes={contentIconStyles} />}
       setContent={setContent}
+      setMetaData={setMetaData}
       zodSchema={memorySelectorSchama}
       info={memoryCardsGeneratedInfo}
     />,
@@ -65,6 +72,7 @@ const MemoryCardsPage = () => {
           firstWordLabel='Word one'
           secondWordLabel='Word two'
           generatedContent={content}
+          metaData={metaData}
         />
       )}
     </>

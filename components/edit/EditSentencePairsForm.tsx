@@ -9,19 +9,22 @@ import {
   EditSentencePairs,
   EditSentencePairsFormValues
 } from '@/lib/zod/editSentencePairs.schema'
+import { EditMetaDataProps } from '@/types/input.types'
 
 interface EditSentencePairsFormProps {
   firstWordLabel: string
   secondWordLabel: string
   zodSchema: ZodSchema
   generatedContent: EditSentencePairs
+  metaData: EditMetaDataProps
 }
 
 const EditSentencePairsForm = ({
   firstWordLabel = 'First word',
   secondWordLabel = 'Second word',
   generatedContent,
-  zodSchema
+  zodSchema,
+  metaData
 }: EditSentencePairsFormProps) => {
   const {
     register,
@@ -37,6 +40,7 @@ const EditSentencePairsForm = ({
   const handleSubmitButton = (data: EditSentencePairsFormValues) => {
     console.log('handleSubmitButton clicked')
     console.log('data in handleSubmitButton: ', data)
+    console.log('metaData', metaData)
   }
 
   return (

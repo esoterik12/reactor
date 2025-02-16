@@ -8,6 +8,7 @@ import { setInput } from '@/redux/slices/inputSlice'
 import { useAppDispatch } from '@/redux/hooks'
 import {
   ContentFormInput,
+  EditMetaDataProps,
   InfoTextData,
   InfoTextObject
 } from '@/types/input.types'
@@ -32,6 +33,7 @@ interface ContentFormProps<T> {
   contentType: string
   watchComponent?: 'pairs'
   setContent: React.Dispatch<SetStateAction<T | null>>
+  setMetaData: React.Dispatch<SetStateAction<EditMetaDataProps>>
 }
 
 export function ContentForm<T>({
@@ -43,7 +45,8 @@ export function ContentForm<T>({
   contentTitle,
   contentType,
   watchComponent,
-  setContent
+  setContent,
+  setMetaData
 }: ContentFormProps<T>) {
   const dispatch = useAppDispatch()
   const [loading, setLoading] = useState(false)
@@ -103,6 +106,7 @@ export function ContentForm<T>({
             generationResults.result.sentencePairings ||
             generationResults.result.sentences
         )
+        setMetaData({ title: data.title, contentType })
       } else {
         throw new AppError(400, 'Error generating content.')
       }

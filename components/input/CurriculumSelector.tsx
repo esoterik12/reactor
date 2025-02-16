@@ -22,7 +22,7 @@ import { CurriculumSelectorForm } from '@/types/curriculumSelector.types'
 import { defaultSelectorValues } from '@/lib/constants/content/defaultSelectorValues'
 import { InputField } from './InputField'
 import { ZodSchema } from 'zod'
-import { InfoTextData } from '@/types/input.types'
+import { EditMetaDataProps, InfoTextData } from '@/types/input.types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TextareaInput } from './TextareaInput'
 import GeneratingContent from '../shared/GeneratingContent'
@@ -34,6 +34,7 @@ interface CurriculumSelectorProps<T> {
   contentTitle: string
   contentType: string
   setContent: React.Dispatch<SetStateAction<T | null>>
+  setMetaData: React.Dispatch<SetStateAction<EditMetaDataProps>>
 }
 
 export function CurriculumSelector<T>({
@@ -42,7 +43,8 @@ export function CurriculumSelector<T>({
   info,
   contentTitle,
   contentType,
-  setContent
+  setContent,
+  setMetaData
 }: CurriculumSelectorProps<T>) {
   const [level, setLevel] = useState<string | null>(null)
   const [unit, setUnit] = useState<string | null>(null)
@@ -127,6 +129,7 @@ export function CurriculumSelector<T>({
         )
 
         setContent(generationResults.result.data)
+        setMetaData({ title: data.title, contentType })
       } catch (error) {
         // TODO add error handling
         console.error('Error loading unit data:', error)
@@ -277,7 +280,7 @@ export function CurriculumSelector<T>({
         </div>
 
         {/* Form Bottom Submit & # of content */}
-        <div className='flex flex-row gap-10 items-centers'>
+        <div className='items-centers flex flex-row gap-10'>
           {/* Number of Questions */}
           {info.numberOfContent && (
             <div>

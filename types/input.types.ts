@@ -20,3 +20,8 @@ export interface InfoTextObject {
   inputInfo?: string
   inputExample?: string
 }
+
+export interface EditMetaDataProps {
+  title: string
+  contentType: string
+}

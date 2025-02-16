@@ -115,6 +115,24 @@ basePageStyles.ts and content-specific styling react-pdf has a few limitations
 and cannot use all CSS styles server rendered PDFs are made in `/components/pdf`
 folder
 
+1. Create a tsx component that imports required react-pdf components from @react-pdf/renderer. This can be server comp. It will produce the pdf with jsx
+2. Create a route.tsx (so it can handle MyDocument.tsx) POST function that
+   recieves a Request and returns a Promise<Response>
+- Get the body from request.json()
+- Validate etc.
+- use renderToBuffer from `@react-pdf/renderer` to create pdfBuffer
+  - pdfBuffer is a Buffer object that contains the binary data of the PDF
+    (Buffer is a Node.js global object used to handle binary data directly) - this cannot be embedded or transmitted within JSON or HTML without encoding (It is possible to use Server Actions, but as far as I can tell this does not allow returning the pdfBuffer without encoding)
+
+3. Create a custom hook to handle blob downloads (using useRef)
+
+4. Create a client-side component to handle the download
+- async function that uses the fetch api (`/api/generate-pdf`)
+- use fetch api method .blob to convert response data into blob object (Binary Large OBject)'
+
+5. Add fonts to `public` folder if being used in style sheet
+- Fonts will need to use a source path with Font.register: process.env.NEXT_PUBLIC_BASE_URL
+
 ### Edit functionality:
 
 Generated content is stored in state:

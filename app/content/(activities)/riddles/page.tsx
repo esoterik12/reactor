@@ -17,6 +17,10 @@ import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 
 const RiddlesPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm
@@ -29,6 +33,7 @@ const RiddlesPage = () => {
       contentTitle='Riddles'
       contentType='riddles'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <CurriculumSelector
       key='Tab 2'
@@ -36,6 +41,7 @@ const RiddlesPage = () => {
       contentType='riddles'
       icon={<IconRiddles classes={contentIconStyles} />}
       setContent={setContent}
+      setMetaData={setMetaData}
       zodSchema={baseContentSelectorSchema}
       info={riddlesInfo}
     />,
@@ -47,7 +53,7 @@ const RiddlesPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditSentencesForm generatedContent={content} />
+        <EditSentencesForm generatedContent={content} metaData={metaData} />
       )}
     </>
   )

@@ -18,6 +18,10 @@ import { allTabs } from '@/lib/constants/tabOptions'
 
 const FindYourPartnerPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
+  const [metaData, setMetaData] = useState({
+    title: '',
+    contentType: ''
+  })
 
   const tabContent = [
     <ContentForm
@@ -29,6 +33,7 @@ const FindYourPartnerPage = () => {
       contentType='findYourPartner'
       contentTitle='Find Your Partner'
       setContent={setContent}
+      setMetaData={setMetaData}
     />,
     <ContentForm
       key='Tab 2'
@@ -40,6 +45,7 @@ const FindYourPartnerPage = () => {
       contentTitle='Find Your Partner'
       watchComponent='pairs'
       setContent={setContent}
+      setMetaData={setMetaData}
       levelSelectionEnabled={false}
     />,
     <p key='Tab 3'>Tab 3</p>,
@@ -55,6 +61,7 @@ const FindYourPartnerPage = () => {
           firstWordLabel='Word one'
           secondWordLabel='Word two'
           generatedContent={content}
+          metaData={metaData}
         />
       )}
     </>
