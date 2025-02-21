@@ -183,3 +183,36 @@ The system:
   - `EditMultipleChoice.tsx` for Type C - long sentence edit, 2x2 grid of
     options, correct answer => above type will require a
 - The above edit components will be used in the edit pages
+
+
+## NOTES:
+
+A work through of how data is being handled to generate a pdf for Riddles
+
+1. generation results are returned
+- message, code, error
+- result{}: data string[]
+
+2. setContent(generationResults.result.data)
+- content in page.tsx is therefore a string[]
+
+3. content passed to EditParagraphsForm - as string[]
+
+4. EditParagraphsForm sets defaultValues as {sentence: generatedContent}
+this is required for react hook form
+this uses EditSentencesFormValues tpye interface infered from definitions in contentEdit.schema.ts
+
+5. handleSubmitButton (in edit para) gets data which is an object
+with prop sentence: string[]
+
+it then JSON.stringify data.sentences as in pdfData.data.content
+
+it sends pdfData (stringify) in the body of POST request to `/api/generate-pdf`
+
+6. generate-pdf extracts pdfData from the body
+ALERT in here, content is still a string!
+
+it then JSON.parses the pdfData.data.content into a string[]
+
+7. inputData is passed to MyDocument (which is a dynamically imported PDF.tsx content file - server redndered react-pdf component)
+POSSIBLE PROBLEM AREA: the problem here is the inputData being passed

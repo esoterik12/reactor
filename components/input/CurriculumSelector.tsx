@@ -112,8 +112,6 @@ export function CurriculumSelector<T>({
           wordsToFilter
         })
 
-        console.log('data', data)
-
         const generationResults = await processInputContent({
           contentType,
           levelSelection: level || 'No selection',

@@ -13,6 +13,7 @@ import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 import InlineError from '../shared/InlineError'
+import { shuffleArray } from '@/lib/utils/shuffleArray'
 
 interface EditPairsFormProps {
   firstWordLabel: string
@@ -34,6 +35,7 @@ const EditWordPairsForm = ({
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors }
   } = useForm<EditPairsFormValues>({
     mode: 'onBlur',
@@ -44,14 +46,16 @@ const EditWordPairsForm = ({
 
   const handleSubmitButton = useCallback(
     async (data: EditPairsFormValues) => {
-      setIsLoading(true)
       setError(null)
+      setIsLoading(true)
+      const pdfType = capitalizeFirstLetter(metaData.contentType)
+
       const pdfData = {
         data: {
           title: metaData.title,
           content: JSON.stringify(data)
         },
-        pdfType: capitalizeFirstLetter(metaData.contentType)
+        pdfType
       }
 
       try {
@@ -69,9 +73,7 @@ const EditWordPairsForm = ({
         }
 
         const blob = await response.blob()
-        const fileName = `${metaData.title} - ${capitalizeFirstLetter(
-          metaData.contentType
-        )}.pdf`
+        const fileName = `${metaData.title} - ${pdfType}.pdf`
         downloadBlob(blob, fileName)
       } catch (error) {
         setError('An unexpected error occurred.')
@@ -82,6 +84,37 @@ const EditWordPairsForm = ({
     },
     [metaData, downloadBlob]
   )
+
+  const shuffleWords = () => {
+    const shuffledWordsArray: string[] = []
+    generatedContent.map(word => {
+      shuffledWordsArray.push(word.wordOne)
+      shuffledWordsArray.push(word.wordTwo)
+    })
+
+    shuffleArray(shuffledWordsArray)
+
+    const finalShuffle = []
+
+    for (let i = 0; i < shuffledWordsArray.length; i += 2) {
+      finalShuffle.push({
+        wordOne: shuffledWordsArray[i],
+        wordTwo: shuffledWordsArray[i + 1]
+      })
+    }
+
+    console.log('finalShuffle', finalShuffle)
+
+    setValue('wordPairings', finalShuffle, {
+      shouldValidate: true
+    })
+  }
+
+  const unshuffleWords = () => {
+    setValue('wordPairings', generatedContent, {
+      shouldValidate: true
+    })
+  }
 
   return (
     <div className='container-background flex h-full flex-col rounded-lg'>
@@ -143,11 +176,11 @@ const EditWordPairsForm = ({
             </div>
           ))}
         </div>
-        <div className='ml-10 mt-4 flex flex-row'>
+        <div className='ml-10 mt-4 flex flex-row gap-4'>
           <DefaultButton
             btnType='submit'
             handleClick={handleSubmit(handleSubmitButton)}
-            customClasses='w-32 button-border primary-background p-1 hover-effect-primary'
+            customClasses='w-[100px] button-border primary-background p-1 hover-effect-primary'
             isDisabled={isLoading}
           >
             {isLoading ? (
@@ -156,6 +189,23 @@ const EditWordPairsForm = ({
               <p className='button-text'>Submit</p>
             )}
           </DefaultButton>
+          <DefaultButton
+            btnType='button'
+            handleClick={shuffleWords}
+            customClasses='w-[100px] button-border p-1 hover-effect'
+            isDisabled={isLoading}
+          >
+            <p className='secondary-text'>Shuffle</p>
+          </DefaultButton>
+          <DefaultButton
+            btnType='button'
+            handleClick={unshuffleWords}
+            customClasses='w-[100px] button-border p-1 hover-effect'
+            isDisabled={isLoading}
+          >
+            <p className='tertiary-text'>Unshuffle</p>
+          </DefaultButton>
+          <p>Add diff pairs button</p>
           {error && (
             <InlineError classes=''>
               <p>{error}</p>

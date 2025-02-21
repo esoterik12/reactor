@@ -28,7 +28,7 @@ const EditSentencesForm = ({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     resolver: zodResolver(editSentencesSchema),
-    defaultValues: { sentence: generatedContent }
+    defaultValues: { sentences: generatedContent }
   })
 
   const handleSubmitButton = (data: EditSentencesFormValues) => {
@@ -64,8 +64,8 @@ const EditSentencesForm = ({
                 id={`sentence-${index}`}
                 inputClasses='p-1 min-w-[800px] w-full'
                 placeholder='Enter sentence'
-                {...register(`sentence.${index}`)}
-                error={errors.sentence?.[index]}
+                {...register(`sentences.${index}`)}
+                error={errors.sentences?.[index]}
               />
             </div>
           ))}

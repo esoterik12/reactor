@@ -12,8 +12,8 @@ import {
 import { ContentForm } from '@/components/input/ContentForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import IconRiddles from '@/components/icons/content/IconRiddles'
-import EditSentencesForm from '@/components/edit/EditSentencesForm'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import EditParagraphsForm from '@/components/edit/EditParagraphsForm'
 
 const RiddlesPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
@@ -48,12 +48,14 @@ const RiddlesPage = () => {
     <p key='Tab 3'>Tab 3</p>
   ]
 
+  console.log('content in /riddles/page.tsx', content)
+
   return (
     <>
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditSentencesForm generatedContent={content} metaData={metaData} />
+        <EditParagraphsForm generatedContent={content} metaData={metaData} />
       )}
     </>
   )

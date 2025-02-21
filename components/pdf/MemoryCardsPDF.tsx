@@ -1,10 +1,10 @@
-import { WordPairings } from '@/lib/zod/contentEdit.schema'
+import { EditPairsFormValues } from '@/lib/zod/contentEdit.schema'
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { memoryCardsPDFStyles } from './MemoryCardsPDF.styles'
 
 interface MemoryCardsPDFProps {
   title: string
-  data: WordPairings
+  data: EditPairsFormValues
 }
 
 export const memoryCardsColors = {
@@ -15,7 +15,7 @@ export const memoryCardsColors = {
 }
 
 // Helper function to chunk an array into subarrays of a specified size
-const chunkArray = (arr: string[], size: number) => {
+export const chunkArray = (arr: string[], size: number) => {
   const result = []
   for (let i = 0; i < arr.length; i += size) {
     result.push(arr.slice(i, i + size))
@@ -25,7 +25,7 @@ const chunkArray = (arr: string[], size: number) => {
 
 const MemoryCardsPDF: React.FC<MemoryCardsPDFProps> = ({ title, data }) => {
   // Flatten the array of word pairs into a single array of words
-  const words = data.flatMap(pair => [pair.wordOne, pair.wordTwo])
+  const words = data.wordPairings.flatMap(pair => [pair.wordOne, pair.wordTwo])
   const rows = chunkArray(words, 4)
 
   return (

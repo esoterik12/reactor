@@ -17,10 +17,16 @@ export const editCorrectSpellingSchema = z.object({
     z.object({
       correctWord: z
         .string()
-        .min(1, { message: 'A correct word is required.' }),
+        .min(1, { message: 'A correct word is required.' })
+        .max(55, {
+          message: 'Correct word cannot support more than 55 characters.'
+        }),
       incorrectWord: z
         .string()
         .min(1, { message: 'An incorrect word is required.' })
+        .max(55, {
+          message: 'Incorrect word cannot support more than 55 characters.'
+        })
     })
   )
 })
@@ -32,12 +38,14 @@ export type EditCorrectSpellingFormValues = z.infer<
 export type CorrectSpellingWordPairings =
   EditCorrectSpellingFormValues['wordPairings']
 
+// TODO: This is currently used in paragraphs as well
 export const editSentencesSchema = z.object({
-  sentence: z.array(z.string().min(1, { message: 'Text is required.' }))
+  sentences: z
+    .array(z.string().min(1, { message: 'Text is required.' }))
+    .max(2000, { message: 'Input cannot support more than 2,000 characters.' })
 })
 
 export type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
-
 
 // Edit multiple choice:
 export const editMultipleChoice = z.object({

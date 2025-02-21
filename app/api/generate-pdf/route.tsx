@@ -23,7 +23,7 @@ export async function POST(request: Request): Promise<Response> {
     const { pdfData } = body
 
     // TODO: Check data in console
-    console.log('Received data:', pdfData)
+    console.log('Received data in route.tsx: ', pdfData)
 
     if (!pdfData || !pdfData.data || !pdfData.pdfType) {
       return NextResponse.json(
@@ -32,15 +32,17 @@ export async function POST(request: Request): Promise<Response> {
       )
     }
 
+    // parse the content (which is a string) in to js string array
+    const inputData = JSON.parse(pdfData.data.content)
+    console.log('inputData in route.tsx: ', inputData)
+
     // Dynamically import correct PDF components:
     const pdfModule = await import(`@/components/pdf/${pdfData.pdfType}PDF`)
     const MyDocument = pdfModule.default
 
-    const inputData = JSON.parse(pdfData.data.content)
-
     // Render the PDF document to a buffer (binary data)
     const pdfBuffer = await renderToBuffer(
-      <MyDocument title={pdfData.data.title} data={inputData.wordPairings} />
+      <MyDocument title={pdfData.data.title} data={inputData} />
     )
 
     // Here the pdfBuffer (binary data) is returned as the HTTP response body (no encoding required)
