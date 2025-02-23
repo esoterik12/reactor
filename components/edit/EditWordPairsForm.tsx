@@ -14,6 +14,7 @@ import { EditMetaDataProps } from '@/types/input.types'
 import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
+import { useAppSelector } from '@/redux/hooks'
 
 interface EditPairsFormProps {
   firstWordLabel: string
@@ -26,11 +27,12 @@ const EditWordPairsForm = ({
   firstWordLabel = 'First word',
   secondWordLabel = 'Second word',
   generatedContent,
-  metaData
+  metaData,
 }: EditPairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
+  const secondaryInputContent = useAppSelector(state => state.input.secondaryInputContent)
 
   const {
     register,
@@ -53,7 +55,8 @@ const EditWordPairsForm = ({
       const pdfData = {
         data: {
           title: metaData.title,
-          content: JSON.stringify(data)
+          content: JSON.stringify(data),
+          secondaryInputContent
         },
         pdfType
       }
@@ -82,7 +85,7 @@ const EditWordPairsForm = ({
         setIsLoading(false)
       }
     },
-    [metaData, downloadBlob]
+    [metaData, downloadBlob, secondaryInputContent]
   )
 
   const shuffleWords = () => {

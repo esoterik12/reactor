@@ -1,0 +1,117 @@
+{
+  "level": 3,
+  "unit": 1,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "___________ means looks up to something or someone very highly.",
+          "answer": "admires"
+        },
+        {
+          "prompt": "A ___________ is a person who is in the same class at school.",
+          "answer": "classmate"
+        },
+        {
+          "prompt": "A ___________ is a group of people who live in a certain area. They may share similar interests.",
+          "answer": "community"
+        },
+        {
+          "prompt": "To ___________ means to supply, give, or bring something about.",
+          "answer": "contribute"
+        },
+        {
+          "prompt": "___________ means doing something over and over to gain skill.",
+          "answer": "practicing"
+        },
+        {
+          "prompt": "To ___________ means to speak or say the sound of a letter or word.",
+          "answer": "pronounce"
+        },
+        {
+          "prompt": "___________ means to be afraid of or frightened by something.",
+          "answer": "scared"
+        },
+        {
+          "prompt": "___________ means suddenly fell in a helpless way or turned and rolled around.",
+          "answer": "tumbled"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "When you ___________, you do something special.",
+          "answer": "celebrate"
+        },
+        {
+          "prompt": "___________ is bravery in a difficult situation.",
+          "answer": "courage"
+        },
+        {
+          "prompt": "When something is a ___________, a person is sad because something is not as good as expected.",
+          "answer": "disappointment"
+        },
+        {
+          "prompt": "Something is ___________ if it is very valuable to you.",
+          "answer": "precious"
+        },
+        {
+          "prompt": "___________ is a feeling of satisfaction in something you have done.",
+          "answer": "pride"
+        },
+        {
+          "prompt": "When you ___________ someone, you make that person remember something.",
+          "answer": "remind"
+        },
+        {
+          "prompt": "You use ___________ to represent ideas or objects.",
+          "answer": "symbols"
+        },
+        {
+          "prompt": "A ___________ is something that has been done for a long time.",
+          "answer": "tradition"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "A ___________ is an important building, large object, or place.",
+          "answer": "carved"
+        },
+        {
+          "prompt": "A person who has ___________ something, cut it into a piece or shape.",
+          "answer": "clues"
+        },
+        {
+          "prompt": "___________ are hints that help someone find something or solve a mystery.",
+          "answer": "grand"
+        },
+        {
+          "prompt": "___________ means great, large, or magnificent.",
+          "answer": "landmark"
+        },
+        {
+          "prompt": "Something that is ___________ is extremely large or heavy.",
+          "answer": "massive"
+        },
+        {
+          "prompt": "A ___________ is a building, statue, or object that honors a person or event.",
+          "answer": "monument"
+        },
+        {
+          "prompt": "Something that is ___________ has a characteristic of or has to do with a nation or its government.",
+          "answer": "national"
+        },
+        {
+          "prompt": "___________ are small bits or signs left behind that show something was there.",
+          "answer": "traces"
+        }
+      ]
+    }
+  ]
+}

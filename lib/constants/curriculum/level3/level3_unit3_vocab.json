@@ -1,0 +1,117 @@
+{
+  "level": 3,
+  "unit": 3,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "The ________ of something is how much of that thing there is.",
+          "answer": "amount"
+        },
+        {
+          "prompt": "________ is the study of the stars, planets, and other outer space objects.",
+          "answer": "Astronomy"
+        },
+        {
+          "prompt": "A ________ is a round model of the world or Earth.",
+          "answer": "globe"
+        },
+        {
+          "prompt": "The ________ includes Earth and the other planets that orbit the Sun.",
+          "answer": "solar system"
+        },
+        {
+          "prompt": "If you ________ someone or something, you provide what they need.",
+          "answer": "support"
+        },
+        {
+          "prompt": "The ________ of something is the outside of it.",
+          "answer": "surface"
+        },
+        {
+          "prompt": "The ________ of something tells how hot or how cold that thing is.",
+          "answer": "temperature"
+        },
+        {
+          "prompt": "________ means the “state of being warm in temperature or feeling.”",
+          "answer": "Warmth"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "When you are in ________, you do not believe something.",
+          "answer": "disbelief"
+        },
+        {
+          "prompt": "To feel ________ is to feel upset because of shock or surprise.",
+          "answer": "dismay"
+        },
+        {
+          "prompt": "When something is ________, it is amazing.",
+          "answer": "fabulous"
+        },
+        {
+          "prompt": "________ are things that are noticeable about something.",
+          "answer": "Features"
+        },
+        {
+          "prompt": "When you are ________ something, you are presented with something that you can accept or turn down.",
+          "answer": "offered"
+        },
+        {
+          "prompt": "Something that is ________ is very beautiful or magnificent.",
+          "answer": "splendid"
+        },
+        {
+          "prompt": "When something is ________, it is the only one of its kind.",
+          "answer": "unique"
+        },
+        {
+          "prompt": "To be ________ means “to be watching closely and carefully.”",
+          "answer": "watchful"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "To be ________ is to be pleasant or ready to agree with something.",
+          "answer": "agreeable"
+        },
+        {
+          "prompt": "To ________ means “to admire highly” or “to be grateful for.”",
+          "answer": "appreciate"
+        },
+        {
+          "prompt": "________ means to have grown suddenly.",
+          "answer": "Boomed"
+        },
+        {
+          "prompt": "________ are people who come from a particular ancestor or group of ancestors.",
+          "answer": "Descendants"
+        },
+        {
+          "prompt": "________ is the number of people who live in a certain region or country.",
+          "answer": "Population"
+        },
+        {
+          "prompt": "________ are sources “of aid or support that may be drawn upon when needed.”",
+          "answer": "Resources"
+        },
+        {
+          "prompt": "________ is the method or means of carrying or moving something from one place to another.",
+          "answer": "Transportation"
+        },
+        {
+          "prompt": "________ are a means of transporting goods or people.",
+          "answer": "Vehicles"
+        }
+      ]
+    }
+  ]
+}

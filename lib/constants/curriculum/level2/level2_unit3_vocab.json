@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 3,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "To go _____________ something is to go from one side to the other.",
+          "answer": "across"
+        },
+        {
+          "prompt": "If you _____________ something, you take it and agree to return it later.",
+          "answer": "borrow"
+        },
+        {
+          "prompt": "The _____________ is land that is away from cities or large towns.",
+          "answer": "countryside"
+        },
+        {
+          "prompt": "An _____________ is a thought or plan you have for something.",
+          "answer": "ideas"
+        },
+        {
+          "prompt": "If my mom _____________ on something, she says firmly that it must be done.",
+          "answer": "insists"
+        },
+        {
+          "prompt": "A _____________ place is one that very few people visit.",
+          "answer": "lonely"
+        },
+        {
+          "prompt": "A _____________ is a way to answer a problem.",
+          "answer": "solution"
+        },
+        {
+          "prompt": "_____________ are very small towns in the country.",
+          "answer": "villages"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "If someone likes _____________, they like doing exciting and unusual things.",
+          "answer": "adventure"
+        },
+        {
+          "prompt": "If you feel _____________, you feel very pleased about something.",
+          "answer": "delighted"
+        },
+        {
+          "prompt": "If you _____________ about something you would like to have happen, you imagined it happening.",
+          "answer": "dreamed"
+        },
+        {
+          "prompt": "If you _____________ doing something, you like doing it.",
+          "answer": "enjoyed"
+        },
+        {
+          "prompt": "If your friends _____________, they complained about something.",
+          "answer": "grumbled"
+        },
+        {
+          "prompt": "_____________ is the Moon’s glow, which you often see at night.",
+          "answer": "moonlight"
+        },
+        {
+          "prompt": "A _____________ is a person who lives near you.",
+          "answer": "neighbor"
+        },
+        {
+          "prompt": "_____________ is the dark part of the day.",
+          "answer": "nighttime"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "_____________ means shouted with happiness or praise.",
+          "answer": "cheered"
+        },
+        {
+          "prompt": "A _____________ is a performance by musicians or singers.",
+          "answer": "concert"
+        },
+        {
+          "prompt": "An _____________ is a tool used to do or make something.",
+          "answer": "instrument"
+        },
+        {
+          "prompt": "Our _____________ are our ways of moving.",
+          "answer": "movements"
+        },
+        {
+          "prompt": "_____________ is the pleasing sounds made by a singer or musical instrument, such as a piano or guitar.",
+          "answer": "music"
+        },
+        {
+          "prompt": "_____________ is the repeating accents of sounds or movements to create a beat.",
+          "answer": "rhythm"
+        },
+        {
+          "prompt": "_____________ are noises that can be heard.",
+          "answer": "sounds"
+        },
+        {
+          "prompt": "When you _____________ something you know what it means.",
+          "answer": "understand"
+        }
+      ]
+    }
+  ]
+}

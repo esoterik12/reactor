@@ -17,6 +17,8 @@ export const baseContentSchema = z.object({
 })
 
 // Choose correct spelling schemas
+// TODO: this need to stop secondary being shorter than the number of pairs somehow
+// TODO: this also needs to ensure that the seondaryInputCOntent is only a-z lower or uppercase
 export const chooseCorrectSpellingSchema = z.object({
   title: z.string().min(1, { message: 'Title is required.' }),
   primaryInputContent: z

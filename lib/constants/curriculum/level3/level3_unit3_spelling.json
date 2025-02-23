@@ -1,0 +1,169 @@
+{
+  "level": 3,
+  "unit": 3,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "We love to ______ on the merry-go round.",
+          "answer": "whirl"
+        },
+        {
+          "prompt": "He finished the race in ______ place.",
+          "answer": "third"
+        },
+        { "prompt": "There are four ______ in my family.", "answer": "girls" },
+        { "prompt": "This mattress is very ______.", "answer": "firm" },
+        { "prompt": "A ______ is a kind of plant.", "answer": "fern" },
+        { "prompt": "We saw two ______ of cows.", "answer": "herds" },
+        { "prompt": "Our teacher is ______ and serious.", "answer": "stern" },
+        { "prompt": "I will help ______ the food.", "answer": "serve" },
+        { "prompt": "Don’t drop and ______ the puppy!", "answer": "hurt" },
+        { "prompt": "The ______ likes to help people.", "answer": "nurse" },
+        {
+          "prompt": "Luis ______ left at the end of the hall.",
+          "answer": "turns"
+        },
+        { "prompt": "What did you ______ in school?", "answer": "learn" },
+        {
+          "prompt": "Inside the oyster was a white ______.",
+          "answer": "pearl"
+        },
+        { "prompt": "The ______ big has three letters.", "answer": "word" },
+        { "prompt": "The ship sailed around the ______.", "answer": "world" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "The rock is very ______.", "answer": "sharp" },
+        { "prompt": "We planted flowers in our ______.", "answer": "yard" },
+        {
+          "prompt": "This painting was made by an ______.",
+          "answer": "artist"
+        },
+        { "prompt": "Who will ______ the turkey?", "answer": "carve" },
+        { "prompt": "I like to sit on our ______.", "answer": "porch" },
+        { "prompt": "That ______ had strong winds.", "answer": "storm" },
+        { "prompt": "What is your favorite ______?", "answer": "sport" },
+        { "prompt": "Mom told me a good ______.", "answer": "story" },
+        { "prompt": "My ______ is to dry the dishes.", "answer": "chore" },
+        { "prompt": "Izzy swam all the way to ______.", "answer": "shore" },
+        { "prompt": "My feet were ______ after the hike.", "answer": "sore" },
+        { "prompt": "Sloan began to ______ her candy.", "answer": "hoard" },
+        { "prompt": "Row with the boat’s ______.", "answer": "oars" },
+        {
+          "prompt": "Please ______ a glass of water for me.",
+          "answer": "pour"
+        },
+        { "prompt": "That blue cup is ______ cup.", "answer": "your" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "Be ______ around that dog!", "answer": "careful" },
+        { "prompt": "She ______ at her grade in shock.", "answer": "stared" },
+        { "prompt": "My brothers ______ their clothes.", "answer": "shared" },
+        { "prompt": "He and I make a good ______.", "answer": "pair" },
+        { "prompt": "The ______ went up six floors.", "answer": "stairs" },
+        {
+          "prompt": "Maggie had to ______ a dress to the recital.",
+          "answer": "wear"
+        },
+        {
+          "prompt": "The ______ liked to fish in the river.",
+          "answer": "bear"
+        },
+        { "prompt": "______ are my oatmeal cookies?", "answer": "where" },
+        { "prompt": "Dad put them in a jar over ______.", "answer": "there" },
+        { "prompt": "The letter began, “______ Ravi.”", "answer": "dear" },
+        {
+          "prompt": "Suitcases go to the ______ of the train.",
+          "answer": "rear"
+        },
+        { "prompt": "We packed our camping ______.", "answer": "gear" },
+        { "prompt": "______ was the cause of the noise.", "answer": "here" },
+        { "prompt": "Jack wants a ______ making music.", "answer": "career" },
+        { "prompt": "My ball team is my ______ group too.", "answer": "peer" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "The newspaper corrected the ______.",
+          "answer": "misprint"
+        },
+        { "prompt": "He ______ the instructions.", "answer": "misread" },
+        { "prompt": "I ______ a map that gets us lost.", "answer": "mistrust" },
+        { "prompt": "I hope I didn’t ______ any words!", "answer": "misspell" },
+        {
+          "prompt": "If you don’t feed your cat, you ______ it.",
+          "answer": "mistreat"
+        },
+        { "prompt": "The teacher ______ the paper.", "answer": "precut" },
+        {
+          "prompt": "The movie ______ was very exciting.",
+          "answer": "preview"
+        },
+        {
+          "prompt": "Mom and Dad said the hotel was ______.",
+          "answer": "prepaid"
+        },
+        { "prompt": "Dad will ______ our vacation.", "answer": "preplan" },
+        {
+          "prompt": "The cookbook said ______ the stove.",
+          "answer": "preheat"
+        },
+        { "prompt": "Lacey would ______ your report.", "answer": "distrust" },
+        { "prompt": "The shop was offering a ______.", "answer": "discount" },
+        { "prompt": "The ______ man stole the book.", "answer": "dishonest" },
+        { "prompt": "Did you ______ the clue?", "answer": "discover" },
+        {
+          "prompt": "Can you please ______ the phone’s ringer?",
+          "answer": "disable"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "We needed ______ for our science project.",
+          "answer": "foil"
+        },
+        { "prompt": "My grandfather collects old ______.", "answer": "coins" },
+        { "prompt": "The parade caused a lot of ______.", "answer": "noise" },
+        {
+          "prompt": "That table has a sharp ______ on each corner.",
+          "answer": "point"
+        },
+        { "prompt": "We will ______ our picnic.", "answer": "enjoy" },
+        { "prompt": "The baby looked very ______.", "answer": "joyful" },
+        {
+          "prompt": "His class was ______ on the first floor.",
+          "answer": "down"
+        },
+        { "prompt": "Tiffany saw an ______ in her barn.", "answer": "owl" },
+        { "prompt": "A ______ gathered outside.", "answer": "crowd" },
+        { "prompt": "The farmer will plow the ______.", "answer": "plow" },
+        {
+          "prompt": "The country road curved ______ and round.",
+          "answer": "round"
+        },
+        { "prompt": "His aunt just bought a new ______.", "answer": "couch" },
+        {
+          "prompt": "My parents are ______ of my good grades.",
+          "answer": "proud"
+        },
+        {
+          "prompt": "The basketball was out of air, so it didn’t ______.",
+          "answer": "bounce"
+        },
+        { "prompt": "I shouted ______ to my friend.", "answer": "loudly" }
+      ]
+    }
+  ]
+}

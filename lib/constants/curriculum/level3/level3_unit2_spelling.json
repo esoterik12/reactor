@@ -1,0 +1,127 @@
+{
+  "level": 3,
+  "unit": 2,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "The _____ is very blue today.", "answer": "sky" },
+        { "prompt": "Show me how to _____ bacon.", "answer": "fry" },
+        { "prompt": "Melissa ate a piece of _____.", "answer": "pie" },
+        { "prompt": "The gift was _____ with red ribbon.", "answer": "tied" },
+        { "prompt": "My jacket is too small and _____.", "answer": "tight" },
+        { "prompt": "This is the _____ answer.", "answer": "right" },
+        { "prompt": "The _____ light hurt my eyes.", "answer": "bright" },
+        {
+          "prompt": "We _____ up coffee beans to make coffee.",
+          "answer": "grind"
+        },
+        { "prompt": "The _____ is five years old.", "answer": "child" },
+        {
+          "prompt": "Did you put an ice _____ in the glass?",
+          "answer": "cube"
+        },
+        { "prompt": "The kitten was too _____.", "answer": "cute" },
+        { "prompt": "The cart is pulled by one _____.", "answer": "mule" },
+        { "prompt": "Mom likes old _____.", "answer": "music" },
+        { "prompt": "Lu _____ us a superhero.", "answer": "drew" },
+        { "prompt": "Very _____ people came to the show.", "answer": "few" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "I hurt the _____ of my foot.", "answer": "heel" },
+        { "prompt": "The play is one _____ from Friday.", "answer": "week" },
+        { "prompt": "She finds a fish in a small _____.", "answer": "creek" },
+        { "prompt": "Tickets to the play are _____.", "answer": "free" },
+        { "prompt": "I will color the grass _____.", "answer": "green" },
+        {
+          "prompt": "Look both ways when you cross the _____.",
+          "answer": "street"
+        },
+        { "prompt": "Water will _____ on a cold day.", "answer": "freeze" },
+        { "prompt": "The _____ likes to swim.", "answer": "seal" },
+        { "prompt": "The ants felt small and _____.", "answer": "weak" },
+        { "prompt": "We ate _____ soup for lunch.", "answer": "bean" },
+        { "prompt": "Answer when he _____ to you.", "answer": "speaks" },
+        { "prompt": "The _____ works together on the play.", "answer": "team" },
+        { "prompt": "Use a rag to _____ up the floor.", "answer": "clean" },
+        { "prompt": "We put milk and _____ on the table.", "answer": "cream" },
+        { "prompt": "We saw deer in the _____.", "answer": "field" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "She will _____ the present.", "answer": "wrap" },
+        { "prompt": "They wore bracelets on their _____.", "answer": "wrists" },
+        { "prompt": "Elena _____ a story.", "answer": "wrote" },
+        { "prompt": "The dog will _____ the garden.", "answer": "wreck" },
+        { "prompt": "Please _____ out the wet rag.", "answer": "wring" },
+        { "prompt": "Don likes to _____ silly stories.", "answer": "write" },
+        { "prompt": "The _____ was for the holiday.", "answer": "wreath" },
+        { "prompt": "My mother likes to _____ sweaters.", "answer": "knit" },
+        { "prompt": "We spread the butter with the _____.", "answer": "knife" },
+        {
+          "prompt": "The story is about a lady and a _____.",
+          "answer": "knight"
+        },
+        { "prompt": "There was a _____ at the door.", "answer": "knock" },
+        { "prompt": "My _____ feels better now.", "answer": "knee" },
+        { "prompt": "A _____ is very small.", "answer": "gnome" },
+        { "prompt": "The _____ said “Keep Out.”", "answer": "sign" },
+        { "prompt": "Ann _____ a pen with her teeth.", "answer": "gnaws" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "Nan _____ her hands with soap.", "answer": "scrubs" },
+        { "prompt": "The baby cries and _____.", "answer": "screams" },
+        { "prompt": "The cat likes to _____ the chair.", "answer": "scratch" },
+        { "prompt": "_____ the mud off your shoes.", "answer": "scrape" },
+        { "prompt": "There is a _____ on the window.", "answer": "screen" },
+        {
+          "prompt": "Juan _____ peanut butter on the bread.",
+          "answer": "spread"
+        },
+        { "prompt": "She made a _____ in the pool.", "answer": "splash" },
+        { "prompt": "We will _____ the plants with water.", "answer": "spray" },
+        { "prompt": "The team was on a winning _____.", "answer": "streak" },
+        { "prompt": "Her _____ opens the door.", "answer": "strength" },
+        { "prompt": "Can the _____ girl lift the rock?", "answer": "strong" },
+        { "prompt": "The mouse made a tiny _____.", "answer": "squeak" },
+        { "prompt": "The boy has _____ toys.", "answer": "three" },
+        { "prompt": "I will _____ the ball to the dog.", "answer": "throw" },
+        { "prompt": "Buy a needle and some _____.", "answer": "thread" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "The _____ is soft and fuzzy.", "answer": "chick" },
+        {
+          "prompt": "There is _____ to be done for the project.",
+          "answer": "much"
+        },
+        { "prompt": "Can you _____ a baseball?", "answer": "pitch" },
+        { "prompt": "A _____ always knows best!", "answer": "teacher" },
+        { "prompt": "What time is _____?", "answer": "lunch" },
+        { "prompt": "Will the baby birds _____ today?", "answer": "hatch" },
+        {
+          "prompt": "For a snack, we had _____ and apples.",
+          "answer": "cheese"
+        },
+        { "prompt": "The runner needed to _____.", "answer": "stretch" },
+        { "prompt": "Is that board _____ enough?", "answer": "thick" },
+        { "prompt": "It is important to tell the _____.", "answer": "truth" },
+        { "prompt": "That _____ leads to the lake.", "answer": "pathway" },
+        { "prompt": "Please put _____ in the crate.", "answer": "them" },
+        { "prompt": "The _____ swam past the boat.", "answer": "fish" },
+        { "prompt": "The _____ jumped out of the water.", "answer": "whales" },
+        { "prompt": "_____ is your favorite color?", "answer": "What" }
+      ]
+    }
+  ]
+}

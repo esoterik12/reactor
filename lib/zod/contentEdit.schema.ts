@@ -1,5 +1,7 @@
 import { z } from 'zod'
 
+// TODO: some potential overlap between this and the spelling schema
+// That could be resolved
 export const editPairsSchema = z.object({
   wordPairings: z.array(
     z.object({
@@ -15,13 +17,13 @@ export type WordPairings = EditPairsFormValues['wordPairings']
 export const editCorrectSpellingSchema = z.object({
   wordPairings: z.array(
     z.object({
-      correctWord: z
+      wordOne: z
         .string()
         .min(1, { message: 'A correct word is required.' })
         .max(55, {
           message: 'Correct word cannot support more than 55 characters.'
         }),
-      incorrectWord: z
+      wordTwo: z
         .string()
         .min(1, { message: 'An incorrect word is required.' })
         .max(55, {

@@ -4,7 +4,7 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from './InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { setInput } from '@/redux/slices/inputSlice'
+import { clearInput, setInput } from '@/redux/slices/inputSlice'
 import { useAppDispatch } from '@/redux/hooks'
 import {
   ContentFormInput,
@@ -70,6 +70,7 @@ export function ContentForm<T>({
 
   const handleSubmitButton = async (data: ContentFormInput) => {
     setLoading(true)
+    dispatch(clearInput())
     console.log('data in handleSubmitButton: ', data)
 
     try {

@@ -26,6 +26,9 @@ import { EditMetaDataProps, InfoTextData } from '@/types/input.types'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { TextareaInput } from './TextareaInput'
 import GeneratingContent from '../shared/GeneratingContent'
+import { AppError } from '@/lib/errors/AppError'
+import { useAppDispatch } from '@/redux/hooks'
+import { clearInput, setInput } from '@/redux/slices/inputSlice'
 
 interface CurriculumSelectorProps<T> {
   icon: React.ReactNode
@@ -51,6 +54,7 @@ export function CurriculumSelector<T>({
   const [unitData, setUnitData] = useState<UnitDataJSON | null>(null)
   const [loading, setLoading] = useState(false)
   const [wordsToFilter, setWordsToFilter] = useState<string[]>([])
+  const dispatch = useAppDispatch()
 
   const {
     control,
@@ -91,6 +95,7 @@ export function CurriculumSelector<T>({
 
   const handleGenerateButton = async (data: CurriculumSelectorForm) => {
     setLoading(true)
+    dispatch(clearInput())
 
     if (level && unit && unitData) {
       try {
@@ -121,13 +126,24 @@ export function CurriculumSelector<T>({
           numberOfContent: data.numberOfContent || null
         })
 
-        console.log(
-          'generationResults in CurriculumSelector.tsx: ',
-          generationResults
-        )
-
-        setContent(generationResults.result.data)
-        setMetaData({ title: data.title, contentType })
+        // TODO: There is still an issue in the way data is handled
+        // between either the top component state or redux state
+        if (generationResults.code === 200) {
+          setContent(generationResults.result.data)
+          setMetaData({ title: data.title, contentType })
+          dispatch(
+            setInput({
+              title: data.title,
+              contentType,
+              levelSelection: level,
+              primaryInputContent: data.primaryInputContent,
+              secondaryInputContent: data.secondaryInputContent,
+              textareaInput: data.textareaInputContent
+            })
+          )
+        } else {
+          throw new AppError(400, 'Error generating content.')
+        }
       } catch (error) {
         // TODO add error handling
         console.error('Error loading unit data:', error)

@@ -1,0 +1,178 @@
+{
+  "level": 2,
+  "unit": 3,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "Hit the __________ with the hammer.", "answer": "nail" },
+        { "prompt": "He rode on the __________.", "answer": "train" },
+        {
+          "prompt": "This is the __________ branch of the library.",
+          "answer": "main"
+        },
+        { "prompt": "Horses like to eat __________.", "answer": "hay" },
+        {
+          "prompt": "Please __________ in your seats until the bell rings.",
+          "answer": "stay"
+        },
+        { "prompt": "Some toys __________ too easily.", "answer": "break" },
+        {
+          "prompt": "My dad cooks __________ on the grill.",
+          "answer": "steak"
+        },
+        { "prompt": "How much do you __________?", "answer": "weigh" },
+        {
+          "prompt": "A horse pulled the __________ through the snow.",
+          "answer": "sleigh"
+        },
+        {
+          "prompt": "Lions hunted their __________ in the tall grass.",
+          "answer": "prey"
+        },
+        {
+          "prompt": "I did not __________ my knee when I fell.",
+          "answer": "scrape"
+        },
+        {
+          "prompt": "Joe saw a __________ animal at the zoo.",
+          "answer": "strange"
+        },
+        {
+          "prompt": "My dog is good and can sit and __________.",
+          "answer": "good"
+        },
+        {
+          "prompt": "Deb’s parents __________ read a book with her.",
+          "answer": "often"
+        },
+        { "prompt": "Jim has __________ black cats.", "answer": "two" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "I turned on the __________ in my room.",
+          "answer": "light"
+        },
+        { "prompt": "You use your eyes for __________.", "answer": "sight" },
+        {
+          "prompt": "He has many good ideas in his __________.",
+          "answer": "mind"
+        },
+        { "prompt": "Did you hear the baby __________?", "answer": "cry" },
+        { "prompt": "Can you __________ your shoes?", "answer": "tie" },
+        { "prompt": "Pam jumped __________ in the air.", "answer": "high" },
+        { "prompt": "We saw __________ animals at the zoo.", "answer": "wild" },
+        { "prompt": "Please __________ the dishes.", "answer": "dry" },
+        { "prompt": "I will __________ to do my homework.", "answer": "try" },
+        { "prompt": "Janet never tells a __________.", "answer": "lie" },
+        { "prompt": "A horse eats __________.", "answer": "hay" },
+        { "prompt": "We had __________ for dinner.", "answer": "steak" },
+        { "prompt": "The game will __________ now.", "answer": "begin" },
+        { "prompt": "Where did you put __________ toys?", "answer": "those" },
+        { "prompt": "This book is falling __________.", "answer": "apart" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "I __________ Mom about the party.", "answer": "told" },
+        { "prompt": "I ate __________ of my dinner.", "answer": "most" },
+        { "prompt": "I can __________ on my back.", "answer": "float" },
+        { "prompt": "My new __________ is red.", "answer": "coat" },
+        { "prompt": "I like __________ with butter.", "answer": "toast" },
+        { "prompt": "Apples __________ on trees.", "answer": "grow" },
+        { "prompt": "I like to __________ the lawn.", "answer": "mow" },
+        {
+          "prompt": "Sam will __________ me how to play the game.",
+          "answer": "show"
+        },
+        { "prompt": "__________ is on our team.", "answer": "Joe" },
+        { "prompt": "I hurt my __________ when I fell.", "answer": "toe" },
+        { "prompt": "We needed __________ in the tent.", "answer": "light" },
+        {
+          "prompt": "I like to see pictures in my __________.",
+          "answer": "mind"
+        },
+        { "prompt": "I __________ read part of the book.", "answer": "only" },
+        { "prompt": "Did you like __________ idea?", "answer": "our" },
+        { "prompt": "__________ can come to the party?", "answer": "who" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "Do __________ want to ride the bus?", "answer": "we" },
+        { "prompt": "The __________ flew out the window.", "answer": "bee" },
+        { "prompt": "Do you __________ a ticket?", "answer": "need" },
+        { "prompt": "The __________ came to the window.", "answer": "queen" },
+        { "prompt": "Do not be __________ to others.", "answer": "mean" },
+        { "prompt": "The __________ was green and yellow.", "answer": "leaf" },
+        { "prompt": "The __________ ran away.", "answer": "thief" },
+        {
+          "prompt": "The __________ told a story about nature.",
+          "answer": "chief"
+        },
+        { "prompt": "The __________ ran down the hill.", "answer": "pony" },
+        { "prompt": "Put the __________ on the table.", "answer": "keys" },
+        { "prompt": "I __________ taller each year.", "answer": "grow" },
+        { "prompt": "I hurt my __________ on the rock.", "answer": "toe" },
+        { "prompt": "We’ll read __________ lunch.", "answer": "after" },
+        { "prompt": "__________ person got an award.", "answer": "every" },
+        { "prompt": "My birthday is a __________ day.", "answer": "special" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "The baby panda is very __________!", "answer": "cute" },
+        {
+          "prompt": "Joan put an ice __________ in her drink.",
+          "answer": "cube"
+        },
+        {
+          "prompt": "Can you smell the __________ from the fire?",
+          "answer": "fumes"
+        },
+        {
+          "prompt": "We listen to __________ on the radio.",
+          "answer": "music"
+        },
+        {
+          "prompt": "The class is studying a __________ on energy.",
+          "answer": "unit"
+        },
+        {
+          "prompt": "Martin will order lunch from the __________.",
+          "answer": "menu"
+        },
+        {
+          "prompt": "There are a __________ birds in the tree.",
+          "answer": "few"
+        },
+        { "prompt": "The family sits in the __________.", "answer": "pew" },
+        {
+          "prompt": "How much __________ does the car need?",
+          "answer": "fuel"
+        },
+        {
+          "prompt": "The actor uses __________ to learn his lines.",
+          "answer": "cues"
+        },
+        { "prompt": "Can I ride the __________?", "answer": "pony" },
+        { "prompt": "The __________ sits on her throne.", "answer": "queen" },
+        {
+          "prompt": "We __________ dance lessons last week.",
+          "answer": "began"
+        },
+        { "prompt": "Will you __________ to my party?", "answer": "come" },
+        {
+          "prompt": "They __________ presents to their friends.",
+          "answer": "give"
+        }
+      ]
+    }
+  ]
+}

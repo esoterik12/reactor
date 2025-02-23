@@ -1,0 +1,187 @@
+{
+  "level": 3,
+  "unit": 1,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "___________ your hands after the play.",
+          "answer": "clap"
+        },
+        { "prompt": "We had a tent to ___________ outside.", "answer": "camp" },
+        { "prompt": "The student raised her ___________.", "answer": "hand" },
+        { "prompt": "The ___________ came with an inkpad.", "answer": "stamp" },
+        { "prompt": "Carrots are a tasty ___________.", "answer": "snack" },
+        {
+          "prompt": "Let clean dishes dry on the ___________.",
+          "answer": "rack"
+        },
+        { "prompt": "Inez ___________ her bike handles.", "answer": "grabs" },
+        {
+          "prompt": "The dog wags her tail when she is ___________.",
+          "answer": "glad"
+        },
+        { "prompt": "His dad paid the phone ___________.", "answer": "bill" },
+        { "prompt": "I ___________ the summer weather.", "answer": "miss" },
+        { "prompt": "The button made a ___________.", "answer": "click" },
+        { "prompt": "The kitten had ___________ paws.", "answer": "pink" },
+        { "prompt": "Kevin was ___________ with the flu.", "answer": "sick" },
+        {
+          "prompt": "Her ___________ showed her nice teeth.",
+          "answer": "grin"
+        },
+        { "prompt": "I could not ___________ the big box.", "answer": "lift" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "Watch your ___________ on the ice.", "answer": "step" },
+        { "prompt": "Rosie’s room was a ___________.", "answer": "mess" },
+        { "prompt": "I have brown hair on my ___________.", "answer": "head" },
+        { "prompt": "His ___________ were corn and wheat.", "answer": "crops" },
+        { "prompt": "The red sign means ___________.", "answer": "stop" },
+        {
+          "prompt": "The ___________ was part of the cliff.",
+          "answer": "rock"
+        },
+        { "prompt": "The ___________ said it was 12:30.", "answer": "clock" },
+        {
+          "prompt": "I found the lost ___________ in my shoe.",
+          "answer": "sock"
+        },
+        { "prompt": "The ___________ had ducks and frogs.", "answer": "pond" },
+        { "prompt": "Andrew ___________ rope for fun.", "answer": "jumps" },
+        { "prompt": "___________ the door, please.", "answer": "shut" },
+        { "prompt": "It was not ___________, but practice.", "answer": "luck" },
+        {
+          "prompt": "The losing team was in a ___________.",
+          "answer": "slump"
+        },
+        { "prompt": "There were ___________ under the log.", "answer": "bugs" },
+        { "prompt": "Her mom put tea in the ___________.", "answer": "mug" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "What is today’s ___________?", "answer": "date" },
+        { "prompt": "May we swim in the ___________?", "answer": "lake" },
+        { "prompt": "The ___________ has four wheels.", "answer": "skate" },
+        { "prompt": "We flew on a ___________.", "answer": "plane" },
+        { "prompt": "We are in the third ___________.", "answer": "grade" },
+        { "prompt": "It is a ___________ day for a walk.", "answer": "fine" },
+        { "prompt": "I read about ___________ in the sea.", "answer": "life" },
+        { "prompt": "We had ___________ with our dinner.", "answer": "rice" },
+        { "prompt": "My grandma is very ___________.", "answer": "wise" },
+        {
+          "prompt": "Grace had a big ___________ on her face.",
+          "answer": "smile"
+        },
+        { "prompt": "That is a pretty red ___________.", "answer": "rose" },
+        { "prompt": "A ___________ is round.", "answer": "globe" },
+        { "prompt": "We smelled ___________ from a fire.", "answer": "smoke" },
+        {
+          "prompt": "Where did your family ___________ from?",
+          "answer": "come"
+        },
+        { "prompt": "She ___________ markers to color.", "answer": "used" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "He is wearing a ___________ white shirt.",
+          "answer": "plain"
+        },
+        { "prompt": "I like to ___________ my hair.", "answer": "braid" },
+        {
+          "prompt": "If I study, I won’t ___________ the test.",
+          "answer": "fail"
+        },
+        {
+          "prompt": "The ___________ was harvested in the fall.",
+          "answer": "grain"
+        },
+        { "prompt": "A ___________ moves very slowly.", "answer": "snail" },
+        {
+          "prompt": "What color did you ___________ your room?",
+          "answer": "paint"
+        },
+        { "prompt": "The trees ___________ in the wind.", "answer": "sway" },
+        {
+          "prompt": "The waiter carried our food on a ___________.",
+          "answer": "tray"
+        },
+        {
+          "prompt": "Elephants are huge ___________ animals.",
+          "answer": "gray"
+        },
+        {
+          "prompt": "We had to ___________ in during the storm.",
+          "answer": "stay"
+        },
+        {
+          "prompt": "My grandpa lives in the ___________ of Ohio.",
+          "answer": "state"
+        },
+        {
+          "prompt": "The museum’s fossil was a ___________.",
+          "answer": "fake"
+        },
+        { "prompt": "We had the ___________ racing time.", "answer": "same" },
+        { "prompt": "The doctor needed to ___________ me.", "answer": "weigh" },
+        { "prompt": "___________ were a good soccer team.", "answer": "they" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "The dolphin swam along the ___________.",
+          "answer": "coast"
+        },
+        { "prompt": "Ice can ___________ on water.", "answer": "float" },
+        {
+          "prompt": "The ___________ caught a fly with its tongue.",
+          "answer": "toad"
+        },
+        {
+          "prompt": "Some people burn ___________ for heat.",
+          "answer": "coal"
+        },
+        {
+          "prompt": "Water will ___________ through the soil.",
+          "answer": "soak"
+        },
+        { "prompt": "The metal was a ___________ color.", "answer": "gold" },
+        { "prompt": "The pet store ___________ fish.", "answer": "sold" },
+        {
+          "prompt": "The trainer will ___________ the bad dog.",
+          "answer": "scold"
+        },
+        {
+          "prompt": "The ball rolled down the ___________.",
+          "answer": "slope"
+        },
+        {
+          "prompt": "Shonda ___________ her piggy bank open.",
+          "answer": "broke"
+        },
+        { "prompt": "I wrote myself a ___________.", "answer": "note" },
+        {
+          "prompt": "Jack ate his chicken wings to the ___________.",
+          "answer": "bone"
+        },
+        {
+          "prompt": "A penguin is ___________ when it walks.",
+          "answer": "slow"
+        },
+        { "prompt": "Please ___________ me your new book.", "answer": "show" },
+        { "prompt": "He was a friend, not a ___________.", "answer": "foe" }
+      ]
+    }
+  ]
+}

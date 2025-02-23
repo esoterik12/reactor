@@ -5,11 +5,12 @@ import { renderToBuffer } from '@react-pdf/renderer'
 // imports the correct react-pdf component and uses renderToBuffer to
 // render the document into a nodejs buffer
 
-interface GeneratePDFRequestBody {
+export interface GeneratePDFRequestBody {
   pdfData: {
     data: {
       title: string
       content: string
+      secondaryInputContent: string | null
     }
     pdfType: string
   }
@@ -42,7 +43,11 @@ export async function POST(request: Request): Promise<Response> {
 
     // Render the PDF document to a buffer (binary data)
     const pdfBuffer = await renderToBuffer(
-      <MyDocument title={pdfData.data.title} data={inputData} />
+      <MyDocument
+        title={pdfData.data.title}
+        data={inputData}
+        secondaryInputContent={pdfData.data.secondaryInputContent}
+      />
     )
 
     // Here the pdfBuffer (binary data) is returned as the HTTP response body (no encoding required)

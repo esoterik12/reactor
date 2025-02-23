@@ -7,13 +7,6 @@ interface MemoryCardsPDFProps {
   data: EditPairsFormValues
 }
 
-export const memoryCardsColors = {
-  lightBlue: '#76cff0',
-  green: '#78d8a3',
-  gray: '#e8e8e8',
-  teal: '#02bec1'
-}
-
 // Helper function to chunk an array into subarrays of a specified size
 export const chunkArray = (arr: string[], size: number) => {
   const result = []

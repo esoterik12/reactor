@@ -1,0 +1,117 @@
+{
+  "level": 3,
+  "unit": 2,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "If you __________ something, you told people about it.",
+          "answer": "announced"
+        },
+        {
+          "prompt": "__________ are the people seeking an office or honor.",
+          "answer": "Candidates"
+        },
+        {
+          "prompt": "To __________ is to cause someone to believe or do something.",
+          "answer": "convince"
+        },
+        {
+          "prompt": "When you make __________, you make choices.",
+          "answer": "decisions"
+        },
+        {
+          "prompt": "To __________ is to choose by voting.",
+          "answer": "elect"
+        },
+        {
+          "prompt": "To __________ is to guess an amount.",
+          "answer": "estimate"
+        },
+        {
+          "prompt": "Miguel went to City Hall to learn about his local __________.",
+          "answer": "government"
+        },
+        {
+          "prompt": "If you are __________, you do things for yourself.",
+          "answer": "independent"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "If you __________ , you got to where you were going.",
+          "answer": "arrived"
+        },
+        {
+          "prompt": "__________ means “came to a new country to live.”",
+          "answer": "Immigrated"
+        },
+        {
+          "prompt": "__________ means “looked at something closely and carefully.”",
+          "answer": "Inspected"
+        },
+        {
+          "prompt": "A __________ is a very short amount of time.",
+          "answer": "moment"
+        },
+        {
+          "prompt": "An __________ is a chance for good things.",
+          "answer": "opportunity"
+        },
+        {
+          "prompt": "__________ are pictures taken with a camera.",
+          "answer": "Photographs"
+        },
+        {
+          "prompt": "Something that is __________ is worth lots of money, or means a lot to someone.",
+          "answer": "valuable"
+        },
+        {
+          "prompt": "__________ means “spoken in a very quiet voice.”",
+          "answer": "Whispered"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "To __________ is to spring back after hitting something.",
+          "answer": "bounce"
+        },
+        {
+          "prompt": "To __________ something is to picture it in your mind.",
+          "answer": "imagine"
+        },
+        {
+          "prompt": "An __________ is a person who creates something for the first time.",
+          "answer": "inventor"
+        },
+        {
+          "prompt": "An __________ is someone who watches something.",
+          "answer": "observer"
+        },
+        {
+          "prompt": "__________ occurs when several words or syllables in a row start with the same sound.",
+          "answer": "Alliteration"
+        },
+        {
+          "prompt": "In a __________ poem, the lines do not need to rhyme.",
+          "answer": "free verse"
+        },
+        {
+          "prompt": "A __________ is a funny poem of five lines with a specific rhyme pattern.",
+          "answer": "limerick"
+        },
+        {
+          "prompt": "Kite and sight __________ because they end with the same sound.",
+          "answer": "rhyme"
+        }
+      ]
+    }
+  ]
+}
