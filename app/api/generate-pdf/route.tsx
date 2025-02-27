@@ -23,9 +23,6 @@ export async function POST(request: Request): Promise<Response> {
 
     const { pdfData } = body
 
-    // TODO: Check data in console
-    console.log('Received data in route.tsx: ', pdfData)
-
     if (!pdfData || !pdfData.data || !pdfData.pdfType) {
       return NextResponse.json(
         { error: 'Missing required data: title and content are required.' },
@@ -35,7 +32,6 @@ export async function POST(request: Request): Promise<Response> {
 
     // parse the content (which is a string) in to js string array
     const inputData = JSON.parse(pdfData.data.content)
-    console.log('inputData in route.tsx: ', inputData)
 
     // Dynamically import correct PDF components:
     const pdfModule = await import(`@/components/pdf/${pdfData.pdfType}PDF`)
@@ -44,7 +40,6 @@ export async function POST(request: Request): Promise<Response> {
     // Render the PDF document to a buffer (binary data)
     const pdfBuffer = await renderToBuffer(
       <MyDocument
-        title={pdfData.data.title}
         data={inputData}
         secondaryInputContent={pdfData.data.secondaryInputContent}
       />

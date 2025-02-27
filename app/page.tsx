@@ -10,6 +10,9 @@ export default function Home() {
         <main className=''>
           <p>This is an example project.</p>
           <p>ADD RIDDLES.</p>
+
+          <p>Add heads up heads down</p>
+          <p>For heads, use missing letters, changed letters, use a blank screen for 2-3 seconds while one is removed</p>
         </main>
       </>
     </PageContainer>

@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 5,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "If you _____________ in doing something, you have met your goal or achieved the desired result.",
+          "answer": "succeed"
+        },
+        {
+          "prompt": "If people _____________, they have the same opinion about something.",
+          "answer": "agree"
+        },
+        {
+          "prompt": "When you _____________ something, you read, practice, or think about it so that you can learn it.",
+          "answer": "study"
+        },
+        {
+          "prompt": "_____________ are people who have done brave or good things.",
+          "answer": "Heroes"
+        },
+        {
+          "prompt": "If something is _____________, it means it is difficult and takes effort to do.",
+          "answer": "challenging"
+        },
+        {
+          "prompt": "If you _____________ something, you find it or find out about it.",
+          "answer": "discover"
+        },
+        {
+          "prompt": "If you have an _____________ in something, you like it and want to learn more about it.",
+          "answer": "interest"
+        },
+        {
+          "prompt": "When you _____________ in a play or movie, you act in it.",
+          "answer": "perform"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "If something has _____________, people chose it over something else.",
+          "answer": "votes"
+        },
+        {
+          "prompt": "Your _____________ are the things the law says you can do or have.",
+          "answer": "rights"
+        },
+        {
+          "prompt": "_____________ are important problems or topics that people are talking or arguing about.",
+          "answer": "Issues"
+        },
+        {
+          "prompt": "A _____________ is a person who has won a contest.",
+          "answer": "champion"
+        },
+        {
+          "prompt": "If you _____________ something, you decided it.",
+          "answer": "determined"
+        },
+        {
+          "prompt": "_____________ are things you tell people you will definitely do.",
+          "answer": "Promises"
+        },
+        {
+          "prompt": "If you have a _____________ to do something, it is your duty to do it.",
+          "answer": "responsibility"
+        },
+        {
+          "prompt": "If you _____________ to do something, you offered to do it.",
+          "answer": "volunteered"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "When things are _____________, they are brought or joined together.",
+          "answer": "united"
+        },
+        {
+          "prompt": "_____________ are directions that tell how to do something or what is allowed.",
+          "answer": "Rules"
+        },
+        {
+          "prompt": "_____________ is the story of what happened in the past.",
+          "answer": "History"
+        },
+        {
+          "prompt": "If something _____________ happens, it happens after a long time.",
+          "answer": "finally"
+        },
+        {
+          "prompt": "When you _____________ something, you make or shape it.",
+          "answer": "form"
+        },
+        {
+          "prompt": "If you _____________, you spoke or shouted suddenly because you were excited or upset.",
+          "answer": "exclaimed"
+        },
+        {
+          "prompt": "If something is _____________, it is for all people to use or visit.",
+          "answer": "public"
+        },
+        {
+          "prompt": "_____________ are people who write stories, books, and articles.",
+          "answer": "Writers"
+        }
+      ]
+    }
+  ]
+}

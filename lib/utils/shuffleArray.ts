@@ -3,4 +3,6 @@ export const shuffleArray = (inputArr: string[]) => {
     const j = Math.floor(Math.random() * (i + 1))
     ;[inputArr[i], inputArr[j]] = [inputArr[j], inputArr[i]]
   }
+
+  return inputArr
 }

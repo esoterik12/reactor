@@ -4,13 +4,11 @@ import { chooseCorrectSpellingStyles as styles } from './ChooseCorrectSpellingPD
 import { createSpellingMessages } from '@/lib/utils/pdf-utils/createSpellingMessages'
 
 interface EditCorrectSpellingProps {
-  title: string
   data: EditCorrectSpellingFormValues
   secondaryInputContent: string
 }
 
 const EditCorrectSpellingPDF: React.FC<EditCorrectSpellingProps> = ({
-  title,
   data,
   secondaryInputContent
 }) => {
@@ -23,21 +21,13 @@ const EditCorrectSpellingPDF: React.FC<EditCorrectSpellingProps> = ({
   return (
     <Document>
       <Page size='A4' style={styles.page}>
-        <View style={styles.titleContainer}>
-          <Text style={styles.titleText}>{title}</Text>
-        </View>
-
         <View style={styles.mainContainer}>
           {combinedResult.map((question, index) => {
             const isCorrectFirst = Math.random() < 0.5
             return (
               <View
                 key={`${index} - ${question.correctWord.word}`}
-                style={
-                  index === 0 || index % 7 !== 0
-                    ? styles.questionRowContainer
-                    : styles.questionNextRowContainer
-                }
+                style={styles.questionRowContainer}
                 wrap={false}
               >
                 <View style={styles.numberContainer}>
@@ -86,6 +76,41 @@ const EditCorrectSpellingPDF: React.FC<EditCorrectSpellingProps> = ({
               </View>
             )
           })}
+        </View>
+      </Page>
+
+      <Page size='A4' style={styles.page}>
+        {/* Student Answer Strip */}
+        {[1, 2, 3, 4].map(item => (
+          <View wrap={false} key={item} style={styles.answerStripContainer}>
+            {combinedResult.map((question, index) => (
+              <View
+                key={`${index} - ${question.correctWord}`}
+                style={styles.answerStripCell}
+              >
+                <Text style={styles.answerNumberCell}>{index + 1}</Text>
+              </View>
+            ))}
+            {/* Overlay view for the outer border */}
+            <View style={styles.outerBorder} />
+          </View>
+        ))}
+      </Page>
+
+      {/* Answer key */}
+      <Page size='A4' style={styles.page}>
+        <View wrap={false} style={styles.answerStripContainer}>
+          {combinedResult.map((question, index) => (
+            <View
+              key={`${index} - ${question.correctWord}`}
+              style={styles.answerStripCell}
+            >
+              <Text style={styles.answerNumberCell}>{index + 1}</Text>
+              <Text>{question.correctWord.correctMessage}</Text>
+            </View>
+          ))}
+          {/* Overlay view for the outer border */}
+          <View style={styles.outerBorder} />
         </View>
       </Page>
     </Document>

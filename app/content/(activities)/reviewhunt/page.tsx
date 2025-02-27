@@ -4,14 +4,16 @@ import ContentTabs from '@/components/containers/ContentTabs'
 import React from 'react'
 import {
   reviewHuntInfo,
-  contentIconStyles
+  contentIconStyles,
+  reviewHuntSelectorInfo
 } from '@/lib/constants/content/contentInfo'
-import { huntAndMistakesSchema } from '@/lib/zod/contentInput.schema'
+import { baseContentSelectorSchema, huntAndMistakesSchema } from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconReviewHunt from '@/components/icons/content/IconReviewHunt'
 import EditMultipleChoice from '@/components/edit/EditMutlipleChoice'
 import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 
 const ReviewHuntPage = () => {
   const [content, setContent] = useState<EditMultipleChoiceValues | null>(null)
@@ -32,7 +34,16 @@ const ReviewHuntPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 2'>Tab 2</p>,
+    <CurriculumSelector
+      key='Tab 2'
+      contentTitle='Review Hunt'
+      contentType='reviewHunt'
+      icon={<IconReviewHunt classes={contentIconStyles} />}
+      setContent={setContent}
+      setMetaData={setMetaData}
+      zodSchema={baseContentSelectorSchema}
+      info={reviewHuntSelectorInfo}
+    />,
     <p key='Tab 3'>Tab 3</p>
   ]
 
@@ -41,7 +52,7 @@ const ReviewHuntPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditMultipleChoice generatedContent={content} metaData={metaData} />
+        <EditMultipleChoice generatedContent={content} metaData={metaData} answerKeyEnabled={true} />
       )}
     </>
   )

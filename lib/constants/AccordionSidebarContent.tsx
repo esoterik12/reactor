@@ -81,14 +81,15 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
     title: 'Presentations',
     icon: <IconStars classes='h-6 w-6' />,
     links: [
-      { linkId: '4-1', contentTitle: 'Grammar Explainers', link: '/' },
+      { linkId: '4-1', contentTitle: 'Grammar Explainer', link: '/' },
       {
         linkId: '4-2',
-        contentTitle: 'Reading Skill Explainers',
+        contentTitle: 'Reading Skill Explainer',
         link: '/'
       },
-      { linkId: '4-3', contentTitle: 'Phonics Introductions', link: '/' },
-      { linkId: '4-4', contentTitle: 'General Presentation', link: '/' }
+      { linkId: '4-3', contentTitle: 'Phonics Introduction', link: '/' },
+      { linkId: '4-4', contentTitle: 'General Presentation', link: '/' },
+      { linkId: '4-5', contentTitle: 'Vocabulary Introduction', link: '/' }
     ]
   }
 ]

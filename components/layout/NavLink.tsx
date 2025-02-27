@@ -24,7 +24,7 @@ const NavLink = ({ href, children, className, ...props }: NavLink) => {
         isActiveLink && 'underline decoration-sky-500'
       )}
     >
-      <DefaultButton customClasses='w-28 h-9 p-1 container-background button-border hover-effect'>
+      <DefaultButton customClasses='w-28 h-8 container-background button-border hover-effect'>
         <div>{children}</div>
       </DefaultButton>
     </Link>

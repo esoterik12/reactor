@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import { useForm, useFieldArray } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import DefaultButton from '@/components/buttons/DefaultButton'
@@ -8,10 +8,14 @@ import { z } from 'zod'
 import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
 import EditQuestionForm from './EditQuestionForm'
 import { EditMetaDataProps } from '@/types/input.types'
+import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
+import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
+import InlineError from '../shared/InlineError'
 
 interface EditMultipleChoiceProps {
   generatedContent: EditMultipleChoiceValues
   metaData: EditMetaDataProps
+  answerKeyEnabled?: boolean
 }
 
 // Infer the form values from the schema.
@@ -19,17 +23,29 @@ type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoice>
 
 const EditMultipleChoice = ({
   generatedContent,
-  metaData
+  metaData,
+  // answerKeyEnabled = false
 }: EditMultipleChoiceProps) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  const { linkRef, downloadBlob } = useBlobDownloader()
+
+  console.log('generatedContent', generatedContent)
+
   const {
     register,
     control,
     handleSubmit,
+    watch,
+    setValue,
     formState: { errors }
   } = useForm<EditMultipleChoiceFormValues>({
     resolver: zodResolver(editMultipleChoice),
-    defaultValues: { questions: generatedContent }
+    defaultValues: { questions: generatedContent, answerKey: false }
   })
+
+  // Holds current value of answerKey for the form
+  const answerKey = watch('answerKey')
 
   /*
     useFieldArray is a custom hook provided by React Hook Form that simplifies the process of 
@@ -42,10 +58,48 @@ const EditMultipleChoice = ({
     name: 'questions'
   })
 
-  const handleSubmitButton = (data: EditMultipleChoiceFormValues) => {
-    console.log('Form Data:', data)
-    console.log('metaData', metaData)
-  }
+  const handleSubmitButton = useCallback(
+    async (data: EditMultipleChoiceFormValues) => {
+      setError(null)
+      setIsLoading(true)
+
+      const pdfType = capitalizeFirstLetter(metaData.contentType)
+
+      const pdfData = {
+        data: {
+          title: metaData.title,
+          content: JSON.stringify(data)
+        },
+        pdfType,
+        answerKey: data.answerKey
+      }
+
+      try {
+        const response = await fetch('/api/generate-pdf', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ pdfData })
+        })
+
+        if (!response.ok) {
+          const errorData = await response.json()
+          throw new Error(errorData.error || 'Failed to generate PDF.')
+        }
+
+        const blob = await response.blob()
+        const fileName = `${metaData.title} - ${pdfType}.pdf`
+        downloadBlob(blob, fileName)
+      } catch (error) {
+        setError('An unexpected error occurred.')
+        console.log('error', error)
+      } finally {
+        setIsLoading(false)
+      }
+    },
+    [metaData, downloadBlob]
+  )
 
   return (
     <div className='container-background flex flex-col rounded-lg'>
@@ -73,9 +127,10 @@ const EditMultipleChoice = ({
         <div className='flex space-x-2 p-4'>
           <DefaultButton
             btnType='submit'
+            isDisabled={isLoading}
             customClasses='w-[120px] button-border primary-background p-1 hover-effect-primary'
           >
-            <p>Submit</p>
+            <p className='button-text'>Submit</p>
           </DefaultButton>
           <DefaultButton
             btnType='button'
@@ -95,6 +150,28 @@ const EditMultipleChoice = ({
           >
             <p className='paragraph-text'>+ Question</p>
           </DefaultButton>
+          {answerKey && (
+            <DefaultButton
+              btnType='button'
+              handleClick={() => setValue('answerKey', !answerKey)}
+              customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
+              isDisabled={isLoading}
+            >
+              <p className={answerKey ? 'button-text' : 'paragraph-text'}>
+                Answers
+              </p>
+            </DefaultButton>
+          )}
+          {/* TODO: Add stlying to error */}
+          {error && (
+            <InlineError classes=''>
+              <p>{error}</p>
+            </InlineError>
+          )}
+          {/* Hidden download link */}
+          <a ref={linkRef} className='hidden'>
+            Download
+          </a>
         </div>
       </form>
     </div>

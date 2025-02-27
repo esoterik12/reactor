@@ -73,6 +73,7 @@ const MemoryCardsPage = () => {
           secondWordLabel='Word two'
           generatedContent={content}
           metaData={metaData}
+          shuffleEnabled={true}
         />
       )}
     </>

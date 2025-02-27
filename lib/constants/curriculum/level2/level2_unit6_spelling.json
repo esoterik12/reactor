@@ -1,0 +1,289 @@
+{
+  "level": 2,
+  "unit": 6,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "I write with a _____________ .", "answer": "pencil" },
+        { "prompt": "The _____________ sticks to metal.", "answer": "magnet" },
+        {
+          "prompt": "The company will _____________ the magazine.",
+          "answer": "publish"
+        },
+        {
+          "prompt": "What will we eat for _____________ tonight?",
+          "answer": "supper"
+        },
+        { "prompt": "I wrote a _____________ to Grandma.", "answer": "letter" },
+        { "prompt": "My teacher is a nice _____________ .", "answer": "lady" },
+        {
+          "prompt": "I like to eat _____________ on my mashed potatoes.",
+          "answer": "gravy"
+        },
+        {
+          "prompt": "The man made a _____________ trip around the world.",
+          "answer": "solo"
+        },
+        {
+          "prompt": "Will you hold the door _____________ for me?",
+          "answer": "open"
+        },
+        { "prompt": "Do you smell that _____________ ?", "answer": "odor" },
+        {
+          "prompt": "The old pipes are made of _____________ .",
+          "answer": "lead"
+        },
+        {
+          "prompt": "Do not _____________ the paintings in the museum.",
+          "answer": "touch"
+        },
+        { "prompt": "The shop _____________ is locked.", "answer": "door" },
+        {
+          "prompt": "I spilled milk down the _____________ of my shirt.",
+          "answer": "front"
+        },
+        {
+          "prompt": "_____________ needs to pick up this litter!",
+          "answer": "Someone"
+        }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "Kris lives in the _____________ of Maine.",
+          "answer": "state"
+        },
+        {
+          "prompt": "We need to _____________ the broken lamp.",
+          "answer": "replace"
+        },
+        {
+          "prompt": "When will she be _____________ years old?",
+          "answer": "nine"
+        },
+        {
+          "prompt": "Sue lives _____________ miles from her grandfather.",
+          "answer": "ninety"
+        },
+        {
+          "prompt": "Stay on this _____________ of the fence.",
+          "answer": "side"
+        },
+        {
+          "prompt": "Kevin rides his bike on the _____________.",
+          "answer": "sidewalk"
+        },
+        {
+          "prompt": "The girl washes her _____________ each morning.",
+          "answer": "face"
+        },
+        {
+          "prompt": "You will need a raincoat if you are going _____________ .",
+          "answer": "outside"
+        },
+        { "prompt": "Look at _____________ new toys!", "answer": "these" },
+        {
+          "prompt": "The _____________ swims in the pond.",
+          "answer": "tadpole"
+        },
+        {
+          "prompt": "I will write a _____________ to my cousin.",
+          "answer": "letter"
+        },
+        {
+          "prompt": "Can the _____________ lift this paper clip?",
+          "answer": "magnet"
+        },
+        { "prompt": "Do you like to sit _____________ ?", "answer": "alone" },
+        {
+          "prompt": "The tree is _____________ the house.",
+          "answer": "beside"
+        },
+        {
+          "prompt": "Three children sit at the _____________ table.",
+          "answer": "round"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "The campers _____________ a fire to stay warm.",
+          "answer": "lit"
+        },
+        {
+          "prompt": "We saw a _____________ mouse in the yard.",
+          "answer": "little"
+        },
+        {
+          "prompt": "Jay bought a new _____________ of paints.",
+          "answer": "set"
+        },
+        {
+          "prompt": "The pieces of gold will _____________ at the bottom of the river.",
+          "answer": "settle"
+        },
+        {
+          "prompt": "Please _____________ that paper into small pieces.",
+          "answer": "rip"
+        },
+        {
+          "prompt": "Throw a stone to make the water _____________ .",
+          "answer": "ripple"
+        },
+        {
+          "prompt": "Dan wrote the shopping list on a _____________ of paper.",
+          "answer": "pad"
+        },
+        {
+          "prompt": "Do you know how to _____________ a boat?",
+          "answer": "paddke"
+        },
+        { "prompt": "Val sat in the _____________ seat.", "answer": "middle" },
+        { "prompt": "I blew a huge soap _____________ !", "answer": "bubble" },
+        {
+          "prompt": "Is it warm enough to play _____________ ?",
+          "answer": "outside"
+        },
+        {
+          "prompt": "Mom will _____________ my old shoes with new ones.",
+          "answer": "replace"
+        },
+        {
+          "prompt": "Kim’s dog likes to _____________ her everywhere.",
+          "answer": "follow"
+        },
+        {
+          "prompt": "I _____________ to music on the radio.",
+          "answer": "listen"
+        },
+        {
+          "prompt": "Can you make me _____________ to eat?",
+          "answer": "something"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        {
+          "prompt": "Do you know the _____________ to the school?",
+          "answer": "way"
+        },
+        {
+          "prompt": "The bird flew _____________ from its nest.",
+          "answer": "away"
+        },
+        {
+          "prompt": "Don’t dig up the _____________ of the plant.",
+          "answer": "root"
+        },
+        {
+          "prompt": "I buy a _____________ at the parade.",
+          "answer": "balloon"
+        },
+        {
+          "prompt": "We like to _____________ hide-and-seek in the park.",
+          "answer": "play"
+        },
+        {
+          "prompt": "Our teacher will _____________ our artwork.",
+          "answer": "display"
+        },
+        {
+          "prompt": "Can you _____________ the book on the top shelf?",
+          "answer": "reach"
+        },
+        {
+          "prompt": "I _____________ swimming at the beach.",
+          "answer": "enjoy"
+        },
+        {
+          "prompt": "Can you _____________ how to play the game?",
+          "answer": "explain"
+        },
+        {
+          "prompt": "The cows are in the _____________ eating grass.",
+          "answer": "meadow"
+        },
+        { "prompt": "Look at the _____________ rabbit!", "answer": "little" },
+        {
+          "prompt": "The table is in the _____________ of the room.",
+          "answer": "middle"
+        },
+        {
+          "prompt": "Will you help me _____________ this puzzle?",
+          "answer": "complete"
+        },
+        {
+          "prompt": "Is this _____________ money to buy the toy?",
+          "answer": "enough"
+        },
+        {
+          "prompt": "The family paddles a canoe on the _____________ .",
+          "answer": "river"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Meg wore a purple _____________ to school.",
+          "answer": "jumper"
+        },
+        {
+          "prompt": "I can see _____________ when I stand on my toes.",
+          "answer": "higher"
+        },
+        { "prompt": "Look at that _____________ twinkle!", "answer": "star" },
+        {
+          "prompt": "The night sky is clear and _____________ .",
+          "answer": "starry"
+        },
+        {
+          "prompt": "Marco planted tomatoes in the _____________ .",
+          "answer": "garden"
+        },
+        {
+          "prompt": "It is _____________ to write in pencil than in pen.",
+          "answer": "better"
+        },
+        {
+          "prompt": "We had chicken soup for _____________ .",
+          "answer": "dinner"
+        },
+        {
+          "prompt": "I see my _____________ each year for a checkup.",
+          "answer": "doctor"
+        },
+        {
+          "prompt": "Buy some cheese at the _____________ .",
+          "answer": "market"
+        },
+        { "prompt": "What a _____________ dog!", "answer": "hairy" },
+        {
+          "prompt": "Do you _____________ playing games with your friends?",
+          "answer": "enjoy"
+        },
+        {
+          "prompt": "The pet store had a _____________ of cat toys in the window.",
+          "answer": "display"
+        },
+        {
+          "prompt": "Our school day ends in the _____________ .",
+          "answer": "afternoon"
+        },
+        { "prompt": "Has _____________ seen my backpack?", "answer": "anyone" },
+        {
+          "prompt": "Lee ate _____________ on his plate.",
+          "answer": "everything"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { StyleSheet, Font } from '@react-pdf/renderer'
+import { PDFColorPallete as colors } from '@/lib/constants/styles/colorPalette'
 
 Font.register({
   family: 'Raleway',
@@ -14,32 +15,12 @@ Font.register({
   ]
 })
 
-export const colors = {
-  lightBlue: '#76cff0',
-  green: '#78d8a3',
-  gray: '#e8e8e8',
-  teal: '#02bec1',
-  red: '#ff6b6b',
-  orange: '#ffb26b',
-  purple: '#b98cff'
-}
-
 export const chooseCorrectSpellingStyles = StyleSheet.create({
   page: {
     backgroundColor: 'white',
     fontFamily: 'Raleway',
     padding: 24
   },
-
-  titleContainer: {
-    textAlign: 'center',
-    marginBottom: 24
-  },
-  titleText: {
-    fontSize: 24,
-    fontWeight: 'bold'
-  },
-
   mainContainer: {
     flexDirection: 'column'
   },
@@ -48,28 +29,20 @@ export const chooseCorrectSpellingStyles = StyleSheet.create({
     alignItems: 'center',
     gap: 6,
     borderWidth: 2,
-    borderColor: colors.gray,
+    borderColor: colors.black,
     padding: 4,
     borderRadius: 8,
     marginBottom: 2
-  },
-  questionNextRowContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    borderWidth: 2,
-    borderColor: colors.gray,
-    padding: 4,
-    borderRadius: 8,
-    marginBottom: 2,
-    marginTop: 48
   },
   numberContainer: {
     flex: 0.1,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 4,
-    padding: 4
+    padding: 4,
+    borderWidth: 0.5,
+    borderColor: colors.gray,
+    height: '100%'
   },
   wordMessageContainer: {
     flex: 0.45,
@@ -77,18 +50,17 @@ export const chooseCorrectSpellingStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 4,
-    borderWidth: 2,
-    borderColor: colors.lightBlue,
+    borderWidth: 0.5,
+    borderColor: colors.gray,
     borderRadius: 4
   },
-
   messageText: {
     color: colors.red,
-    fontSize: 26,
+    fontSize: 24,
     marginTop: 4
   },
   wordText: {
-    fontSize: 26,
+    fontSize: 24,
     marginTop: 8,
     marginBottom: 4
   },
@@ -96,5 +68,39 @@ export const chooseCorrectSpellingStyles = StyleSheet.create({
     color: colors.teal,
     fontWeight: 12,
     fontSize: 32
+  },
+
+  answerStripContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap', // allow wrapping onto new rows
+    position: 'relative', // needed for the overlay positioning
+    borderRadius: 4,
+    marginBottom: 2
+  },
+  answerStripCell: {
+    flexBasis: '10%', // each cell takes up 10% of the width
+    height: 80,
+    borderRightWidth: 1,
+    borderBottomWidth: 1,
+    borderColor: colors.gray,
+    textAlign: 'center'
+  },
+  answerNumberCell: {
+    borderBottomWidth: 1,
+    padding: 4,
+    borderColor: colors.gray,
+    textAlign: 'center'
+  },
+  // Overlay that draws the outer border on top of the cells
+  outerBorder: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    borderWidth: 2,
+    borderColor: colors.black,
+    borderRadius: 0,
+    pointerEvents: 'none' // so it doesn't interfere with touch events
   }
 })

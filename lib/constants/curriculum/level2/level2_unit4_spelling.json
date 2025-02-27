@@ -1,0 +1,262 @@
+{
+  "level": 2,
+  "unit": 4,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "I _____________ my hair after my bath.",
+          "answer": "comb"
+        },
+        {
+          "prompt": "A _____________ falls when the boy eats a cookie.",
+          "answer": "crumb"
+        },
+        {
+          "prompt": "That is a funny _____________ in the play!",
+          "answer": "scene"
+        },
+        {
+          "prompt": "A dog found them by tracking their _____________.",
+          "answer": "scent"
+        },
+        {
+          "prompt": "The _____________ is buzzing by my ear!",
+          "answer": "gnat"
+        },
+        {
+          "prompt": "What does that street _____________ say?",
+          "answer": "sign"
+        },
+        {
+          "prompt": "Mom will use this sharp _____________ to cut the carrots.",
+          "answer": "knife"
+        },
+        {
+          "prompt": "Do you _____________ the way to the library?",
+          "answer": "know"
+        },
+        {
+          "prompt": "Pablo wears a watch on his left _____________.",
+          "answer": "wrist"
+        },
+        { "prompt": "Rachel likes _____________ poems.", "answer": "writing" },
+        {
+          "prompt": "This box is in the shape of a _____________.",
+          "answer": "cube"
+        },
+        {
+          "prompt": "Rebecca loves to listen to _____________.",
+          "answer": "music"
+        },
+        {
+          "prompt": "_____________ throw the ball in the house.",
+          "answer": "Don't"
+        },
+        {
+          "prompt": "I will _____________ a sandwich for lunch.",
+          "answer": "eat"
+        },
+        { "prompt": "Those elephants are _____________ big.", "answer": "very" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "The _____________ put money in a cash register.",
+          "answer": "clerk"
+        },
+        { "prompt": "The _____________ of cows grazed.", "answer": "herd" },
+        {
+          "prompt": "Daniel was _____________ in the race.",
+          "answer": "first"
+        },
+        { "prompt": "Jenny has on a blue _____________ .", "answer": "skirt" },
+        { "prompt": "Mom helped me _____________ the soup.", "answer": "stir" },
+        {
+          "prompt": "It was hard to _____________ the butter.",
+          "answer": "churn"
+        },
+        {
+          "prompt": "Sammy _____________ his ankle when he fell.",
+          "answer": "hurt"
+        },
+        {
+          "prompt": "The water balloon _____________ when it hit the ground.",
+          "answer": "burst"
+        },
+        { "prompt": "I have a lot of _____________ to do.", "answer": "work" },
+        {
+          "prompt": "I think rain is _____________ than snow.",
+          "answer": "worse"
+        },
+        {
+          "prompt": "Do you _____________ where the playground is?",
+          "answer": "know"
+        },
+        {
+          "prompt": "I wear a bracelet on my _____________ .",
+          "answer": "wrist"
+        },
+        {
+          "prompt": "Andrea _____________ her shoe under the couch.",
+          "answer": "found"
+        },
+        {
+          "prompt": "This letter is _____________ my grandfather.",
+          "answer": "from"
+        },
+        { "prompt": "My birthday is _____________ .", "answer": "today" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        {
+          "prompt": "The ship sailed into the _____________ .",
+          "answer": "port"
+        },
+        { "prompt": "What city is _____________ of here?", "answer": "north" },
+        { "prompt": "Jake wants _____________ rice.", "answer": "more" },
+        {
+          "prompt": "Dad went to the _____________ for milk.",
+          "answer": "store"
+        },
+        {
+          "prompt": "Mark used the _____________ to turn the boat.",
+          "answer": "oar"
+        },
+        { "prompt": "Listen to that lion _____________ !", "answer": "roar" },
+        {
+          "prompt": "Can you write the answer on the _____________ ?",
+          "answer": "board"
+        },
+        {
+          "prompt": "Carl put a new _____________ in the car.",
+          "answer": "part"
+        },
+        {
+          "prompt": "What time does school _____________ ?",
+          "answer": "start"
+        },
+        {
+          "prompt": "We like to play in the _____________ .",
+          "answer": "park"
+        },
+        { "prompt": "_____________ , let’s play a game.", "answer": "First" },
+        {
+          "prompt": "I _____________ my toe when I kicked the ball.",
+          "answer": "hurt"
+        },
+        {
+          "prompt": "Dinosaurs lived a long time _____________ .",
+          "answer": "ago"
+        },
+        {
+          "prompt": "Would you please _____________ my backpack?",
+          "answer": "carry"
+        },
+        { "prompt": "Many _____________ live in our town.", "answer": "people" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "I _____________ you to run a mile.", "answer": "dare" },
+        {
+          "prompt": "The cats _____________ at the birds outside the window.",
+          "answer": "stare"
+        },
+        {
+          "prompt": "How much is the _____________ to ride the bus?",
+          "answer": "fare"
+        },
+        { "prompt": "Leah has dark brown _____________ .", "answer": "hair" },
+        {
+          "prompt": "Joe put on a _____________ of warm boots.",
+          "answer": "pair"
+        },
+        { "prompt": "The _____________ has a hard seat.", "answer": "chair" },
+        {
+          "prompt": "They saw a black _____________ in the forest.",
+          "answer": "bear"
+        },
+        { "prompt": "Beth ate a juicy _____________ .", "answer": "pear" },
+        { "prompt": "_____________ is my homework?", "answer": "Where" },
+        {
+          "prompt": "I left my notebook over _____________ .",
+          "answer": "there"
+        },
+        {
+          "prompt": "Mandy has a _____________ friend named Sue.",
+          "answer": "dear"
+        },
+        {
+          "prompt": "Listen to those loud _____________ from the crowd!",
+          "answer": "cheers"
+        },
+        {
+          "prompt": "Randy _____________ how to spell all the words.",
+          "answer": "knew"
+        },
+        { "prompt": "I _____________ flew on an airplane.", "answer": "never" },
+        {
+          "prompt": "My friends and I _____________ on the school bus.",
+          "answer": "talk"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "The baby panda is very __________ !", "answer": "cute" },
+        {
+          "prompt": "Joan put an ice __________ in her drink.",
+          "answer": "cube"
+        },
+        {
+          "prompt": "Can you smell the __________ from the fire?",
+          "answer": "fumes"
+        },
+        {
+          "prompt": "We listen to __________ on the radio.",
+          "answer": "music"
+        },
+        {
+          "prompt": "The class is studying a __________ on energy.",
+          "answer": "unit"
+        },
+        {
+          "prompt": "Martin will order lunch from the __________ .",
+          "answer": "menu"
+        },
+        {
+          "prompt": "There are a __________ birds in the tree.",
+          "answer": "few"
+        },
+        { "prompt": "The family sits in the __________ .", "answer": "pew" },
+        {
+          "prompt": "How much __________ does the car need?",
+          "answer": "fuel"
+        },
+        {
+          "prompt": "The actor uses __________ to learn his lines.",
+          "answer": "cues"
+        },
+        { "prompt": "Can I ride the __________ ?", "answer": "pony" },
+        { "prompt": "The __________ sits on her throne.", "answer": "queen" },
+        {
+          "prompt": "We __________ dance lessons last week.",
+          "answer": "began"
+        },
+        { "prompt": "Will you __________ to my party?", "answer": "come" },
+        {
+          "prompt": "They __________ presents to their friends.",
+          "answer": "give"
+        }
+      ]
+    }
+  ]
+}

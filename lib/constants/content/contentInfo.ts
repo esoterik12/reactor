@@ -129,6 +129,12 @@ export const reviewHuntInfo = {
   }
 }
 
+export const reviewHuntSelectorInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: reviewHuntInfo.primaryInputInfo,
+  numberOfContent: reviewHuntInfo.numberOfContent
+}
+
 // Grammar Mistakes
 export const grammarMistakesInfo = {
   levelSelectionInfo,

@@ -53,7 +53,7 @@ const EditSentencesForm = ({
       >
         <div className='flex flex-col gap-1'>
           {generatedContent.map((_, index) => (
-            <div className='flex flex-row px-2 pb-2' key={index}>
+            <div className='flex flex-row items-center px-2 pb-2' key={index}>
               <div className='flex h-full min-w-[32px] items-center justify-center'>
                 <p className='paragraph-text'>{index + 1}</p>
               </div>

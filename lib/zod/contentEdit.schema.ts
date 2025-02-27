@@ -8,7 +8,8 @@ export const editPairsSchema = z.object({
       wordOne: z.string().min(1, { message: 'Word one is required.' }),
       wordTwo: z.string().min(1, { message: 'Word two is required.' })
     })
-  )
+  ),
+  answerKey: z.boolean()
 })
 
 export type EditPairsFormValues = z.infer<typeof editPairsSchema>
@@ -66,7 +67,8 @@ export const editMultipleChoice = z.object({
         })
       )
     })
-  )
+  ),
+  answerKey: z.boolean()
 })
 
 export type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoice>

@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 6,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "The _____________ of something is how much it is worth.",
+          "answer": "value"
+        },
+        {
+          "prompt": "A _____________ is a plan or a set of rules for doing something.",
+          "answer": "system"
+        },
+        {
+          "prompt": "If you make a _____________ of something, you write down information to save it.",
+          "answer": "record"
+        },
+        {
+          "prompt": "If you _____________ something, you made something new.",
+          "answer": "invented"
+        },
+        {
+          "prompt": "_____________ is the dollars and cents that you use to buy things.",
+          "answer": "Money"
+        },
+        {
+          "prompt": "If something is _____________ a certain amount of money, it costs that much money to buy it.",
+          "answer": "worth"
+        },
+        {
+          "prompt": "The _____________ of things are how much you have to pay to buy them.",
+          "answer": "prices"
+        },
+        {
+          "prompt": "If you _____________ something, you pay money to buy it.",
+          "answer": "purchase"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "If something _____________, it made a soft crackling sound.",
+          "answer": "rustled"
+        },
+        {
+          "prompt": "The _____________ of something is the line or border where it ends.",
+          "answer": "edge"
+        },
+        {
+          "prompt": "When things _____________, they grow and change.",
+          "answer": "develop"
+        },
+        {
+          "prompt": "_____________ are large numbers of plants that are grown for food.",
+          "answer": "Crops"
+        },
+        {
+          "prompt": "If something _____________, it came into sight.",
+          "answer": "appeared"
+        },
+        {
+          "prompt": "_____________ are steps in a process.",
+          "answer": "Stages"
+        },
+        {
+          "prompt": "Something that is _____________ is bright and yellow like gold.",
+          "answer": "golden"
+        },
+        {
+          "prompt": "If something is _____________, it is giving out light.",
+          "answer": "shining"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "_____________ are units for measuring time.",
+          "answer": "Seconds"
+        },
+        {
+          "prompt": "Something that is _____________ is very bright.",
+          "answer": "dazzling"
+        },
+        {
+          "prompt": "When you _____________ something, you make or invent it.",
+          "answer": "create"
+        },
+        {
+          "prompt": "When you use your _____________, you form pictures or ideas in your mind.",
+          "answer": "imagination"
+        },
+        {
+          "prompt": "Sometimes poets use _____________. They include the same line at least twice in a poem.",
+          "answer": "repeated lines"
+        },
+        {
+          "prompt": "The poet shared her _____________ about using your imagination.",
+          "answer": "message"
+        },
+        {
+          "prompt": "The _____________ of a poem are the syllables that make rhythm in a line of poetry.",
+          "answer": "beats"
+        },
+        {
+          "prompt": "“I’m a swan” is a _____________ because it compares two unlike things.",
+          "answer": "metaphor"
+        }
+      ]
+    }
+  ]
+}

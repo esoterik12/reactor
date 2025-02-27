@@ -184,6 +184,13 @@ The system:
     options, correct answer => above type will require a
 - The above edit components will be used in the edit pages
 
+## Completion Status 
+
+### Activities & Games
+- Memory Cards: Complete
+- Choose Correct: Complete
+- Crazy Check Up: Incomplete
+
 
 ## NOTES:
 

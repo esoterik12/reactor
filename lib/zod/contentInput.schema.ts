@@ -86,8 +86,7 @@ export const textareaContentSchema = baseContentSchema.extend({
   textareaInputContent: z
     .string()
     .min(50, {
-      message:
-        'You need to put in enough data, at least 50 characters, to build questions around.'
+      message: 'Input at least 50 characters to build questions around.'
     })
     .max(10000, {
       message: 'We can only support 10,000 characters at the moment.'
@@ -107,9 +106,10 @@ export const huntAndMistakesSchema = textareaContentSchema.extend({
       invalid_type_error: 'Must be a number.'
     })
     .min(4, { message: 'Generate at least 4.' })
-    .max(12, { message: 'Generate at most 12.' })
+    .max(16, { message: 'Generate at most 16.' })
 })
 
+// TODO: move helper function to utils
 const validateCommaSeparatedWords = ({
   value,
   min = 10,

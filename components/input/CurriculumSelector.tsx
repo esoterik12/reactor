@@ -29,6 +29,7 @@ import GeneratingContent from '../shared/GeneratingContent'
 import { AppError } from '@/lib/errors/AppError'
 import { useAppDispatch } from '@/redux/hooks'
 import { clearInput, setInput } from '@/redux/slices/inputSlice'
+import InlineError from '../shared/InlineError'
 
 interface CurriculumSelectorProps<T> {
   icon: React.ReactNode
@@ -52,7 +53,8 @@ export function CurriculumSelector<T>({
   const [level, setLevel] = useState<string | null>(null)
   const [unit, setUnit] = useState<string | null>(null)
   const [unitData, setUnitData] = useState<UnitDataJSON | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<null | string>(null)
   const [wordsToFilter, setWordsToFilter] = useState<string[]>([])
   const dispatch = useAppDispatch()
 
@@ -77,7 +79,7 @@ export function CurriculumSelector<T>({
     async function fetchUnitData() {
       if (level && unit) {
         try {
-          setLoading(true)
+          setIsLoading(true)
           setWordsToFilter([])
           reset()
           const result: UnitDataJSON = await loadUnit({ level, unit })
@@ -86,7 +88,7 @@ export function CurriculumSelector<T>({
           // TODO errors
           console.error('Error loading unit data:', error)
         } finally {
-          setLoading(false)
+          setIsLoading(false)
         }
       }
     }
@@ -94,11 +96,12 @@ export function CurriculumSelector<T>({
   }, [level, unit, reset])
 
   const handleGenerateButton = async (data: CurriculumSelectorForm) => {
-    setLoading(true)
-    dispatch(clearInput())
-
+    setError(null)
     if (level && unit && unitData) {
       try {
+        setIsLoading(true)
+        dispatch(clearInput())
+
         // Creates holding array and adds unitData if it is selected in the form state
         const unitDataArray: (SpellingWeek | VocabWeek)[] = []
         unitData?.spelling.forEach(spellingWeek => {
@@ -111,6 +114,11 @@ export function CurriculumSelector<T>({
             unitDataArray.push(vocabWeek)
           }
         })
+
+        if (unitDataArray.length === 0) {
+          setError('No content selected.')
+          return
+        }
 
         const filteredWords = filterCurriculumWords({
           unitDataArray,
@@ -144,11 +152,14 @@ export function CurriculumSelector<T>({
         } else {
           throw new AppError(400, 'Error generating content.')
         }
-      } catch (error) {
-        // TODO add error handling
-        console.error('Error loading unit data:', error)
+      } catch (err: unknown) {
+        if (err instanceof AppError) {
+          setError(err.message)
+        } else {
+          setError('An unexpected error occurred while generating content.')
+        }
       } finally {
-        setLoading(false)
+        setIsLoading(false)
       }
     }
   }
@@ -204,7 +215,9 @@ export function CurriculumSelector<T>({
                       isDisabled={!unitData}
                       customClasses={`w-10 h-9 input-border p-1 ${value ? 'secondary-background' : 'page-background hover-effect '}`}
                     >
-                      <p>{item.weekName.split(' ')[1]}</p>
+                      <p className={`${value ? 'text-white' : ''}`}>
+                        {item.weekName.split(' ')[1]}
+                      </p>
                     </RefButton>
                   )}
                 />
@@ -228,7 +241,9 @@ export function CurriculumSelector<T>({
                       isDisabled={!unitData}
                       customClasses={`w-10 h-9 input-border p-1  ${value ? 'primary-background' : 'page-background hover-effect'}`}
                     >
-                      <p>{item.weekId.split('')[0]}</p>
+                      <p className={`${value ? 'text-white' : ''}`}>
+                        {item.weekId.split('')[0]}
+                      </p>
                     </RefButton>
                   )}
                 />
@@ -248,7 +263,7 @@ export function CurriculumSelector<T>({
               inputClasses='p-1 w-full'
               error={errors.title}
               {...register('title')}
-              isDisabled={loading}
+              isDisabled={isLoading}
             />
           </div>
 
@@ -266,14 +281,14 @@ export function CurriculumSelector<T>({
                 inputClasses='p-1 w-full'
                 error={errors.secondaryInputContent}
                 {...register('secondaryInputContent')}
-                isDisabled={loading}
+                isDisabled={isLoading}
               />
             </div>
           )}
 
           {/* Textarea Paste Input */}
           {info.textareaInputInfo && (
-            <>
+            <div className='w-[410px]'>
               <div className='flex flex-row items-center justify-between'>
                 <h3 className='label-text mb-0.5'>
                   {info.textareaInputInfo.title}:
@@ -283,13 +298,13 @@ export function CurriculumSelector<T>({
                 <TextareaInput
                   id='textareaInputContent'
                   placeholder=''
-                  inputClasses='resize-none w-full h-14 p-1'
+                  inputClasses='w-full h-9 p-1'
                   error={errors.textareaInputContent}
                   {...register('textareaInputContent')}
-                  isDisabled={loading}
+                  isDisabled={isLoading}
                 />
               </div>
-            </>
+            </div>
           )}
         </div>
 
@@ -310,7 +325,7 @@ export function CurriculumSelector<T>({
                 inputClasses='p-1 w-[150px]'
                 error={errors.numberOfContent}
                 {...register('numberOfContent')}
-                isDisabled={loading}
+                isDisabled={isLoading}
               />
             </div>
           )}
@@ -319,10 +334,16 @@ export function CurriculumSelector<T>({
             btnType='submit'
             handleClick={handleSubmit(handleGenerateButton)}
             customClasses='w-[150px] h-9 my-5 button-border primary-background p-1 hover-effect-primary'
-            isDisabled={loading}
+            isDisabled={isLoading}
           >
             <p className='button-text'>Generate</p>
           </DefaultButton>
+
+          {error && (
+            <InlineError classes='flex h-9 my-5 items-center justify-center'>
+              <p className='secondary-text'>Error: {error}</p>
+            </InlineError>
+          )}
         </div>
       </form>
 
@@ -332,7 +353,7 @@ export function CurriculumSelector<T>({
           If so, we map over all the words in that array and show the answer (word)
       */}
       <div className='p-4'>
-        {loading ? (
+        {isLoading ? (
           <div className='text-center'>
             <GeneratingContent />
           </div>

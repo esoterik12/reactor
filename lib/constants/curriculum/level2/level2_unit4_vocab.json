@@ -1,0 +1,117 @@
+{
+  "level": 2,
+  "unit": 4,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "If you _____________ about something, you think about it because you are curious about it.",
+          "answer": "wonder"
+        },
+        {
+          "prompt": "If something _____________ over or through a place, it goes over or through there.",
+          "answer": "travels"
+        },
+        {
+          "prompt": "_____________ are large groups of people, including bands, moving through a public place for a special event.",
+          "answer": "Parades"
+        },
+        {
+          "prompt": "A _____________ is clothing you wear to look like something or someone else.",
+          "answer": "costume"
+        },
+        {
+          "prompt": "If something is _____________ to two or more people, it is owned or shared by all of them.",
+          "answer": "common"
+        },
+        {
+          "prompt": "_____________ are ways of acting or events that a group of people has done over and over again.",
+          "answer": "Customs"
+        },
+        {
+          "prompt": "Your _____________ thing is something you like the best.",
+          "answer": "favorite"
+        },
+        {
+          "prompt": "If something is _____________ by something else, the first thing is closed in on all sides by the second thing.",
+          "answer": "surrounded"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "Something that is _____________ is firm and hard and keeps its shape.",
+          "answer": "solid"
+        },
+        {
+          "prompt": "Something that is _____________ is nearby.",
+          "answer": "local"
+        },
+        {
+          "prompt": "_____________ is the planet we live on.",
+          "answer": "Earth"
+        },
+        {
+          "prompt": "When things _____________, they burst loudly and with a lot of force.",
+          "answer": "explode"
+        },
+        {
+          "prompt": "When something is _____________, it is lively.",
+          "answer": "active"
+        },
+        {
+          "prompt": "An _____________ is land that has water all around it.",
+          "answer": "island"
+        },
+        {
+          "prompt": "The _____________ of something are the different ways it looks and acts.",
+          "answer": "properties"
+        },
+        {
+          "prompt": "Something that is _____________ has a very sharp slope.",
+          "answer": "steep"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "When something is _____________, it is outside and not inside a building.",
+          "answer": "outdoors"
+        },
+        {
+          "prompt": "Things that _____________ make a person feel happy or eager.",
+          "answer": "excite"
+        },
+        {
+          "prompt": "_____________ are small amounts of liquid that fall in a round shape.",
+          "answer": "Drops"
+        },
+        {
+          "prompt": "Something that is _____________ is very light in color.",
+          "answer": "pale"
+        },
+        {
+          "prompt": "A _____________ poem does not have to rhyme.",
+          "answer": "free verse"
+        },
+        {
+          "prompt": "_____________ happens when words that are close to each other begin with the same sound.",
+          "answer": "Alliteration"
+        },
+        {
+          "prompt": "_____________ are words that have opposite meanings.",
+          "answer": "Antonyms"
+        },
+        {
+          "prompt": "_____________ is when a poet repeats certain words or phrases.",
+          "answer": "Repetition"
+        }
+      ]
+    }
+  ]
+}

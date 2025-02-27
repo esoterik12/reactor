@@ -18,16 +18,6 @@ Font.register({
 export const riddlesPDFStyles = StyleSheet.create({
   page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 12 },
 
-  // Title and Dates Section
-  titleContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  titleText: {
-    fontSize: 24,
-    marginBottom: 12
-  },
-
   // Riddles container
   mainContainer: {
     flexDirection: 'column',

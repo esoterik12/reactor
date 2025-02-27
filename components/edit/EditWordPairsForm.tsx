@@ -21,6 +21,8 @@ interface EditPairsFormProps {
   secondWordLabel: string
   generatedContent: WordPairings
   metaData: EditMetaDataProps
+  shuffleEnabled?: boolean
+  answerKeyEnabled?: boolean
 }
 
 const EditWordPairsForm = ({
@@ -28,23 +30,31 @@ const EditWordPairsForm = ({
   secondWordLabel = 'Second word',
   generatedContent,
   metaData,
+  shuffleEnabled = false,
+  // answerKeyEnabled = false
 }: EditPairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
-  const secondaryInputContent = useAppSelector(state => state.input.secondaryInputContent)
+  const secondaryInputContent = useAppSelector(
+    state => state.input.secondaryInputContent
+  )
 
   const {
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors }
   } = useForm<EditPairsFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     resolver: zodResolver(editPairsSchema),
-    defaultValues: { wordPairings: generatedContent }
+    defaultValues: { wordPairings: generatedContent, answerKey: false }
   })
+
+  // Holds current value of answerKey for the form
+  const answerKey = watch('answerKey')
 
   const handleSubmitButton = useCallback(
     async (data: EditPairsFormValues) => {
@@ -58,7 +68,8 @@ const EditWordPairsForm = ({
           content: JSON.stringify(data),
           secondaryInputContent
         },
-        pdfType
+        pdfType,
+        answerKey: data.answerKey
       }
 
       try {
@@ -88,14 +99,15 @@ const EditWordPairsForm = ({
     [metaData, downloadBlob, secondaryInputContent]
   )
 
+  // TODO: move this to utils
   const shuffleWords = () => {
-    const shuffledWordsArray: string[] = []
+    const wordsArray: string[] = []
     generatedContent.map(word => {
-      shuffledWordsArray.push(word.wordOne)
-      shuffledWordsArray.push(word.wordTwo)
+      wordsArray.push(word.wordOne)
+      wordsArray.push(word.wordTwo)
     })
 
-    shuffleArray(shuffledWordsArray)
+    const shuffledWordsArray = shuffleArray(wordsArray)
 
     const finalShuffle = []
 
@@ -105,8 +117,6 @@ const EditWordPairsForm = ({
         wordTwo: shuffledWordsArray[i + 1]
       })
     }
-
-    console.log('finalShuffle', finalShuffle)
 
     setValue('wordPairings', finalShuffle, {
       shouldValidate: true
@@ -192,26 +202,42 @@ const EditWordPairsForm = ({
               <p className='button-text'>Submit</p>
             )}
           </DefaultButton>
-          <DefaultButton
-            btnType='button'
-            handleClick={shuffleWords}
-            customClasses='w-[100px] button-border p-1 hover-effect'
-            isDisabled={isLoading}
-          >
-            <p className='secondary-text'>Shuffle</p>
-          </DefaultButton>
-          <DefaultButton
-            btnType='button'
-            handleClick={unshuffleWords}
-            customClasses='w-[100px] button-border p-1 hover-effect'
-            isDisabled={isLoading}
-          >
-            <p className='tertiary-text'>Unshuffle</p>
-          </DefaultButton>
-          <p>Add diff pairs button</p>
+          {answerKey && (
+            <DefaultButton
+              btnType='button'
+              handleClick={() => setValue('answerKey', !answerKey)}
+              customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
+              isDisabled={isLoading}
+            >
+              <p className={answerKey ? 'button-text' : 'paragraph-text'}>
+                Answers
+              </p>
+            </DefaultButton>
+          )}
+          {shuffleEnabled && (
+            <>
+              <DefaultButton
+                btnType='button'
+                handleClick={shuffleWords}
+                customClasses='w-[100px] button-border p-1 hover-effect'
+                isDisabled={isLoading}
+              >
+                <p className='secondary-text'>Shuffle</p>
+              </DefaultButton>
+              <DefaultButton
+                btnType='button'
+                handleClick={unshuffleWords}
+                customClasses='w-[100px] button-border p-1 hover-effect'
+                isDisabled={isLoading}
+              >
+                <p className='tertiary-text'>Unshuffle</p>
+              </DefaultButton>
+            </>
+          )}
+          <p>Differentiate</p>
           {error && (
-            <InlineError classes=''>
-              <p>{error}</p>
+            <InlineError classes='flex h-9 my-5 items-center justify-center'>
+              <p className='secondary-text'>Error: {error}</p>
             </InlineError>
           )}
         </div>

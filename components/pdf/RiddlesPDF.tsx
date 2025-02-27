@@ -2,7 +2,6 @@ import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { riddlesPDFStyles } from './RiddlesPDF.styles'
 
 interface RiddlesPDFProps {
-  title: string
   data: string[]
 }
 
@@ -13,14 +12,10 @@ export const memoryCardsColors = {
   teal: '#02bec1'
 }
 
-const RiddlePDF: React.FC<RiddlesPDFProps> = ({ title, data }) => {
+const RiddlePDF: React.FC<RiddlesPDFProps> = ({ data }) => {
   return (
     <Document>
       <Page size='A4' style={riddlesPDFStyles.page}>
-        <View style={riddlesPDFStyles.titleContainer}>
-          <Text style={riddlesPDFStyles.titleText}>{title}</Text>
-        </View>
-
         <View style={riddlesPDFStyles.mainContainer}>
           {data.map((item, index) => (
             <View

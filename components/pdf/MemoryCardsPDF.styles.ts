@@ -23,17 +23,7 @@ export const reportColors = {
 }
 
 export const memoryCardsPDFStyles = StyleSheet.create({
-  page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 12 },
-
-  // Title and Dates Section
-  titleContainer: {
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  titleText: {
-    fontSize: 24,
-    marginBottom: 12
-  },
+  page: { backgroundColor: 'white', fontFamily: 'Raleway', paddingVertical: 36},
 
   // Grid Section
   gridContainer: {
@@ -46,19 +36,13 @@ export const memoryCardsPDFStyles = StyleSheet.create({
     alignItems: 'center',
     gap: 4
   },
-  newPageRow: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 4,
-    marginTop: 36
-  },
   cell: {
     width: '22%',
     height: 130,
     backgroundColor: reportColors.gray,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 12
   },
   cellText: {
     fontSize: 14,
