@@ -4,58 +4,53 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { editSentencesSchema } from '@/lib/zod/contentEdit.schema'
-import { z } from 'zod'
 import { EditMetaDataProps } from '@/types/input.types'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import InlineError from '../shared/InlineError'
+import {
+  CrazyCheckUpCommand,
+  editCrazyCheckUpSchema,
+  EditCrazyCheckUpFormValues
+} from '@/lib/zod/editCrazyCheckUp.schema'
 
-interface EditSentencesFormProps {
-  generatedContent: string[]
+// Update the props to use the command type array
+interface EditCrazyCheckUpProps {
+  generatedContent: CrazyCheckUpCommand[] // each command is one object
   metaData: EditMetaDataProps
-  answerKeyEnabled?: boolean
 }
 
-// Infer the form values from the schema
-type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
-
-const EditSentencesForm = ({
+const EditCrazyCheckUp = ({
   generatedContent,
-  metaData,
-  answerKeyEnabled
-}: EditSentencesFormProps) => {
+  metaData
+}: EditCrazyCheckUpProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
   const submitPDF = useSubmitPDF()
 
+  console.log('generatedContent', generatedContent)
+
   const {
     register,
     handleSubmit,
-    watch,
-    setValue,
     formState: { errors }
-  } = useForm<EditSentencesFormValues>({
+  } = useForm<EditCrazyCheckUpFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    resolver: zodResolver(editSentencesSchema),
-    defaultValues: { sentences: generatedContent, answerKey: false }
+    resolver: zodResolver(editCrazyCheckUpSchema),
+    defaultValues: { data: generatedContent }
   })
 
-  const answerKey = watch('answerKey')
-
   const handleSubmitButton = useCallback(
-    async (data: EditSentencesFormValues) => {
+    async (data: EditCrazyCheckUpFormValues) => {
       console.log('handleSubmitButton clicked')
       console.log('data in handleSubmitButton: ', data)
       console.log('metaData', metaData)
-      // Here you can process the data (e.g., send it to an API)
 
       const pdfData = {
         data: { title: metaData.title, content: JSON.stringify(data) },
-        pdfType: metaData.contentType,
-        answerKey: data.answerKey
+        pdfType: metaData.contentType
       }
 
       submitPDF({
@@ -66,7 +61,7 @@ const EditSentencesForm = ({
         downloadBlob
       })
     },
-    [downloadBlob, metaData, submitPDF]
+    [metaData, submitPDF, downloadBlob]
   )
 
   return (
@@ -93,10 +88,11 @@ const EditSentencesForm = ({
                 errorType='highlightInput'
                 labelClasses='paragraph-text small-text'
                 id={`sentence-${index}`}
+                isDisabled={isLoading}
                 inputClasses='p-1 min-w-[800px] w-full'
                 placeholder='Enter sentence'
-                {...register(`sentences.${index}`)}
-                error={errors.sentences?.[index]}
+                {...register(`data.${index}.command`)}
+                error={errors.data?.[index]?.command}
               />
             </div>
           ))}
@@ -104,22 +100,12 @@ const EditSentencesForm = ({
         <DefaultButton
           btnType='submit'
           handleClick={handleSubmit(handleSubmitButton)}
+          isDisabled={isLoading}
           customClasses='w-32 mt-1 ml-10 button-border primary-background p-1 hover-effect-primary'
         >
           <p className='button-text'>Submit</p>
         </DefaultButton>
-        {answerKeyEnabled && (
-          <DefaultButton
-            btnType='button'
-            handleClick={() => setValue('answerKey', !answerKey)}
-            customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
-            isDisabled={isLoading}
-          >
-            <p className={answerKey ? 'button-text' : 'paragraph-text'}>
-              Answers
-            </p>
-          </DefaultButton>
-        )}
+
         {error && (
           <InlineError classes='flex h-9 my-5 items-center justify-center'>
             <p className='secondary-text'>Error: {error}</p>
@@ -134,4 +120,4 @@ const EditSentencesForm = ({
   )
 }
 
-export default EditSentencesForm
+export default EditCrazyCheckUp

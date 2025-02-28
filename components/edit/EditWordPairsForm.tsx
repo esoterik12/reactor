@@ -1,5 +1,5 @@
 'use client'
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -11,10 +11,10 @@ import {
 } from '@/lib/zod/contentEdit.schema'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
-import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
 import { useAppSelector } from '@/redux/hooks'
+import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 
 interface EditPairsFormProps {
   firstWordLabel: string
@@ -31,11 +31,12 @@ const EditWordPairsForm = ({
   generatedContent,
   metaData,
   shuffleEnabled = false,
-  // answerKeyEnabled = false
+  answerKeyEnabled = false
 }: EditPairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
+  const submitPDF = useSubmitPDF()
   const secondaryInputContent = useAppSelector(
     state => state.input.secondaryInputContent
   )
@@ -53,51 +54,27 @@ const EditWordPairsForm = ({
     defaultValues: { wordPairings: generatedContent, answerKey: false }
   })
 
-  // Holds current value of answerKey for the form
   const answerKey = watch('answerKey')
 
-  const handleSubmitButton = useCallback(
-    async (data: EditPairsFormValues) => {
-      setError(null)
-      setIsLoading(true)
-      const pdfType = capitalizeFirstLetter(metaData.contentType)
+  const handleSubmitButton = (data: EditPairsFormValues) => {
+    const pdfData = {
+      data: {
+        title: metaData.title,
+        content: JSON.stringify(data),
+        secondaryInputContent
+      },
+      pdfType: metaData.contentType,
+      answerKey: data.answerKey
+    }
 
-      const pdfData = {
-        data: {
-          title: metaData.title,
-          content: JSON.stringify(data),
-          secondaryInputContent
-        },
-        pdfType,
-        answerKey: data.answerKey
-      }
-
-      try {
-        const response = await fetch('/api/generate-pdf', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ pdfData })
-        })
-
-        if (!response.ok) {
-          const errorData = await response.json()
-          throw new Error(errorData.error || 'Failed to generate PDF.')
-        }
-
-        const blob = await response.blob()
-        const fileName = `${metaData.title} - ${pdfType}.pdf`
-        downloadBlob(blob, fileName)
-      } catch (error) {
-        setError('An unexpected error occurred.')
-        console.log('error', error)
-      } finally {
-        setIsLoading(false)
-      }
-    },
-    [metaData, downloadBlob, secondaryInputContent]
-  )
+    submitPDF({
+      pdfData,
+      title: metaData.title,
+      setError,
+      setIsLoading,
+      downloadBlob
+    })
+  }
 
   // TODO: move this to utils
   const shuffleWords = () => {
@@ -202,7 +179,7 @@ const EditWordPairsForm = ({
               <p className='button-text'>Submit</p>
             )}
           </DefaultButton>
-          {answerKey && (
+          {answerKeyEnabled && (
             <DefaultButton
               btnType='button'
               handleClick={() => setValue('answerKey', !answerKey)}

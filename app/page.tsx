@@ -13,6 +13,7 @@ export default function Home() {
 
           <p>Add heads up heads down</p>
           <p>For heads, use missing letters, changed letters, use a blank screen for 2-3 seconds while one is removed</p>
+          <p>Find Your Partner: provide support for 3, 4, 5 matching pairs</p>
         </main>
       </>
     </PageContainer>

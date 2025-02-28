@@ -98,7 +98,6 @@ export const baseContentSelectorSchema = baseContentSchema.omit({
   primaryInputContent: true
 })
 
-//
 export const huntAndMistakesSchema = textareaContentSchema.extend({
   numberOfContent: z.coerce
     .number({

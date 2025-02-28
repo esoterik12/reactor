@@ -45,7 +45,8 @@ export type CorrectSpellingWordPairings =
 export const editSentencesSchema = z.object({
   sentences: z
     .array(z.string().min(1, { message: 'Text is required.' }))
-    .max(2000, { message: 'Input cannot support more than 2,000 characters.' })
+    .max(2000, { message: 'Input cannot support more than 2,000 characters.' }),
+  answerKey: z.boolean()
 })
 
 export type EditSentencesFormValues = z.infer<typeof editSentencesSchema>

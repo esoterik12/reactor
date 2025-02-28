@@ -1,6 +1,5 @@
 import { StyleSheet, Font } from '@react-pdf/renderer'
 
-// Register font
 Font.register({
   family: 'Raleway',
   fonts: [
@@ -17,8 +16,6 @@ Font.register({
 
 export const riddlesPDFStyles = StyleSheet.create({
   page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 12 },
-
-  // Riddles container
   mainContainer: {
     flexDirection: 'column',
     gap: 24,

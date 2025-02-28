@@ -12,12 +12,13 @@ import {
 } from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconCrazyCheckUp from '@/components/icons/content/IconCrazyCheckUp'
-import EditSentencesForm from '@/components/edit/EditSentencesForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import { CrazyCheckUpCommand } from '@/lib/zod/editCrazyCheckUp.schema'
+import EditCrazyCheckUp from '@/components/edit/EditCrazyCheckUp'
 
 const CrazyCheckUpPage = () => {
-  const [content, setContent] = useState<string[] | null>(null)
+  const [content, setContent] = useState<CrazyCheckUpCommand[] | null>(null)
   const [metaData, setMetaData] = useState({
     title: '',
     contentType: ''
@@ -53,7 +54,7 @@ const CrazyCheckUpPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditSentencesForm generatedContent={content} metaData={metaData} />
+        <EditCrazyCheckUp generatedContent={content} metaData={metaData} />
       )}
     </>
   )

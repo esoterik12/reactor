@@ -189,7 +189,12 @@ The system:
 ### Activities & Games
 - Memory Cards: Complete
 - Choose Correct: Complete
-- Crazy Check Up: Incomplete
+- Crazy Check Up: Complete
+- Riddles: Complete
+
+- Find Your Partner: Needs big change to support more than 2 matches
+- Review Hunt: Complete - Needs Adjustment
+- Grammar Mistakes: Incomplete
 
 
 ## NOTES:
