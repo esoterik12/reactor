@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useCallback, useState } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -10,6 +10,9 @@ import {
   EditSentencePairsFormValues
 } from '@/lib/zod/editSentencePairs.schema'
 import { EditMetaDataProps } from '@/types/input.types'
+import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
+import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
+import InlineError from '../shared/InlineError'
 
 interface EditSentencePairsFormProps {
   firstWordLabel: string
@@ -26,6 +29,13 @@ const EditSentencePairsForm = ({
   zodSchema,
   metaData
 }: EditSentencePairsFormProps) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  const { linkRef, downloadBlob } = useBlobDownloader()
+  const submitPDF = useSubmitPDF()
+
+  console.log('generatedContent', generatedContent)
+
   const {
     register,
     handleSubmit,
@@ -37,11 +47,23 @@ const EditSentencePairsForm = ({
     defaultValues: { sentencePairings: generatedContent }
   })
 
-  const handleSubmitButton = (data: EditSentencePairsFormValues) => {
-    console.log('handleSubmitButton clicked')
-    console.log('data in handleSubmitButton: ', data)
-    console.log('metaData', metaData)
-  }
+  const handleSubmitButton = useCallback(
+    async (data: EditSentencePairsFormValues) => {
+      const pdfData = {
+        data: { title: metaData.title, content: JSON.stringify(data) },
+        pdfType: metaData.contentType
+      }
+
+      submitPDF({
+        pdfData,
+        title: metaData.title,
+        setError,
+        setIsLoading,
+        downloadBlob
+      })
+    },
+    [metaData, submitPDF, downloadBlob]
+  )
 
   return (
     <div className='container-background flex h-full w-full flex-col rounded-lg'>
@@ -80,6 +102,7 @@ const EditSentencePairsForm = ({
                 inputClasses='p-1 w-full'
                 containerClasses='w-[49%] py-2'
                 placeholder=''
+                isDisabled={isLoading}
                 {...register(`sentencePairings.${index}.correctSentence`)}
                 error={errors.sentencePairings?.[index]?.correctSentence}
               />
@@ -91,6 +114,7 @@ const EditSentencePairsForm = ({
                 inputClasses='p-1 w-full'
                 containerClasses='w-[49%] py-2'
                 placeholder=''
+                isDisabled={isLoading}
                 {...register(`sentencePairings.${index}.incorrectSentence`)}
                 error={errors.sentencePairings?.[index]?.incorrectSentence}
               />
@@ -100,10 +124,21 @@ const EditSentencePairsForm = ({
         <DefaultButton
           ariaLabel='Submit button'
           btnType='submit'
+          isDisabled={isLoading}
           customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
         >
           <p className='button-text'>Submit</p>
         </DefaultButton>
+
+        {error && (
+          <InlineError classes='flex h-9 my-5 items-center justify-center'>
+            <p className='secondary-text'>Error: {error}</p>
+          </InlineError>
+        )}
+        {/* Hidden download link */}
+        <a ref={linkRef} className='hidden'>
+          Download
+        </a>
       </form>
     </div>
   )

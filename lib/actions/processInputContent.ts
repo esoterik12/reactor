@@ -28,8 +28,6 @@ export default async function processInputContent({
 }: ProcessInputContentProps) {
   let generationMessage: string = ''
 
-  console.log('contentType', contentType)
-
   try {
     switch (contentType) {
       case 'chooseCorrectSpelling':

@@ -14,9 +14,8 @@ import {
   EditCrazyCheckUpFormValues
 } from '@/lib/zod/editCrazyCheckUp.schema'
 
-// Update the props to use the command type array
 interface EditCrazyCheckUpProps {
-  generatedContent: CrazyCheckUpCommand[] // each command is one object
+  generatedContent: CrazyCheckUpCommand[] 
   metaData: EditMetaDataProps
 }
 
@@ -28,8 +27,6 @@ const EditCrazyCheckUp = ({
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
   const submitPDF = useSubmitPDF()
-
-  console.log('generatedContent', generatedContent)
 
   const {
     register,
@@ -44,10 +41,6 @@ const EditCrazyCheckUp = ({
 
   const handleSubmitButton = useCallback(
     async (data: EditCrazyCheckUpFormValues) => {
-      console.log('handleSubmitButton clicked')
-      console.log('data in handleSubmitButton: ', data)
-      console.log('metaData', metaData)
-
       const pdfData = {
         data: { title: metaData.title, content: JSON.stringify(data) },
         pdfType: metaData.contentType
@@ -99,7 +92,6 @@ const EditCrazyCheckUp = ({
         </div>
         <DefaultButton
           btnType='submit'
-          handleClick={handleSubmit(handleSubmitButton)}
           isDisabled={isLoading}
           customClasses='w-32 mt-1 ml-10 button-border primary-background p-1 hover-effect-primary'
         >

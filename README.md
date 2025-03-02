@@ -191,10 +191,11 @@ The system:
 - Choose Correct: Complete
 - Crazy Check Up: Complete
 - Riddles: Complete
+- Grammar Mistakes: Complete
 
 - Find Your Partner: Needs big change to support more than 2 matches
 - Review Hunt: Complete - Needs Adjustment
-- Grammar Mistakes: Incomplete
+
 
 
 ## NOTES:

@@ -14,7 +14,7 @@ import {
   editSentencePairsSchema
 } from '@/lib/zod/editSentencePairs.schema'
 import EditSentencePairsForm from '@/components/edit/EditSentencePairsForm'
-import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import { generateSingleTab } from '@/lib/constants/tabOptions'
 
 const GrammarMistakesPage = () => {
   const [content, setContent] = useState<EditSentencePairs | null>(null)
@@ -35,14 +35,13 @@ const GrammarMistakesPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 2'>Tab 2</p>,
-    <p key='Tab 3'>Tab 3</p>
+    <p key='Tab 2'>Tab 2</p>
   ]
 
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
+        <ContentTabs tabs={generateSingleTab} tabContent={tabContent} />
       ) : (
         <EditSentencePairsForm
           firstWordLabel='Correct sentence'

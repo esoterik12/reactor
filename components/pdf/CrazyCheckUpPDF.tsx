@@ -7,19 +7,6 @@ interface CrazyCheckUpPDFProps {
 }
 
 const CrazyCheckUpPDF: React.FC<CrazyCheckUpPDFProps> = ({ data }) => {
-  console.log('data', data)
-
-  /*
-    Simple sentence types: 
-      doAnAction, speakOrAsk, useWhiteBoard, useScrapPaper
-
-    Write on a line type:
-      writeOnThisPaper
-
-    Draw in a box (wide box):
-      drawOnThispaper
-
-  */
   return (
     <Document>
       <Page size='A4' style={styles.page}>

@@ -4,8 +4,6 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from './InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { clearInput, setInput } from '@/redux/slices/inputSlice'
-import { useAppDispatch } from '@/redux/hooks'
 import {
   ContentFormInput,
   EditMetaDataProps,
@@ -48,7 +46,6 @@ export function ContentForm<T>({
   setContent,
   setMetaData
 }: ContentFormProps<T>) {
-  const dispatch = useAppDispatch()
   const [loading, setLoading] = useState(false)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
@@ -70,9 +67,6 @@ export function ContentForm<T>({
 
   const handleSubmitButton = async (data: ContentFormInput) => {
     setLoading(true)
-    dispatch(clearInput())
-    console.log('data in handleSubmitButton: ', data)
-
     try {
       const generationResults = await processInputContent({
         contentType,
@@ -83,21 +77,7 @@ export function ContentForm<T>({
         numberOfContent: data.numberOfContent || null
       })
 
-      // TODO: This currently sends a lot of data to context, not used at the
-      // moment, may be wise to remove
       if (generationResults.code === 200) {
-        dispatch(
-          setInput({
-            title: data.title,
-            contentType,
-            levelSelection: selectedLevel,
-            primaryInputContent: data.primaryInputContent,
-            secondaryInputContent: data.secondaryInputContent,
-            textareaInput: data.textareaInputContent,
-            generatedContent:
-              generationResults.result.data || generationResults.result.pairs
-          })
-        )
         // TODO: generation functions are returning objects with different names
         setContent(
           generationResults.result.data ||
@@ -112,7 +92,7 @@ export function ContentForm<T>({
         throw new AppError(400, 'Error generating content.')
       }
     } catch (error) {
-      console.log('error in handleSubmitButton in ContentForm.tsx: ', error)
+      console.log('Error in handleSubmitButton in ContentForm.tsx: ', error)
       throw new AppError(400, 'Error generation content.')
     } finally {
       setLoading(false)
@@ -125,7 +105,6 @@ export function ContentForm<T>({
   }
 
   const currentPrimaryInput = watch('primaryInputContent')
-  // const currentSecondaryInput = watch('secondaryInputContent')
 
   return (
     <section className='flex h-full w-full flex-row'>
