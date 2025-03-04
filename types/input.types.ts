@@ -4,6 +4,7 @@ export interface ContentFormInput {
   secondaryInputContent?: string
   textareaInputContent?: string
   numberOfContent?: number | null
+  secondaryNumberOfContent?: number | null
 }
 
 // New content info types below
@@ -13,6 +14,7 @@ export interface InfoTextData {
   secondaryInputInfo?: InfoTextObject
   textareaInputInfo?: InfoTextObject
   numberOfContent?: InfoTextObject
+  secondaryNumberOfContent?: InfoTextObject
 }
 
 export interface InfoTextObject {

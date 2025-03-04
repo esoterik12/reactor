@@ -21,7 +21,7 @@ export default function riddlesMessage({
 
       Ensure the answers are not included in the riddles and that the return data uses a newline character to represent a line break.
 
-      Importantly, also ensure the language is simple and suitable for all students at an elementary grade ${levelSelection}
+      Importantly, also ensure the language is simple and suitable for all students at an elementary grade ${levelSelection} or below.
 
       Return valid JSON only.
     `

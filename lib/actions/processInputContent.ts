@@ -16,6 +16,7 @@ interface ProcessInputContentProps {
   secondaryInputContent?: string
   textareaInput?: string
   numberOfContent?: number | null
+  secondaryNumberOfContent?: number | null
 }
 
 export default async function processInputContent({
@@ -24,7 +25,8 @@ export default async function processInputContent({
   primaryInputContent,
   secondaryInputContent,
   textareaInput,
-  numberOfContent
+  numberOfContent,
+  secondaryNumberOfContent
 }: ProcessInputContentProps) {
   let generationMessage: string = ''
 
@@ -49,7 +51,8 @@ export default async function processInputContent({
           matchingCriteria:
             secondaryInputContent || 'Missing matching criteria',
           numberOfContent: numberOfContent || 8,
-          levelSelection
+          levelSelection,
+          secondaryNumberOfContent: secondaryNumberOfContent || 2
         })
         break
 

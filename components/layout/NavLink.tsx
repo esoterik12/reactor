@@ -16,15 +16,14 @@ const NavLink = ({ href, children, className, ...props }: NavLink) => {
   const isActiveLink = href === pathname
 
   return (
-    <Link
-      {...props}
-      href={href}
-      className={clsx(
-        className,
-        isActiveLink && 'underline decoration-sky-500'
-      )}
-    >
-      <DefaultButton customClasses='w-28 h-8 container-background button-border hover-effect'>
+    <Link {...props} href={href}>
+      <DefaultButton
+        customClasses={clsx(
+          'w-28 h-8 container-background button-border hover-effect',
+          className,
+          isActiveLink && 'underline'
+        )}
+      >
         <div>{children}</div>
       </DefaultButton>
     </Link>

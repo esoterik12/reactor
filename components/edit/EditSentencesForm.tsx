@@ -14,7 +14,6 @@ import InlineError from '../shared/InlineError'
 interface EditSentencesFormProps {
   generatedContent: string[]
   metaData: EditMetaDataProps
-  answerKeyEnabled?: boolean
 }
 
 // Infer the form values from the schema
@@ -22,8 +21,7 @@ type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
 
 const EditSentencesForm = ({
   generatedContent,
-  metaData,
-  answerKeyEnabled
+  metaData
 }: EditSentencesFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -33,8 +31,6 @@ const EditSentencesForm = ({
   const {
     register,
     handleSubmit,
-    watch,
-    setValue,
     formState: { errors }
   } = useForm<EditSentencesFormValues>({
     mode: 'onBlur',
@@ -43,15 +39,8 @@ const EditSentencesForm = ({
     defaultValues: { sentences: generatedContent, answerKey: false }
   })
 
-  const answerKey = watch('answerKey')
-
   const handleSubmitButton = useCallback(
     async (data: EditSentencesFormValues) => {
-      console.log('handleSubmitButton clicked')
-      console.log('data in handleSubmitButton: ', data)
-      console.log('metaData', metaData)
-      // Here you can process the data (e.g., send it to an API)
-
       const pdfData = {
         data: { title: metaData.title, content: JSON.stringify(data) },
         pdfType: metaData.contentType,
@@ -103,23 +92,12 @@ const EditSentencesForm = ({
         </div>
         <DefaultButton
           btnType='submit'
+          isDisabled={isLoading}
           handleClick={handleSubmit(handleSubmitButton)}
           customClasses='w-32 mt-1 ml-10 button-border primary-background p-1 hover-effect-primary'
         >
           <p className='button-text'>Submit</p>
         </DefaultButton>
-        {answerKeyEnabled && (
-          <DefaultButton
-            btnType='button'
-            handleClick={() => setValue('answerKey', !answerKey)}
-            customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
-            isDisabled={isLoading}
-          >
-            <p className={answerKey ? 'button-text' : 'paragraph-text'}>
-              Answers
-            </p>
-          </DefaultButton>
-        )}
         {error && (
           <InlineError classes='flex h-9 my-5 items-center justify-center'>
             <p className='secondary-text'>Error: {error}</p>

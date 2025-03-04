@@ -52,7 +52,7 @@ const ReviewHuntPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditMultipleChoice generatedContent={content} metaData={metaData} answerKeyEnabled={true} />
+        <EditMultipleChoice generatedContent={content} metaData={metaData} />
       )}
     </>
   )
@@ -76,7 +76,6 @@ is a subject pronoun. Write O if it is an object pronoun.
 4. Will the captain say hello to us ?
 5. You can ride in the car with Jessie.
 6. The girl did not invite them to the party.
-
 
 A subject pronoun takes the place of a noun in the subject of a
 sentence. An object pronoun takes the place of a noun that follows

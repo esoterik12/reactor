@@ -77,7 +77,14 @@ export const generateFindYourPartnerSchema = generatePairsSchema.extend({
       invalid_type_error: 'Must be a number.'
     })
     .min(4, { message: 'Generate at least 4.' })
-    .max(24, { message: 'Generate at most 24.' })
+    .max(24, { message: 'Generate at most 24.' }),
+  secondaryNumberOfContent: z.coerce
+    .number({
+      required_error: 'Set size is required.',
+      invalid_type_error: 'Must be a number.'
+    })
+    .min(2, { message: '2 is the minimum.' })
+    .max(4, { message: '4 is the maximum.' })
 })
 
 // Combines the baseContentSchema with a textareaInputContent validation to be used

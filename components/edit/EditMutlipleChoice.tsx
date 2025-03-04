@@ -15,37 +15,27 @@ import InlineError from '../shared/InlineError'
 interface EditMultipleChoiceProps {
   generatedContent: EditMultipleChoiceValues
   metaData: EditMetaDataProps
-  answerKeyEnabled?: boolean
 }
 
-// Infer the form values from the schema.
 type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoice>
 
 const EditMultipleChoice = ({
   generatedContent,
-  metaData,
-  // answerKeyEnabled = false
+  metaData
 }: EditMultipleChoiceProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
 
-  console.log('generatedContent', generatedContent)
-
   const {
     register,
     control,
     handleSubmit,
-    watch,
-    setValue,
     formState: { errors }
   } = useForm<EditMultipleChoiceFormValues>({
     resolver: zodResolver(editMultipleChoice),
     defaultValues: { questions: generatedContent, answerKey: false }
   })
-
-  // Holds current value of answerKey for the form
-  const answerKey = watch('answerKey')
 
   /*
     useFieldArray is a custom hook provided by React Hook Form that simplifies the process of 
@@ -150,22 +140,9 @@ const EditMultipleChoice = ({
           >
             <p className='paragraph-text'>+ Question</p>
           </DefaultButton>
-          {answerKey && (
-            <DefaultButton
-              btnType='button'
-              handleClick={() => setValue('answerKey', !answerKey)}
-              customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
-              isDisabled={isLoading}
-            >
-              <p className={answerKey ? 'button-text' : 'paragraph-text'}>
-                Answers
-              </p>
-            </DefaultButton>
-          )}
-          {/* TODO: Add stlying to error */}
           {error && (
-            <InlineError classes=''>
-              <p>{error}</p>
+            <InlineError classes='flex h-9 my-5 items-center justify-center'>
+              <p className='secondary-text'>Error: {error}</p>
             </InlineError>
           )}
           {/* Hidden download link */}

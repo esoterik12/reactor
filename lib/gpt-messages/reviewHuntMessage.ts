@@ -13,7 +13,6 @@ export default function reviewHuntMessage({
   levelSelection,
   numberOfQuestions
 }: ReviewHuntMessage) {
-
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(reviewHuntStructure)}
@@ -26,7 +25,7 @@ export default function reviewHuntMessage({
       Note: if the content data involves only a set of vocabulary or spelling words, please use the other words
       as possible incorrect answers.
 
-      Ensure the content is suitable for all students at an elementary grade ${levelSelection}.
+      Ensure the content is easy for all students at an elementary grade ${levelSelection}.
 
       Return valid JSON only.
     `

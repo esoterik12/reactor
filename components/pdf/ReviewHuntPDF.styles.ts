@@ -81,7 +81,7 @@ export const reviewHuntPDFStyles = StyleSheet.create({
     width: '8%'
   },
   optionsNumberText: {
-    fontSize: 20,
+    fontSize: 16,
     color: colors.teal
   },
   optionsCell: {
@@ -90,12 +90,12 @@ export const reviewHuntPDFStyles = StyleSheet.create({
   },
   optionsText: {
     color: colors.black,
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'left'
   },
   correctOptionsText: {
     color: colors.orange,
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'left'
   }
 })

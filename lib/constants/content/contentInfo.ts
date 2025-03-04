@@ -85,7 +85,7 @@ export const findYourPartnerGeneratedInfo = {
     inputInfo:
       'Provide a description of the content you would like the activity to contain. Being specific and giving a few examples will improve the results.',
     inputExample:
-      "For example: 'Generate matching pairs based around different rhyming pairs that use short vowel sounds like cat, rat, clock, sock.'"
+      "For example: 'Generate matching sets based around different rhyming sounds that use short vowel sounds like cat, rat, clock, sock.'"
   },
   secondaryInputInfo: {
     title: 'Matching criteria',
@@ -94,7 +94,12 @@ export const findYourPartnerGeneratedInfo = {
       'For example: rhyming, synonyms, antonyms, definitions, sentence blanks, etc.'
   },
   numberOfContent: {
-    title: 'Number of pairs'
+    title: 'Number of cards'
+  },
+  secondaryNumberOfContent: {
+    title: 'Set size',
+    inputInfo: 'This specifies how many items will be in each group or set.',
+    inputExample: 'For example: you can have sets of two, three, or four.'
   }
 }
 
@@ -159,7 +164,7 @@ export const grammarMistakesInfo = {
 export const riddlesInfo = {
   levelSelectionInfo,
   primaryInputInfo: {
-    title: 'Riddle content:',
+    title: 'Riddle content',
     inputInfo:
       'Provide a comma-separated list of words you would like to create riddles for. You can provide phrases or full sentences as well as long as each is separated by a comma, just consider their feasability as answers to a riddle.',
     inputExample: 'For example: camouflage, evolution, predator'

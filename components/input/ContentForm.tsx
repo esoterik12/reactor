@@ -74,7 +74,8 @@ export function ContentForm<T>({
         primaryInputContent: data.primaryInputContent,
         secondaryInputContent: data.secondaryInputContent,
         textareaInput: data.textareaInputContent,
-        numberOfContent: data.numberOfContent || null
+        numberOfContent: data.numberOfContent || null,
+        secondaryNumberOfContent: data.secondaryNumberOfContent || null
       })
 
       if (generationResults.code === 200) {
@@ -214,28 +215,53 @@ export function ContentForm<T>({
             </>
           )}
 
-          {/* Number of Questions */}
+          {/* Number of Content / Secondary Number of Content */}
           {info.numberOfContent && (
-            <div>
-              <div className='flex flex-row items-center justify-between'>
-                <h3 className='label-text mb-0.5'>
-                  {info.numberOfContent.title}:
-                </h3>
-                {info.numberOfContent.inputInfo && (
-                  <ContentInfoButton
-                    handleClick={() => handleSelectInfo('numberOfContent')}
-                  />
-                )}
+            <div className='flex flex-row gap-8'>
+              <div>
+                <div className='flex flex-row items-center justify-between'>
+                  <h3 className='label-text mb-1'>
+                    {info.numberOfContent.title}:
+                  </h3>
+                  {info.numberOfContent.inputInfo && (
+                    <ContentInfoButton
+                      handleClick={() => handleSelectInfo('numberOfContent')}
+                    />
+                  )}
+                </div>
+                <InputField
+                  type='text'
+                  id='numberOfContent'
+                  placeholder=''
+                  inputClasses='p-1 w-32'
+                  error={errors.numberOfContent}
+                  {...register('numberOfContent')}
+                  isDisabled={loading}
+                />
               </div>
-              <InputField
-                type='text'
-                id='inputContent'
-                placeholder=''
-                inputClasses='p-1 w-32'
-                error={errors.numberOfContent}
-                {...register('numberOfContent')}
-                isDisabled={loading}
-              />
+              {info.secondaryNumberOfContent && (
+                <div>
+                <div className='flex flex-row items-center justify-between'>
+                  <h3 className='label-text mb-1'>
+                    {info.secondaryNumberOfContent.title}:
+                  </h3>
+                  {info.secondaryNumberOfContent.inputInfo && (
+                    <ContentInfoButton
+                      handleClick={() => handleSelectInfo('secondaryNumberOfContent')}
+                    />
+                  )}
+                </div>
+                <InputField
+                  type='text'
+                  id='secondaryNumberOfContent'
+                  placeholder=''
+                  inputClasses='p-1 w-32'
+                  error={errors.secondaryNumberOfContent}
+                  {...register('secondaryNumberOfContent')}
+                  isDisabled={loading}
+                />
+              </div>
+              )}
             </div>
           )}
 

@@ -1,10 +1,3 @@
-/* 
-TODO: A more effective review hunt would involve quesitons more
-closely related to the quiz structure as shown below 
-To accomplish this, the generator would need to use two different formats,
-one for just simple vocab from the curriculum selector, and one for grammar content
-*/
-
 export const reviewHuntAltStructure = {
   data: [
     {
@@ -25,7 +18,7 @@ export const reviewHuntAltStructure = {
           answerText: 'Harry picked everything up.'
         }
       ],
-      correctAnswerId: 'c'
+      correctAnswer: 'c'
     },
     {
       questionId: 'q2',
@@ -45,19 +38,106 @@ export const reviewHuntAltStructure = {
           answerText: 'When we get home, us can play all night.'
         }
       ],
-      correctAnswerId: 'b'
+      correctAnswer: 'b'
     },
     {
       questionId: 'q3',
-      questionType: 'writtenAnswer',
-      sentence: 'We all climbed into Kevin’s car and he took us home.',
-      question: 'Which pronoun could replace “Kevin’s car”?'
+      questionType: 'multipleChoice',
+      question: 'Which sentence uses a conjunction?',
+      possibleAnswers: [
+        {
+          answerId: 'a',
+          answerText: 'He does not want to work with his brother.'
+        },
+        {
+          answerId: 'b',
+          answerText: 'He can help you, but you will have to wait.'
+        },
+        {
+          answerId: 'c',
+          answerText: 'He is slowly finishing his work at home.'
+        }
+      ],
+      correctAnswer: 'b'
     },
     {
       questionId: 'q4',
+      questionType: 'multipleChoice',
+      question: 'Which sentence has a past tense verb?',
+      possibleAnswers: [
+        {
+          answerId: 'a',
+          answerText: 'When Harry wakes up, he does some exercise.'
+        },
+        {
+          answerId: 'b',
+          answerText: 'When will Harry wake up?'
+        },
+        {
+          answerId: 'c',
+          answerText: 'When Harry woke up, he ate his breakfast.'
+        }
+      ],
+      correctAnswer: 'c'
+    },
+
+    // Sentence Completions
+    {
+      questionId: 'q5',
+      questionType: 'sentenceCompletion',
+      sentence: 'We all climbed into Kevin’s car and he took us home.',
+      question: 'Which pronoun could replace “Kevin’s”?',
+      possibleAnswers: [
+        {
+          answerId: 'a',
+          answerText: 'his'
+        },
+        {
+          answerId: 'b',
+          answerText: 'her'
+        },
+        {
+          answerId: 'c',
+          answerText: 'he'
+        }
+      ],
+      correctAnswer: 'a'
+    },
+    {
+      questionId: 'q6',
+      questionType: 'sentenceCompletion',
+      sentence: 'I saw ___ elephant at the zoo.',
+      question: 'Which article correctly completes the sentence?',
+      possibleAnswers: [
+        {
+          answerId: 'a',
+          answerText: 'a'
+        },
+        {
+          answerId: 'b',
+          answerText: 'an'
+        },
+        {
+          answerId: 'c',
+          answerText: 'the'
+        }
+      ],
+      correctAnswer: 'b'
+    },
+
+    // Written Answer
+    {
+      questionId: 'q7',
       questionType: 'writtenAnswer',
       sentence: 'After my fight with Alan, Mrs. Amy was very angry with ___.',
-      question: 'Which object pronoun can complete this sentence?'
+      question: 'Which object pronoun can complete this sentence?',
+      
+    },
+    {
+      questionId: 'q8',
+      questionType: 'writtenAnswer',
+      sentence: 'She quickly ran to the store.',
+      question: 'Which word is and adverb in this sentence?'
     }
   ]
 }

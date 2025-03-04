@@ -1,37 +1,55 @@
-import { pairStructure } from '../constants/return-structure/matchingPairsStructures'
+import { findYourPartnerStructureArrays } from '../constants/return-structure/findYourPartnerStructure'
 
 export interface FindYourPartnerMessage {
   data: string
   matchingCriteria: string | null
-  numberOfContent: number | null | undefined
   levelSelection?: string
+  numberOfContent: number | null | undefined
+  // This is the set size:
+  secondaryNumberOfContent: number | null | undefined
 }
 
 export default function findYourPartnerMessage({
   data,
   matchingCriteria,
+  levelSelection,
   numberOfContent,
-  levelSelection
+  secondaryNumberOfContent
 }: FindYourPartnerMessage) {
-  const structure = pairStructure
+  let structure
 
-  console.log('data', data)
-  console.log('matchingCriteria', matchingCriteria)
+  switch (secondaryNumberOfContent) {
+    case 2:
+      structure = findYourPartnerStructureArrays.twos
+      break
+    case 3:
+      structure = findYourPartnerStructureArrays.threes
+      break
+    case 4:
+      structure = findYourPartnerStructureArrays.fours
+      break
+    default:
+      structure = findYourPartnerStructureArrays.twos
+      break
+  }
+
+  console.log('structure after case switch in message: ', structure)
 
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(structure)}
 
-      Take the following words to be used as wordOne:
+      Take the following words, with each word to be used as the first word in each array:
       ${data}
 
       And the following matching criteria:
       ${matchingCriteria}
 
-      And generate a wordTwo that matches wordOne based on the above matching criteria: ${matchingCriteria}.
+      And generate an array of arrays with matching words based on the following matching criteria: ${matchingCriteria}. 
+      Each array should be a set of ${secondaryNumberOfContent} matching words according to the above matching criteria.
 
-      Ensure you create ${numberOfContent} pairs in total the returned JSON and that language used
-      corresponds to a grade level of ${levelSelection}.
+      Ensure you create ${numberOfContent} set in total the returned JSON and that language used
+      is easy for an elementary grade level of ${levelSelection}.
 
       Return valid JSON only.
     `

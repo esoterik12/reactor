@@ -5,19 +5,14 @@ import IconFindYourPartner from '@/components/icons/content/IconFindYourPartner'
 import { ContentForm } from '@/components/input/ContentForm'
 import {
   findYourPartnerGeneratedInfo,
-  findYourPartnerManualInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import {
-  generateFindYourPartnerSchema,
-  manualPairsSchema
-} from '@/lib/zod/contentInput.schema'
-import { WordPairings } from '@/lib/zod/contentEdit.schema'
-import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
-import { allTabs } from '@/lib/constants/tabOptions'
+import { generateFindYourPartnerSchema } from '@/lib/zod/contentInput.schema'
+import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import EditSetsForm from '@/components/edit/EditSetsForm'
 
 const FindYourPartnerPage = () => {
-  const [content, setContent] = useState<WordPairings | null>(null)
+  const [content, setContent] = useState<string[][] | null>(null)
   const [metaData, setMetaData] = useState({
     title: '',
     contentType: ''
@@ -35,33 +30,19 @@ const FindYourPartnerPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <ContentForm
-      key='Tab 2'
-      icon={<IconFindYourPartner classes={contentIconStyles} />}
-      formType='manual'
-      zodSchema={manualPairsSchema}
-      info={findYourPartnerManualInfo}
-      contentType='findYourPartner'
-      contentTitle='Find Your Partner'
-      watchComponent='pairs'
-      setContent={setContent}
-      setMetaData={setMetaData}
-      levelSelectionEnabled={false}
-    />,
-    <p key='Tab 3'>Tab 3</p>,
-    <p key='Tab 4'>Tab 4</p>
+    <p key='Tab 2'>Tab 2</p>,
+    <p key='Tab 3'>Tab 3</p>
   ]
 
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={allTabs} tabContent={tabContent} />
+        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditWordPairsForm
-          firstWordLabel='Word one'
-          secondWordLabel='Word two'
-          generatedContent={content}
+        <EditSetsForm
+          generatedContent={{ data: content }}
           metaData={metaData}
+          shuffleEnabled={true}
         />
       )}
     </>

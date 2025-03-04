@@ -4,11 +4,7 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import {
-  EditPairsFormValues,
-  editPairsSchema,
-  WordPairings
-} from '@/lib/zod/contentEdit.schema'
+import { EditSetsFormValues, editSetsSchema } from '@/lib/zod/editSets.schema'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
@@ -16,23 +12,17 @@ import { shuffleArray } from '@/lib/utils/shuffleArray'
 import { useAppSelector } from '@/redux/hooks'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 
-interface EditPairsFormProps {
-  firstWordLabel: string
-  secondWordLabel: string
-  generatedContent: WordPairings
+interface EditSetsFormProps {
+  generatedContent: EditSetsFormValues
   metaData: EditMetaDataProps
   shuffleEnabled?: boolean
-  answerKeyEnabled?: boolean
 }
 
-const EditWordPairsForm = ({
-  firstWordLabel = 'First word',
-  secondWordLabel = 'Second word',
+const EditSetsForm = ({
   generatedContent,
   metaData,
-  shuffleEnabled = false,
-  answerKeyEnabled = false
-}: EditPairsFormProps) => {
+  shuffleEnabled = false
+}: EditSetsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
@@ -42,30 +32,28 @@ const EditWordPairsForm = ({
     state => state.input.secondaryInputContent
   )
 
+  console.log('generatedContent in EditSetsForm: ', generatedContent)
+
   const {
     register,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors }
-  } = useForm<EditPairsFormValues>({
+  } = useForm<EditSetsFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    resolver: zodResolver(editPairsSchema),
-    defaultValues: { wordPairings: generatedContent, answerKey: false }
+    resolver: zodResolver(editSetsSchema),
+    defaultValues: { data: generatedContent.data }
   })
 
-  const answerKey = watch('answerKey')
-
-  const handleSubmitButton = (data: EditPairsFormValues) => {
+  const handleSubmitButton = (data: EditSetsFormValues) => {
     const pdfData = {
       data: {
         title: metaData.title,
         content: JSON.stringify(data),
         secondaryInputContent
       },
-      pdfType: metaData.contentType,
-      answerKey: data.answerKey
+      pdfType: metaData.contentType
     }
 
     submitPDF({
@@ -78,34 +66,38 @@ const EditWordPairsForm = ({
   }
 
   const shuffleWords = () => {
-    const wordsArray: string[] = []
-    generatedContent.map(word => {
-      wordsArray.push(word.wordOne)
-      wordsArray.push(word.wordTwo)
-    })
+    const numberOfSets = generatedContent.data.length
+    const setSize = generatedContent.data[0].length
 
-    const shuffledWordsArray = shuffleArray(wordsArray)
+    const flattenedArray = generatedContent.data.flat()
+    const shuffledArray = shuffleArray(flattenedArray)
 
-    const finalShuffle = []
-
-    for (let i = 0; i < shuffledWordsArray.length; i += 2) {
-      finalShuffle.push({
-        wordOne: shuffledWordsArray[i],
-        wordTwo: shuffledWordsArray[i + 1]
-      })
+    const newData: string[][] = []
+    for (let i = 0; i < numberOfSets; i++) {
+      const start = i * setSize
+      const end = start + setSize
+      newData.push(shuffledArray.slice(start, end))
     }
 
-    setValue('wordPairings', finalShuffle, {
-      shouldValidate: true
-    })
+    setValue('data', newData, { shouldValidate: true })
     setIsShuffled(true)
   }
 
   const unshuffleWords = () => {
-    setValue('wordPairings', generatedContent, {
+    setValue('data', generatedContent.data, {
       shouldValidate: true
     })
     setIsShuffled(false)
+  }
+
+  const getGridColsClass = (setSize: number) => {
+    const map: Record<number, string> = {
+      2: 'grid-cols-[30px,1fr,1fr]',
+      3: 'grid-cols-[30px,1fr,1fr,1fr]',
+      4: 'grid-cols-[30px,1fr,1fr,1fr,1fr]',
+      5: 'grid-cols-[30px,1fr,1fr,1fr,1fr,1fr]'
+    }
+    return map[setSize] || 'grid-cols-[30px,1fr,1fr]' // Fallback
   }
 
   return (
@@ -121,53 +113,43 @@ const EditWordPairsForm = ({
         className='flex h-full flex-col justify-between p-4'
         onSubmit={handleSubmit(handleSubmitButton)}
       >
-        <div className='grid max-w-[900px] grid-cols-2'>
-          <div className='grid max-w-[400px] grid-cols-[30px,1fr,1fr] px-2 pb-1'>
-            <div className='flex h-full items-center justify-center'>
-              <p className='paragraph-text'>#</p>
-            </div>
-            <p className='paragraph-text w-40'>{firstWordLabel}</p>
-            <p className='paragraph-text w-40'>{secondWordLabel}</p>
+        <div
+          className={`grid ${getGridColsClass(generatedContent.data[0].length)} px-2 pb-1`}
+        >
+          <div className='flex h-full items-center justify-center'>
+            <p className='paragraph-text'>#</p>
           </div>
-          <div className='grid max-w-[400px] grid-cols-[30px,1fr,1fr] px-2 pb-1'>
-            <div className='flex h-full items-center justify-center'>
-              <p className='paragraph-text'>#</p>
-            </div>
-            <p className='paragraph-text w-40'>{firstWordLabel}</p>
-            <p className='paragraph-text w-40'>{secondWordLabel}</p>
-          </div>
-
-          {generatedContent.map((_, index) => (
-            <div
-              className='grid max-w-[400px] grid-cols-[30px,1fr,1fr] px-2 pb-2'
-              key={index}
-            >
-              <div className='flex h-full items-center justify-center'>
-                <p className='paragraph-text'>{index + 1}</p>
-              </div>
-              <InputField
-                type='text'
-                errorType='highlightInput'
-                labelClasses='paragraph-text small-text'
-                id={`firstField-${index}`}
-                inputClasses='p-1 w-40'
-                placeholder=''
-                {...register(`wordPairings.${index}.wordOne`)}
-                error={errors.wordPairings?.[index]?.wordOne}
-              />
-              <InputField
-                type='text'
-                errorType='highlightInput'
-                labelClasses='paragraph-text small-text'
-                id={`secondField-${index}`}
-                inputClasses='p-1 w-40'
-                placeholder=''
-                {...register(`wordPairings.${index}.wordTwo`)}
-                error={errors.wordPairings?.[index]?.wordTwo}
-              />
-            </div>
+          {generatedContent.data[0].map((_, numberIndex) => (
+            <p key={`number-${numberIndex}`} className='paragraph-text w-40'>
+              Word {numberIndex + 1}
+            </p>
           ))}
         </div>
+
+        {generatedContent.data.map((set, qIndex) => (
+          <div
+            key={`${set[0]}-${qIndex}`}
+            className={`grid ${getGridColsClass(generatedContent.data[0].length)} px-2 pb-2`}
+          >
+            <div className='flex h-full items-center justify-center'>
+              <p className='paragraph-text'>{qIndex + 1}</p>
+            </div>
+
+            {set.map((word, setIndex) => (
+              <InputField
+                key={`${word}-${qIndex}-${setIndex}`}
+                type='text'
+                errorType='highlightInput'
+                labelClasses='paragraph-text small-text'
+                id={`firstField-${qIndex}`}
+                inputClasses='p-1 w-48'
+                placeholder=''
+                {...register(`data.${qIndex}.${setIndex}`)}
+                error={errors.data?.[qIndex]?.[setIndex]}
+              />
+            ))}
+          </div>
+        ))}
         <div className='ml-10 mt-4 flex flex-row gap-4'>
           <DefaultButton
             btnType='submit'
@@ -181,18 +163,7 @@ const EditWordPairsForm = ({
               <p className='button-text'>Submit</p>
             )}
           </DefaultButton>
-          {answerKeyEnabled && (
-            <DefaultButton
-              btnType='button'
-              handleClick={() => setValue('answerKey', !answerKey)}
-              customClasses={`w-[100px] ${answerKey ? 'tertiary-background' : 'page-background hover-effect'} button-border `}
-              isDisabled={isLoading}
-            >
-              <p className={answerKey ? 'button-text' : 'paragraph-text'}>
-                Answers
-              </p>
-            </DefaultButton>
-          )}
+
           {shuffleEnabled && (
             <>
               <DefaultButton
@@ -234,4 +205,4 @@ const EditWordPairsForm = ({
   )
 }
 
-export default EditWordPairsForm
+export default EditSetsForm
