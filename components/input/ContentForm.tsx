@@ -67,6 +67,9 @@ export function ContentForm<T>({
 
   const handleSubmitButton = async (data: ContentFormInput) => {
     setLoading(true)
+
+    console.log('data in ContentForm.tsx: ', data)
+
     try {
       const generationResults = await processInputContent({
         contentType,
@@ -241,26 +244,28 @@ export function ContentForm<T>({
               </div>
               {info.secondaryNumberOfContent && (
                 <div>
-                <div className='flex flex-row items-center justify-between'>
-                  <h3 className='label-text mb-1'>
-                    {info.secondaryNumberOfContent.title}:
-                  </h3>
-                  {info.secondaryNumberOfContent.inputInfo && (
-                    <ContentInfoButton
-                      handleClick={() => handleSelectInfo('secondaryNumberOfContent')}
-                    />
-                  )}
+                  <div className='flex flex-row items-center justify-between'>
+                    <h3 className='label-text mb-1'>
+                      {info.secondaryNumberOfContent.title}:
+                    </h3>
+                    {info.secondaryNumberOfContent.inputInfo && (
+                      <ContentInfoButton
+                        handleClick={() =>
+                          handleSelectInfo('secondaryNumberOfContent')
+                        }
+                      />
+                    )}
+                  </div>
+                  <InputField
+                    type='text'
+                    id='secondaryNumberOfContent'
+                    placeholder=''
+                    inputClasses='p-1 w-32'
+                    error={errors.secondaryNumberOfContent}
+                    {...register('secondaryNumberOfContent')}
+                    isDisabled={loading}
+                  />
                 </div>
-                <InputField
-                  type='text'
-                  id='secondaryNumberOfContent'
-                  placeholder=''
-                  inputClasses='p-1 w-32'
-                  error={errors.secondaryNumberOfContent}
-                  {...register('secondaryNumberOfContent')}
-                  isDisabled={loading}
-                />
-              </div>
               )}
             </div>
           )}

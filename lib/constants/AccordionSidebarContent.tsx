@@ -54,12 +54,28 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
     title: 'Worksheets',
     icon: <IconPaperAirplane classes='h-6 w-6' />,
     links: [
-      { linkId: '2-1', contentTitle: 'Scrambled Words', link: '/' },
-      { linkId: '2-2', contentTitle: 'Scrambled Sentences', link: '/' },
-      { linkId: '2-3', contentTitle: 'Bingo', link: '/' },
-      { linkId: '2-4', contentTitle: 'Wordsearch', link: '/' },
-      { linkId: '2-5', contentTitle: 'Interviews', link: '/' },
-      { linkId: '2-6', contentTitle: 'Cryptogram', link: '/' }
+      {
+        linkId: '2-1',
+        contentTitle: 'Scrambled Words',
+        link: `${root}/scrambledwords`
+      },
+      {
+        linkId: '2-2',
+        contentTitle: 'Scrambled Sentences',
+        link: `${root}/scrambledsentences`
+      },
+      { linkId: '2-3', contentTitle: 'Bingo', link: `${root}/bingo` },
+      { linkId: '2-4', contentTitle: 'Wordsearch', link: `${root}/wordsearch` },
+      {
+        linkId: '2-5',
+        contentTitle: 'Interviews',
+        link: `${root}/interviews`
+      },
+      {
+        linkId: '2-6',
+        contentTitle: 'Cryptogram',
+        link: `${root}/cryptogram`
+      }
     ]
   },
   {

@@ -8,7 +8,7 @@ import { ZodSchema } from 'zod'
 import {
   EditSentencePairs,
   EditSentencePairsFormValues
-} from '@/lib/zod/editSentencePairs.schema'
+} from '@/lib/zod/edit/editSentencePairs.schema'
 import { EditMetaDataProps } from '@/types/input.types'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
@@ -33,8 +33,6 @@ const EditSentencePairsForm = ({
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
   const submitPDF = useSubmitPDF()
-
-  console.log('generatedContent', generatedContent)
 
   const {
     register,

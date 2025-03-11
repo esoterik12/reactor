@@ -5,10 +5,7 @@ import {
   contentIconStyles,
   riddlesInfo
 } from '@/lib/constants/content/contentInfo'
-import {
-  baseContentSchema,
-  baseContentSelectorSchema
-} from '@/lib/zod/contentInput.schema'
+import { baseContentInputSchema, baseContentSelectorSchema } from '@/lib/zod/input/baseContentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import IconRiddles from '@/components/icons/content/IconRiddles'
@@ -27,7 +24,7 @@ const RiddlesPage = () => {
       key='Tab 1'
       icon={<IconRiddles classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={baseContentSchema}
+      zodSchema={baseContentInputSchema}
       info={riddlesInfo}
       levelSelectionEnabled={true}
       contentTitle='Riddles'
@@ -47,8 +44,6 @@ const RiddlesPage = () => {
     />,
     <p key='Tab 3'>Tab 3</p>
   ]
-
-  console.log('content in /riddles/page.tsx', content)
 
   return (
     <>

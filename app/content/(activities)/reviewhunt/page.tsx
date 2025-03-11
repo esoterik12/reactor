@@ -7,13 +7,14 @@ import {
   contentIconStyles,
   reviewHuntSelectorInfo
 } from '@/lib/constants/content/contentInfo'
-import { baseContentSelectorSchema, huntAndMistakesSchema } from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconReviewHunt from '@/components/icons/content/IconReviewHunt'
 import EditMultipleChoice from '@/components/edit/EditMutlipleChoice'
-import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
+import { EditMultipleChoiceValues } from '@/lib/zod/edit/editMultipleChoice.schema'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
+import { baseContentSelectorSchema } from '@/lib/zod/input/baseContentInput.schema'
+import { reviewHuntInputSchema } from '@/lib/zod/input/reviewHuntInput.schema'
 
 const ReviewHuntPage = () => {
   const [content, setContent] = useState<EditMultipleChoiceValues | null>(null)
@@ -27,7 +28,7 @@ const ReviewHuntPage = () => {
       key='Tab 1'
       icon={<IconReviewHunt classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={huntAndMistakesSchema}
+      zodSchema={reviewHuntInputSchema}
       info={reviewHuntInfo}
       contentTitle='Review Hunt'
       contentType='reviewHunt'
@@ -85,7 +86,6 @@ and ends in -self or -selves. Examples include myself, herself,
 yourselves, and themselves.
 • A reflexive pronoun is used when the subject and object of a sentence
 refer to the same person or thing. Anna fixed the sentence herself.
-
 Circle the correct reflexive pronoun in parentheses to complete
 each!sentence.
 1. I almost hurt (myself / yourself) while walking down the stairs.

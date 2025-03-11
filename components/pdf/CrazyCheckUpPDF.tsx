@@ -1,6 +1,6 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { crazyCheckUpPDFStyles as styles } from './CrazyCheckUpPDF.styles'
-import { EditCrazyCheckUpFormValues } from '@/lib/zod/editCrazyCheckUp.schema'
+import { EditCrazyCheckUpFormValues } from '@/lib/zod/edit/editCrazyCheckUp.schema'
 
 interface CrazyCheckUpPDFProps {
   data: EditCrazyCheckUpFormValues

@@ -33,8 +33,6 @@ export default function findYourPartnerMessage({
       break
   }
 
-  console.log('structure after case switch in message: ', structure)
-
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(structure)}

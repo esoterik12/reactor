@@ -1,7 +1,7 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { reviewHuntPDFStyles as styles } from './ReviewHuntPDF.styles'
-import { EditMultipleChoiceFormValues } from '@/lib/zod/contentEdit.schema'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
+import { EditMultipleChoiceFormValues } from '@/lib/zod/edit/editMultipleChoice.schema'
 
 interface ReviewHuntPDFProps {
   data: EditMultipleChoiceFormValues

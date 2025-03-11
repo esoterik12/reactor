@@ -93,20 +93,33 @@ project
 - ContentForm takes `info` content which is used to provide some titles and
   tooltip content to guide usage
 
+### Content Forms: Zod Schemas
+
+- The basic premise here was to create base schemas that share the input common
+  to all forms like title and primaryInputContent (string)
+- Then, separate files are created that import and extend these schemas to fit
+  individual content types
+
 #### New Input Type Process:
 
 1. Create a new page.tsx in a matching folder
-2. Add the content top the sidebar constants `AccordionSidebarContent.tsx`
+2. Add the content top the sidebar constants
+   `/lib/constants/AccordionSidebarContent.tsx`
 3. Create a new icon for the page and and add it to `ContentForm.tsx`
-4. Add new content into into `/lib/constants/content` - add to ContentForm
+4. Add new content info into `/lib/constants/content` - add to ContentForm
 5. Use existing or create new schemas in `/lib/zod` - add to ContentForm
 6. Use existing or create new edit types/schema in `/lib/zod` - add to page
    content state
 7. Use appropriate edit form or create a new one in `page.tsx`
-8. Create new return structure in `/lib/constants/return-structure`
+8. Create new return structure in `/lib/constants/return-structure` (ensure it
+   is an object with property data)
 9. Create new message in `/lib/gpt-messages`
 10. Add message and input data to relevant `/lib/actions`
 11. Add case to `processInputContent.ts`
+12. Add curriculum selector - (ensure that the zod schema is adjusted to make
+    primaryInputContent optional)
+13. Create a react-pdf component that uses the contentType (capitalized first
+    letter) as its name + PDF.tsx
 
 ### react-pdf
 
@@ -115,23 +128,33 @@ basePageStyles.ts and content-specific styling react-pdf has a few limitations
 and cannot use all CSS styles server rendered PDFs are made in `/components/pdf`
 folder
 
-1. Create a tsx component that imports required react-pdf components from @react-pdf/renderer. This can be server comp. It will produce the pdf with jsx
+1. Create a tsx component that imports required react-pdf components from
+   @react-pdf/renderer. This can be server comp. It will produce the pdf with
+   jsx
 2. Create a route.tsx (so it can handle MyDocument.tsx) POST function that
    recieves a Request and returns a Promise<Response>
+
 - Get the body from request.json()
 - Validate etc.
 - use renderToBuffer from `@react-pdf/renderer` to create pdfBuffer
   - pdfBuffer is a Buffer object that contains the binary data of the PDF
-    (Buffer is a Node.js global object used to handle binary data directly) - this cannot be embedded or transmitted within JSON or HTML without encoding (It is possible to use Server Actions, but as far as I can tell this does not allow returning the pdfBuffer without encoding)
+    (Buffer is a Node.js global object used to handle binary data directly) -
+    this cannot be embedded or transmitted within JSON or HTML without encoding
+    (It is possible to use Server Actions, but as far as I can tell this does
+    not allow returning the pdfBuffer without encoding)
 
 3. Create a custom hook to handle blob downloads (using useRef)
 
 4. Create a client-side component to handle the download
+
 - async function that uses the fetch api (`/api/generate-pdf`)
-- use fetch api method .blob to convert response data into blob object (Binary Large OBject)'
+- use fetch api method .blob to convert response data into blob object (Binary
+  Large OBject)'
 
 5. Add fonts to `public` folder if being used in style sheet
-- Fonts will need to use a source path with Font.register: process.env.NEXT_PUBLIC_BASE_URL
+
+- Fonts will need to use a source path with Font.register:
+  process.env.NEXT_PUBLIC_BASE_URL
 
 ### Edit functionality:
 
@@ -184,48 +207,138 @@ The system:
     options, correct answer => above type will require a
 - The above edit components will be used in the edit pages
 
-## Completion Status 
+## Completion Status
 
 ### Activities & Games
+
+- Running 03.11 Test
+
 - Memory Cards: Complete
+  - Generate content: success
+  - Curriculum selector: success
 - Choose Correct: Complete
 - Crazy Check Up: Complete
 - Riddles: Complete
 - Grammar Mistakes: Complete
-
-- Find Your Partner: Needs big change to support more than 2 matches
+- Find Your Partner: Complete
 - Review Hunt: Complete - Needs Adjustment
-
-
 
 ## NOTES:
 
 A work through of how data is being handled to generate a pdf for Riddles
 
 1. generation results are returned
+
 - message, code, error
 - result{}: data string[]
 
 2. setContent(generationResults.result.data)
+
 - content in page.tsx is therefore a string[]
 
 3. content passed to EditParagraphsForm - as string[]
 
-4. EditParagraphsForm sets defaultValues as {sentence: generatedContent}
-this is required for react hook form
-this uses EditSentencesFormValues tpye interface infered from definitions in contentEdit.schema.ts
+4. EditParagraphsForm sets defaultValues as {sentence: generatedContent} this is
+   required for react hook form this uses EditSentencesFormValues tpye interface
+   infered from definitions in contentEdit.schema.ts
 
-5. handleSubmitButton (in edit para) gets data which is an object
-with prop sentence: string[]
+5. handleSubmitButton (in edit para) gets data which is an object with prop
+   sentence: string[]
 
 it then JSON.stringify data.sentences as in pdfData.data.content
 
 it sends pdfData (stringify) in the body of POST request to `/api/generate-pdf`
 
-6. generate-pdf extracts pdfData from the body
-ALERT in here, content is still a string!
+6. generate-pdf extracts pdfData from the body ALERT in here, content is still a
+   string!
 
 it then JSON.parses the pdfData.data.content into a string[]
 
-7. inputData is passed to MyDocument (which is a dynamically imported PDF.tsx content file - server redndered react-pdf component)
-POSSIBLE PROBLEM AREA: the problem here is the inputData being passed
+7. inputData is passed to MyDocument (which is a dynamically imported PDF.tsx
+   content file - server redndered react-pdf component) POSSIBLE PROBLEM AREA:
+   the problem here is the inputData being passed
+
+## Phonics Development:
+
+Goals:
+
+1. The app should be able to create an array of words that match a certian
+   phonics concept or some concepts
+
+- For example, the user might have a list of long and short Aa words
+- The user might have some words that use different blends, digraphs, etc
+- Initially, this will probably only really work for single-syllable words
+
+2. The app should take a list of target words and generate a list of similar
+   words, that is, words that have different starting and ending sounds but the
+   rest is the same It should also generate a list of words with different vowel
+   sounds
+
+3. OR perhaps the app can somehow intelligently
+
+4. Prompt:
+
+I want you to help me prepare instructional phonics materials.
+
+Take this word:
+
+pig
+
+I want you to produce 10 lists of 5 words that are based around this word.
+
+For example, one list would be real and nonsense words that are the same, but
+have a different starting letter (flag the word as real or nonsense, have a mix)
+One list would have a different starting letter. One would have a blend at the
+start, one Would have a blend at the end And create a few more that would help
+students practice different phonics skills relevant to grade K, 1, 2
+
+Return the data as JSON
+
+5. Another idea
+
+Perhaps somehow GPT can sort input words in to categories based on how they can
+be modified
+
+Certain features: Rhyming words
+
+Can it: Substitute end Substitute start Substitute vowel Form start blend Form
+end blend Subtract start Subtract end
+
+"cat", "dog", "sun", "run", "big", "hat", "see", "down", "fun", "with",
+"school", "friend"
+
+From these words, some can and some CANNOT be changed and still make readable
+words using the following techniques: Substitute end letter Substitute start
+letter Substitute vowel Form starting blend by adding a letter Form ending blend
+by adding a letter Form starting digraph by adding a letter Form ending digraph
+by adding a letter  
+Subtract starting letter Subtract ending letter
+
+Please create an array of objects and mark each word with a boolean
+corresponding to the above criteria
+
+BELOW IS THE PLAN: Okay, perhpas what we can have is a set of commands that can
+be used Like:
+
+- Subtract starting letter
+- Subtract ending letter
+- Substitute end letter
+- Substitute start letter
+- Substitute vowel
+- Form starting blend by adding a letter
+- Form ending blend by adding a letter
+- Form starting digraph by adding a letter
+- Form ending digraph by adding a letter
+
+Each command contains an array of characters that can be randomly selected and
+then cycled through to form nonsense and real words
+
+Perhaps a button can be added to check if a word is real using GPT.
+
+ALSO possible: could there be a collection of impossible letter combinations
+that are skipped if they are created through the use of the commands [ "bx",
+"cj", "dq", "fv", "gx", "hx", "jb", "jf", "jq", "jv", "jx", "kx", "mz", "pq",
+"qb", "qc", "qf", "qg", "qh", "qj", "qk", "ql", "qm", "qn", "qp", "qr", "qs",
+"qt", "qv", "qw", "qx", "qz", "sx", "tv", "vb", "vc", "vd", "vf", "vg", "vh",
+"vj", "vk", "vm", "vn", "vp", "vq", "vr", "vt", "vw", "vx", "vz", "wx", "xj",
+"xk", "xq", "xv", "xz", "zb", "zc", "zf", "zj", "zq", "zv", "zx" ]

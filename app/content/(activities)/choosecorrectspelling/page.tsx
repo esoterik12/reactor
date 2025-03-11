@@ -9,16 +9,16 @@ import {
 import {
   chooseCorrectSpellingSchema,
   chooseCorrectSpellingSelectorSchema
-} from '@/lib/zod/contentInput.schema'
+} from '@/lib/zod/input/chooseCorrectSpellingInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconChooseCorrectSpelling from '@/components/icons/content/IconChooseCorrectSpelling'
-import { WordPairings } from '@/lib/zod/contentEdit.schema'
-import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
+import EditCorrectSpellingForm from '@/components/edit/EditCorrectSpellingForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
-import { allTabs } from '@/lib/constants/tabOptions'
+import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import { SpellingWordPairings } from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
 
 const ChooseCorrectSpellingPage = () => {
-  const [content, setContent] = useState<WordPairings | null>(null)
+  const [content, setContent] = useState<SpellingWordPairings | null>(null)
   const [metaData, setMetaData] = useState({
     title: '',
     contentType: ''
@@ -36,20 +36,8 @@ const ChooseCorrectSpellingPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <ContentForm
-      key='Tab 2'
-      icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
-      formType='manual'
-      zodSchema={chooseCorrectSpellingSchema}
-      info={chooseSpellingManualInfo}
-      contentTitle='Choose Correct Spelling'
-      contentType='chooseCorrectSpelling'
-      setContent={setContent}
-      setMetaData={setMetaData}
-      levelSelectionEnabled={false}
-    />,
     <CurriculumSelector
-      key='Tab 3'
+      key='Tab 2'
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
       icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
@@ -58,15 +46,15 @@ const ChooseCorrectSpellingPage = () => {
       zodSchema={chooseCorrectSpellingSelectorSchema}
       info={chooseSpellingManualInfo}
     />,
-    <p key='Tab 4'>Tab 4</p>
+    <p key='Tab 3'>Tab 3</p>
   ]
 
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={allTabs} tabContent={tabContent} />
+        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditWordPairsForm
+        <EditCorrectSpellingForm
           firstWordLabel='Correct word'
           secondWordLabel='Incorrect word'
           generatedContent={content}

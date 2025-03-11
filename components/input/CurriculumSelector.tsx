@@ -27,8 +27,6 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { TextareaInput } from './TextareaInput'
 import GeneratingContent from '../shared/GeneratingContent'
 import { AppError } from '@/lib/errors/AppError'
-import { useAppDispatch } from '@/redux/hooks'
-import { clearInput, setInput } from '@/redux/slices/inputSlice'
 import InlineError from '../shared/InlineError'
 
 interface CurriculumSelectorProps<T> {
@@ -56,7 +54,6 @@ export function CurriculumSelector<T>({
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<null | string>(null)
   const [wordsToFilter, setWordsToFilter] = useState<string[]>([])
-  const dispatch = useAppDispatch()
 
   const {
     control,
@@ -84,9 +81,14 @@ export function CurriculumSelector<T>({
           reset()
           const result: UnitDataJSON = await loadUnit({ level, unit })
           setUnitData(result)
-        } catch (error) {
-          // TODO errors
-          console.error('Error loading unit data:', error)
+        } catch (err: unknown) {
+          if (err instanceof AppError) {
+            setError(err.message)
+          } else {
+            setError(
+              'An unexpected error occurred while fetching curriculum content.'
+            )
+          }
         } finally {
           setIsLoading(false)
         }
@@ -100,7 +102,6 @@ export function CurriculumSelector<T>({
     if (level && unit && unitData) {
       try {
         setIsLoading(true)
-        dispatch(clearInput())
 
         // Creates holding array and adds unitData if it is selected in the form state
         const unitDataArray: (SpellingWeek | VocabWeek)[] = []
@@ -131,24 +132,13 @@ export function CurriculumSelector<T>({
           primaryInputContent: JSON.stringify(filteredWords),
           secondaryInputContent: data.secondaryInputContent,
           textareaInput: data.textareaInputContent,
-          numberOfContent: data.numberOfContent || null
+          numberOfContent: data.numberOfContent || null,
+          secondaryNumberOfContent: data.secondaryNumberOfContent || null
         })
 
-        // TODO: There is still an issue in the way data is handled
-        // between either the top component state or redux state
         if (generationResults.code === 200) {
           setContent(generationResults.result.data)
           setMetaData({ title: data.title, contentType })
-          dispatch(
-            setInput({
-              title: data.title,
-              contentType,
-              levelSelection: level,
-              primaryInputContent: data.primaryInputContent,
-              secondaryInputContent: data.secondaryInputContent,
-              textareaInput: data.textareaInputContent
-            })
-          )
         } else {
           throw new AppError(400, 'Error generating content.')
         }
@@ -325,6 +315,24 @@ export function CurriculumSelector<T>({
                 inputClasses='p-1 w-[150px]'
                 error={errors.numberOfContent}
                 {...register('numberOfContent')}
+                isDisabled={isLoading}
+              />
+            </div>
+          )}
+          {info.secondaryNumberOfContent && (
+            <div>
+              <div className='flex flex-row items-center justify-between'>
+                <h3 className='label-text mb-0.5'>
+                  {info.secondaryNumberOfContent.title}:
+                </h3>
+              </div>
+              <InputField
+                type='text'
+                id='secondaryNumberOfContent'
+                placeholder=''
+                inputClasses='p-1 w-[150px]'
+                error={errors.secondaryNumberOfContent}
+                {...register('secondaryNumberOfContent')}
                 isDisabled={isLoading}
               />
             </div>

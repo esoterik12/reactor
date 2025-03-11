@@ -8,6 +8,7 @@ import grammarMistakesMessage from '../gpt-messages/grammarMistakesMessage'
 import memoryCardsMessage from '../gpt-messages/memoryCardsMessage'
 import reviewHuntMessage from '../gpt-messages/reviewHuntMessage'
 import riddlesMessage from '../gpt-messages/riddlesMessage'
+import scrambledSentencesMessage from '../gpt-messages/scrambledSentencesMessage'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -91,15 +92,27 @@ export default async function processInputContent({
         })
         break
 
+      case 'scrambledSentences':
+        generationMessage = scrambledSentencesMessage({
+          data: primaryInputContent,
+          levelSelection,
+          numberOfSentences: numberOfContent || 8,
+          wordsPerSentence: secondaryNumberOfContent || 8
+        })
+        break
+
       default:
         throw new AppError(404, `Unsupported content type: ${contentType}`)
     }
   } catch (error) {
-    console.error('Error processing input content:', error)
+    console.log('Error processing input content: ', error)
     generationMessage = 'Error generating content'
   }
 
-  const generationResults = generateContent({ message: generationMessage })
+  const generationResults = generateContent({
+    message: generationMessage,
+    secondaryInput: secondaryInputContent
+  })
 
   return generationResults
 }

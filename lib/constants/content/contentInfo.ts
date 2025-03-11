@@ -38,7 +38,7 @@ export const memoryCardsManualInfo = {
 }
 
 // Choose Correct Spelling
-const spellingSecretMessage = {
+export const spellingSecretMessage = {
   title: 'Secret message',
   inputInfo:
     'This is the secret message that players will decode by choosing the correct spelling of each word. It must be at least 15 non-whitespace characters in length.'
@@ -51,7 +51,6 @@ export const chooseSpellingGeneratedInfo = {
     inputInfo:
       'Provide a comma-separated list of spelling words. Plausible misspellings will be generated for each word to complete the activity.'
   },
-  secondaryInputInfo: spellingSecretMessage
 }
 
 export const chooseSpellingManualInfo = {
@@ -62,7 +61,6 @@ export const chooseSpellingManualInfo = {
       'Provide a comma-separated list of spelling words. With each word being followed by the misspelling you want to use in the activity.',
     inputExample: "For example, 'cat, kat, help, hlep' would create two pairs."
   },
-  secondaryInputInfo: spellingSecretMessage
 }
 
 // Crazy Check Up
@@ -94,7 +92,7 @@ export const findYourPartnerGeneratedInfo = {
       'For example: rhyming, synonyms, antonyms, definitions, sentence blanks, etc.'
   },
   numberOfContent: {
-    title: 'Number of cards'
+    title: 'Number of sets'
   },
   secondaryNumberOfContent: {
     title: 'Set size',

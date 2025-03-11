@@ -8,7 +8,7 @@ import {
   UseFieldArrayRemove
 } from 'react-hook-form'
 import { InputField } from '@/components/input/InputField'
-import { EditMultipleChoiceFormValues } from '@/lib/zod/contentEdit.schema'
+import { EditMultipleChoiceFormValues } from '@/lib/zod/edit/editMultipleChoice.schema'
 import DefaultButton from '../buttons/DefaultButton'
 import IconXCircle from '../icons/IconXCircle'
 import IconDelete from '../icons/IconDelete'

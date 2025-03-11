@@ -24,9 +24,5 @@ export const riddlesPDFStyles = StyleSheet.create({
   },
   riddleRow: {
     flexDirection: 'column'
-  },
-  newRiddleRow: {
-    flexDirection: 'column',
-    marginTop: 48
   }
 })

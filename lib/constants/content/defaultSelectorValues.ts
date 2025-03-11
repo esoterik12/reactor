@@ -4,6 +4,7 @@ export const defaultSelectorValues = {
   secondaryInputContent: '',
   textareaInputContent: '',
   numberOfContent: null,
+  secondaryNumberOfContent: null,
   spellingWeeks: {
     week1: false,
     week2: false,

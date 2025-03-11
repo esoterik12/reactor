@@ -12,10 +12,10 @@ import {
   CrazyCheckUpCommand,
   editCrazyCheckUpSchema,
   EditCrazyCheckUpFormValues
-} from '@/lib/zod/editCrazyCheckUp.schema'
+} from '@/lib/zod/edit/editCrazyCheckUp.schema'
 
 interface EditCrazyCheckUpProps {
-  generatedContent: CrazyCheckUpCommand[] 
+  generatedContent: CrazyCheckUpCommand[]
   metaData: EditMetaDataProps
 }
 
@@ -36,7 +36,12 @@ const EditCrazyCheckUp = ({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     resolver: zodResolver(editCrazyCheckUpSchema),
-    defaultValues: { data: generatedContent }
+    defaultValues: {
+      data: generatedContent.map(item => ({
+        command: item.command,
+        commandType: item.commandType || 'doAnAction'
+      }))
+    }
   })
 
   const handleSubmitButton = useCallback(

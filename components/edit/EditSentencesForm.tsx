@@ -4,7 +4,7 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { editSentencesSchema } from '@/lib/zod/contentEdit.schema'
+import { editSentencesSchema } from '@/lib/zod/edit/editSentences.schema'
 import { z } from 'zod'
 import { EditMetaDataProps } from '@/types/input.types'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
@@ -16,7 +16,6 @@ interface EditSentencesFormProps {
   metaData: EditMetaDataProps
 }
 
-// Infer the form values from the schema
 type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
 
 const EditSentencesForm = ({
@@ -36,7 +35,7 @@ const EditSentencesForm = ({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     resolver: zodResolver(editSentencesSchema),
-    defaultValues: { sentences: generatedContent, answerKey: false }
+    defaultValues: { data: generatedContent }
   })
 
   const handleSubmitButton = useCallback(
@@ -44,7 +43,6 @@ const EditSentencesForm = ({
       const pdfData = {
         data: { title: metaData.title, content: JSON.stringify(data) },
         pdfType: metaData.contentType,
-        answerKey: data.answerKey
       }
 
       submitPDF({
@@ -84,8 +82,8 @@ const EditSentencesForm = ({
                 id={`sentence-${index}`}
                 inputClasses='p-1 min-w-[800px] w-full'
                 placeholder='Enter sentence'
-                {...register(`sentences.${index}`)}
-                error={errors.sentences?.[index]}
+                {...register(`data.${index}`)}
+                error={errors.data?.[index]}
               />
             </div>
           ))}

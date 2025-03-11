@@ -3,13 +3,13 @@ import { useState, useCallback } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { editSentencesSchema } from '@/lib/zod/contentEdit.schema'
 import { z } from 'zod'
 import { EditMetaDataProps } from '@/types/input.types'
 import { TextareaInput } from '../input/TextareaInput'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 import InlineError from '../shared/InlineError'
+import { editRiddlesSchema } from '@/lib/zod/edit/editRiddles.schema'
 
 interface EditSentencesFormProps {
   generatedContent: string[]
@@ -17,7 +17,7 @@ interface EditSentencesFormProps {
 }
 
 // Infer the form values from the schema
-type EditSentencesFormValues = z.infer<typeof editSentencesSchema>
+type EditSentencesFormValues = z.infer<typeof editRiddlesSchema>
 
 // Note, this is using the editSentencesShcema
 const EditParagraphsForm = ({
@@ -35,8 +35,8 @@ const EditParagraphsForm = ({
   } = useForm<EditSentencesFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    resolver: zodResolver(editSentencesSchema),
-    defaultValues: { sentences: generatedContent }
+    resolver: zodResolver(editRiddlesSchema),
+    defaultValues: { data: generatedContent }
   })
 
   const handleSubmitButton = useCallback(
@@ -48,7 +48,7 @@ const EditParagraphsForm = ({
       const pdfData = {
         data: {
           title: metaData.title,
-          content: JSON.stringify(data.sentences)
+          content: JSON.stringify(data.data)
         },
         pdfType
       }
@@ -105,8 +105,8 @@ const EditParagraphsForm = ({
                 inputClasses='p-1 min-w-[800px] w-full h-28'
                 placeholder='Enter sentence'
                 isDisabled={false}
-                {...register(`sentences.${index}`)}
-                error={errors.sentences?.[index]}
+                {...register(`data.${index}`)}
+                error={errors.data?.[index]}
               />
             </div>
           ))}

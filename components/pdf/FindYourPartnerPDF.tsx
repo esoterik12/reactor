@@ -1,6 +1,6 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { findYourPartnerPDFStyles as styles } from './FindYourPartnerPDF.styles'
-import { EditSetsFormValues } from '@/lib/zod/editSets.schema'
+import { EditSetsFormValues } from '@/lib/zod/edit/editSets.schema'
 
 interface FindYourPartnerPDFProps {
   data: EditSetsFormValues

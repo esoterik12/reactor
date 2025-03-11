@@ -1,9 +1,9 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { grammarMistakesPDFStyles as styles } from './GrammarMistakesPDF.styles'
-import { EditGrammarMistakesFormValues } from '@/lib/zod/editGrammarMistakes.schema'
+import { EditSentencePairsFormValues } from '@/lib/zod/edit/editSentencePairs.schema'
 
 interface GrammarMistakesPDFProps {
-  data: EditGrammarMistakesFormValues
+  data: EditSentencePairsFormValues
 }
 
 const GrammarMistakesPDF: React.FC<GrammarMistakesPDFProps> = ({ data }) => {

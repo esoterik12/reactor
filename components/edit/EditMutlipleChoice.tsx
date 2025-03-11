@@ -3,9 +3,11 @@ import React, { useCallback, useState } from 'react'
 import { useForm, useFieldArray } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import DefaultButton from '@/components/buttons/DefaultButton'
-import { editMultipleChoice } from '@/lib/zod/contentEdit.schema'
 import { z } from 'zod'
-import { EditMultipleChoiceValues } from '@/lib/zod/contentEdit.schema'
+import {
+  EditMultipleChoiceValues,
+  editMultipleChoiceSchema
+} from '@/lib/zod/edit/editMultipleChoice.schema'
 import EditQuestionForm from './EditQuestionForm'
 import { EditMetaDataProps } from '@/types/input.types'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
@@ -17,7 +19,7 @@ interface EditMultipleChoiceProps {
   metaData: EditMetaDataProps
 }
 
-type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoice>
+type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoiceSchema>
 
 const EditMultipleChoice = ({
   generatedContent,
@@ -33,8 +35,8 @@ const EditMultipleChoice = ({
     handleSubmit,
     formState: { errors }
   } = useForm<EditMultipleChoiceFormValues>({
-    resolver: zodResolver(editMultipleChoice),
-    defaultValues: { questions: generatedContent, answerKey: false }
+    resolver: zodResolver(editMultipleChoiceSchema),
+    defaultValues: { questions: generatedContent }
   })
 
   /*
@@ -60,8 +62,7 @@ const EditMultipleChoice = ({
           title: metaData.title,
           content: JSON.stringify(data)
         },
-        pdfType,
-        answerKey: data.answerKey
+        pdfType
       }
 
       try {

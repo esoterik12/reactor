@@ -12,11 +12,7 @@ const RiddlePDF: React.FC<RiddlesPDFProps> = ({ data }) => {
           {data.map((item, index) => (
             <View
               key={`${index} - ${item[0]}`}
-              style={
-                (index + 1) % 8 !== 0
-                  ? riddlesPDFStyles.riddleRow
-                  : riddlesPDFStyles.newRiddleRow
-              }
+              style={riddlesPDFStyles.riddleRow}
               wrap={false}
             >
               <Text>{item}</Text>

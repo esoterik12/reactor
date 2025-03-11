@@ -4,62 +4,61 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import {
-  EditPairsFormValues,
-  editPairsSchema,
-  WordPairings
-} from '@/lib/zod/edit/editWordPairs.schema'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
-import { useAppSelector } from '@/redux/hooks'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
+import {
+  editChooseCorrectSpellingSchema,
+  SpellingWordPairings,
+  EditCorrectSpellingFormValues
+} from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
 
-interface EditPairsFormProps {
+interface EditCorrectSpellingFormProps {
   firstWordLabel: string
   secondWordLabel: string
-  generatedContent: WordPairings
+  generatedContent: SpellingWordPairings
   metaData: EditMetaDataProps
   shuffleEnabled?: boolean
 }
 
-const EditWordPairsForm = ({
+const EditCorrectSpellingForm = ({
   firstWordLabel = 'First word',
   secondWordLabel = 'Second word',
   generatedContent,
   metaData,
-  shuffleEnabled = false,
-}: EditPairsFormProps) => {
+  shuffleEnabled = false
+}: EditCorrectSpellingFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
   const [isShuffled, setIsShuffled] = useState(false)
   const submitPDF = useSubmitPDF()
-  const secondaryInputContent = useAppSelector(
-    state => state.input.secondaryInputContent
-  )
 
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors }
-  } = useForm<EditPairsFormValues>({
+  } = useForm<EditCorrectSpellingFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    resolver: zodResolver(editPairsSchema),
-    defaultValues: { wordPairings: generatedContent}
+    resolver: zodResolver(editChooseCorrectSpellingSchema),
+    defaultValues: {
+      wordPairings: generatedContent,
+      secondaryInputContent: ''
+    }
   })
 
-  const handleSubmitButton = (data: EditPairsFormValues) => {
+  const handleSubmitButton = (data: EditCorrectSpellingFormValues) => {
     const pdfData = {
       data: {
         title: metaData.title,
         content: JSON.stringify(data),
-        secondaryInputContent
+        secondaryInputContent: data.secondaryInputContent
       },
-      pdfType: metaData.contentType,
+      pdfType: metaData.contentType
     }
 
     submitPDF({
@@ -162,7 +161,22 @@ const EditWordPairsForm = ({
             </div>
           ))}
         </div>
-        <div className='ml-10 mt-4 flex flex-row gap-4'>
+
+        {/* Secret Message Input */}
+        <div className='ml-7 mt-2 p-2'>
+          <p className='paragraph-text w-40 mb-1'>Secret Message</p>
+          <InputField
+            type='text'
+            errorType='textBelow'
+            labelClasses='paragraph-text small-text'
+            id='secondaryInputContent'
+            inputClasses='p-1 w-[450px]'
+            placeholder=''
+            {...register('secondaryInputContent')}
+            error={errors.secondaryInputContent}
+          />
+        </div>
+        <div className='ml-9 flex flex-row gap-4'>
           <DefaultButton
             btnType='submit'
             handleClick={handleSubmit(handleSubmitButton)}
@@ -216,4 +230,4 @@ const EditWordPairsForm = ({
   )
 }
 
-export default EditWordPairsForm
+export default EditCorrectSpellingForm

@@ -12,8 +12,8 @@ export default function crazyCheckUpMessage({
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(crazyCheckUpStructure)}
-      Note the commandType for each action can be:
-      'doAnAction, writeOnPaper, speakOrAsk, writeOnThisPaper, useWhiteboard, drawOnThisPaper, or useScrapPaper
+      Note the commandType for each action can ONLY be:
+      'doAnAction, writeOnPaper, findSomething, speakOrAsk, writeOnThisPaper, useWhiteboard, drawOnThisPaper, or useScrapPaper
 
       Take the following data vocabulary words:
       ${data}

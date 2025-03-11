@@ -7,7 +7,8 @@ export const commandTypeSchema = z.union([
   z.literal('writeOnThisPaper'),
   z.literal('useWhiteboard'),
   z.literal('drawOnThisPaper'),
-  z.literal('useScrapPaper')
+  z.literal('useScrapPaper'),
+  z.literal('findSomething'),
 ])
 
 // Schema for a single command

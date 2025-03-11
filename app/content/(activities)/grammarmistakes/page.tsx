@@ -6,15 +6,15 @@ import {
   grammarMistakesInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import { huntAndMistakesSchema } from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconGrammarMistakes from '@/components/icons/content/IconGrammarMistakes'
+import EditSentencePairsForm from '@/components/edit/EditSentencePairsForm'
+import { generateSingleTab } from '@/lib/constants/tabOptions'
 import {
   EditSentencePairs,
   editSentencePairsSchema
-} from '@/lib/zod/editSentencePairs.schema'
-import EditSentencePairsForm from '@/components/edit/EditSentencePairsForm'
-import { generateSingleTab } from '@/lib/constants/tabOptions'
+} from '@/lib/zod/edit/editSentencePairs.schema'
+import { grammarMistakesInputSchema } from '@/lib/zod/input/grammarMistakesInput.schema'
 
 const GrammarMistakesPage = () => {
   const [content, setContent] = useState<EditSentencePairs | null>(null)
@@ -28,7 +28,7 @@ const GrammarMistakesPage = () => {
       key='Tab 1'
       icon={<IconGrammarMistakes classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={huntAndMistakesSchema}
+      zodSchema={grammarMistakesInputSchema}
       info={grammarMistakesInfo}
       contentType='grammarMistakes'
       contentTitle='Grammar Mistakes'

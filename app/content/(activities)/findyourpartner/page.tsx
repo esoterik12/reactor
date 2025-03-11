@@ -7,9 +7,13 @@ import {
   findYourPartnerGeneratedInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import { generateFindYourPartnerSchema } from '@/lib/zod/contentInput.schema'
+import {
+  generateFindYourPartnerSchema,
+  generateFindYourPartnerSelectorSchema
+} from '@/lib/zod/input/findYourPartners.schema'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import EditSetsForm from '@/components/edit/EditSetsForm'
+import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 
 const FindYourPartnerPage = () => {
   const [content, setContent] = useState<string[][] | null>(null)
@@ -30,7 +34,16 @@ const FindYourPartnerPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 2'>Tab 2</p>,
+    <CurriculumSelector
+      key='Tab 3'
+      contentType='findYourPartner'
+      contentTitle='Find Your Partner'
+      icon={<IconFindYourPartner classes={contentIconStyles} />}
+      setContent={setContent}
+      setMetaData={setMetaData}
+      zodSchema={generateFindYourPartnerSelectorSchema}
+      info={findYourPartnerGeneratedInfo}
+    />,
     <p key='Tab 3'>Tab 3</p>
   ]
 

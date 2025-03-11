@@ -10,12 +10,12 @@ and array with the correct and incorrect words
 */
 
 import { AppError } from '@/lib/errors/AppError'
-import { WordPairings } from '@/lib/zod/contentEdit.schema'
+import { SpellingWordPairings } from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
 
 interface CreateSpellingMessagesParams {
   numberOfPairs: number
   secondaryInputContent: string
-  wordPairings: WordPairings
+  wordPairings: SpellingWordPairings
 }
 
 interface CorrectWord {

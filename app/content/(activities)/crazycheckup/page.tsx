@@ -6,16 +6,16 @@ import {
   crazyCheckUpInfo,
   contentIconStyles
 } from '@/lib/constants/content/contentInfo'
-import {
-  baseContentSchema,
-  baseContentSelectorSchema
-} from '@/lib/zod/contentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import IconCrazyCheckUp from '@/components/icons/content/IconCrazyCheckUp'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
-import { CrazyCheckUpCommand } from '@/lib/zod/editCrazyCheckUp.schema'
+import { CrazyCheckUpCommand } from '@/lib/zod/edit/editCrazyCheckUp.schema'
 import EditCrazyCheckUp from '@/components/edit/EditCrazyCheckUp'
+import {
+  baseContentInputSchema,
+  baseContentSelectorSchema
+} from '@/lib/zod/input/baseContentInput.schema'
 
 const CrazyCheckUpPage = () => {
   const [content, setContent] = useState<CrazyCheckUpCommand[] | null>(null)
@@ -29,7 +29,7 @@ const CrazyCheckUpPage = () => {
       key='Tab 1'
       icon={<IconCrazyCheckUp classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={baseContentSchema}
+      zodSchema={baseContentInputSchema}
       info={crazyCheckUpInfo}
       contentTitle='Crazy Check Up'
       contentType='crazyCheckUp'

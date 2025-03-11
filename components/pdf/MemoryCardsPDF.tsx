@@ -1,6 +1,6 @@
-import { EditPairsFormValues } from '@/lib/zod/contentEdit.schema'
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { memoryCardsPDFStyles } from './MemoryCardsPDF.styles'
+import { EditPairsFormValues } from '@/lib/zod/edit/editWordPairs.schema'
 
 interface MemoryCardsPDFProps {
   data: EditPairsFormValues
