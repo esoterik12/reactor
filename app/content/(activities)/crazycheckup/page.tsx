@@ -40,6 +40,7 @@ const CrazyCheckUpPage = () => {
       key='Tab 2'
       contentTitle='Crazy Check Up'
       contentType='crazyCheckUp'
+      formType='generated'
       icon={<IconCrazyCheckUp classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

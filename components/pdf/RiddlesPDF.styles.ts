@@ -15,11 +15,10 @@ Font.register({
 })
 
 export const riddlesPDFStyles = StyleSheet.create({
-  page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 12 },
+  page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 24 },
   mainContainer: {
     flexDirection: 'column',
     gap: 24,
-    margin: 12,
     marginLeft: 48
   },
   riddleRow: {

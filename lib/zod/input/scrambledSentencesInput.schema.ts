@@ -8,14 +8,14 @@ export const scrambledSentencesContentSchema = {
       invalid_type_error: 'Must be a number.'
     })
     .min(3, { message: 'At least 3.' })
-    .max(12, { message: 'At most 18.' }),
+    .max(12, { message: 'At most 12.' }),
   secondaryNumberOfContent: z.coerce
     .number({
       required_error: 'Input required.',
       invalid_type_error: 'Must be a number.'
     })
     .min(3, { message: 'At least 3 words.' })
-    .max(12, { message: 'At most 12 words.' })
+    .max(10, { message: 'At most 10 words.' })
 }
 
 export const scrambledSentencesFormSchema = baseContentInputSchema.extend(

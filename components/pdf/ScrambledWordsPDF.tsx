@@ -1,8 +1,8 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
-import { memoryCardsPDFStyles as styles } from './MemoryCardsPDF.styles'
+import { scrambledWordsPDFStyles as styles } from './ScrambledWordsPDF.styles'
 import { EditPairsFormValues } from '@/lib/zod/edit/editWordPairs.schema'
 
-interface MemoryCardsPDFProps {
+interface ScrambledWordsPDFProps {
   data: EditPairsFormValues
 }
 
@@ -15,21 +15,23 @@ export const chunkArray = (arr: string[], size: number) => {
   return result
 }
 
-const MemoryCardsPDF: React.FC<MemoryCardsPDFProps> = ({ data }) => {
+const ScrambledWordsPDF: React.FC<ScrambledWordsPDFProps> = ({ data }) => {
   // Flatten the array of word pairs into a single array of words
-  const words = data.wordPairings.flatMap(pair => [pair.wordOne, pair.wordTwo])
-  const rows = chunkArray(words, 4)
+  const scrambledWords = data.wordPairings.flatMap(pair => pair.wordTwo)
+
+  const scrambledWordRows = chunkArray(scrambledWords, 4)
 
   return (
     <Document>
       <Page size='A4' style={styles.page}>
         {/* 4x4 Grid Layout */}
         <View style={styles.gridContainer}>
-          {rows.map((row, rowIndex) => (
+          {scrambledWordRows.map((row, rowIndex) => (
             <View key={rowIndex} style={styles.row} wrap={false}>
               {row.map((word, colIndex) => (
                 <View key={colIndex} style={styles.cell}>
                   <Text style={styles.cellText}>{word}</Text>
+                  <View style={styles.writingLine} />
                 </View>
               ))}
             </View>
@@ -40,4 +42,4 @@ const MemoryCardsPDF: React.FC<MemoryCardsPDFProps> = ({ data }) => {
   )
 }
 
-export default MemoryCardsPDF
+export default ScrambledWordsPDF

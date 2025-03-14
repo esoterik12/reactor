@@ -38,6 +38,7 @@ const FindYourPartnerPage = () => {
       key='Tab 3'
       contentType='findYourPartner'
       contentTitle='Find Your Partner'
+      formType='generated'
       icon={<IconFindYourPartner classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

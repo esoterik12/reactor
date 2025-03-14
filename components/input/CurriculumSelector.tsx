@@ -28,9 +28,11 @@ import { TextareaInput } from './TextareaInput'
 import GeneratingContent from '../shared/GeneratingContent'
 import { AppError } from '@/lib/errors/AppError'
 import InlineError from '../shared/InlineError'
+import { FormTypes } from '@/types/form.types'
 
 interface CurriculumSelectorProps<T> {
   icon: React.ReactNode
+  formType: FormTypes
   zodSchema: ZodSchema
   info: InfoTextData
   contentTitle: string
@@ -41,6 +43,7 @@ interface CurriculumSelectorProps<T> {
 
 export function CurriculumSelector<T>({
   icon,
+  formType,
   zodSchema,
   info,
   contentTitle,
@@ -128,6 +131,7 @@ export function CurriculumSelector<T>({
 
         const generationResults = await processInputContent({
           contentType,
+          formType,
           levelSelection: level || 'No selection',
           primaryInputContent: JSON.stringify(filteredWords),
           secondaryInputContent: data.secondaryInputContent,

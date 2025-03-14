@@ -15,7 +15,18 @@ export const scrambledSentencesGeneratedInfo = {
   },
   secondaryNumberOfContent: {
     title: 'Words per sentence',
-    inputInfo: 'This specifies roughly how many words will be in each sentence.',
-    inputExample: 'For example: entering 6 will ensure sentences have 6 words per sentence, +-2 words.'
+    inputInfo:
+      'This specifies roughly how many words will be in each sentence.',
+    inputExample:
+      'For example: entering 6 will ensure sentences have 6 words per sentence, +-2 words.'
+  }
+}
+
+// Scrambled Words
+export const scrambledWordsGeneratedInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input words',
+    inputInfo: 'Provide a comma-separated list of words to scramble.'
   }
 }

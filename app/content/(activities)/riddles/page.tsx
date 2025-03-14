@@ -36,6 +36,7 @@ const RiddlesPage = () => {
       key='Tab 2'
       contentTitle='Riddles'
       contentType='riddles'
+      formType='generated'
       icon={<IconRiddles classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

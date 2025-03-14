@@ -39,6 +39,7 @@ const ReviewHuntPage = () => {
       key='Tab 2'
       contentTitle='Review Hunt'
       contentType='reviewHunt'
+      formType='generated'
       icon={<IconReviewHunt classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

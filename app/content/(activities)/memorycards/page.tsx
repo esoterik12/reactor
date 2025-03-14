@@ -39,6 +39,7 @@ const MemoryCardsPage = () => {
       key='Tab 2'
       contentTitle='Memory Cards'
       contentType='memoryCards'
+      formType='generated'
       icon={<IconMemoryCards classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

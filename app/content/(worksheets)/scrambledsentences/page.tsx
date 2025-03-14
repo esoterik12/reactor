@@ -36,6 +36,7 @@ const ScrambledSentencesPage = () => {
       key='Tab 2'
       contentTitle='Scrambled Sentences'
       contentType='scrambledSentences'
+      formType='generated'
       icon={<IconScrambledSentences classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}

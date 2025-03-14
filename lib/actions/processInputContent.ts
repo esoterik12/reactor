@@ -9,9 +9,12 @@ import memoryCardsMessage from '../gpt-messages/memoryCardsMessage'
 import reviewHuntMessage from '../gpt-messages/reviewHuntMessage'
 import riddlesMessage from '../gpt-messages/riddlesMessage'
 import scrambledSentencesMessage from '../gpt-messages/scrambledSentencesMessage'
+import { FormTypes } from '@/types/form.types'
+import { generateScrambledWords } from '../internal-generation/generateScrambledWords'
 
 interface ProcessInputContentProps {
   contentType: string
+  formType: FormTypes
   levelSelection: string
   primaryInputContent: string
   secondaryInputContent?: string
@@ -22,6 +25,7 @@ interface ProcessInputContentProps {
 
 export default async function processInputContent({
   contentType,
+  formType,
   levelSelection,
   primaryInputContent,
   secondaryInputContent,
@@ -29,90 +33,123 @@ export default async function processInputContent({
   numberOfContent,
   secondaryNumberOfContent
 }: ProcessInputContentProps) {
-  let generationMessage: string = ''
+  if (formType === 'generated') {
+    // This holds a content-specific generation message that is sent to GPT API
+    let generationMessage: string = ''
 
-  try {
-    switch (contentType) {
-      case 'chooseCorrectSpelling':
-        generationMessage = chooseCorrectSpellingMessage({
-          data: primaryInputContent
-        })
-        break
+    try {
+      switch (contentType) {
+        case 'chooseCorrectSpelling':
+          generationMessage = chooseCorrectSpellingMessage({
+            data: primaryInputContent
+          })
+          break
 
-      case 'crazyCheckUp':
-        generationMessage = crazyCheckUpMessage({
-          data: primaryInputContent,
-          levelSelection
-        })
-        break
+        case 'crazyCheckUp':
+          generationMessage = crazyCheckUpMessage({
+            data: primaryInputContent,
+            levelSelection
+          })
+          break
 
-      case 'findYourPartner':
-        generationMessage = findYourPartnerMessage({
-          data: primaryInputContent,
-          matchingCriteria:
-            secondaryInputContent || 'Missing matching criteria',
-          numberOfContent: numberOfContent || 8,
-          levelSelection,
-          secondaryNumberOfContent: secondaryNumberOfContent || 2
-        })
-        break
+        case 'findYourPartner':
+          generationMessage = findYourPartnerMessage({
+            data: primaryInputContent,
+            matchingCriteria:
+              secondaryInputContent || 'Missing matching criteria',
+            numberOfContent: numberOfContent || 8,
+            levelSelection,
+            secondaryNumberOfContent: secondaryNumberOfContent || 2
+          })
+          break
 
-      case 'grammarMistakes':
-        generationMessage = grammarMistakesMessage({
-          grammarConceptDescription: JSON.stringify(primaryInputContent),
-          numberOfContent,
-          levelSelection,
-          textareaInput
-        })
-        break
+        case 'grammarMistakes':
+          generationMessage = grammarMistakesMessage({
+            grammarConceptDescription: JSON.stringify(primaryInputContent),
+            numberOfContent,
+            levelSelection,
+            textareaInput
+          })
+          break
 
-      case 'memoryCards':
-        generationMessage = memoryCardsMessage({
-          data: JSON.stringify(primaryInputContent),
-          matchingCriteria:
-            secondaryInputContent || 'Missing matching criteria',
-          levelSelection,
-          numberOfContent
-        })
-        break
+        case 'memoryCards':
+          generationMessage = memoryCardsMessage({
+            data: JSON.stringify(primaryInputContent),
+            matchingCriteria:
+              secondaryInputContent || 'Missing matching criteria',
+            levelSelection,
+            numberOfContent
+          })
+          break
 
-      case 'reviewHunt':
-        generationMessage = reviewHuntMessage({
-          data: primaryInputContent,
-          concepts: JSON.stringify(textareaInput),
-          levelSelection,
-          numberOfQuestions: numberOfContent || 8
-        })
-        break
+        case 'reviewHunt':
+          generationMessage = reviewHuntMessage({
+            data: primaryInputContent,
+            concepts: JSON.stringify(textareaInput),
+            levelSelection,
+            numberOfQuestions: numberOfContent || 8
+          })
+          break
 
-      case 'riddles':
-        generationMessage = riddlesMessage({
-          data: primaryInputContent,
-          levelSelection
-        })
-        break
+        case 'riddles':
+          generationMessage = riddlesMessage({
+            data: primaryInputContent,
+            levelSelection
+          })
+          break
 
-      case 'scrambledSentences':
-        generationMessage = scrambledSentencesMessage({
-          data: primaryInputContent,
-          levelSelection,
-          numberOfSentences: numberOfContent || 8,
-          wordsPerSentence: secondaryNumberOfContent || 8
-        })
-        break
+        case 'scrambledSentences':
+          generationMessage = scrambledSentencesMessage({
+            data: primaryInputContent,
+            levelSelection,
+            numberOfSentences: numberOfContent || 8,
+            wordsPerSentence: secondaryNumberOfContent || 8
+          })
+          break
 
-      default:
-        throw new AppError(404, `Unsupported content type: ${contentType}`)
+        default:
+          throw new AppError(404, `Unsupported content type: ${contentType}`)
+      }
+    } catch (error) {
+      generationMessage = 'Error processing input content for API generation.'
+      console.log(generationMessage, error)
     }
-  } catch (error) {
-    console.log('Error processing input content: ', error)
-    generationMessage = 'Error generating content'
+
+    const generationResults = generateContent({
+      message: generationMessage,
+      secondaryInput: secondaryInputContent
+    })
+
+    return generationResults
+  } else {
+    // Creation result is used to describe things that are generated internally without GPT API
+    let creationResult
+
+    try {
+      switch (contentType) {
+        case 'scrambledWords':
+          creationResult = generateScrambledWords({ primaryInputContent })
+          break
+        default:
+          throw new AppError(404, `Unsupported content type: ${contentType}`)
+      }
+      
+    } catch (error) {
+      const creationResultError =
+        'Error processing input content for internal generation.'
+      console.log(creationResultError, error)
+      return {
+        message: creationResultError,
+        code: 400
+      }
+    }
+
+    const generationResults = {
+      message: 'Content generated successfully.',
+      code: 200,
+      result: creationResult
+    }
+
+    return generationResults
   }
-
-  const generationResults = generateContent({
-    message: generationMessage,
-    secondaryInput: secondaryInputContent
-  })
-
-  return generationResults
 }

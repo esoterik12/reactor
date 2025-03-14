@@ -20,9 +20,10 @@ import ContentInfoButton from '../buttons/ContentInfoButton'
 import InfoTooltip from '../containers/InfoTooltip'
 import processInputContent from '@/lib/actions/processInputContent'
 import { AppError } from '@/lib/errors/AppError'
+import { FormTypes } from '@/types/form.types'
 
 interface ContentFormProps<T> {
-  formType: 'manual' | 'generated' | 'curriculum'
+  formType: FormTypes
   icon: React.ReactNode
   zodSchema: ZodSchema
   info: InfoTextData
@@ -68,11 +69,10 @@ export function ContentForm<T>({
   const handleSubmitButton = async (data: ContentFormInput) => {
     setLoading(true)
 
-    console.log('data in ContentForm.tsx: ', data)
-
     try {
       const generationResults = await processInputContent({
         contentType,
+        formType,
         levelSelection: selectedLevel || 'No level selection',
         primaryInputContent: data.primaryInputContent,
         secondaryInputContent: data.secondaryInputContent,
@@ -81,15 +81,19 @@ export function ContentForm<T>({
         secondaryNumberOfContent: data.secondaryNumberOfContent || null
       })
 
+      console.log('generationResults in ContentForm.tsx: ', generationResults)
+
       if (generationResults.code === 200) {
         // TODO: generation functions are returning objects with different names
+        // I think this can be solved in the GPT API return
         setContent(
           generationResults.result.data ||
             generationResults.result.pairs ||
             generationResults.result.commands ||
             generationResults.result.questions ||
             generationResults.result.sentencePairings ||
-            generationResults.result.sentences
+            generationResults.result.sentences ||
+            generationResults.result
         )
         setMetaData({ title: data.title, contentType })
       } else {
@@ -286,7 +290,7 @@ export function ContentForm<T>({
           isDisabled={loading}
         >
           <p className='button-text'>
-            {formType === 'manual' ? 'Create' : 'Generate'}
+            {formType === 'generated' ? 'Create' : 'Generate'}
           </p>
         </DefaultButton>
       </form>

@@ -40,6 +40,7 @@ const ChooseCorrectSpellingPage = () => {
       key='Tab 2'
       contentTitle='Choose Correct Spelling'
       contentType='chooseCorrectSpelling'
+      formType='generated'
       icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
       setContent={setContent}
       setMetaData={setMetaData}
