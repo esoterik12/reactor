@@ -106,16 +106,17 @@ project
 2. Add the content top the sidebar constants
    `/lib/constants/AccordionSidebarContent.tsx`
 3. Create a new icon for the page and and add it to `ContentForm.tsx`
+  - Edit the contentTitle and contentType props
 4. Add new content info into `/lib/constants/content` - add to ContentForm
 5. Use existing or create new schemas in `/lib/zod` - add to ContentForm
 6. Use existing or create new edit types/schema in `/lib/zod` - add to page
    content state
 7. Use appropriate edit form or create a new one in `page.tsx`
-8. Create new return structure in `/lib/constants/return-structure` (ensure it
-   is an object with property data)
-9. Create new message in `/lib/gpt-messages`
-10. Add message and input data to relevant `/lib/actions`
-11. Add case to `processInputContent.ts`
+8. - If the content is generated, create a new return structure in `/lib/constants/return-structure` (ensure it is an object with property data)
+   - If the content is NOT generated (or both generated and internally process, create a function to handle it in `/lib/internal-generation`)
+9. If generated: Create new message in `/lib/gpt-messages`
+10. If generated: Add message and input data to relevant `/lib/actions`
+11. Add processing / generating function to `processInputContent.ts`
 12. Add curriculum selector - (ensure that the zod schema is adjusted to make
     primaryInputContent optional)
 13. Create a react-pdf component that uses the contentType (capitalized first
@@ -210,18 +211,6 @@ The system:
 ## Completion Status
 
 ### Activities & Games
-
-- Running 03.11 Test
-
-- Memory Cards: Complete
-  - Generate content: success
-  - Curriculum selector: success
-- Choose Correct: Complete
-- Crazy Check Up: Complete
-- Riddles: Complete
-- Grammar Mistakes: Complete
-- Find Your Partner: Complete
-- Review Hunt: Complete - Needs Adjustment
 
 ## NOTES:
 

@@ -2,27 +2,23 @@ import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { EditCorrectSpellingFormValues } from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
 import { chooseCorrectSpellingStyles as styles } from './ChooseCorrectSpellingPDF.styles'
 import { createSpellingMessages } from '@/lib/utils/pdf-utils/createSpellingMessages'
+import { EditMetaDataProps } from '@/types/input.types'
 
 interface EditCorrectSpellingProps {
   data: EditCorrectSpellingFormValues
-  secondaryInputContent: string
+  metaData: EditMetaDataProps
 }
 
 const EditCorrectSpellingPDF: React.FC<EditCorrectSpellingProps> = ({
   data,
-  secondaryInputContent
+  metaData
 }) => {
-
-  console.log('data in EditCorrectSpellingPDF: ', data)
-  console.log('secondaryInputContent in EditCorrectSpellingPDF: ', secondaryInputContent)
-
 
   const combinedResult = createSpellingMessages({
     numberOfPairs: data.wordPairings.length,
-    secondaryInputContent,
+    secondaryInputContent: metaData.secondaryInputContent,
     wordPairings: data.wordPairings
   })
-
 
   return (
     <Document>

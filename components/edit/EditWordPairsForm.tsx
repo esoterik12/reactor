@@ -13,7 +13,6 @@ import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
-import { useAppSelector } from '@/redux/hooks'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 
 interface EditPairsFormProps {
@@ -29,16 +28,13 @@ const EditWordPairsForm = ({
   secondWordLabel = 'Second word',
   generatedContent,
   metaData,
-  shuffleEnabled = false,
+  shuffleEnabled = false
 }: EditPairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
   const [isShuffled, setIsShuffled] = useState(false)
   const submitPDF = useSubmitPDF()
-  const secondaryInputContent = useAppSelector(
-    state => state.input.secondaryInputContent
-  )
 
   const {
     register,
@@ -49,22 +45,17 @@ const EditWordPairsForm = ({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
     resolver: zodResolver(editPairsSchema),
-    defaultValues: { wordPairings: generatedContent}
+    defaultValues: { wordPairings: generatedContent }
   })
 
   const handleSubmitButton = (data: EditPairsFormValues) => {
     const pdfData = {
-      data: {
-        title: metaData.title,
-        content: JSON.stringify(data),
-        secondaryInputContent
-      },
-      pdfType: metaData.contentType,
+      content: JSON.stringify(data),
+      metaData
     }
 
     submitPDF({
       pdfData,
-      title: metaData.title,
       setError,
       setIsLoading,
       downloadBlob

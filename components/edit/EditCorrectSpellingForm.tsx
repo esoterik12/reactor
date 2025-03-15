@@ -46,24 +46,18 @@ const EditCorrectSpellingForm = ({
     reValidateMode: 'onBlur',
     resolver: zodResolver(editChooseCorrectSpellingSchema),
     defaultValues: {
-      wordPairings: generatedContent,
-      secondaryInputContent: ''
+      wordPairings: generatedContent
     }
   })
 
   const handleSubmitButton = (data: EditCorrectSpellingFormValues) => {
     const pdfData = {
-      data: {
-        title: metaData.title,
-        content: JSON.stringify(data),
-        secondaryInputContent: data.secondaryInputContent
-      },
-      pdfType: metaData.contentType
+      content: JSON.stringify(data),
+      metaData
     }
 
     submitPDF({
       pdfData,
-      title: metaData.title,
       setError,
       setIsLoading,
       downloadBlob
@@ -162,20 +156,6 @@ const EditCorrectSpellingForm = ({
           ))}
         </div>
 
-        {/* Secret Message Input */}
-        <div className='ml-7 mt-2 p-2'>
-          <p className='paragraph-text w-40 mb-1'>Secret Message</p>
-          <InputField
-            type='text'
-            errorType='textBelow'
-            labelClasses='paragraph-text small-text'
-            id='secondaryInputContent'
-            inputClasses='p-1 w-[450px]'
-            placeholder=''
-            {...register('secondaryInputContent')}
-            error={errors.secondaryInputContent}
-          />
-        </div>
         <div className='ml-9 flex flex-row gap-4'>
           <DefaultButton
             btnType='submit'

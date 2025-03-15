@@ -58,11 +58,8 @@ const EditMultipleChoice = ({
       const pdfType = capitalizeFirstLetter(metaData.contentType)
 
       const pdfData = {
-        data: {
-          title: metaData.title,
-          content: JSON.stringify(data)
-        },
-        pdfType
+        content: JSON.stringify(data),
+        metaData
       }
 
       try {

@@ -1,38 +1,29 @@
 'use client'
 import { useCallback } from 'react'
-import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter'
+import { EditMetaDataProps } from '@/types/input.types'
 
 interface UseSubmitPDFDataProps {
   pdfData: Data
-  title: string
   setError: React.Dispatch<React.SetStateAction<string | null>>
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
   downloadBlob: (blob: Blob, filename: string) => void
 }
 
 interface Data {
-  data: {
-    title: string
-    content: string
-    secondaryInputData?: string | null
-  }
-  pdfType: string
-  answerKey?: boolean
+  content: string
+  metaData: EditMetaDataProps
 }
 
 const useSubmitPDF = () => {
   const submitPDF = useCallback(
     async ({
       pdfData,
-      title,
       setError,
       setIsLoading,
       downloadBlob
     }: UseSubmitPDFDataProps) => {
       setError(null)
       setIsLoading(true)
-
-      pdfData.pdfType = capitalizeFirstLetter(pdfData.pdfType)
 
       try {
         const response = await fetch('/api/generate-pdf', {
@@ -49,7 +40,7 @@ const useSubmitPDF = () => {
         }
 
         const blob = await response.blob()
-        const fileName = `${title} - ${pdfData.pdfType}`
+        const fileName = `${pdfData.metaData.title} - ${pdfData.metaData.contentType}`
         downloadBlob(blob, fileName)
       } catch (error) {
         console.log('Error submitting PDF: ', error)

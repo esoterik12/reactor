@@ -26,4 +26,7 @@ export interface InfoTextObject {
 export interface EditMetaDataProps {
   title: string
   contentType: string
+  secondaryInputContent?: string
+  numberOfContent?: number | null | undefined
+  secondaryNumberOfContent?: number | null | undefined
 }

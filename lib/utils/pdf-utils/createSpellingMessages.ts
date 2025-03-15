@@ -14,7 +14,7 @@ import { SpellingWordPairings } from '@/lib/zod/edit/editChooseCorrectSpelling.s
 
 interface CreateSpellingMessagesParams {
   numberOfPairs: number
-  secondaryInputContent: string
+  secondaryInputContent: string | undefined
   wordPairings: SpellingWordPairings
 }
 
@@ -38,7 +38,10 @@ export const createSpellingMessages = ({
   secondaryInputContent,
   wordPairings
 }: CreateSpellingMessagesParams): CombinedResult[] => {
-  // Ensure `wordPairings` is an array
+  if (!secondaryInputContent) {
+    throw new AppError(400, 'Invalid message content.')
+  }
+
   if (typeof wordPairings === 'string') {
     try {
       wordPairings = JSON.parse(wordPairings)

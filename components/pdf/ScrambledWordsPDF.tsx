@@ -1,18 +1,10 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { scrambledWordsPDFStyles as styles } from './ScrambledWordsPDF.styles'
 import { EditPairsFormValues } from '@/lib/zod/edit/editWordPairs.schema'
+import { chunkArray } from '@/lib/utils/chunkArray'
 
 interface ScrambledWordsPDFProps {
   data: EditPairsFormValues
-}
-
-// Helper function to chunk an array into subarrays of a specified size
-export const chunkArray = (arr: string[], size: number) => {
-  const result = []
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size))
-  }
-  return result
 }
 
 const ScrambledWordsPDF: React.FC<ScrambledWordsPDFProps> = ({ data }) => {

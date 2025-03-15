@@ -1,17 +1,10 @@
 import { Document, Page, Text, View } from '@react-pdf/renderer'
 import { findYourPartnerPDFStyles as styles } from './FindYourPartnerPDF.styles'
 import { EditSetsFormValues } from '@/lib/zod/edit/editSets.schema'
+import { chunkArray } from '@/lib/utils/chunkArray'
 
 interface FindYourPartnerPDFProps {
   data: EditSetsFormValues
-}
-
-export const chunkArray = (arr: string[], size: number) => {
-  const result = []
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size))
-  }
-  return result
 }
 
 const FindYourPartnerPDF: React.FC<FindYourPartnerPDFProps> = ({ data }) => {

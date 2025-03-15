@@ -47,13 +47,12 @@ const EditCrazyCheckUp = ({
   const handleSubmitButton = useCallback(
     async (data: EditCrazyCheckUpFormValues) => {
       const pdfData = {
-        data: { title: metaData.title, content: JSON.stringify(data) },
-        pdfType: metaData.contentType
+        content: JSON.stringify(data),
+        metaData
       }
 
       submitPDF({
         pdfData,
-        title: metaData.title,
         setError,
         setIsLoading,
         downloadBlob

@@ -51,6 +51,7 @@ export const chooseSpellingGeneratedInfo = {
     inputInfo:
       'Provide a comma-separated list of spelling words. Plausible misspellings will be generated for each word to complete the activity.'
   },
+  secondaryInputInfo: spellingSecretMessage
 }
 
 export const chooseSpellingManualInfo = {
@@ -61,6 +62,7 @@ export const chooseSpellingManualInfo = {
       'Provide a comma-separated list of spelling words. With each word being followed by the misspelling you want to use in the activity.',
     inputExample: "For example, 'cat, kat, help, hlep' would create two pairs."
   },
+  secondaryInputInfo: spellingSecretMessage
 }
 
 // Crazy Check Up

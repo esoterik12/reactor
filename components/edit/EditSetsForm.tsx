@@ -4,12 +4,14 @@ import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { EditSetsFormValues, editSetsSchema } from '@/lib/zod/edit/editSets.schema'
+import {
+  EditSetsFormValues,
+  editSetsSchema
+} from '@/lib/zod/edit/editSets.schema'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
-import { useAppSelector } from '@/redux/hooks'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 
 interface EditSetsFormProps {
@@ -28,11 +30,6 @@ const EditSetsForm = ({
   const { linkRef, downloadBlob } = useBlobDownloader()
   const [isShuffled, setIsShuffled] = useState(false)
   const submitPDF = useSubmitPDF()
-  const secondaryInputContent = useAppSelector(
-    state => state.input.secondaryInputContent
-  )
-
-  console.log('generatedContent in EditSetsForm: ', generatedContent)
 
   const {
     register,
@@ -48,17 +45,12 @@ const EditSetsForm = ({
 
   const handleSubmitButton = (data: EditSetsFormValues) => {
     const pdfData = {
-      data: {
-        title: metaData.title,
-        content: JSON.stringify(data),
-        secondaryInputContent
-      },
-      pdfType: metaData.contentType
+      content: JSON.stringify(data),
+      metaData
     }
 
     submitPDF({
       pdfData,
-      title: metaData.title,
       setError,
       setIsLoading,
       downloadBlob

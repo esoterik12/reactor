@@ -13,7 +13,7 @@ interface GenerateContentProps {
 
 export default async function generateContent({
   message,
-  secondaryInput = null
+  secondaryInput = null,
 }: GenerateContentProps) {
   try {
     const response = await openai.chat.completions.create({
@@ -52,7 +52,7 @@ export default async function generateContent({
       message: 'Content generated successfully.',
       code: 200,
       result: JSON.parse(response.choices[0].message.content),
-      secondaryInput
+      secondaryInput,
     }
   } catch (error) {
     console.error('Error generating sentence:', error)

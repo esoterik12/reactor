@@ -30,3 +30,31 @@ export const scrambledWordsGeneratedInfo = {
     inputInfo: 'Provide a comma-separated list of words to scramble.'
   }
 }
+
+// Bingo
+export const bingoGeneratedInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Describe content',
+    inputInfo:
+      'Provide a description of what kind of word you would like generated for the bingo cards.',
+    inputExample:
+      'For example, you might ask for Grade 1 Sight Words, long vowel words, CVC words, words related to the environment.'
+  },
+  numberOfContent: {
+    title: 'Number of game cards'
+  }
+}
+
+export const bingoManualInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Input words',
+    inputInfo: 'Provide a comma-separated list of words to scramble.',
+    inputExample:
+      'For example, "achievement, technology, community, attain, preserve."'
+  },
+  numberOfContent: {
+    title: 'Number of game cards'
+  }
+}

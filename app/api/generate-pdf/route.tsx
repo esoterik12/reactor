@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 import { renderToBuffer } from '@react-pdf/renderer'
+import { EditMetaDataProps } from '@/types/input.types'
+import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 
 // This route takes pdf input data from a post request and dynamically
 // imports the correct react-pdf component and uses renderToBuffer to
@@ -7,12 +9,8 @@ import { renderToBuffer } from '@react-pdf/renderer'
 
 export interface GeneratePDFRequestBody {
   pdfData: {
-    data: {
-      title: string
-      content: string
-      secondaryInputContent: string | null
-    }
-    pdfType: string
+    content: string
+    metaData: EditMetaDataProps
   }
 }
 
@@ -21,28 +19,26 @@ export async function POST(request: Request): Promise<Response> {
     // Parse JSON body
     const body: GeneratePDFRequestBody = await request.json()
 
-    const { pdfData } = body
-
-    if (!pdfData || !pdfData.data || !pdfData.pdfType) {
+    if (!body.pdfData.content || !body.pdfData.metaData) {
       return NextResponse.json(
-        { error: 'Missing required data: title and content are required.' },
+        { error: 'Missing required data: metaData and content are required.' },
         { status: 400 }
       )
     }
 
     // parse the content (which is a string) in to js string array
-    const inputData = JSON.parse(pdfData.data.content)
+    const inputDataParsed = JSON.parse(body.pdfData.content)
 
     // Dynamically import correct PDF components:
-    const pdfModule = await import(`@/components/pdf/${pdfData.pdfType}PDF`)
+    // First letter is capitalized to fit with component naming
+    const pdfModule = await import(
+      `@/components/pdf/${capitalizeFirstLetter(body.pdfData.metaData.contentType)}PDF`
+    )
     const MyDocument = pdfModule.default
 
     // Render the PDF document to a buffer (binary data)
     const pdfBuffer = await renderToBuffer(
-      <MyDocument
-        data={inputData}
-        secondaryInputContent={pdfData.data.secondaryInputContent}
-      />
+      <MyDocument data={inputDataParsed} metaData={body.pdfData.metaData} />
     )
 
     // Here the pdfBuffer (binary data) is returned as the HTTP response body (no encoding required)

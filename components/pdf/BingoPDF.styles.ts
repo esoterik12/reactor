@@ -15,8 +15,13 @@ Font.register({
   ]
 })
 
-export const findYourPartnerPDFStyles = StyleSheet.create({
-  page: { backgroundColor: 'white', fontFamily: 'Raleway', paddingVertical: 36},
+export const BingoPDFStyles = StyleSheet.create({
+  page: {
+    backgroundColor: 'white',
+    fontFamily: 'Raleway',
+    paddingVertical: 36,
+    paddingHorizontal: 34
+  },
 
   // Grid Section
   gridContainer: {
@@ -31,11 +36,12 @@ export const findYourPartnerPDFStyles = StyleSheet.create({
   },
   cell: {
     width: '22%',
-    height: 130,
-    backgroundColor: colors.gray,
+    height: 110,
     justifyContent: 'center',
-    borderRadius: 5,
     alignItems: 'center',
+    border: 2,
+    borderColor: colors.teal,
+    borderRadius: 5,
     padding: 12
   },
   cellText: {

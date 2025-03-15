@@ -46,11 +46,8 @@ const EditParagraphsForm = ({
       const pdfType = capitalizeFirstLetter(metaData.contentType)
 
       const pdfData = {
-        data: {
-          title: metaData.title,
-          content: JSON.stringify(data.data)
-        },
-        pdfType
+        content: JSON.stringify(data.data),
+        metaData
       }
 
       try {

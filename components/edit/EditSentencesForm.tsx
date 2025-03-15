@@ -41,13 +41,12 @@ const EditSentencesForm = ({
   const handleSubmitButton = useCallback(
     async (data: EditSentencesFormValues) => {
       const pdfData = {
-        data: { title: metaData.title, content: JSON.stringify(data) },
-        pdfType: metaData.contentType,
+        content: JSON.stringify(data),
+        metaData
       }
 
       submitPDF({
         pdfData,
-        title: metaData.title,
         setError,
         setIsLoading,
         downloadBlob

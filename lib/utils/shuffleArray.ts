@@ -6,3 +6,16 @@ export const shuffleArray = (inputArr: string[]) => {
 
   return inputArr
 }
+
+export const shuffle2DArray = (inputArr: string[][]) => {
+  const rows = inputArr.length
+  const flatArray = inputArr.flat()
+
+  const shuffledArray = shuffleArray(flatArray)
+
+  const new2DArray = Array.from({ length: rows }, (_, rowIndex) => {
+    return shuffledArray.slice(rowIndex * rows, rowIndex * rows + rows)
+  })
+
+  return new2DArray
+}

@@ -81,8 +81,6 @@ export function ContentForm<T>({
         secondaryNumberOfContent: data.secondaryNumberOfContent || null
       })
 
-      console.log('generationResults in ContentForm.tsx: ', generationResults)
-
       if (generationResults.code === 200) {
         // TODO: generation functions are returning objects with different names
         // I think this can be solved in the GPT API return
@@ -95,7 +93,13 @@ export function ContentForm<T>({
             generationResults.result.sentences ||
             generationResults.result
         )
-        setMetaData({ title: data.title, contentType })
+        setMetaData({
+          title: data.title,
+          contentType,
+          secondaryInputContent: data.secondaryInputContent,
+          numberOfContent: data.numberOfContent,
+          secondaryNumberOfContent: data.secondaryNumberOfContent
+        })
       } else {
         throw new AppError(400, 'Error generating content.')
       }
@@ -290,7 +294,7 @@ export function ContentForm<T>({
           isDisabled={loading}
         >
           <p className='button-text'>
-            {formType === 'generated' ? 'Create' : 'Generate'}
+            {formType === 'generated' ? 'Generate' : 'Create'}
           </p>
         </DefaultButton>
       </form>

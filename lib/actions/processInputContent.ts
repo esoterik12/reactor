@@ -11,6 +11,8 @@ import riddlesMessage from '../gpt-messages/riddlesMessage'
 import scrambledSentencesMessage from '../gpt-messages/scrambledSentencesMessage'
 import { FormTypes } from '@/types/form.types'
 import { generateScrambledWords } from '../internal-generation/generateScrambledWords'
+import bingoMessage from '../gpt-messages/bingoMessage'
+import { processBingoWords } from '../internal-generation/processBingoWords'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -107,6 +109,13 @@ export default async function processInputContent({
           })
           break
 
+        case 'bingo':
+          generationMessage = bingoMessage({
+            data: primaryInputContent,
+            levelSelection
+          })
+          break
+
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }
@@ -130,10 +139,14 @@ export default async function processInputContent({
         case 'scrambledWords':
           creationResult = generateScrambledWords({ primaryInputContent })
           break
+
+        case 'bingo':
+          creationResult = processBingoWords({ primaryInputContent })
+          break
+
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }
-      
     } catch (error) {
       const creationResultError =
         'Error processing input content for internal generation.'
@@ -144,10 +157,13 @@ export default async function processInputContent({
       }
     }
 
+    // TODO: there appears to be a type-mismatch with creationResult
+    // May need to be converted to JSON here instead of route.tsx
+
     const generationResults = {
       message: 'Content generated successfully.',
       code: 200,
-      result: creationResult
+      result: creationResult,
     }
 
     return generationResults
