@@ -13,6 +13,7 @@ import { FormTypes } from '@/types/form.types'
 import { generateScrambledWords } from '../internal-generation/generateScrambledWords'
 import bingoMessage from '../gpt-messages/bingoMessage'
 import { processBingoWords } from '../internal-generation/processBingoWords'
+import interviewsMessage from '../gpt-messages/interviewsMessage'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -116,6 +117,14 @@ export default async function processInputContent({
           })
           break
 
+        case 'interviews':
+          generationMessage = interviewsMessage({
+            data: primaryInputContent,
+            levelSelection,
+            numberOfContent
+          })
+          break
+          
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }

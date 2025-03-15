@@ -58,3 +58,21 @@ export const bingoManualInfo = {
     title: 'Number of game cards'
   }
 }
+
+export const interviewsGeneratedInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Questions topcis',
+    inputInfo: 'Describe what topics the questions should be based around.',
+    inputExample:
+      'For example, they could be general get to know you questions, questions about a specific topics, or questions that use a set of words.'
+  },
+  numberOfContent: {
+    title: 'Number of questions'
+  }
+}
+
+export const interviewsSelectorInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: interviewsGeneratedInfo.primaryInputInfo
+}

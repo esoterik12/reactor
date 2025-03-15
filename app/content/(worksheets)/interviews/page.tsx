@@ -2,19 +2,18 @@
 import { useState } from 'react'
 import ContentTabs from '@/components/containers/ContentTabs'
 import React from 'react'
-import {
-  crazyCheckUpInfo,
-  contentIconStyles
-} from '@/lib/constants/content/contentInfo'
+import { contentIconStyles } from '@/lib/constants/content/contentInfo'
 import { ContentForm } from '@/components/input/ContentForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
-import {
-  baseContentInputSchema,
-  baseContentSelectorSchema
-} from '@/lib/zod/input/baseContentInput.schema'
+import { baseContentSelectorSchema } from '@/lib/zod/input/baseContentInput.schema'
 import IconInterviews from '@/components/icons/content/IconInterviews'
 import EditSentencesForm from '@/components/edit/EditSentencesForm'
+import {
+  interviewsGeneratedInfo,
+  interviewsSelectorInfo
+} from '@/lib/constants/content/worksheetsContentInfo'
+import { interviewsInputSchema } from '@/lib/zod/input/interviewsInput.schema'
 
 const InterviewsPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
@@ -28,8 +27,8 @@ const InterviewsPage = () => {
       key='Tab 1'
       icon={<IconInterviews classes={contentIconStyles} />}
       formType='generated'
-      zodSchema={baseContentInputSchema}
-      info={crazyCheckUpInfo}
+      zodSchema={interviewsInputSchema}
+      info={interviewsGeneratedInfo}
       contentTitle='Interviews'
       contentType='interviews'
       setContent={setContent}
@@ -44,7 +43,7 @@ const InterviewsPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
       zodSchema={baseContentSelectorSchema}
-      info={crazyCheckUpInfo}
+      info={interviewsSelectorInfo}
     />,
     <p key='Tab 3'>Tab 3</p>
   ]
