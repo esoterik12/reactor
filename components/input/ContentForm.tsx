@@ -21,6 +21,7 @@ import InfoTooltip from '../containers/InfoTooltip'
 import processInputContent from '@/lib/actions/processInputContent'
 import { AppError } from '@/lib/errors/AppError'
 import { FormTypes } from '@/types/form.types'
+import InlineError from '../shared/InlineError'
 
 interface ContentFormProps<T> {
   formType: FormTypes
@@ -48,6 +49,7 @@ export function ContentForm<T>({
   setMetaData
 }: ContentFormProps<T>) {
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [selectedLevel, setSelectedLevel] = useState<string | null>('None')
   const [selectedInfo, setSelectedInfo] = useState<null | InfoTextObject>(null)
 
@@ -84,6 +86,9 @@ export function ContentForm<T>({
       if (generationResults.code === 200) {
         // TODO: generation functions are returning objects with different names
         // I think this can be solved in the GPT API return
+
+        console.log('generationResults in ContentForm.tsx: ', generationResults)
+
         setContent(
           generationResults.result.data ||
             generationResults.result.pairs ||
@@ -105,7 +110,7 @@ export function ContentForm<T>({
       }
     } catch (error) {
       console.log('Error in handleSubmitButton in ContentForm.tsx: ', error)
-      throw new AppError(400, 'Error generation content.')
+      setError('Unexpected submission error; please try again.')
     } finally {
       setLoading(false)
     }
@@ -286,17 +291,24 @@ export function ContentForm<T>({
             />
           )}
         </div>
-        <DefaultButton
-          ariaLabel='Submit button'
-          btnType='submit'
-          handleClick={handleSubmit(handleSubmitButton)}
-          customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
-          isDisabled={loading}
-        >
-          <p className='button-text'>
-            {formType === 'generated' ? 'Generate' : 'Create'}
-          </p>
-        </DefaultButton>
+        <div className='flex flex-row items-center gap-4'>
+          <DefaultButton
+            ariaLabel='Submit button'
+            btnType='submit'
+            handleClick={handleSubmit(handleSubmitButton)}
+            customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
+            isDisabled={loading}
+          >
+            <p className='button-text'>
+              {formType === 'generated' ? 'Generate' : 'Create'}
+            </p>
+          </DefaultButton>
+          {error && (
+            <InlineError classes='flex h-9 mt-1 items-center justify-center'>
+              <p className='secondary-text'>Error: {error}</p>
+            </InlineError>
+          )}
+        </div>
       </form>
       {/* Tooltip Info Right side */}
       <div className='flex w-[35%] flex-col px-4 py-4'>

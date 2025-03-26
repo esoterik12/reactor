@@ -5,12 +5,13 @@ import IconStars from '@/components/icons/IconStars'
 import { AccordionSidebarContentProps } from '@/types/accordion.types'
 
 const root = '/content'
+const iconClasses = 'h-5 w-5'
 
 export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
   {
     id: 1,
     title: 'Activities & Games',
-    icon: <IconPuzzle classes='h-6 w-6' />,
+    icon: <IconPuzzle classes={iconClasses} />,
     links: [
       {
         linkId: '1-1',
@@ -52,7 +53,7 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
   {
     id: 2,
     title: 'Worksheets',
-    icon: <IconPaperAirplane classes='h-6 w-6' />,
+    icon: <IconPaperAirplane classes={iconClasses} />,
     links: [
       {
         linkId: '2-1',
@@ -81,7 +82,7 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
   {
     id: 3,
     title: 'Projected Games',
-    icon: <IconRocket classes='h-6 w-6' />,
+    icon: <IconRocket classes={iconClasses} />,
     links: [
       { linkId: '3-1', contentTitle: 'Scrambled Words', link: '/' },
       { linkId: '3-2', contentTitle: 'Scrambled Sentences', link: '/' },
@@ -95,7 +96,7 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
   {
     id: 4,
     title: 'Presentations',
-    icon: <IconStars classes='h-6 w-6' />,
+    icon: <IconStars classes={iconClasses} />,
     links: [
       { linkId: '4-1', contentTitle: 'Grammar Explainer', link: '/' },
       {

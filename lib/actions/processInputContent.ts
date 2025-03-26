@@ -14,6 +14,7 @@ import { generateScrambledWords } from '../internal-generation/generateScrambled
 import bingoMessage from '../gpt-messages/bingoMessage'
 import { processBingoWords } from '../internal-generation/processBingoWords'
 import interviewsMessage from '../gpt-messages/interviewsMessage'
+import { generateCryptogram } from '../internal-generation/generateCryptogram'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -124,7 +125,7 @@ export default async function processInputContent({
             numberOfContent
           })
           break
-          
+
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }
@@ -153,6 +154,13 @@ export default async function processInputContent({
           creationResult = processBingoWords({ primaryInputContent })
           break
 
+        case 'cryptogram':
+          creationResult = generateCryptogram({
+            primaryInputContent,
+            secondaryInputContent
+          })
+          break
+
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }
@@ -172,7 +180,7 @@ export default async function processInputContent({
     const generationResults = {
       message: 'Content generated successfully.',
       code: 200,
-      result: creationResult,
+      result: creationResult
     }
 
     return generationResults

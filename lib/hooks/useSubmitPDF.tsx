@@ -5,7 +5,7 @@ import { EditMetaDataProps } from '@/types/input.types'
 interface UseSubmitPDFDataProps {
   pdfData: Data
   setError: React.Dispatch<React.SetStateAction<string | null>>
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
+  setIsLoading?: React.Dispatch<React.SetStateAction<boolean>>
   downloadBlob: (blob: Blob, filename: string) => void
 }
 
@@ -23,7 +23,7 @@ const useSubmitPDF = () => {
       downloadBlob
     }: UseSubmitPDFDataProps) => {
       setError(null)
-      setIsLoading(true)
+      if (setIsLoading) setIsLoading(true)
 
       try {
         const response = await fetch('/api/generate-pdf', {
@@ -46,7 +46,7 @@ const useSubmitPDF = () => {
         console.log('Error submitting PDF: ', error)
         setError('An unexpected error occurred.')
       } finally {
-        setIsLoading(false)
+        if (setIsLoading) setIsLoading(false)
       }
     },
     []

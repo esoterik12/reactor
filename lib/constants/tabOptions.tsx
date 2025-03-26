@@ -11,9 +11,14 @@ export const generateOnlyTabs = [
   'Content Guide'
 ]
 
-export const manualOnlyTabs = [
+export const manualCurricululmOnlyTabs = [
   'Manual Input',
   'Curriculum Selector',
+  'Content Guide'
+]
+
+export const manualTabs = [
+  'Manual Input',
   'Content Guide'
 ]
 

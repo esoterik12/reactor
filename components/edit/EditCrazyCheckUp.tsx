@@ -8,6 +8,7 @@ import { EditMetaDataProps } from '@/types/input.types'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import InlineError from '../shared/InlineError'
+import { possibleCrazyCheckupCommands } from '@/lib/gpt-messages/crazyCheckUpMessage'
 import {
   CrazyCheckUpCommand,
   editCrazyCheckUpSchema,
@@ -38,8 +39,11 @@ const EditCrazyCheckUp = ({
     resolver: zodResolver(editCrazyCheckUpSchema),
     defaultValues: {
       data: generatedContent.map(item => ({
+        // This is required because GPT will sometimes create new commandTypes
         command: item.command,
-        commandType: item.commandType || 'doAnAction'
+        commandType: possibleCrazyCheckupCommands.includes(item.commandType)
+          ? item.commandType
+          : 'doAnAction'
       }))
     }
   })

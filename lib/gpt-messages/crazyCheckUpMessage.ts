@@ -5,6 +5,17 @@ interface CrazyCheckUpMessage {
   levelSelection: string | null
 }
 
+export const possibleCrazyCheckupCommands = [
+  'doAnAction',
+  'writeOnPaper',
+  'findSomething',
+  'speakOrAsk',
+  'writeOnThisPaper',
+  'useWhiteboard',
+  'drawOnThisPaper',
+  'useScrapPaper'
+]
+
 export default function crazyCheckUpMessage({
   data,
   levelSelection
@@ -13,7 +24,9 @@ export default function crazyCheckUpMessage({
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(crazyCheckUpStructure)}
       Note the commandType for each action can ONLY be:
-      'doAnAction, writeOnPaper, findSomething, speakOrAsk, writeOnThisPaper, useWhiteboard, drawOnThisPaper, or useScrapPaper
+      ${JSON.stringify(possibleCrazyCheckupCommands)}
+
+      DO NOT MAKE ANY NEW commandType entries
 
       Take the following data vocabulary words:
       ${data}

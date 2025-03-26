@@ -24,7 +24,7 @@ export const crazyCheckUpPDFStyles = StyleSheet.create({
     marginHorizontal: 18
   },
   itemRow: {
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   commandRow: {
     flexDirection: 'row',

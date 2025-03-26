@@ -9,15 +9,15 @@ export default async function NavHeader() {
   const session = await getServerSession()
 
   return (
-    <header className='z-20 h-14'>
-      <nav className='flex flex-row items-center justify-between'>
+    <header className='z-20 h-16'>
+      <nav className='flex flex-row items-center pt-1 justify-between'>
         {/* Logo - Left Side */}
-        <div className='flex w-1/4 flex-row'>
+        <div className='flex w-1/4 ml-2 flex-row'>
           <Logo />
         </div>
 
         {/* NavLinks */}
-        <div className='mr-4 flex flex-row items-center justify-center gap-x-2'>
+        <div className='mr-6 flex flex-row items-center justify-center gap-x-2'>
           <NavLink href='/design'>
             <p>Design</p>
           </NavLink>

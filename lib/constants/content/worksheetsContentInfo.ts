@@ -76,3 +76,17 @@ export const interviewsSelectorInfo = {
   levelSelectionInfo,
   primaryInputInfo: interviewsGeneratedInfo.primaryInputInfo
 }
+
+export const cryptogramInfo = {
+  levelSelectionInfo,
+  primaryInputInfo: {
+    title: 'Text to decode',
+    inputInfo:
+      'Enter a sentence that will be encoded with numbers replacing the letters.'
+  },
+  secondaryInputInfo: {
+    title: 'Given letters',
+    inputInfo:
+      'You can provide some letters to start to make the puzzle easier. For young learners, it will work best providing 5-8 letters to start.'
+  }
+}

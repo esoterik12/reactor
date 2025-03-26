@@ -11,7 +11,7 @@ const ContentTabs = ({ tabs, tabContent }: { tabs: string[], tabContent: React.R
         {tabs.map((tab, index) => (
           <button
             key={`${tab}-${index}`}
-            className={`z-10 w-[180px] border-b-2 py-2 text-center ${
+            className={`z-10 w-[200px] border-b-2 py-2 text-center ${
               activeTab === index
                 ? 'border-sky-500'
                 : 'paragraph-text border-transparent'
@@ -22,7 +22,7 @@ const ContentTabs = ({ tabs, tabContent }: { tabs: string[], tabContent: React.R
           </button>
         ))}
       </div>
-      <div className='relative z-0 -my-[2px] flex w-full border-b-2 border-zinc-600'></div>
+      <div className='relative z-0 -my-[2px] flex w-full border-b-2 border-zinc-300 dark:border-zinc-600'></div>
 
       {/* Active Tab Content */}
       <div className='flex-grow'>{tabContent[activeTab]}</div>

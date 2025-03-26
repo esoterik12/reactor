@@ -1,10 +1,10 @@
 'use client'
-import { useRef } from 'react'
+import { useCallback, useRef } from 'react'
 
 const useBlobDownloader = () => {
   const linkRef = useRef<HTMLAnchorElement>(null)
 
-  const downloadBlob = (blob: Blob, filename: string) => {
+  const downloadBlob = useCallback((blob: Blob, filename: string) => {
     const url = window.URL.createObjectURL(blob)
     if (linkRef.current) {
       // Set href and download attributes of the anchor elements
@@ -17,7 +17,7 @@ const useBlobDownloader = () => {
       // Clean up by revoking the Blob URL and resetting the href
       window.URL.revokeObjectURL(url)
     }
-  }
+  }, [])
 
   return { linkRef, downloadBlob }
 }
