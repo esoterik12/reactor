@@ -11,10 +11,6 @@ export default function Home() {
         </header> */}
         <main className='flex flex-col gap-y-2'>
           <div className={containerClasses}>
-            <p>BUG - Shuffle does not use newly edited values</p>
-            <p>BUG - Find correct spelling is bugging out - incorrect data passed to PDF.tsx</p>
-          </div>
-          <div className={containerClasses}>
             <p>Add heads up heads down</p>
             <p>
               For heads, use missing letters, changed letters, use a blank
@@ -25,13 +21,10 @@ export default function Home() {
             <p>A function to differentiate card in sets may be valuable</p>
           </div>
           <div className={containerClasses}>
-            <p>Add answer sheet for riddles</p>
-          </div>
-          <div className={containerClasses}>
             <p>Add level 5 curriculum data</p>
           </div>
           <div className={containerClasses}>
-            <p>Add sight words to curriculum selecetor somehow</p>
+            <p>Add sight words to curriculum selector somehow</p>
           </div>
           <div className={containerClasses}>
             <p>

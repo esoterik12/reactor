@@ -42,14 +42,14 @@ export const createSpellingMessages = ({
     throw new AppError(400, 'Invalid message content.')
   }
 
-  if (typeof wordPairings === 'string') {
-    try {
-      wordPairings = JSON.parse(wordPairings)
-    } catch (error) {
-      console.log('Error creating spelling messages: ', error)
-      throw new AppError(400, 'Invalid wordPairings JSON')
-    }
-  }
+  // if (typeof wordPairings === 'string') {
+  //   try {
+  //     wordPairings = JSON.parse(wordPairings)
+  //   } catch (error) {
+  //     console.log('Error creating spelling messages: ', error)
+  //     throw new AppError(400, 'Invalid wordPairings JSON')
+  //   }
+  // }
 
   if (!Array.isArray(wordPairings)) {
     throw new AppError(400, 'wordPairings must be an array')

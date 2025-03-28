@@ -35,6 +35,7 @@ const EditSetsForm = ({
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors }
   } = useForm<EditSetsFormValues>({
     mode: 'onBlur',
@@ -58,10 +59,13 @@ const EditSetsForm = ({
   }
 
   const shuffleWords = () => {
-    const numberOfSets = generatedContent.data.length
-    const setSize = generatedContent.data[0].length
+    // Important: access the current data in form in case edits are made
+    const currentData = watch('data')
+    
+    const numberOfSets = currentData.length
+    const setSize = currentData[0].length
 
-    const flattenedArray = generatedContent.data.flat()
+    const flattenedArray = currentData.flat()
     const shuffledArray = shuffleArray(flattenedArray)
 
     const newData: string[][] = []

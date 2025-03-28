@@ -1,0 +1,117 @@
+{
+  "level": 5,
+  "unit": 4,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "____________ is the act of expecting something to happen.",
+          "answer": "anticipation"
+        },
+        {
+          "prompt": "When you ____________ a rule, you resist it or refuse to obey it.",
+          "answer": "defy"
+        },
+        {
+          "prompt": "If you are ____________, you qualify or have a right to do something.",
+          "answer": "entitled"
+        },
+        {
+          "prompt": "A person who is ____________ does not support or agree with either side of an argument.",
+          "answer": "neutral"
+        },
+        {
+          "prompt": "An ____________ person is honest and says what he or she thinks.",
+          "answer": "outspoken"
+        },
+        {
+          "prompt": "If something is ____________, it is saved for a purpose or a special person.",
+          "answer": "reserved"
+        },
+        {
+          "prompt": "If he ____________ the lost treasure, he went looking for it.",
+          "answer": "sought"
+        },
+        {
+          "prompt": "Things that are ____________ are not the same.",
+          "answer": "unequal"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "When you are ____________, you are amazed and surprised.",
+          "answer": "astounded"
+        },
+        {
+          "prompt": "When she ____________ her diary, she put it out of sight.",
+          "answer": "concealed"
+        },
+        {
+          "prompt": "If you are ____________, you are curious.",
+          "answer": "inquisitive"
+        },
+        {
+          "prompt": "When you ____________ a difficult paragraph, you explain its meaning and make it easier to understand.",
+          "answer": "interpret"
+        },
+        {
+          "prompt": "If you are ____________, you are confused.",
+          "answer": "preplexed"
+        },
+        {
+          "prompt": "When you make a ____________ cut with the scissors, you make an exact or accurate cut.",
+          "answer": "precise"
+        },
+        {
+          "prompt": "If you ____________, you think about something again.",
+          "answer": "reconsider"
+        },
+        {
+          "prompt": "If you are ____________, you think that someone or something is wrong and cannot be trusted.",
+          "answer": "suspicious"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Something that is ____________ is lifeless and not able to grow anything.",
+          "answer": "barren"
+        },
+        {
+          "prompt": "____________ is putting thoughts or feelings into words or actions.",
+          "answer": "expression"
+        },
+        {
+          "prompt": "Something ____________ has importance or a purpose.",
+          "answer": "meaningful"
+        },
+        {
+          "prompt": "____________ are big, fluffy feathers or feathery parts.",
+          "answer": "plumes"
+        },
+        {
+          "prompt": "____________ is the repetition of the same consonant sound at the beginning of a group of words.",
+          "answer": "alliteration"
+        },
+        {
+          "prompt": "A ____________ poem is a short poem that expresses personal feelings.",
+          "answer": "lyric"
+        },
+        {
+          "prompt": "____________ is a repeating pattern of stressed and unstressed syllables.",
+          "answer": "meter"
+        },
+        {
+          "prompt": "A ____________ is a group of lines in a poem.",
+          "answer": "stanza"
+        }
+      ]
+    }
+  ]
+}

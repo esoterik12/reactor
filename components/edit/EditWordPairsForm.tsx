@@ -40,6 +40,7 @@ const EditWordPairsForm = ({
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors }
   } = useForm<EditPairsFormValues>({
     mode: 'onBlur',
@@ -47,6 +48,8 @@ const EditWordPairsForm = ({
     resolver: zodResolver(editPairsSchema),
     defaultValues: { wordPairings: generatedContent }
   })
+
+  console.log('generatedContent in EditWordPairsForm: ', generatedContent)
 
   const handleSubmitButton = (data: EditPairsFormValues) => {
     const pdfData = {
@@ -64,7 +67,11 @@ const EditWordPairsForm = ({
 
   const shuffleWords = () => {
     const wordsArray: string[] = []
-    generatedContent.map(word => {
+
+    // Important: access the current data in form in case edits are made
+    const currentWordPairings = watch('wordPairings')
+
+    currentWordPairings.map(word => {
       wordsArray.push(word.wordOne)
       wordsArray.push(word.wordTwo)
     })

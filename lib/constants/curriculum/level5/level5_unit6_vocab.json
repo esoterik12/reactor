@@ -1,0 +1,117 @@
+{
+  "level": 5,
+  "unit": 6,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "A ____________ is a short announcement of the latest news.",
+          "answer": "bulletin"
+        },
+        {
+          "prompt": "____________ are gifts of money, time, or effort given to a cause.",
+          "answer": "contributions"
+        },
+        {
+          "prompt": "____________ is a great difference or variety.",
+          "answer": "diversity"
+        },
+        {
+          "prompt": "When people ____________, they joined the armed forces of their own free will.",
+          "answer": "enlisted"
+        },
+        {
+          "prompt": "If you ____________ something, you stop it from moving from one place to another.",
+          "answer": "intercept"
+        },
+        {
+          "prompt": "____________ are plans or processes for doing something.",
+          "answer": "operations"
+        },
+        {
+          "prompt": "____________ are new members of the armed forces.",
+          "answer": "recruits"
+        },
+        {
+          "prompt": "____________ is finding a way to live.",
+          "answer": "survival"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "An ____________ is a change in a plant or animal that helps it survive.",
+          "answer": "adaptation"
+        },
+        {
+          "prompt": "If you are ____________, you are able to move and react quickly and easily.",
+          "answer": "agile"
+        },
+        {
+          "prompt": "If you ____________ something, you hide or store it in a hiding place.",
+          "answer": "cache"
+        },
+        {
+          "prompt": "When something is ____________, it is temporarily inactive.",
+          "answer": "dormant"
+        },
+        {
+          "prompt": "When animals ____________, they hunt or search for food.",
+          "answer": "forage"
+        },
+        {
+          "prompt": "If the temperature is ____________, it is very cold.",
+          "answer": "frigid"
+        },
+        {
+          "prompt": "When animals ____________, they spend the winter sleeping.",
+          "answer": "hibernate"
+        },
+        {
+          "prompt": "An animal’s fur ____________, or keeps the animal warm.",
+          "answer": "insulates"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "If something ____________, it makes a loud, harsh sound.",
+          "answer": "blares"
+        },
+        {
+          "prompt": "A ____________ is a relationship or bond with someone or something.",
+          "answer": "connection"
+        },
+        {
+          "prompt": "An ____________ is a short trip to do or get something.",
+          "answer": "errand"
+        },
+        {
+          "prompt": "An ____________ is the giving of one thing for another.",
+          "answer": "exchange"
+        },
+        {
+          "prompt": "____________ is repeating words with the same vowel sound.",
+          "answer": "assonance"
+        },
+        {
+          "prompt": "A poem with ____________ has words that contain the same middle or final",
+          "answer": "consonance"
+        },
+        {
+          "prompt": "When writers use ____________, they use words to create a picture.",
+          "answer": "imagery"
+        },
+        {
+          "prompt": "____________ is giving human qualities to things that aren’t human, such as objects or animals.",
+          "answer": "personification"
+        }
+      ]
+    }
+  ]
+}

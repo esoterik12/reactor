@@ -89,6 +89,8 @@ export function ContentForm<T>({
 
         console.log('generationResults in ContentForm.tsx: ', generationResults)
 
+        console.log('data in ContentForm', data)
+
         setContent(
           generationResults.result.data ||
             generationResults.result.pairs ||

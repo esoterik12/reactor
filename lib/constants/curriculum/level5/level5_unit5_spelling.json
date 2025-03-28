@@ -1,0 +1,239 @@
+{
+  "level": 5,
+  "unit": 5,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        {
+          "prompt": "He had a __________ look on his face.",
+          "answer": "serious"
+        },
+        {
+          "prompt": "Mom was __________ when the cat broke the vase.",
+          "answer": "furious"
+        },
+        {
+          "prompt": "The volcanic __________ happened 20 years ago.",
+          "answer": "eruption"
+        },
+        {
+          "prompt": "Kevin __________ eats lunch at noon.",
+          "answer": "usually"
+        },
+        { "prompt": "We went in the wrong __________.", "answer": "direction" },
+        {
+          "prompt": "The switch was in the “on” __________.",
+          "answer": "position"
+        },
+        { "prompt": "My sister is very __________.", "answer": "forgetful" },
+        { "prompt": "My bed is very __________.", "answer": "comfortable" },
+        { "prompt": "I __________ finished the essay.", "answer": "finally" },
+        {
+          "prompt": "The fire caused a lot of __________.",
+          "answer": "destruction"
+        },
+        {
+          "prompt": "She __________ left the building.",
+          "answer": "apparently"
+        },
+        {
+          "prompt": "I __________ lost track of time.",
+          "answer": "completely"
+        },
+        {
+          "prompt": "He will __________ finish his work.",
+          "answer": "eventually"
+        },
+        {
+          "prompt": "I packed the box very __________.",
+          "answer": "carefully"
+        },
+        {
+          "prompt": "The __________ ants were hard to see.",
+          "answer": "microscopic"
+        },
+        { "prompt": "Dad is __________ to cats.", "answer": "allergic" },
+        { "prompt": "It was a __________ study.", "answer": "scientific" },
+        {
+          "prompt": "__________ is my number one concern.",
+          "answer": "safety"
+        },
+        {
+          "prompt": "My favorite __________ is running.",
+          "answer": "activity"
+        },
+        {
+          "prompt": "Molly’s __________ lasted for days.",
+          "answer": "sickness"
+        }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "The orange tasted __________.", "answer": "sweet" },
+        { "prompt": "Our hotel room was a __________.", "answer": "suite" },
+        { "prompt": "We decided to __________ for rain.", "answer": "pray" },
+        { "prompt": "The badger let his __________ escape.", "answer": "prey" },
+        {
+          "prompt": "I took a __________ of student opinions.",
+          "answer": "poll"
+        },
+        { "prompt": "The flag hung on a __________.", "answer": "pole" },
+        { "prompt": "Let’s not __________ any time.", "answer": "waste" },
+        {
+          "prompt": "These slacks are too tight around the __________.",
+          "answer": "waist"
+        },
+        { "prompt": "The __________ house was grand.", "answer": "manor" },
+        {
+          "prompt": "Jay’s __________ of speaking is formal.",
+          "answer": "manner"
+        },
+        { "prompt": "The boat docked at the __________.", "answer": "pier" },
+        { "prompt": "Hector is my __________.", "answer": "peer" },
+        { "prompt": "A __________ is a kind of berry.", "answer": "currant" },
+        { "prompt": "The __________ carried the boat.", "answer": "current" },
+        {
+          "prompt": "The __________ of friends is comforting.",
+          "answer": "presence"
+        },
+        { "prompt": "Aunt Beth sends us __________.", "answer": "presents" },
+        { "prompt": "The town __________ meets today.", "answer": "council" },
+        { "prompt": "Her __________ is fair and wise.", "answer": "counsel" },
+        {
+          "prompt": "Mom writes letters on colorful __________.",
+          "answer": "stationery"
+        },
+        { "prompt": "The guard was __________.", "answer": "stationary" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "Soak it in water to __________ it.", "answer": "prewash" },
+        { "prompt": "We had to __________ the machine.", "answer": "disable" },
+        { "prompt": "The sun can __________ clothes.", "answer": "discolor" },
+        { "prompt": "She admitted she was __________.", "answer": "mistaken" },
+        {
+          "prompt": "Mom __________ the oven before baking.",
+          "answer": "preheats"
+        },
+        { "prompt": "People seem to __________ him.", "answer": "mistrust" },
+        { "prompt": "The answer was __________.", "answer": "incorrect" },
+        { "prompt": "They can __________ the wires.", "answer": "disconnect" },
+        { "prompt": "I saw a __________ of the movie.", "answer": "preview" },
+        { "prompt": "It’s unfair to __________ people.", "answer": "prejudge" },
+        { "prompt": "Don’t __________ her strength.", "answer": "misjudge" },
+        { "prompt": "I cannot bear this __________.", "answer": "discomfort" },
+        { "prompt": "Quickly __________ the horse.", "answer": "dismount" },
+        { "prompt": "They __________ her actions.", "answer": "misunderstand" },
+        {
+          "prompt": "James will not __________ the rules.",
+          "answer": "disobey"
+        },
+        { "prompt": "He regretted being __________.", "answer": "dishonest" },
+        {
+          "prompt": "Segregation laws are an example of __________.",
+          "answer": "injustice"
+        },
+        { "prompt": "They __________ of video games.", "answer": "disapprove" },
+        { "prompt": "The meal was __________.", "answer": "inexpensive" },
+        { "prompt": "Our plans are still __________.", "answer": "indefinite" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "Grandpa cried tears of __________.", "answer": "sadness" },
+        {
+          "prompt": "Luther experienced __________ when his daughter was born.",
+          "answer": "gladness"
+        },
+        { "prompt": "Her worries were __________.", "answer": "needless" },
+        { "prompt": "He flicked the __________ fly.", "answer": "harmless" },
+        { "prompt": "The wolf hunted in __________.", "answer": "darkness" },
+        { "prompt": "I love the moon’s __________.", "answer": "fullness" },
+        { "prompt": "The __________ was calming.", "answer": "stillness" },
+        { "prompt": "The situation is not __________.", "answer": "hopeless" },
+        { "prompt": "The skydivers were __________.", "answer": "fearless" },
+        { "prompt": "The rope showed no __________.", "answer": "weakness" },
+        {
+          "prompt": "His stomach is a __________ pit.",
+          "answer": "bottomless"
+        },
+        {
+          "prompt": "There’s no time for __________.",
+          "answer": "foolishness"
+        },
+        { "prompt": "She smiled with __________.", "answer": "fondness" },
+        {
+          "prompt": "Lena makes the dance look __________.",
+          "answer": "effortless"
+        },
+        { "prompt": "His work was __________.", "answer": "meaningless" },
+        { "prompt": "The room’s __________ is scary.", "answer": "emptiness" },
+        { "prompt": "She asked for my __________.", "answer": "forgiveness" },
+        { "prompt": "He stood __________ in fear.", "answer": "motionless" },
+        { "prompt": "The fighting was __________.", "answer": "ceaseless" },
+        {
+          "prompt": "The lion’s __________ is unmatched.",
+          "answer": "fierceness"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "She wants to __________ the teacher.",
+          "answer": "impress"
+        },
+        {
+          "prompt": "He made a good first __________.",
+          "answer": "impression"
+        },
+        { "prompt": "We will __________ new officers.", "answer": "elect" },
+        { "prompt": "Everyone voted in the __________.", "answer": "election" },
+        {
+          "prompt": "Try to __________ Canada on the map.",
+          "answer": "locate"
+        },
+        { "prompt": "We know the whale’s __________.", "answer": "location" },
+        {
+          "prompt": "People always __________ the twins.",
+          "answer": "confuse"
+        },
+        {
+          "prompt": "The noise added to the __________.",
+          "answer": "confusion"
+        },
+        { "prompt": "Please __________ the mistakes.", "answer": "correct" },
+        { "prompt": "She made the __________ in red.", "answer": "correction" },
+        { "prompt": "Let’s __________ the problem.", "answer": "discuss" },
+        { "prompt": "Jake led a book __________.", "answer": "discussion" },
+        { "prompt": "__________ during the test.", "answer": "concentrate" },
+        { "prompt": "Chess requires __________.", "answer": "concentration" },
+        {
+          "prompt": "Our __________ was not even close.",
+          "answer": "estimate"
+        },
+        { "prompt": "Their __________ was too high.", "answer": "estimation" },
+        {
+          "prompt": "I want to __________ the classroom.",
+          "answer": "decorate"
+        },
+        {
+          "prompt": "The wreath is a nice __________.",
+          "answer": "decoration"
+        },
+        { "prompt": "Running uphill will __________ us.", "answer": "exhaust" },
+        {
+          "prompt": "I felt __________ after the race.",
+          "answer": "exhaustion"
+        }
+      ]
+    }
+  ]
+}

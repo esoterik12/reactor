@@ -1,0 +1,117 @@
+{
+  "level": 5,
+  "unit": 5,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "If two things are ____________ the same size, they are nearly or about the same size.",
+          "answer": "approximately"
+        },
+        {
+          "prompt": "Something ____________ relates to outer space or astronomy.",
+          "answer": "astronomical"
+        },
+        {
+          "prompt": "When you make a ____________, you do math to find an answer.",
+          "answer": "calculation"
+        },
+        {
+          "prompt": "____________ are rules for judging something or making a decision.",
+          "answer": "criteria"
+        },
+        {
+          "prompt": "You can measure across the center of a circle to find its ____________.",
+          "answer": "diameter"
+        },
+        {
+          "prompt": "When you ____________ something, you examine it again and again.",
+          "answer": "evaluate"
+        },
+        {
+          "prompt": "To ____________ something is to move in a circle around it again and again.",
+          "answer": "orbit"
+        },
+        {
+          "prompt": "____________ are anything that is shaped like a ball or a globe.",
+          "answer": "spheres"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "When you ____________ something, you take it for granted, or suppose it is so.",
+          "answer": "assume"
+        },
+        {
+          "prompt": "To ____________ is to make sure of something.",
+          "answer": "guarantee"
+        },
+        {
+          "prompt": "If you ____________ someone, you suggest or propose that the person be chosen, such as a candidate for an office.",
+          "answer": "nominate"
+        },
+        {
+          "prompt": "If something is done ____________, it is easily seen or understood.",
+          "answer": "obviously"
+        },
+        {
+          "prompt": "To ____________ is to trust or depend on someone or something.",
+          "answer": "rely"
+        },
+        {
+          "prompt": "When you are ____________, you provide approval, aid, or encouragement to others.",
+          "answer": "supportive"
+        },
+        {
+          "prompt": "If you feel ____________ toward someone, you feel and understand their troubles.",
+          "answer": "sympathy"
+        },
+        {
+          "prompt": "A ____________ is a person who lacks physical strength.",
+          "answer": "weakling"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Something that is ____________ has to do with farms or farming.",
+          "answer": "agricultural"
+        },
+        {
+          "prompt": "If something ____________, it grew weaker or smaller in number.",
+          "answer": "declined"
+        },
+        {
+          "prompt": "A ____________ is a sickness or an ailment.",
+          "answer": "disorder"
+        },
+        {
+          "prompt": "If you can ____________ something, you can tell exactly what it is.",
+          "answer": "identify"
+        },
+        {
+          "prompt": "Something that is ____________ is likely to happen or be true.",
+          "answer": "probable"
+        },
+        {
+          "prompt": "If crops ____________, they are successful and strong.",
+          "answer": "thrive"
+        },
+        {
+          "prompt": "Something ____________ is not planned for or predicted.",
+          "answer": "unexpected"
+        },
+        {
+          "prompt": "If something is ____________, it is happening over a large area or affecting many people.",
+          "answer": "widespread"
+        }
+      ]
+    }
+  ]
+}

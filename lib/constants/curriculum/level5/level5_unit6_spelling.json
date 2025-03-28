@@ -1,0 +1,230 @@
+{
+  "level": 5,
+  "unit": 6,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "The __________ floated in space.", "answer": "astronaut" },
+        { "prompt": "The __________ rang loudly.", "answer": "telephone" },
+        { "prompt": "We drove in our __________.", "answer": "automobile" },
+        { "prompt": "I looked through the __________.", "answer": "telescope" },
+        { "prompt": "It’s a __________ can opener.", "answer": "mechanical" },
+        { "prompt": "A goddess appeared in the __________.", "answer": "myth" },
+        {
+          "prompt": "I watched the game on __________.",
+          "answer": "television"
+        },
+        {
+          "prompt": "We’re learning __________ in school.",
+          "answer": "phonics"
+        },
+        {
+          "prompt": "The __________ studied the stars.",
+          "answer": "astronomer"
+        },
+        { "prompt": "She smiled for the __________.", "answer": "photograph" },
+        { "prompt": "Sam’s hobby is __________.", "answer": "photography" },
+        {
+          "prompt": "__________ stories are fascinating.",
+          "answer": "mythical"
+        },
+        {
+          "prompt": "A __________ is a word that sounds the same as another word.",
+          "answer": "homophone"
+        },
+        { "prompt": "A __________ will fix your car.", "answer": "mechanic" },
+        { "prompt": "A __________ announced the news.", "answer": "telegram" },
+        { "prompt": "Sharon used a __________ lens.", "answer": "telephoto" },
+        {
+          "prompt": "I asked for the star’s __________.",
+          "answer": "autograph"
+        },
+        { "prompt": "The __________ door slid open.", "answer": "automatic" },
+        { "prompt": "We prevented the __________.", "answer": "disaster" },
+        {
+          "prompt": "The __________ was an important invention.",
+          "answer": "telegraph"
+        }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        {
+          "prompt": "We learned __________ in class.",
+          "answer": "subtraction"
+        },
+        { "prompt": "A bike is my __________.", "answer": "transportation" },
+        { "prompt": "He worked on the secret __________.", "answer": "missle" },
+        { "prompt": "I carried the __________ radio.", "answer": "portable" },
+        {
+          "prompt": "He left the theater at __________.",
+          "answer": "intermission"
+        },
+        { "prompt": "A __________ chose the book.", "answer": "committee" },
+        { "prompt": "We will __________ the camp rules.", "answer": "respect" },
+        {
+          "prompt": "Big items are hard to __________.",
+          "answer": "transport"
+        },
+        { "prompt": "The farmer rode the __________.", "answer": "tractor" },
+        { "prompt": "The __________ watched the game.", "answer": "spectator" },
+        {
+          "prompt": "Lions are the main __________ at the zoo.",
+          "answer": "attraction"
+        },
+        { "prompt": "Corn is our country’s __________.", "answer": "export" },
+        {
+          "prompt": "The __________ examined the restaurant.",
+          "answer": "inspector"
+        },
+        { "prompt": "Loud music will __________ me.", "answer": "distract" },
+        {
+          "prompt": "What a __________ the circus was!",
+          "answer": "spectacle"
+        },
+        {
+          "prompt": "Please __________ the sleeping bags.",
+          "answer": "inspect"
+        },
+        {
+          "prompt": "Her __________ is to finish the job.",
+          "answer": "mission"
+        },
+        { "prompt": "It’s expensive to __________ goods.", "answer": "import" },
+        {
+          "prompt": "The teacher will __________ the class.",
+          "answer": "dismiss"
+        },
+        { "prompt": "I __________ she is upset with me", "answer": "suspect" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "They wore colorful __________.", "answer": "clothes" },
+        { "prompt": "__________ is a cold month.", "answer": "January" },
+        { "prompt": "She had __________ for breakfast.", "answer": "cereal" },
+        {
+          "prompt": "Exercise can increase your __________.",
+          "answer": "strength"
+        },
+        { "prompt": "The __________ eclipse is rare.", "answer": "lunar" },
+        { "prompt": "An __________ contains maps.", "answer": "atlas" },
+        { "prompt": "__________ water tastes salty.", "answer": "ocean" },
+        { "prompt": "Soldiers __________ each other.", "answer": "salute" },
+        { "prompt": "We tried to calm her __________.", "answer": "fury" },
+        { "prompt": "Voices __________ in the hall.", "answer": "echo" },
+        { "prompt": "The seasons follow a __________.", "answer": "cycle" },
+        { "prompt": "The __________ missed our path.", "answer": "cyclone" },
+        { "prompt": "The statue is __________.", "answer": "gigantic" },
+        {
+          "prompt": "Athletes compete in the __________.",
+          "answer": "Olympics"
+        },
+        { "prompt": "Flags marked their __________.", "answer": "territory" },
+        { "prompt": "We ate lunch on the __________.", "answer": "terrace" },
+        { "prompt": "Her __________ blocked the sun.", "answer": "parasol" },
+        { "prompt": "Nancy inherited a __________.", "answer": "fortune" },
+        { "prompt": "I was __________ after the fight.", "answer": "furious" },
+        { "prompt": "Paul is __________ to his guests.", "answer": "gracious" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "A __________ supports the camera.", "answer": "tripod" },
+        {
+          "prompt": "The __________ looks like her sisters.",
+          "answer": "triplet"
+        },
+        {
+          "prompt": "The __________ is a graceful creature.",
+          "answer": "unicorn"
+        },
+        { "prompt": "I wore my school __________.", "answer": "uniform" },
+        { "prompt": "The group spoke in __________.", "answer": "unison" },
+        { "prompt": "The magazine comes __________.", "answer": "biweekly" },
+        {
+          "prompt": "Our city is __________ the size of yours.",
+          "answer": "triple"
+        },
+        {
+          "prompt": "Jackie likes to ride her __________.",
+          "answer": "bicycle"
+        },
+        { "prompt": "Ted prefers the __________.", "answer": "tricycle" },
+        { "prompt": "The clown rode a __________.", "answer": "unicycle" },
+        { "prompt": "A __________ has three sides.", "answer": "triangle" },
+        {
+          "prompt": "To __________ is to divide into two.",
+          "answer": "bisect"
+        },
+        { "prompt": "A __________ of singers performed.", "answer": "trio" },
+        {
+          "prompt": "Pep rallies can __________ the school.",
+          "answer": "unify"
+        },
+        { "prompt": "The __________ crawled slowly.", "answer": "centipede" },
+        { "prompt": "Tanya measured a __________.", "answer": "centimeter" },
+        { "prompt": "A __________ is one hundred years.", "answer": "century" },
+        {
+          "prompt": "I looked through the __________.",
+          "answer": "binoculars"
+        },
+        { "prompt": "The __________ is a big place.", "answer": "universe" },
+        { "prompt": "He attends a state __________.", "answer": "university" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        { "prompt": "It was an __________ dinner.", "answer": "enjoyable" },
+        {
+          "prompt": "The __________ child had a tantrum.",
+          "answer": "unreasonable"
+        },
+        { "prompt": "The tall tale was __________.", "answer": "unbelievable" },
+        { "prompt": "Relax on the __________ sofa.", "answer": "comfortable" },
+        {
+          "prompt": "We put the top down on the __________ car.",
+          "answer": "convertible"
+        },
+        {
+          "prompt": "Scientists have __________ jobs.",
+          "answer": "respectable"
+        },
+        { "prompt": "The sale items were __________.", "answer": "affordable" },
+        { "prompt": "Time travel is not __________.", "answer": "possible" },
+        { "prompt": "Glass goblets are __________.", "answer": "breakable" },
+        { "prompt": "Justin earned __________ grades.", "answer": "favorable" },
+        {
+          "prompt": "Easy-going Leah is a __________ girl.",
+          "answer": "likable"
+        },
+        {
+          "prompt": "The cracked cup was no longer __________.",
+          "answer": "usable"
+        },
+        {
+          "prompt": "The sleuth wrote with __________ ink.",
+          "answer": "invisible"
+        },
+        { "prompt": "The king was an __________ man.", "answer": "honorable" },
+        { "prompt": "He is __________ of doing the job.", "answer": "capable" },
+        { "prompt": "That was a __________ decision.", "answer": "sensible" },
+        {
+          "prompt": "The silly mistakes were __________.",
+          "answer": "laughable"
+        },
+        { "prompt": "Winters are hardly __________.", "answer": "bearable" },
+        { "prompt": "We folded the __________ tent.", "answer": "collapsible" },
+        {
+          "prompt": "These are __________ boots for snow.",
+          "answer": "suitable"
+        }
+      ]
+    }
+  ]
+}

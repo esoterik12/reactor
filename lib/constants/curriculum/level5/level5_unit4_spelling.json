@@ -1,0 +1,239 @@
+{
+  "level": 5,
+  "unit": 4,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "The ad has a catchy __________ .", "answer": "slogan" },
+        { "prompt": "I can knit __________ mittens.", "answer": "woolen" },
+        {
+          "prompt": "She likes to __________ to the waves.",
+          "answer": "listen"
+        },
+        { "prompt": "The __________ stood near the river.", "answer": "heron" },
+        { "prompt": "The sounds did not __________ us.", "answer": "frighten" },
+        {
+          "prompt": "Rest stops will __________ the trip.",
+          "answer": "lengthen"
+        },
+        { "prompt": "Darrell is our team’s __________ .", "answer": "captain" },
+        { "prompt": "Bill saw the __________ peak.", "answer": "mountain" },
+        {
+          "prompt": "The __________ on her left foot fell off as she ran.",
+          "answer": "sandal"
+        },
+        { "prompt": "The traffic __________ changed.", "answer": "signal" },
+        { "prompt": "They provide __________ news.", "answer": "global" },
+        { "prompt": "Wheat is sold by the __________ .", "answer": "bushel" },
+        { "prompt": "She will __________ in delight.", "answer": "marvel" },
+        { "prompt": "We got water from the __________ .", "answer": "barrel" },
+        { "prompt": "He prefers __________ gifts.", "answer": "practical" },
+        {
+          "prompt": "She ate a __________  with mustard.",
+          "answer": "pretzel"
+        },
+        { "prompt": "We read our favorite __________ .", "answer": "fable" },
+        { "prompt": "The clown made them __________ .", "answer": "chuckle" },
+        { "prompt": "I drew an __________ in math class.", "answer": "angle" },
+        { "prompt": "He turned the __________ .", "answer": "nozzle" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "Snow in April is __________.", "answer": "unusual" },
+        { "prompt": "He has an __________ camera.", "answer": "underwater" },
+        { "prompt": "The car must __________ speed.", "answer": "regain" },
+        { "prompt": "I __________ the broken plate.", "answer": "repaired" },
+        {
+          "prompt": "Bridget was __________ of the time.",
+          "answer": "unaware"
+        },
+        { "prompt": "Some animals are __________ .", "answer": "unfriendly" },
+        { "prompt": "The project was __________ .", "answer": "unfinished" },
+        { "prompt": "Forget the __________ details.", "answer": "unimportant" },
+        {
+          "prompt": "I’ll __________ these blueberries.",
+          "answer": "refreeze"
+        },
+        {
+          "prompt": "We must __________ the water supply.",
+          "answer": "replenish"
+        },
+        {
+          "prompt": "The play will __________ the actors.",
+          "answer": "reunite"
+        },
+        { "prompt": "I like to __________ old music.", "answer": "rediscover" },
+        { "prompt": "Can you __________ this package?", "answer": "rewrap" },
+        { "prompt": "Did I __________ the phone?", "answer": "disconnect" },
+        {
+          "prompt": "Mom tries to __________ yelling.",
+          "answer": "discourage"
+        },
+        { "prompt": "Stealing is __________ .", "answer": "dishonest" },
+        { "prompt": "The letter is __________ .", "answer": "nonspecific" },
+        { "prompt": "Don’t __________ your brother.", "answer": "misjudge" },
+        { "prompt": "The heat can __________ you.", "answer": "overwhelm" },
+        {
+          "prompt": "Let’s __________ our feet in the pool!",
+          "answer": "submerge"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "Maria won the spelling __________.", "answer": "contest" },
+        { "prompt": "I’m __________ with the results.", "answer": "content" },
+        { "prompt": "There was a __________ downtown.", "answer": "protest" },
+        { "prompt": "Dan had to __________ the flu.", "answer": "combat" },
+        { "prompt": "A license __________ you to drive.", "answer": "permits" },
+        {
+          "prompt": "He likes to __________ against the rules.",
+          "answer": "rebel"
+        },
+        { "prompt": "I will __________ the information.", "answer": "present" },
+        { "prompt": "__________ your ballot here.", "answer": "insert" },
+        {
+          "prompt": "The __________ gets little rainfall.",
+          "answer": "desert"
+        },
+        { "prompt": "Her favorite __________ is math.", "answer": "subject" },
+        { "prompt": "I need to rest for a __________ .", "answer": "minute" },
+        { "prompt": "A __________ car is a small car.", "answer": "compact" },
+        { "prompt": "Good __________ is important.", "answer": "conduct" },
+        {
+          "prompt": "He signed the __________ for the job.",
+          "answer": "contract"
+        },
+        { "prompt": "They __________ to give up.", "answer": "refuse" },
+        {
+          "prompt": "The __________ upset their parents.",
+          "answer": "conflict"
+        },
+        {
+          "prompt": "I want to __________ voting patterns.",
+          "answer": "research"
+        },
+        { "prompt": "I had an __________ for being late.", "answer": "excuse" },
+        { "prompt": "The __________ was not marked.", "answer": "entrance" },
+        {
+          "prompt": "__________ the splinter with tweezers.",
+          "answer": "extract"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "The __________ moved her cattle.", "answer": "rancher" },
+        { "prompt": "Ramon is a storm __________ .", "answer": "searcher" },
+        {
+          "prompt": "He works better under __________ .",
+          "answer": "pressure"
+        },
+        {
+          "prompt": "Things will improve in the __________ .",
+          "answer": "future"
+        },
+        {
+          "prompt": "The __________ shop displayed meat.",
+          "answer": "butcher"
+        },
+        { "prompt": "A ruler can __________ the length.", "answer": "measure" },
+        { "prompt": "The picnic was a __________ .", "answer": "pleasure" },
+        {
+          "prompt": "Sleet is a __________ of snow and rain.",
+          "answer": "mixture"
+        },
+        {
+          "prompt": "The map led us to the __________ .",
+          "answer": "treasure"
+        },
+        { "prompt": "My eyes are my best __________ .", "answer": "feature" },
+        { "prompt": "Cows grazed in the __________ .", "answer": "pasture" },
+        { "prompt": "We saw the scariest __________ .", "answer": "creature" },
+        { "prompt": "Take notes during the __________ .", "answer": "lecture" },
+        {
+          "prompt": "She made a __________ with her hand.",
+          "answer": "gesture"
+        },
+        {
+          "prompt": "I enjoy being outdoors in __________ .",
+          "answer": "nature"
+        },
+        { "prompt": "Tom’s __________ finally healed.", "answer": "fracture" },
+        { "prompt": "The __________ made it damp.", "answer": "moisture" },
+        { "prompt": "They moved her in a __________ .", "answer": "stretcher" },
+        {
+          "prompt": "Our state __________ makes laws.",
+          "answer": "legislature"
+        },
+        { "prompt": "The __________ sky shone brightly.", "answer": "azure" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "It’s a short __________  to the lake.",
+          "answer": "distance"
+        },
+        { "prompt": "Each job has its __________ .", "answer": "importance" },
+        {
+          "prompt": "The ice skater lost her __________ .",
+          "answer": "balance"
+        },
+        { "prompt": "The teacher took __________ .", "answer": "attendance" },
+        { "prompt": "His __________ was due to the flu.", "answer": "absence" },
+        {
+          "prompt": "They applauded the __________ .",
+          "answer": "performance"
+        },
+        {
+          "prompt": "Plants have a __________ on water.",
+          "answer": "dependence"
+        },
+        { "prompt": "Glue is a sticky __________ .", "answer": "substance" },
+        {
+          "prompt": "Barking dogs create a __________ .",
+          "answer": "disturbance"
+        },
+        {
+          "prompt": "A beard changed his __________ .",
+          "answer": "appearance"
+        },
+        {
+          "prompt": "Nurses give medical __________ .",
+          "answer": "assistance"
+        },
+        {
+          "prompt": "Her __________ about the subject showed in her speech.",
+          "answer": "ignorance"
+        },
+        {
+          "prompt": "The stars shone with __________ .",
+          "answer": "brilliance"
+        },
+        { "prompt": "The __________ rushed to help.", "answer": "ambulance" },
+        {
+          "prompt": "His __________ is down the street.",
+          "answer": "residence"
+        },
+        {
+          "prompt": "Her smile beamed with __________ .",
+          "answer": "radiance"
+        },
+        { "prompt": "His __________ was frustrating.", "answer": "resistance" },
+        { "prompt": "I agreed with some __________ .", "answer": "reluctance" },
+        {
+          "prompt": "A marathon requires __________ .",
+          "answer": "persistance"
+        },
+        { "prompt": "__________ showed in her face.", "answer": "hesitance" }
+      ]
+    }
+  ]
+}

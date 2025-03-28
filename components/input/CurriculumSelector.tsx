@@ -142,7 +142,13 @@ export function CurriculumSelector<T>({
 
         if (generationResults.code === 200) {
           setContent(generationResults.result.data)
-          setMetaData({ title: data.title, contentType })
+          setMetaData({
+            title: data.title,
+            contentType,
+            secondaryInputContent: data.secondaryInputContent,
+            numberOfContent: data.numberOfContent,
+            secondaryNumberOfContent: data.secondaryNumberOfContent
+          })
         } else {
           throw new AppError(400, 'Error generating content.')
         }

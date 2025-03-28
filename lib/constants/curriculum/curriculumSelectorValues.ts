@@ -36,7 +36,7 @@ export interface Word {
 }
 
 // export const levels = ['K', '1', '2', '3', '4', '5']
-export const levels = ['2', '3', '4']
+export const levels = ['2', '3', '4', '5']
 export const units = ['1', '2', '3', '4', '5', '6']
 
 export const spellingWeeks: SpellingWeeks[] = [
