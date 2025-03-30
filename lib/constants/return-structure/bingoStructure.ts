@@ -25,5 +25,5 @@ export const bingoStructure = {
     'alpine',
     'cave',
     'lagoon'
-  ]
+  ].map(word => ({ word }))
 }

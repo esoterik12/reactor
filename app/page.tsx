@@ -24,6 +24,12 @@ export default function Home() {
             <p>Add level 5 curriculum data</p>
           </div>
           <div className={containerClasses}>
+            <p>
+              Create a standardized textSizes.ts file for react-pdf - check
+              Refactoring UI
+            </p>
+          </div>
+          <div className={containerClasses}>
             <p>Add sight words to curriculum selector somehow</p>
           </div>
           <div className={containerClasses}>

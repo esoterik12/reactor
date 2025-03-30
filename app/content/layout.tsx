@@ -39,7 +39,7 @@ const CreatePageLayout = async ({
             accordionContent={AccordionSidebarContent}
           />
         </section>
-        <section className='h-full w-full pl-4 pr-2'>{children}</section>{' '}
+        <section className='h-full w-full pl-4 pr-2'>{children}</section>
       </PageContainer>
     </ContextProvider>
   )

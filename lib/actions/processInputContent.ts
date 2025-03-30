@@ -112,10 +112,27 @@ export default async function processInputContent({
           break
 
         case 'bingo':
-          generationMessage = bingoMessage({
-            data: primaryInputContent,
-            levelSelection
-          })
+          // This is a unique (hopefully) case where a multiple generation branches are required
+          if (
+            // This stops generation if 25 or more words are submitted
+            typeof primaryInputContent === 'string' &&
+            primaryInputContent
+              .split(',')
+              .map(word => word.trim())
+              .filter(word => word.length > 0).length >= 25
+          ) {
+            return {
+              message: 'Over 25 bingo words submitted; no generation required',
+              code: 200,
+              // Return data in this format to mirror return from generateContent()
+              result: { data: processBingoWords({ primaryInputContent }) }
+            }
+          } else {
+            generationMessage = bingoMessage({
+              data: primaryInputContent,
+              levelSelection
+            })
+          }
           break
 
         case 'interviews':

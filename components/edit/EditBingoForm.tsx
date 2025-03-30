@@ -3,18 +3,21 @@ import { useState } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { useFieldArray, useForm } from 'react-hook-form'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import {
   EditBingoFormValues,
-  editBingoSchema
+  editBingoSchema,
+  EditBingoValues
 } from '@/lib/zod/edit/editBingo.schema'
+import IconXCircle from '../icons/IconXCircle'
+import IconPlusCircle from '../icons/IconPlusCircle'
 
 interface EditBingoForm {
-  generatedContent: string[]
+  generatedContent: EditBingoValues
   metaData: EditMetaDataProps
 }
 
@@ -26,6 +29,8 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
 
   const {
     register,
+    control,
+    watch,
     handleSubmit,
     formState: { errors }
   } = useForm<EditBingoFormValues>({
@@ -33,6 +38,11 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
     reValidateMode: 'onBlur',
     resolver: zodResolver(editBingoSchema),
     defaultValues: { bingoWords: generatedContent }
+  })
+
+  const { fields, remove, append } = useFieldArray<EditBingoFormValues>({
+    control,
+    name: 'bingoWords'
   })
 
   const handleSubmitButton = (data: EditBingoFormValues) => {
@@ -49,6 +59,8 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
     })
   }
 
+  const sufficientBingoWords = watch('bingoWords').length >= 25
+
   return (
     <section className='container-background flex h-full flex-col rounded-lg'>
       <div className='flex'>
@@ -59,11 +71,11 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 
       <form
-        className='flex h-full flex-col justify-between p-4'
+        className='flex min-h-96 flex-col justify-between p-4'
         onSubmit={handleSubmit(handleSubmitButton)}
       >
         <div className='grid w-full grid-cols-5'>
-          {generatedContent.map((word, index) => (
+          {fields.map((word, index) => (
             <div
               className='grid max-w-[400px] grid-cols-[30px,1fr,1fr] px-2 pb-2'
               key={index}
@@ -76,31 +88,54 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
                 errorType='highlightInput'
                 labelClasses='paragraph-text small-text'
                 id={`firstField-${index}`}
-                inputClasses='p-1 w-40'
+                inputClasses='p-1 w-32'
                 placeholder=''
-                {...register(`bingoWords.${index}`)}
-                error={errors.bingoWords?.[index]}
+                {...register(`bingoWords.${index}.word`)}
+                error={errors.bingoWords?.[index]?.word}
               />
+              <DefaultButton
+                customClasses='ml-1'
+                handleClick={() => remove(index)}
+              >
+                <IconXCircle classes='h-5 w-5 muted-transition-effect paragraph-text' />
+              </DefaultButton>
             </div>
           ))}
         </div>
-        <div className='ml-10 mt-4 flex flex-row gap-4'>
-          <DefaultButton
-            btnType='submit'
-            handleClick={handleSubmit(handleSubmitButton)}
-            customClasses='w-[100px] button-border primary-background p-1 hover-effect-primary'
-            isDisabled={isLoading}
-          >
-            {isLoading ? (
-              <span>Loading...</span>
-            ) : (
-              <p className='button-text'>Submit</p>
-            )}
-          </DefaultButton>
+        <div className='ml-10 mt-4 flex flex-row'>
+          <div className='mr-10 flex flex-row justify-center'>
+            <DefaultButton
+              btnType='submit'
+              handleClick={handleSubmit(handleSubmitButton)}
+              customClasses='w-32 h-9 button-border primary-background p-1 hover-effect-primary'
+              isDisabled={isLoading || !sufficientBingoWords}
+            >
+              {isLoading ? (
+                <span>Loading...</span>
+              ) : (
+                <p className='button-text'>Submit</p>
+              )}
+            </DefaultButton>
+
+            <DefaultButton
+              customClasses='ml-1'
+              handleClick={() => append({ word: '' })}
+            >
+              <IconPlusCircle
+                classes={`h-5 w-5 muted-transition-effect ${!sufficientBingoWords ? 'secondary-text' : 'paragraph-text'}`}
+              />
+            </DefaultButton>
+          </div>
 
           {error && (
-            <InlineError classes='flex h-9 my-5 items-center justify-center'>
+            <InlineError classes='flex h-8 items-center justify-center'>
               <p className='secondary-text'>Error: {error}</p>
+            </InlineError>
+          )}
+
+          {!sufficientBingoWords && (
+            <InlineError classes='flex h-9 items-center justify-center'>
+              <p className='secondary-text'>You must have 25 words or more.</p>
             </InlineError>
           )}
         </div>

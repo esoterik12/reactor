@@ -37,8 +37,8 @@ export const memoryCardsPDFStyles = StyleSheet.create({
     gap: 4
   },
   cell: {
-    width: '22%',
-    height: 130,
+    width: '21%',
+    height: 120,
     backgroundColor: reportColors.gray,
     justifyContent: 'center',
     alignItems: 'center',

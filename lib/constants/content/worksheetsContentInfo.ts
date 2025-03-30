@@ -37,7 +37,7 @@ export const bingoGeneratedInfo = {
   primaryInputInfo: {
     title: 'Describe content',
     inputInfo:
-      'Provide a description of what kind of word you would like generated for the bingo cards.',
+      'Provide a description of what kind of word you would like generated for the bingo cards. You can also provide a few words and follow it up with a description of extra words you would like generated.',
     inputExample:
       'For example, you might ask for Grade 1 Sight Words, long vowel words, CVC words, words related to the environment.'
   },
@@ -50,9 +50,10 @@ export const bingoManualInfo = {
   levelSelectionInfo,
   primaryInputInfo: {
     title: 'Input words',
-    inputInfo: 'Provide a comma-separated list of words to scramble.',
+    inputInfo:
+      'Provide a comma-separated list of 25 words to be used to create five-by-five bingo grids.',
     inputExample:
-      'For example, "achievement, technology, community, attain, preserve."'
+      'For example, "achievement, technology, community, attain, preserve..."'
   },
   numberOfContent: {
     title: 'Number of game cards'

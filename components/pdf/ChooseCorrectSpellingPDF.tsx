@@ -14,9 +14,6 @@ const EditCorrectSpellingPDF: React.FC<EditCorrectSpellingProps> = ({
   metaData
 }) => {
 
-  console.log('data in EditCorrectSpellingPDF: ', data)
-  console.log('metaData in EditCorrectSpellingPDF: ', metaData)
-
   const combinedResult = createSpellingMessages({
     numberOfPairs: data.wordPairings.length,
     secondaryInputContent: metaData.secondaryInputContent,

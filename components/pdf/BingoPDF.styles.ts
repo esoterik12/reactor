@@ -26,23 +26,23 @@ export const BingoPDFStyles = StyleSheet.create({
   // Grid Section
   gridContainer: {
     flexDirection: 'column',
-    gap: 4
+    borderWidth: 1,
+    borderColor: colors.gray,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 4
+
   },
   cell: {
     width: '22%',
-    height: 110,
+    height: 105,
     justifyContent: 'center',
     alignItems: 'center',
-    border: 2,
-    borderColor: colors.teal,
-    borderRadius: 5,
-    padding: 12
+    borderWidth: 1,
+    borderColor: colors.gray,
+    padding: 4
   },
   cellText: {
     fontSize: 14,
