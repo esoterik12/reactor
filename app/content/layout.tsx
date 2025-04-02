@@ -31,7 +31,7 @@ const CreatePageLayout = async ({
   return (
     <ContextProvider>
       <PageContainer customClasses='pb-2 px-4 flex flex-row '>
-        <section className='h-full max-w-[270px] min-w-[270px] px-2'>
+        <section className='h-full max-w-[260px] min-w-[260px] mx-4'>
           <AccordionStack
             username={serverSession.user.name}
             userEmail={serverSession.user.email}
@@ -39,7 +39,7 @@ const CreatePageLayout = async ({
             accordionContent={AccordionSidebarContent}
           />
         </section>
-        <section className='h-full w-full pl-4 pr-2'>{children}</section>
+        <section className='h-full container-border shadow-border-md w-full ml-4 mr-4'>{children}</section>
       </PageContainer>
     </ContextProvider>
   )

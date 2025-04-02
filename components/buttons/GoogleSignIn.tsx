@@ -6,7 +6,7 @@ import DefaultButton from './DefaultButton'
 const GoogleSignIn = () => {
   return (
     <DefaultButton
-      customClasses='w-20 h-8 p-1 container-background button-border hover-effect'
+      customClasses='w-20 h-8 shadow-border-sm p-1 container-background button-border hover-effect'
       handleClick={() => signIn('google')}
     >
       <p className=''>Sign In</p>

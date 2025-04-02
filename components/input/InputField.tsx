@@ -53,7 +53,7 @@ const InputField: React.ForwardRefExoticComponent<
         id={id}
         tabIndex={-1}
         placeholder={placeholder}
-        className={`${inputClasses} page-background ${errorType === 'highlightInput' && error ? 'input-error-border' : 'input-border'}`}
+        className={`${inputClasses} shadow-inset page-background ${errorType === 'highlightInput' && error ? 'input-error-border' : 'input-border'}`}
         disabled={isDisabled}
         {...rest}
       />

@@ -4,7 +4,7 @@ const containerClasses = 'rounded-lg  p-2 dark:bg-zinc-800 bg-white'
 
 export default function Home() {
   return (
-    <PageContainer customClasses='px-6 py-2 md:px-12 md:py-4'>
+    <PageContainer customClasses='px-6 py-2 md:px-8 md:py-4'>
       <>
         {/* <header className=''>
           <h1 className='custom-primary-text'>Welcome</h1>

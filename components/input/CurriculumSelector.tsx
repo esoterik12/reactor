@@ -213,7 +213,7 @@ export function CurriculumSelector<T>({
                       ref={ref}
                       onClick={() => onChange(!value)}
                       isDisabled={!unitData}
-                      customClasses={`w-10 h-9 input-border p-1 ${value ? 'secondary-background' : 'page-background hover-effect '}`}
+                      customClasses={`w-10 h-9 shadow-border-sm input-border p-1 ${value ? 'secondary-background' : 'page-background hover-effect '}`}
                     >
                       <p className={`${value ? 'text-white' : ''}`}>
                         {item.weekName.split(' ')[1]}
@@ -239,7 +239,7 @@ export function CurriculumSelector<T>({
                       ref={ref}
                       onClick={() => onChange(!value)}
                       isDisabled={!unitData}
-                      customClasses={`w-10 h-9 input-border p-1  ${value ? 'primary-background' : 'page-background hover-effect'}`}
+                      customClasses={`w-10 h-9 shadow-border-sm input-border p-1  ${value ? 'primary-background' : 'page-background hover-effect'}`}
                     >
                       <p className={`${value ? 'text-white' : ''}`}>
                         {item.weekId.split('')[0]}
@@ -351,7 +351,7 @@ export function CurriculumSelector<T>({
             ariaLabel='Submit button'
             btnType='submit'
             handleClick={handleSubmit(handleGenerateButton)}
-            customClasses='w-[150px] h-9 my-5 button-border primary-background p-1 hover-effect-primary'
+            customClasses='w-32 h-9 my-5 button-border shadow-border-md primary-background p-1 hover-effect-primary'
             isDisabled={isLoading}
           >
             <p className='button-text'>Generate</p>

@@ -53,7 +53,7 @@ export function Dropdown({
     })
 
     return (
-      <div className='page-background input-border flex flex-row items-center px-2'>
+      <div className='page-background input-border shadow-inset  flex flex-row items-center px-2'>
         <div className='relative w-full'>
           {/* width is being passed as md:w-[XYZpx] */}
           <div className={`flex ${width} flex-col gap-1 rounded-xl`}>

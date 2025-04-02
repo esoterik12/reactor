@@ -298,7 +298,7 @@ export function ContentForm<T>({
             ariaLabel='Submit button'
             btnType='submit'
             handleClick={handleSubmit(handleSubmitButton)}
-            customClasses='w-32 mt-2 button-border primary-background p-1 hover-effect-primary'
+            customClasses='w-32 h-9 mt-2 button-border primary-background p-1 hover-effect-primary'
             isDisabled={loading}
           >
             <p className='button-text'>

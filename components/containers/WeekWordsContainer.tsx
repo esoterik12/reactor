@@ -44,7 +44,7 @@ const WeekWordsContainer = ({
         <motion.div
           layout
           key={`spelling-week-${weekItem.week}`}
-          className='border-color h-[244px] rounded border p-2'
+          className='border-color h-[244px] rounded shadow-border-sm border p-2'
           initial={{ opacity: 0, y: -5 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 25 }}

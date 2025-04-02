@@ -19,7 +19,7 @@ const NavLink = ({ href, children, className, ...props }: NavLink) => {
     <Link {...props} href={href}>
       <DefaultButton
         customClasses={clsx(
-          'w-28 h-8 container-background button-border hover-effect',
+          'w-28 h-9 shadow-border-sm container-background button-border hover-effect',
           className,
           isActiveLink && 'underline'
         )}
