@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { InputField } from '@/components/input/InputField'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
+import { useFieldArray, useForm } from 'react-hook-form'
 import { EditMetaDataProps } from '@/types/input.types'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
@@ -14,6 +14,7 @@ import {
   editCrazyCheckUpSchema,
   EditCrazyCheckUpFormValues
 } from '@/lib/zod/edit/editCrazyCheckUp.schema'
+import IconXCircle from '../icons/IconXCircle'
 
 interface EditCrazyCheckUpProps {
   generatedContent: CrazyCheckUpCommand[]
@@ -32,6 +33,7 @@ const EditCrazyCheckUp = ({
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors }
   } = useForm<EditCrazyCheckUpFormValues>({
     mode: 'onBlur',
@@ -46,6 +48,11 @@ const EditCrazyCheckUp = ({
           : 'doAnAction'
       }))
     }
+  })
+
+  const { fields, remove } = useFieldArray<EditCrazyCheckUpFormValues>({
+    control,
+    name: 'data'
   })
 
   const handleSubmitButton = useCallback(
@@ -79,7 +86,7 @@ const EditCrazyCheckUp = ({
         onSubmit={handleSubmit(handleSubmitButton)}
       >
         <div className='flex flex-col gap-1'>
-          {generatedContent.map((_, index) => (
+          {fields.map((_, index) => (
             <div className='flex flex-row items-center px-2 pb-2' key={index}>
               <div className='flex h-full min-w-[32px] items-center justify-center'>
                 <p className='paragraph-text'>{index + 1}</p>
@@ -95,6 +102,12 @@ const EditCrazyCheckUp = ({
                 {...register(`data.${index}.command`)}
                 error={errors.data?.[index]?.command}
               />
+              <DefaultButton
+                customClasses='ml-1'
+                handleClick={() => remove(index)}
+              >
+                <IconXCircle classes='h-5 w-5 muted-transition-effect paragraph-text' />
+              </DefaultButton>
             </div>
           ))}
         </div>

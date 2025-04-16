@@ -38,7 +38,7 @@ export const generateScrambledWords = ({
       wordOne: word
     }))
 
-    return combinedResult
+    return { data: combinedResult }
   } catch (error) {
     console.error('Error processing input content: ', error)
     throw new AppError(404, 'Error running generateScrambledWords.')

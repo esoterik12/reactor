@@ -11,7 +11,7 @@ export default function interviewsMessage({
   levelSelection,
   numberOfContent
 }: InterviewsMessage) {
-  const numberOfQuestions = numberOfContent || JSON.parse(data).length
+  const numberOfQuestions = numberOfContent || data
 
   return `
       Here is an example data structure that I'd like returned in JSON:

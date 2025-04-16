@@ -101,6 +101,8 @@ export function CurriculumSelector<T>({
   }, [level, unit, reset])
 
   const handleGenerateButton = async (data: CurriculumSelectorForm) => {
+    // Note: Here data contains only title and numberOfContent
+    // The words are in wordsToFilter useState
     setError(null)
     if (level && unit && unitData) {
       try {
@@ -127,13 +129,13 @@ export function CurriculumSelector<T>({
         const filteredWords = filterCurriculumWords({
           unitDataArray,
           wordsToFilter
-        })
+        }).join(',')
 
         const generationResults = await processInputContent({
           contentType,
           formType,
           levelSelection: level || 'No selection',
-          primaryInputContent: JSON.stringify(filteredWords),
+          primaryInputContent: filteredWords,
           secondaryInputContent: data.secondaryInputContent,
           textareaInput: data.textareaInputContent,
           numberOfContent: data.numberOfContent || null,
@@ -314,7 +316,7 @@ export function CurriculumSelector<T>({
           {info.numberOfContent && (
             <div>
               <div className='flex flex-row items-center justify-between'>
-                <h3 className='label-text mb-0.5'>
+                <h3 className='label-text mb-1'>
                   {info.numberOfContent.title}:
                 </h3>
               </div>
@@ -322,7 +324,7 @@ export function CurriculumSelector<T>({
                 type='text'
                 id='numberOfContent'
                 placeholder=''
-                inputClasses='p-1 w-[150px]'
+                inputClasses='p-1 w-32'
                 error={errors.numberOfContent}
                 {...register('numberOfContent')}
                 isDisabled={isLoading}

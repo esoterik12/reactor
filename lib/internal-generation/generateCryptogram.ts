@@ -15,12 +15,6 @@ export const generateCryptogram = ({
     throw new AppError(400, 'Invalid cryptogram input.')
   }
 
-  console.log(
-    'running generateCryprogram with primary and secondary input content: ',
-    primaryInputContent,
-    secondaryInputContent
-  )
-
   // Prepare an array of the alphabet in lowercase
   const alphabet = Array.from({ length: 26 }, (_, i) =>
     String.fromCharCode(97 + i)
@@ -68,8 +62,6 @@ export const generateCryptogram = ({
       }
     }
   })
-
-  console.log('cryptogramOutput: ', cryptogramOutput)
 
   return cryptogramOutput
 }

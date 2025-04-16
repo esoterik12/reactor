@@ -6,7 +6,7 @@ type SpellingWeekIds = '1' | '2' | '3' | '4' | '5'
 // These two are used in defining the useForm default values
 export interface VocabWeeks {
   weekId: VocabWeekIds
-  weekName: 'Weeks 1 & 2' | 'Weeks 3 & 4' | 'Week 5'
+  weekName: 'Week 1 & 2' | 'Week 3 & 4' | 'Week 5'
 }
 
 export interface SpellingWeeks {
@@ -65,11 +65,11 @@ export const spellingWeeks: SpellingWeeks[] = [
 export const vocabWeeks: VocabWeeks[] = [
   {
     weekId: '12',
-    weekName: 'Weeks 1 & 2'
+    weekName: 'Week 1 & 2'
   },
   {
     weekId: '34',
-    weekName: 'Weeks 3 & 4'
+    weekName: 'Week 3 & 4'
   },
   {
     weekId: '5',

@@ -27,26 +27,6 @@ const BingoPage = () => {
     numberOfContent: null
   })
 
-  /*
-    Have to decide how this will work:
-
-    Generated content:
-      Based only on description
-      creates a message using the usual routes and sends content to bingo edit form
-      This will create exactly 25 words and use the level selection to keep language appropriate
-      1. The schema can require 25 words
-
-    Manual input:
-      I want this to by-pass generation if there are 25 words or more
-      it should also have a watch component that shows how many words - and shows "extra words will be generated"
-
-    Curriculum selector:
-      This DOES NOT have a watch component - this may be necessary 
-      This will also by-pass generation if there are 25 words or more
-
-    Let's make it all without watch first
-  */
-
   const tabContent = [
     <ContentForm
       key='Tab 1'

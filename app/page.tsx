@@ -47,6 +47,16 @@ export default function Home() {
             <p>Add reset to edit forms</p>
             <p>Add reset to content form - useForm has a reset function</p>
           </div>
+          <div className={containerClasses}>
+            <p>Add a tongue twister functionality with curriculum selector</p>
+            <p>Provide level appropriate content</p>
+          </div>
+          <div className={containerClasses}>
+            <p>Projected Game: Sentence Spot It</p>
+            <p>This produces a sentence and a load of random extra words, players have to try to form a sentence going left to right</p>
+            <p>It can gradually get easier by slightly changing the shade of the color or moving the text into a line</p>
+            <p>Decreasing points as it gets easier</p>
+          </div>
         </main>
       </>
     </PageContainer>

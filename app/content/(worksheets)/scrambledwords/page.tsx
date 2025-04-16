@@ -4,7 +4,7 @@ import ContentTabs from '@/components/containers/ContentTabs'
 import { ContentForm } from '@/components/input/ContentForm'
 import { contentIconStyles } from '@/lib/constants/content/contentInfo'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
-import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import { manualCurricululmOnlyTabs } from '@/lib/constants/tabOptions'
 import { scrambledWordsGeneratedInfo } from '@/lib/constants/content/worksheetsContentInfo'
 import IconScrambledWords from '@/components/icons/content/IconScrambledWords'
 import {
@@ -51,7 +51,7 @@ const ScrambledWordsPage = () => {
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
+        <ContentTabs tabs={manualCurricululmOnlyTabs} tabContent={tabContent} />
       ) : (
         <EditWordPairsForm
           firstWordLabel='Original Word'

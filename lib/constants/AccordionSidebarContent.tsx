@@ -66,17 +66,17 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
         link: `${root}/scrambledsentences`
       },
       { linkId: '2-3', contentTitle: 'Bingo', link: `${root}/bingo` },
-      { linkId: '2-4', contentTitle: 'Wordsearch', link: `${root}/wordsearch` },
       {
-        linkId: '2-5',
+        linkId: '2-4',
         contentTitle: 'Interviews',
         link: `${root}/interviews`
       },
       {
-        linkId: '2-6',
+        linkId: '2-5',
         contentTitle: 'Cryptogram',
         link: `${root}/cryptogram`
       }
+      // { linkId: '2-6', contentTitle: 'Wordsearch', link: `${root}/wordsearch` }
     ]
   },
   {

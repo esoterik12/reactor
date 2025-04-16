@@ -20,6 +20,7 @@ export default function crazyCheckUpMessage({
   data,
   levelSelection
 }: CrazyCheckUpMessage) {
+
   return `
       Here is an example data structure that I'd like returned in JSON:
       ${JSON.stringify(crazyCheckUpStructure)}
@@ -32,6 +33,7 @@ export default function crazyCheckUpMessage({
       ${data}
 
       And generate a set of fun and engaging commands for students to follow in a classroom environment.
+      
       Each command should use one of the words in the data vocabulary words.
 
       Here is a list of possible command structures to base your generated commands on:

@@ -15,6 +15,8 @@ import bingoMessage from '../gpt-messages/bingoMessage'
 import { processBingoWords } from '../internal-generation/processBingoWords'
 import interviewsMessage from '../gpt-messages/interviewsMessage'
 import { generateCryptogram } from '../internal-generation/generateCryptogram'
+import wordsearchMessage from '../gpt-messages/wordsearchMessage'
+import { processWordsearchWords } from '../internal-generation/processWordsearchWords'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -143,6 +145,14 @@ export default async function processInputContent({
           })
           break
 
+        case 'wordsearch':
+          generationMessage = wordsearchMessage({
+            primaryInputContent,
+            secondaryNumberOfContent,
+            levelSelection
+          })
+          break
+
         default:
           throw new AppError(404, `Unsupported content type: ${contentType}`)
       }
@@ -164,7 +174,9 @@ export default async function processInputContent({
     try {
       switch (contentType) {
         case 'scrambledWords':
-          creationResult = generateScrambledWords({ primaryInputContent })
+          creationResult = generateScrambledWords({
+            primaryInputContent
+          })
           break
 
         case 'bingo':
@@ -176,6 +188,10 @@ export default async function processInputContent({
             primaryInputContent,
             secondaryInputContent
           })
+          break
+
+        case 'wordsearch':
+          creationResult = processWordsearchWords({ primaryInputContent })
           break
 
         default:
@@ -192,7 +208,7 @@ export default async function processInputContent({
     }
 
     // TODO: there appears to be a type-mismatch with creationResult
-    // May need to be converted to JSON here instead of route.tsx
+    // May need to be converted to JSON here instead of in route.tsx
 
     const generationResults = {
       message: 'Content generated successfully.',

@@ -85,11 +85,6 @@ export function ContentForm<T>({
 
       if (generationResults.code === 200) {
         // TODO: generation functions are returning objects with different names
-        // I think this can be solved in the GPT API return
-
-        console.log('generationResults in ContentForm.tsx: ', generationResults)
-
-        console.log('data in ContentForm', data)
 
         setContent(
           generationResults.result.data ||

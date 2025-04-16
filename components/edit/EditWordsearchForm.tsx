@@ -9,19 +9,22 @@ import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import {
-  EditBingoFormValues,
-  editBingoSchema,
-  EditBingoValues
-} from '@/lib/zod/edit/editBingo.schema'
+  editWordsearchSchema,
+  EditWordsearchFormValues,
+  EditWordsearchValues
+} from '@/lib/zod/edit/editWordsearch.schema'
 import IconXCircle from '../icons/IconXCircle'
 import IconPlusCircle from '../icons/IconPlusCircle'
 
-interface EditBingoForm {
-  generatedContent: EditBingoValues
+interface EditWordsearchForm {
+  generatedContent: EditWordsearchValues
   metaData: EditMetaDataProps
 }
 
-const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
+const EditWordsearchForm = ({
+  generatedContent,
+  metaData
+}: EditWordsearchForm) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const { linkRef, downloadBlob } = useBlobDownloader()
@@ -33,19 +36,19 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
     watch,
     handleSubmit,
     formState: { errors }
-  } = useForm<EditBingoFormValues>({
+  } = useForm<EditWordsearchFormValues>({
     mode: 'onBlur',
     reValidateMode: 'onBlur',
-    resolver: zodResolver(editBingoSchema),
-    defaultValues: { bingoWords: generatedContent }
+    resolver: zodResolver(editWordsearchSchema),
+    defaultValues: { wordsearchWords: generatedContent }
   })
 
-  const { fields, remove, append } = useFieldArray<EditBingoFormValues>({
+  const { fields, remove, append } = useFieldArray<EditWordsearchFormValues>({
     control,
-    name: 'bingoWords'
+    name: 'wordsearchWords'
   })
 
-  const handleSubmitButton = (data: EditBingoFormValues) => {
+  const handleSubmitButton = (data: EditWordsearchFormValues) => {
     const pdfData = {
       content: JSON.stringify(data),
       metaData
@@ -59,7 +62,9 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
     })
   }
 
-  const sufficientBingoWords = watch('bingoWords').length >= 25
+  const incorrectNumberOfWords =
+    watch('wordsearchWords').length < 6 ||
+    watch('wordsearchWords').length > 18
 
   return (
     <section className='container-background flex h-full flex-col rounded-lg'>
@@ -90,8 +95,8 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
                 id={`firstField-${index}`}
                 inputClasses='p-1 w-32'
                 placeholder=''
-                {...register(`bingoWords.${index}.word`)}
-                error={errors.bingoWords?.[index]?.word}
+                {...register(`wordsearchWords.${index}.word`)}
+                error={errors.wordsearchWords?.[index]?.word}
               />
               <DefaultButton
                 customClasses='ml-1'
@@ -108,7 +113,7 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
               btnType='submit'
               handleClick={handleSubmit(handleSubmitButton)}
               customClasses='w-32 h-9 button-border primary-background p-1 hover-effect-primary'
-              isDisabled={isLoading || !sufficientBingoWords}
+              isDisabled={isLoading || incorrectNumberOfWords}
             >
               {isLoading ? (
                 <span>Loading...</span>
@@ -122,7 +127,7 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
               handleClick={() => append({ word: '' })}
             >
               <IconPlusCircle
-                classes={`h-5 w-5 muted-transition-effect ${!sufficientBingoWords ? 'secondary-text' : 'paragraph-text'}`}
+                classes={`h-5 w-5 muted-transition-effect ${incorrectNumberOfWords ? 'secondary-text' : 'paragraph-text'}`}
               />
             </DefaultButton>
           </div>
@@ -133,9 +138,11 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
             </InlineError>
           )}
 
-          {!sufficientBingoWords && (
+          {incorrectNumberOfWords && (
             <InlineError classes='flex h-9 items-center justify-center'>
-              <p className='secondary-text'>You must have 25 words or more.</p>
+              <p className='secondary-text'>
+                You must have between 6 or 18 words.
+              </p>
             </InlineError>
           )}
         </div>
@@ -148,4 +155,4 @@ const EditBingoForm = ({ generatedContent, metaData }: EditBingoForm) => {
   )
 }
 
-export default EditBingoForm
+export default EditWordsearchForm
