@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aydee-app/word-search": "^0.1.1",
     "@hookform/resolvers": "^3.10.0",
     "@react-pdf/renderer": "^4.2.1",
     "@reduxjs/toolkit": "^2.5.0",

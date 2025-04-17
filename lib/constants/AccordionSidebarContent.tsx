@@ -76,7 +76,6 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
         contentTitle: 'Cryptogram',
         link: `${root}/cryptogram`
       }
-      // { linkId: '2-6', contentTitle: 'Wordsearch', link: `${root}/wordsearch` }
     ]
   },
   {
@@ -84,13 +83,29 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
     title: 'Projected Games',
     icon: <IconRocket classes={iconClasses} />,
     links: [
-      { linkId: '3-1', contentTitle: 'Scrambled Words', link: '/' },
-      { linkId: '3-2', contentTitle: 'Scrambled Sentences', link: '/' },
-      { linkId: '3-3', contentTitle: 'Spot It!', link: '/' },
-      { linkId: '3-4', contentTitle: 'Jeopardy', link: '/' },
-      { linkId: '3-5', contentTitle: 'Memory Game', link: '/' },
-      { linkId: '3-6', contentTitle: 'Minefield', link: '/' },
-      { linkId: '3-7', contentTitle: 'Picture Reveal', link: '/' }
+      {
+        linkId: '3-1',
+        contentTitle: 'Unscramble Words',
+        link: `${root}/unscramblewords`
+      },
+      {
+        linkId: '3-2',
+        contentTitle: 'Unscramble Sentences',
+        link: `${root}/unscramblesentences`
+      },
+      { linkId: '3-3', contentTitle: 'Spot It!', link: `${root}/spotit` },
+      { linkId: '3-4', contentTitle: 'Jeopardy', link: `${root}/jeopardy` },
+      {
+        linkId: '3-5',
+        contentTitle: 'Memory Game',
+        link: `${root}/memorygame`
+      },
+      { linkId: '3-6', contentTitle: 'Minefield', link: `${root}/minefield` },
+      {
+        linkId: '3-7',
+        contentTitle: 'Picture Reveal',
+        link: `${root}/picturereveal`
+      }
     ]
   },
   {

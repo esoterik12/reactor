@@ -180,7 +180,7 @@ export function CurriculumSelector<T>({
         {/* Dropdowns */}
         <div className='mt-2 flex flex-row gap-x-10'>
           <div className='w-[150px]'>
-            <h3 className='label-text mb-1'>Select level:</h3>
+            <h3 className='label-text mb-0.5'>Select level:</h3>
             <Dropdown
               dropdownItems={levels}
               selectedItem={level}
@@ -191,7 +191,7 @@ export function CurriculumSelector<T>({
             />
           </div>
           <div className='w-[150px]'>
-            <h3 className='label-text mb-1'>Select unit:</h3>
+            <h3 className='label-text mb-0.5'>Select unit:</h3>
             <Dropdown
               dropdownItems={units}
               selectedItem={unit}
