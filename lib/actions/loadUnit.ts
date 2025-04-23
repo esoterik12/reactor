@@ -1,6 +1,4 @@
 'use server'
-import { promises as fs } from 'fs'
-import { UnitDataJSON } from '../constants/curriculum/curriculumSelectorValues'
 
 export default async function loadUnit({
   level,
@@ -9,25 +7,15 @@ export default async function loadUnit({
   level: string
   unit: string
 }) {
-  const spellingFile = await fs.readFile(
-    process.cwd() +
-      `/lib/constants/curriculum/level${level}/level${level}_unit${unit}_spelling.json`,
-    'utf8'
+  // these dynamic imports ensure Next.js bundles the JSON files
+  const spellingModule = await import(
+    `@/lib/constants/curriculum/level${level}/level${level}_unit${unit}_spelling.json`
   )
-  const spellingData = JSON.parse(spellingFile)
-
-  const vocabFile = await fs.readFile(
-    process.cwd() +
-      `/lib/constants/curriculum/level${level}/level${level}_unit${unit}_vocab.json`,
-    'utf8'
+  const vocabModule = await import(
+    `@/lib/constants/curriculum/level${level}/level${level}_unit${unit}_vocab.json`
   )
-
-  const vocabData = JSON.parse(vocabFile)
-
-  const unitData: UnitDataJSON = {
-    spelling: spellingData.spelling,
-    vocab: vocabData.vocabulary
+  return {
+    spelling: spellingModule.spelling,
+    vocab: vocabModule.vocabulary
   }
-
-  return unitData
 }

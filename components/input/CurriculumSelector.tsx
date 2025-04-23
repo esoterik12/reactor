@@ -58,6 +58,9 @@ export function CurriculumSelector<T>({
   const [error, setError] = useState<null | string>(null)
   const [wordsToFilter, setWordsToFilter] = useState<string[]>([])
 
+  console.log('level in CurriculumSelector.tsx: ', level)
+  console.log('level in CurriculumSelector.tsx: ', unit)
+
   const {
     control,
     watch,

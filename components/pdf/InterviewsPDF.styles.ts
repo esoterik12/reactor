@@ -26,7 +26,7 @@ export const interviewPDFStyles = StyleSheet.create({
   questionContainer: {
     flexDirection: 'column',
     marginBottom: 12,
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.gray,
     height: '47%'
   },

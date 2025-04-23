@@ -25,24 +25,48 @@ const UnscrambleWords = ({
 
     plan is to continue using existing input system and simply change the edit components to game components with a reset
 
+
     Inputs:
 
-    Component should:
-      -Prepare the words in state with a view count
-        -This should be done after selecting player number
-      
-      -Keep score by the number of letters in a word completed
+      Component should:
+        -Prepare the words in state with a view count
+          -This should be done after selecting player/team number
+        
+        -Keep score by the number of letters in a word completed
 
-      Setup:
-        -Have a one, two, three, four player split screen option (for whiteboards)
-        -Have a target score selector (25, 50, 75, 100, 150)
+        Setup:
+          -Have a one, two, three, four player split screen option (for whiteboards)
+            -Default to one player
+          -Select a time limit (30 seconds, 60, 120)
 
-      Display:
-        -Have a score at the top for each player
-        -Have a full screen option
+        Display:
+          -Timer
+          -Have a score at the top for each player
+          -Have a full screen option
+          -Columns for each team with: scores at the top, current word, reset at the bottom
 
-      Styling:
-        -Using the w
+        Styling:
+          -Using blues and oranges
+          -Thing grey line down the middle
+          -Use Icons for:
+            -Players/teams
+            -Timer
+            -Animated floating up star for correct
+
+      Reusable Components:
+        -Score
+        -Player/team select
+        -GameButton (this could be an extension of DefaultButton)
+        -Fullscreen Button
+        -Reset Button
+        -PlaySound (this should play a juingle or a buzzer - with prop text to select)
+
+      -Process:
+        1. Create some dummy data in a test page
+          -This should be a data sctructure that models generatedContent and metaData
+        2. Build visual design
+        3. Build dummy interactivity (buttons, scores, timers, etc)
+
   */
 
   console.log('generatedContent in UnscrambleWords: ', generatedContent)
