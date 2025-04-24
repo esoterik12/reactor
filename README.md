@@ -156,6 +156,7 @@ folder
 
 - Fonts will need to use a source path with Font.register:
   process.env.NEXT_PUBLIC_BASE_URL
+  **MAKE SURE this is correctly added in production
 
 ### Edit functionality:
 

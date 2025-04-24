@@ -1,19 +1,8 @@
-import { StyleSheet, Font } from '@react-pdf/renderer'
+import { StyleSheet } from '@react-pdf/renderer'
 import { PDFColorPallete as colors } from '@/lib/constants/styles/colorPalette'
+import { registerPdfFonts } from '@/lib/utils/pdf-utils/registerFont'
 
-Font.register({
-  family: 'Raleway',
-  fonts: [
-    {
-      src: `${process.env.NEXT_PUBLIC_BASE_URL}/fonts/Raleway-Regular.ttf`,
-      fontWeight: 'normal'
-    },
-    {
-      src: `${process.env.NEXT_PUBLIC_BASE_URL}/fonts/Raleway-Bold.ttf`,
-      fontWeight: 'bold'
-    }
-  ]
-})
+registerPdfFonts()
 
 export const crazyCheckUpPDFStyles = StyleSheet.create({
   page: { backgroundColor: 'white', fontFamily: 'Raleway', marginVertical: 18 },
