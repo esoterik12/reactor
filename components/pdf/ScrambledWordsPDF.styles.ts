@@ -36,7 +36,7 @@ export const scrambledWordsPDFStyles = StyleSheet.create({
   cell: {
     width: '24%',
     height: 130,
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.gray,
     justifyContent: 'center',
     alignItems: 'center',

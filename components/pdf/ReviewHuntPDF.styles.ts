@@ -67,7 +67,7 @@ export const reviewHuntPDFStyles = StyleSheet.create({
   // Answer options
   answerSheetContainer: {
     marginHorizontal: 24,
-    border: 2,
+    borderWidth: 2,
     borderRadius: 12,
     borderColor: colors.gray
   },

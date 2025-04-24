@@ -25,7 +25,7 @@ export const grammarMistakesPDFStyles = StyleSheet.create({
   },
   itemRow: {
     flexDirection: 'column',
-    border: 1,
+    borderWidth: 1,
     borderRadius: 10,
     borderColor: colors.gray,
     padding: 4
@@ -70,7 +70,7 @@ export const grammarMistakesPDFStyles = StyleSheet.create({
     flexDirection: 'column',
     width: '60%',
     height: 120,
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.black,
     marginLeft: 33,
     marginTop: 8

@@ -51,7 +51,7 @@ export const scrambledSentencesPDFStyles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.gray,
     borderRadius: 10,
     minWidth: 60,

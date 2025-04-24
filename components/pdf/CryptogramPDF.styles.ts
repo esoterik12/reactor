@@ -24,7 +24,7 @@ export const cryptogramPDFStyles = StyleSheet.create({
     justifyContent: 'center',
     gap: 6,
     marginHorizontal: 18,
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.blue,
     borderRadius: 10,
     paddingVertical: 20

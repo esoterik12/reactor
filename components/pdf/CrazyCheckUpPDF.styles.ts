@@ -61,7 +61,7 @@ export const crazyCheckUpPDFStyles = StyleSheet.create({
     flexDirection: 'column',
     width: '60%',
     height: 120,
-    border: 1,
+    borderWidth: 1,
     borderColor: colors.black,
     marginLeft: 33,
     marginTop: 8

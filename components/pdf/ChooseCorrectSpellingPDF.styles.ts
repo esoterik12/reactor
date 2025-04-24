@@ -100,7 +100,6 @@ export const chooseCorrectSpellingStyles = StyleSheet.create({
     bottom: 0,
     borderWidth: 2,
     borderColor: colors.black,
-    borderRadius: 0,
     pointerEvents: 'none' // so it doesn't interfere with touch events
   }
 })

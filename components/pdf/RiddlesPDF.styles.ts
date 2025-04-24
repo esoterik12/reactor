@@ -42,7 +42,7 @@ export const riddlesPDFStyles = StyleSheet.create({
   answerContainer: {
     flexDirection: 'column',
     gap: 12,
-    border: 1,
+    borderWidth: 1,
     padding: 20,
     borderColor: colors.gray,
     borderRadius: 20
