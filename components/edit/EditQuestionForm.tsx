@@ -39,7 +39,7 @@ const EditQuestionForm = ({
   })
 
   return (
-    <div className='mb-2 flex flex-col border-b border-zinc-500 px-4 pb-6 pt-2'>
+    <div className='mb-2 flex flex-col border-b shadow-border-md border-zinc-500 px-4 pb-6 pt-2'>
       <div className='flew-row flex w-full items-start justify-between'>
         <InputField
           type='text'

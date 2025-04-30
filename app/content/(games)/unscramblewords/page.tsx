@@ -12,7 +12,7 @@ import {
   baseContentSelectorSchema
 } from '@/lib/zod/input/baseContentInput.schema'
 import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
-// import UnscrambleWords from '@/components/games/UnscrambleWords'
+import UnscrambleWordsGame from '@/components/games/UnscrambleWordsGame'
 
 const UnscrambleWordsPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -53,11 +53,10 @@ const UnscrambleWordsPage = () => {
       {!content ? (
         <ContentTabs tabs={manualCurricululmOnlyTabs} tabContent={tabContent} />
       ) : (
-        // <UnscrambleWords
-        //   generatedContent={content}
-        //   metaData={metaData}
-        // />
-        <p>{metaData.title}</p>
+        <UnscrambleWordsGame
+          generatedContent={content}
+          metaData={metaData}
+        />
       )}
     </>
   )

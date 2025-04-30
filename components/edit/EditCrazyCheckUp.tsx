@@ -73,7 +73,7 @@ const EditCrazyCheckUp = ({
   )
 
   return (
-    <div className='container-background flex h-full flex-col rounded-lg'>
+    <div className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
       <div className='flex'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content

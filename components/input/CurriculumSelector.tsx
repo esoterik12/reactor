@@ -58,9 +58,6 @@ export function CurriculumSelector<T>({
   const [error, setError] = useState<null | string>(null)
   const [wordsToFilter, setWordsToFilter] = useState<string[]>([])
 
-  console.log('level in CurriculumSelector.tsx: ', level)
-  console.log('level in CurriculumSelector.tsx: ', unit)
-
   const {
     control,
     watch,
@@ -170,7 +167,7 @@ export function CurriculumSelector<T>({
   }
 
   return (
-    <section className='flex min-h-[613px] flex-col'>
+    <section className='flex shadow-border-md  min-h-[613px] flex-col'>
       <div className='mb-2 flex items-center gap-2 px-4 pt-4'>
         {icon}
         <h2 className='large-text'>{contentTitle}</h2>

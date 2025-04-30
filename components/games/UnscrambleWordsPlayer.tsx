@@ -1,113 +1,168 @@
-// 'use client'
-// import DefaultButton from '@/components/buttons/DefaultButton'
-// import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
-// import { useState } from 'react'
-// import IconCheckCircle from '../icons/IconCheckCircle'
+'use client'
+import DefaultButton from '@/components/buttons/DefaultButton'
+import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
+import { useRef, useEffect, useReducer } from 'react'
+import IconCheckCircle from '../icons/IconCheckCircle'
+import { useSoundPlayer } from '@/lib/hooks/useSoundPlayer'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useTheme } from 'next-themes'
+import ScoreDisplay from './ScoreDisplay'
+import { unscrambleWordsReducer } from '@/lib/utils/game-utils/unscrambleWordsReducer'
 
-// interface UnscrambleWordsPlayerProps {
-//   content: WordPairings
-// }
+interface UnscrambleWordsPlayerProps {
+  content: WordPairings
+  playerNumber: number
+  isReset: boolean
+}
 
-// export default function UnscrambleWordsPlayer({
-//   content
-// }: UnscrambleWordsPlayerProps) {
-//   const [gameContent, setGameContent] = useState<WordPairings | null>(content)
+export default function UnscrambleWordsPlayer({
+  content,
+  playerNumber,
+  isReset
+}: UnscrambleWordsPlayerProps) {
+  const { play: playCorrect } = useSoundPlayer('correct')
+  const { theme } = useTheme()
+  const [
+    {
+      currentWordIndex,
+      clickedIndexes,
+      currentLetterIndex,
+      score,
+      gameContent
+    },
+    dispatch
+  ] = useReducer(unscrambleWordsReducer, {
+    currentWordIndex: 0,
+    currentLetterIndex: 0,
+    clickedIndexes: [],
+    score: 0,
+    gameContent: content
+  })
 
-//   // Eventually, this can be built using a reducer
-//   const [currentWordIndex, setCurrentWordIndex] = useState(0)
-//   const [currentLetterIndex, setCurrentLetterIndex] = useState(0)
-//   const [clickedIndexes, setClickedIndexes] = useState<number[]>([])
+  // useEffect to reset everything if timer reset is clicked
+  useEffect(() => {
+    dispatch({ type: 'RESET_GAME', payload: content })
+  }, [isReset, content])
 
-//   // Add proper error handling here
-//   if (!gameContent) {
-//     return <p>Error loading player component</p>
-//   }
+  // useRef is used here to avoid an issue with two fast double clicks
+  const loadingRef = useRef(false)
 
-//   const handleClickLetter = ({
-//     letter,
-//     clickedLetterIndex
-//   }: {
-//     letter: string
-//     clickedLetterIndex: number
-//   }) => {
-//     const correctWordArray = gameContent[currentWordIndex].wordOne.split('')
-//     const scrambledWordArray = gameContent[currentWordIndex].wordTwo.split('')
+  // Add proper error handling here
+  if (!content || !theme) {
+    return <p>Error loading player component</p>
+  }
 
-//     const expectedLetter = correctWordArray[currentLetterIndex]
+  const handleClickLetter = ({
+    letter,
+    clickedLetterIndex
+  }: {
+    letter: string
+    clickedLetterIndex: number
+  }) => {
+    dispatch({ type: 'CLICK_LETTER', payload: { letter, clickedLetterIndex } })
+  }
 
-//     if (letter === expectedLetter) {
-//       setClickedIndexes([...clickedIndexes, clickedLetterIndex])
-//       setCurrentLetterIndex(currentLetterIndex => currentLetterIndex + 1)
-//     }
+  const nextWord = () => {
+    if (loadingRef.current) return
+    loadingRef.current = true
+    playCorrect()
+    dispatch({ type: 'NEXT_WORD' })
+  }
 
-//     // console.log('correctWordArray: ', correctWordArray)
-//     // console.log('scrambledWordArray: ', scrambledWordArray)
-//     // console.log('expectedLetter: ', expectedLetter)
-//     // console.log('clickedIndexes', clickedIndexes)
+  return (
+    <motion.div
+      layout
+      className='container-border container-background flex h-[70vh] w-full flex-col items-center justify-between gap-1 p-4'
+      key={`player-number-${playerNumber}`}
+      initial={{ opacity: 0, y: -5 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 25 }}
+      transition={{
+        layout: { type: 'spring', stiffness: 456, damping: 45 },
+        opacity: { duration: 0.4, ease: 'easeInOut' },
+        y: { duration: 0.1, ease: 'easeOut' }
+      }}
+    >
+      {/* Top Half */}
+      <div>
+        {/* Score Container */}
+        <ScoreDisplay score={score} />
 
-//     /*
-//       So this will have to take the letter index and letter and check if the LETTER matches the expected letter
-//       The issue is that sometimes there will be multiples of the same letter, but we want to blur out the letter clicked
-//     */
-//   }
+        {/* Completed Letters Display */}
+        <div className='flex h-24 w-full flex-row items-center justify-center'>
+          {gameContent[currentWordIndex].wordOne
+            .split('')
+            .map((letter, letterIndex) => (
+              <p
+                key={`${letterIndex}-${letter}`}
+                className={`${letterIndex >= currentLetterIndex && 'hidden'} header-largest flex flex-row items-center justify-center`}
+              >
+                {letter}
+              </p>
+            ))}
+        </div>
+      </div>
 
-//   const nextWord = () => {
-//     if (currentLetterIndex === gameContent[currentWordIndex].wordOne.length) {
-//       setCurrentWordIndex(currentWordIndex => currentWordIndex + 1)
-//       setClickedIndexes([])
-//       setCurrentLetterIndex(0)
-//     }
-//   }
+      {/* Bottom Half */}
+      <div className='flex h-56 w-full flex-col items-center justify-center'>
+        {/* Current Scrambled Word Input Buttons */}
+        <div className='flex h-40 w-full flex-col items-center justify-center'>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={gameContent[currentWordIndex].wordTwo} // changes for each word
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.14 }}
+              className='flex flex-row flex-wrap items-center justify-center gap-2'
+            >
+              {gameContent[currentWordIndex].wordTwo
+                .split('')
+                .map((letter, letterIdx) => (
+                  <DefaultButton
+                    customClasses={`${clickedIndexes.includes(letterIdx) ? 'page-background' : 'primary-background'} h-14 w-14 header p-1 button-border hover-effect`}
+                    key={`${letterIdx}-${letter}`}
+                    handleClick={() =>
+                      handleClickLetter({
+                        letter,
+                        clickedLetterIndex: letterIdx
+                      })
+                    }
+                    isDisabled={clickedIndexes.includes(letterIdx)}
+                  >
+                    <p className='button-text'>{letter}</p>
+                  </DefaultButton>
+                ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-//   return (
-//     <div className='container-border container-background flex w-full flex-col gap-1 p-4 items-center'>
-//       {/* Score Container */}
-//       <div className='flex h-16 flex-row gap-2'>
-//         <p className='subheader paragraph-text'>Score:</p>
-//         <p className='subheader'>11</p>
-//       </div>
-
-//       {/* Game Container */}
-//       <div className='flex h-20 flex-row gap-2'>
-//         {gameContent[currentWordIndex].wordOne
-//           .split('')
-//           .map((letter, letterIndex) => (
-//             <div
-//               className={`${letterIndex >= currentLetterIndex && 'hidden'} flex h-12 w-2 flex-row items-center justify-center p-1`}
-//               key={`${letterIndex}-${letter}`}
-//             >
-//               <p className='header'>{letter}</p>
-//             </div>
-//           ))}
-//       </div>
-
-//       <div className='flex h-32 flex-col gap-8 items-center'>
-//         <div className='flex flex-row gap-2'>
-//           {gameContent[currentWordIndex].wordTwo
-//             .split('')
-//             .map((letter, letterIdx) => (
-//               <DefaultButton
-//                 customClasses={`${clickedIndexes.includes(letterIdx) ? 'page-background' : 'primary-background'} w-12 h-12 p-1 button-border hover-effect`}
-//                 key={`${letterIdx}-${letter}`}
-//                 handleClick={() =>
-//                   handleClickLetter({ letter, clickedLetterIndex: letterIdx })
-//                 }
-//                 isDisabled={clickedIndexes.includes(letterIdx)}
-//               >
-//                 <p className='button-text subheader'>{letter}</p>
-//               </DefaultButton>
-//             ))}
-//         </div>
-//         {/* Next Word Button */}
-//         <div>
-//           {currentLetterIndex ===
-//             gameContent[currentWordIndex].wordOne.length && (
-//             <DefaultButton handleClick={nextWord}>
-//               <IconCheckCircle classes='h-12 w-12 tertiary-text' />
-//             </DefaultButton>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+        {/* Next Word Button */}
+        <div className='flex h-20 w-full flex-row items-center justify-center'>
+          <AnimatePresence
+            mode='wait'
+            onExitComplete={() => {
+              loadingRef.current = false
+            }}
+          >
+            {currentLetterIndex ===
+              gameContent[currentWordIndex].wordOne.length && (
+              <motion.div
+                key='next-word-button'
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.18 }}
+                className='flex w-full flex-col items-center justify-center gap-8'
+              >
+                <DefaultButton handleClick={() => nextWord()}>
+                  <IconCheckCircle classes='h-12 w-12 tertiary-text' />
+                </DefaultButton>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.div>
+  )
+}

@@ -57,6 +57,9 @@ export default function Home() {
             <p>It can gradually get easier by slightly changing the shade of the color or moving the text into a line</p>
             <p>Decreasing points as it gets easier</p>
           </div>
+          <div className={containerClasses}>
+            <p>Minefield two players but with words as the cards</p>
+          </div>
         </main>
       </>
     </PageContainer>

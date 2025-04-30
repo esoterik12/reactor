@@ -42,6 +42,9 @@
     @apply bg-emerald-400;
   }
   /* Text Sizing */
+  .header-largest {
+    @apply text-5xl font-bold;
+  }
   .header-large {
     @apply text-4xl font-bold;
   }

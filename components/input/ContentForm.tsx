@@ -121,7 +121,7 @@ export function ContentForm<T>({
   const currentPrimaryInput = watch('primaryInputContent')
 
   return (
-    <section className='flex h-full w-full flex-row'>
+    <section className='shadow-border-md flex h-full w-full flex-row'>
       <form
         className='flex h-full w-[65%] flex-col justify-between p-4'
         onSubmit={handleSubmit(handleSubmitButton)}
