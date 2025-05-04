@@ -2,12 +2,12 @@
 import DefaultButton from '@/components/buttons/DefaultButton'
 import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
 import { useRef, useEffect, useReducer } from 'react'
-import IconCheckCircle from '../icons/IconCheckCircle'
 import { useSoundPlayer } from '@/lib/hooks/useSoundPlayer'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import ScoreDisplay from './ScoreDisplay'
 import { unscrambleWordsReducer } from '@/lib/utils/game-utils/unscrambleWordsReducer'
+import NextButton from './NextButton'
 
 interface UnscrambleWordsPlayerProps {
   content: WordPairings
@@ -139,28 +139,14 @@ export default function UnscrambleWordsPlayer({
 
         {/* Next Word Button */}
         <div className='flex h-20 w-full flex-row items-center justify-center'>
-          <AnimatePresence
-            mode='wait'
-            onExitComplete={() => {
-              loadingRef.current = false
-            }}
-          >
-            {currentLetterIndex ===
-              gameContent[currentWordIndex].wordOne.length && (
-              <motion.div
-                key='next-word-button'
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.18 }}
-                className='flex w-full flex-col items-center justify-center gap-8'
-              >
-                <DefaultButton handleClick={() => nextWord()}>
-                  <IconCheckCircle classes='h-12 w-12 tertiary-text' />
-                </DefaultButton>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <NextButton
+            nextFn={nextWord}
+            displayCondition={
+              currentLetterIndex ===
+              gameContent[currentWordIndex].wordOne.length
+            }
+            isLoadingRef={loadingRef}
+          />
         </div>
       </div>
     </motion.div>

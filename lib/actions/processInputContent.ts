@@ -17,6 +17,7 @@ import interviewsMessage from '../gpt-messages/interviewsMessage'
 import { generateCryptogram } from '../internal-generation/generateCryptogram'
 import wordsearchMessage from '../gpt-messages/wordsearchMessage'
 import { processWordsearchWords } from '../internal-generation/processWordsearchWords'
+import { processSpotItWords } from '../internal-generation/processSpotItWords'
 
 interface ProcessInputContentProps {
   contentType: string
@@ -192,6 +193,12 @@ export default async function processInputContent({
 
         case 'wordsearch':
           creationResult = processWordsearchWords({ primaryInputContent })
+          break
+
+        case 'spotit':
+          creationResult = {
+            data: processSpotItWords({ words: primaryInputContent })
+          }
           break
 
         default:

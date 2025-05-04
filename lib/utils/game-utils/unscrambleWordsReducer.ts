@@ -32,6 +32,7 @@ export function unscrambleWordsReducer(
         state.clickedIndexes.includes(clickedLetterIndex)
       ) {
         return state // invalid click
+
       }
 
       const updatedIndexes = [...state.clickedIndexes, clickedLetterIndex]

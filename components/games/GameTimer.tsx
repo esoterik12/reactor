@@ -9,12 +9,15 @@ interface GameTimerProps {
   initialSeconds?: number
   // Provided to trigger a game-wide reset function from parent comp
   parentResetFunction?: React.Dispatch<SetStateAction<boolean>>
+  // Secondary start
+  externalStart?: boolean
 }
 
 export default function GameTimer({
   initialMinutes = 0,
   initialSeconds = 0,
-  parentResetFunction
+  parentResetFunction,
+  externalStart
 }: GameTimerProps) {
   const [minutes, setMinutes] = useState(initialMinutes)
   const [seconds, setSeconds] = useState(initialSeconds)
@@ -47,6 +50,12 @@ export default function GameTimer({
     setMinutes(initialMinutes)
     setSeconds(initialSeconds)
   }
+
+  useEffect(() => {
+    if (externalStart) {
+      start()
+    }
+  }, [externalStart])
 
   // Clean up on unmount
   useEffect(() => {
