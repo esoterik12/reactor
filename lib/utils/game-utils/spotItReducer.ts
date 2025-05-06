@@ -21,6 +21,7 @@ export type GameAction =
   | { type: 'NEXT_WORD' }
   | { type: 'RESET_GAME'; payload: SpotItWord[] }
   | { type: 'RESET_STREAK' }
+  | { type: 'ADD_BONUS_POINTS' }
 
 export function spotItReducer(
   state: SpotItGameState,
@@ -128,6 +129,13 @@ export function spotItReducer(
         ...state,
         matchedWord: null,
         gameContent: updatedContent
+      }
+    }
+
+    case 'ADD_BONUS_POINTS': {
+      return {
+        ...state,
+        score: state.score + 5
       }
     }
 

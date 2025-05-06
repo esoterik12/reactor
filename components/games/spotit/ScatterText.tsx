@@ -67,7 +67,7 @@ function ScatterText({
 
     setPositions(newPos)
     setReady(true)
-  }, [sizes, isFullScreen, numOfPlayers])
+  }, [sizes, items, isFullScreen, numOfPlayers])
 
   // Framer variants
   const itemVariants: Variants = {

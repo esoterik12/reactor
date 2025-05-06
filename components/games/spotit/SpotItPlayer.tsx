@@ -10,6 +10,7 @@ import NextButton from '../NextButton'
 import GamePlayerContainer from '@/components/containers/GamePlayerContainer'
 import BlurOpponent from './BlurOpponent'
 import ScatterText from './ScatterText'
+import BonusPointsButton from '../BonusPointsButton'
 
 interface UnscrambleWordsPlayerProps {
   content: SpotItWord[]
@@ -32,7 +33,9 @@ export default function SpotItPlayer({
   isFullScreen,
   numOfPlayers
 }: UnscrambleWordsPlayerProps) {
-  const { play: playCorrect } = useSoundPlayer('correct')
+  const { play: playCorrect } = useSoundPlayer('correct', 0.8)
+  const { play: playBonus } = useSoundPlayer('multiply', 0.4)
+  const { play: playBlur } = useSoundPlayer('swoosh', 0.6)
 
   const { theme } = useTheme()
   const [
@@ -77,10 +80,19 @@ export default function SpotItPlayer({
   const handleBlurOpponent = () => {
     const opponent = playerNumber === 1 ? 2 : 1
     setIsBlurred(prev => (prev.includes(opponent) ? prev : [...prev, opponent]))
+    playBlur()
     dispatch({ type: 'RESET_STREAK' })
     setTimeout(() => {
       setIsBlurred(prev => prev.filter(p => p !== opponent))
     }, 5000)
+  }
+
+  const handleBonusPoints = () => {
+    if (loadingRef.current) return
+    loadingRef.current = true
+    playBonus()
+    dispatch({ type: 'ADD_BONUS_POINTS' })
+    dispatch({ type: 'RESET_STREAK' })
   }
 
   return (
@@ -106,6 +118,15 @@ export default function SpotItPlayer({
             {/* Action Buttons Button */}
             <div className='flex h-1/6 w-full flex-row items-center justify-center'>
               <div className='w-20'>
+                <BlurOpponent
+                  handleBlurOpponent={handleBlurOpponent}
+                  displayCondition={
+                    perfectStreak >= 10 && numOfPlayers.length > 1
+                  }
+                  isLoadingRef={loadingRef}
+                />
+              </div>
+              <div className='w-20'>
                 <NextButton
                   nextFn={handleNextWord}
                   displayCondition={!!matchedWord}
@@ -113,8 +134,8 @@ export default function SpotItPlayer({
                 />
               </div>
               <div className='w-20'>
-                <BlurOpponent
-                  handleBlurOpponent={handleBlurOpponent}
+                <BonusPointsButton
+                  bonusPointsFn={handleBonusPoints}
                   displayCondition={perfectStreak >= 10}
                   isLoadingRef={loadingRef}
                 />
