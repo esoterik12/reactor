@@ -17,9 +17,11 @@ interface SpotItGameProps {
 const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
   const { containerRef, toggleFullScreen, isFullscreen } =
     useFullscreen<HTMLDivElement>()
+
   const [numOfPlayers, setNumOfPlayers] = useState<number[]>([1])
   const [isReset, setIsReset] = useState(false)
   const [gameIsStarted, setGameIsStarted] = useState(false)
+  const [isBlurred, setIsBlurred] = useState<number[]>([])
 
   const toggleNumOfPlayers = (num: 1 | 2) => {
     setNumOfPlayers(Array.from({ length: num }, (_, i) => i + 1))
@@ -27,9 +29,8 @@ const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
 
   useEffect(() => {
     setIsReset(false)
+    setGameIsStarted(false)
   }, [isReset, setIsReset])
-
-  console.log('generatedContent in SpotItGame.tsx', generatedContent)
 
   return (
     <section
@@ -43,7 +44,7 @@ const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
         <div className='ml-2 flex flex-row p-2'>
           <GameTimer
             parentResetFunction={setIsReset}
-            externalStart={gameIsStarted}
+            parentStartFucntion={setGameIsStarted}
           />
         </div>
         <div className='mr-1 flex flex-row items-center gap-2 p-2'>
@@ -74,7 +75,10 @@ const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
             content={generatedContent.data}
             isReset={isReset}
             gameIsStarted={gameIsStarted}
-            setGameIsStarted={setGameIsStarted}
+            isBlurred={isBlurred}
+            setIsBlurred={setIsBlurred}
+            isFullScreen={isFullscreen}
+            numOfPlayers={numOfPlayers}
           />
         ))}
       </motion.div>

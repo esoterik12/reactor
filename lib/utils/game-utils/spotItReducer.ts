@@ -6,6 +6,7 @@ export interface SpotItGameState {
   gameContent: SpotItWord[]
   gameStarted: boolean
   matchedWord: string | null
+  perfectStreak: number
 }
 
 export type GameAction =
@@ -19,6 +20,7 @@ export type GameAction =
     }
   | { type: 'NEXT_WORD' }
   | { type: 'RESET_GAME'; payload: SpotItWord[] }
+  | { type: 'RESET_STREAK' }
 
 export function spotItReducer(
   state: SpotItGameState,
@@ -47,9 +49,8 @@ export function spotItReducer(
       newContent.push(duplicatedWord)
 
       return {
-        matchedWord: null,
+        ...state,
         gameStarted: true,
-        score: 0,
         gameContent: newContent
       }
     }
@@ -68,11 +69,13 @@ export function spotItReducer(
       const isCorrect = clickedWord.word === duplicatedWord.word
 
       if (!isCorrect) {
-        return state
+        return { ...state, perfectStreak: 0 }
       } else {
         return {
           ...state,
-          matchedWord: duplicatedWord.word
+          matchedWord: duplicatedWord.word,
+          score: state.score + 1,
+          perfectStreak: state.perfectStreak + 1
         }
       }
     }
@@ -124,8 +127,14 @@ export function spotItReducer(
       return {
         ...state,
         matchedWord: null,
-        gameContent: updatedContent,
-        score: state.score + 1
+        gameContent: updatedContent
+      }
+    }
+
+    case 'RESET_STREAK': {
+      return {
+        ...state,
+        perfectStreak: 0
       }
     }
 
@@ -134,7 +143,8 @@ export function spotItReducer(
         matchedWord: null,
         gameStarted: false,
         score: 0,
-        gameContent: action.payload
+        gameContent: action.payload,
+        perfectStreak: 0
       }
     }
 
