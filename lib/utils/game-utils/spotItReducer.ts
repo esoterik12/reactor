@@ -135,7 +135,7 @@ export function spotItReducer(
     case 'ADD_BONUS_POINTS': {
       return {
         ...state,
-        score: state.score + 5
+        score: state.score + 3
       }
     }
 

@@ -13,7 +13,7 @@ const ScoreDisplay = ({ score, streak }: ScoreDisplayProps) => {
 
   return (
     <div
-      className={`${streak === undefined ? 'justify-center' : 'justify-between'} flex h-1/6 w-full flex-row items-center gap-2 px-2`}
+      className={`${streak === undefined ? 'justify-center' : 'justify-between'} flex h-[6%] w-full flex-row items-center gap-2 px-2`}
     >
       <div className='flex flex-row'>
         <p className='subheader paragraph-text mr-1'>Score:</p>

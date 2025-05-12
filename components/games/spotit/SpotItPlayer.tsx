@@ -12,7 +12,7 @@ import BlurOpponent from './BlurOpponent'
 import ScatterText from './ScatterText'
 import BonusPointsButton from '../BonusPointsButton'
 
-interface UnscrambleWordsPlayerProps {
+interface SpotItPlayerProps {
   content: SpotItWord[]
   playerNumber: number
   isReset: boolean
@@ -32,7 +32,7 @@ export default function SpotItPlayer({
   setIsBlurred,
   isFullScreen,
   numOfPlayers
-}: UnscrambleWordsPlayerProps) {
+}: SpotItPlayerProps) {
   const { play: playCorrect } = useSoundPlayer('correct', 0.8)
   const { play: playBonus } = useSoundPlayer('multiply', 0.4)
   const { play: playBlur } = useSoundPlayer('swoosh', 0.6)
@@ -99,8 +99,7 @@ export default function SpotItPlayer({
     <>
       {gameStarted ? (
         <GamePlayerContainer playerNumber={playerNumber}>
-          {/* Top Half */}
-          <div className='h-[70vh] w-full'>
+          <div className='h-full w-full'>
             {/* Score Container */}
             <ScoreDisplay score={score} streak={perfectStreak} />
 
@@ -116,7 +115,7 @@ export default function SpotItPlayer({
             />
 
             {/* Action Buttons Button */}
-            <div className='flex h-1/6 w-full flex-row items-center justify-center'>
+            <div className='flex h-[14%] w-full flex-row items-center justify-center'>
               <div className='w-20'>
                 <BlurOpponent
                   handleBlurOpponent={handleBlurOpponent}

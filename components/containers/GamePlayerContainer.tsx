@@ -14,7 +14,7 @@ const GamePlayerContainer = ({
   return (
     <motion.div
       layout
-      className='container-border container-background flex h-[70vh] w-full flex-col items-center justify-between gap-1 p-4'
+      className='container-border container-background flex w-full flex-col items-center justify-between gap-1 p-4'
       key={`player-number-${playerNumber}`}
       initial={{ opacity: 0, y: -5 }}
       animate={{ opacity: 1, y: 0 }}

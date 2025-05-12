@@ -175,7 +175,7 @@ export function CurriculumSelector<T>({
       {/* Left Panel: Selectors & Checkboxes */}
       <form
         onSubmit={handleSubmit(handleGenerateButton)}
-        className='border-color w-full border-b px-4 pb-2'
+        className='border-color w-full border-b px-4 pb-4'
       >
         {/* Dropdowns */}
         <div className='mt-2 flex flex-row gap-x-10'>
@@ -353,7 +353,7 @@ export function CurriculumSelector<T>({
             ariaLabel='Submit button'
             btnType='submit'
             handleClick={handleSubmit(handleGenerateButton)}
-            customClasses='w-32 h-9 my-5 button-border shadow-border-md primary-background p-1 hover-effect-primary'
+            customClasses='w-32 h-9 mt-6 button-border shadow-border-md primary-background p-1 hover-effect-primary'
             isDisabled={isLoading}
           >
             <p className='button-text'>Generate</p>

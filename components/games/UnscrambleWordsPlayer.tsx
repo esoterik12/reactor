@@ -73,61 +73,69 @@ export default function UnscrambleWordsPlayer({
   return (
     <GamePlayerContainer playerNumber={playerNumber}>
       {/* Top Half */}
-      <div>
+      <div className='h-full w-full'>
+        {/* Score container takes up 6%, 
+        the middle section takes up 80% - two section within take up 50% each
+        The bottom button sections take up 14%    
+        */}
+
         {/* Score Container */}
         <ScoreDisplay score={score} />
 
-        {/* Completed Letters Display */}
-        <div className='flex h-24 w-full flex-row items-center justify-center'>
-          {gameContent[currentWordIndex].wordOne
-            .split('')
-            .map((letter, letterIndex) => (
-              <p
-                key={`${letterIndex}-${letter}`}
-                className={`${letterIndex >= currentLetterIndex && 'hidden'} header-largest flex flex-row items-center justify-center`}
-              >
-                {letter}
-              </p>
-            ))}
-        </div>
-      </div>
+        {/* Middle Section */}
+        <div className='h-[80%]'>
+          {/* Completed Letters Display */}
+          <div className='flex h-[50%] w-full flex-row items-center justify-center'>
+            {gameContent[currentWordIndex].wordOne
+              .split('')
+              .map((letter, letterIndex) => (
+                <p
+                  key={`${letterIndex}-${letter}`}
+                  className={`${letterIndex >= currentLetterIndex && 'hidden'} header-largest flex flex-row items-center justify-center`}
+                >
+                  {letter}
+                </p>
+              ))}
+          </div>
 
-      {/* Bottom Half */}
-      <div className='flex h-56 w-full flex-col items-center justify-center'>
-        {/* Current Scrambled Word Input Buttons */}
-        <div className='flex h-40 w-full flex-col items-center justify-center'>
-          <AnimatePresence mode='wait'>
-            <motion.div
-              key={gameContent[currentWordIndex].wordTwo} // changes for each word
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.14 }}
-              className='flex flex-row flex-wrap items-center justify-center gap-2'
-            >
-              {gameContent[currentWordIndex].wordTwo
-                .split('')
-                .map((letter, letterIdx) => (
-                  <DefaultButton
-                    customClasses={`${clickedIndexes.includes(letterIdx) ? 'page-background' : 'primary-background'} h-14 w-14 header p-1 button-border hover-effect`}
-                    key={`${letterIdx}-${letter}`}
-                    handleClick={() =>
-                      handleClickLetter({
-                        letter,
-                        clickedLetterIndex: letterIdx
-                      })
-                    }
-                    isDisabled={clickedIndexes.includes(letterIdx)}
-                  >
-                    <p className='button-text'>{letter}</p>
-                  </DefaultButton>
-                ))}
-            </motion.div>
-          </AnimatePresence>
+          {/* Input Buttons */}
+          <div className='flex h-[50%] w-full flex-col items-center justify-center'>
+            {/* Current Scrambled Word Input Buttons */}
+            <div className='flex w-full flex-col items-center justify-center'>
+              <AnimatePresence mode='wait'>
+                <motion.div
+                  key={gameContent[currentWordIndex].wordTwo} // changes for each word
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.14 }}
+                  className='flex flex-row flex-wrap items-center justify-center gap-2'
+                >
+                  {gameContent[currentWordIndex].wordTwo
+                    .split('')
+                    .map((letter, letterIdx) => (
+                      <DefaultButton
+                        customClasses={`${clickedIndexes.includes(letterIdx) ? 'page-background' : 'primary-background'} h-14 w-14 header p-1 button-border hover-effect`}
+                        key={`${letterIdx}-${letter}`}
+                        handleClick={() =>
+                          handleClickLetter({
+                            letter,
+                            clickedLetterIndex: letterIdx
+                          })
+                        }
+                        isDisabled={clickedIndexes.includes(letterIdx)}
+                      >
+                        <p className='button-text'>{letter}</p>
+                      </DefaultButton>
+                    ))}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
         </div>
 
-        {/* Next Word Button */}
-        <div className='flex h-20 w-full flex-row items-center justify-center'>
+        {/* Bottom Next Word Button */}
+        <div className='flex h-[14%] w-full flex-row items-center justify-center'>
           <NextButton
             nextFn={nextWord}
             displayCondition={

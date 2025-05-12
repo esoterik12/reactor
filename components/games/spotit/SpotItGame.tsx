@@ -34,12 +34,12 @@ const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
 
   return (
     <section
-      className={`${isFullscreen && 'p-4'} page-background flex flex-col justify-between`}
+      className={`${isFullscreen && 'p-4'} h-full page-background flex flex-col`}
       ref={containerRef}
     >
       {/* Selection Top Panel */}
       <div
-        className={`container-background container-border flex h-1/6 flex-row justify-between`}
+        className={`container-background container-border flex flex-row justify-between`}
       >
         <div className='ml-2 flex flex-row p-2'>
           <GameTimer
@@ -67,7 +67,7 @@ const SpotItGame = ({ generatedContent }: SpotItGameProps) => {
       </div>
 
       {/* Game Container */}
-      <motion.div layout className='mt-2 flex h-5/6 w-full flex-row gap-2'>
+      <motion.div layout className='mt-2 h-screen flex w-full flex-row gap-2'>
         {numOfPlayers.map((_, playerIndex) => (
           <SpotItPlayer
             key={`player-${playerIndex}-comp`}

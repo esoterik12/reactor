@@ -18,6 +18,8 @@ import {
   bingoSelectorSchema
 } from '@/lib/zod/input/bingoInput.schema'
 import { EditBingoValues } from '@/lib/zod/edit/editBingo.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { bingoContentGuide } from '@/lib/constants/content/content-guides/bingoContentGuide'
 
 const BingoPage = () => {
   const [content, setContent] = useState<EditBingoValues | null>(null)
@@ -64,7 +66,16 @@ const BingoPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 4'>Tab 4</p>
+    <ContentGuide
+      key='Tab 4'
+      icon={<IconBingo classes={contentIconStyles} />}
+      contentTitle={bingoContentGuide.contentTitle}
+      description={bingoContentGuide.description}
+      whyUseIt={bingoContentGuide.whyUseIt}
+      imageCaption={bingoContentGuide.imageCaption}
+      imageLink={bingoContentGuide.imageLink}
+      generationOptions={bingoContentGuide.generationOptions}
+    />
   ]
 
   return (

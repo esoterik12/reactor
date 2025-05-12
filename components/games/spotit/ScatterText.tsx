@@ -93,7 +93,7 @@ function ScatterText({
   return (
     <div
       ref={containerRef}
-      className='relative h-4/6 w-full items-center justify-center'
+      className='relative h-[80%] w-full items-center justify-center'
     >
       {/* render hidden spans for measurement */}
       {items.map((text, i) => (

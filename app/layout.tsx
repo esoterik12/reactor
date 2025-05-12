@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${late.className} page-background h-[100vh] antialiased`}
+        className={`${late.className} page-background flex flex-col flex-grow antialiased`}
       >
         <Providers>
           <NavHeader />

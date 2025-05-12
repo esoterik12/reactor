@@ -11,6 +11,8 @@ import { cryptogramInputSchema } from '@/lib/zod/input/cryptogramInput.schema'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import InlineError from '@/components/shared/InlineError'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { cryptogramContentGuide as guide } from '@/lib/constants/content/content-guides/cryptogramContentGuide'
 
 const CryptogramPage = () => {
   const [error, setError] = useState<string | null>(null)
@@ -64,7 +66,16 @@ const CryptogramPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 2'>Tab 2</p>
+    <ContentGuide
+      key='Tab 2'
+      icon={<IconCryptogram classes={contentIconStyles} />}
+      contentTitle='Cryptogram'
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

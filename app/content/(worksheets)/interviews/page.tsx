@@ -14,6 +14,8 @@ import {
   interviewsSelectorInfo
 } from '@/lib/constants/content/worksheetsContentInfo'
 import { interviewsInputSchema } from '@/lib/zod/input/interviewsInput.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { interviewsContentGuide as guide } from '@/lib/constants/content/content-guides/interviewsContentGuide'
 
 const InterviewsPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
@@ -45,7 +47,16 @@ const InterviewsPage = () => {
       zodSchema={baseContentSelectorSchema}
       info={interviewsSelectorInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconInterviews classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageCaption={guide.imageCaption}
+      imageLink={guide.imageLink}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (
