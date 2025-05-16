@@ -15,6 +15,8 @@ import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { memoryCardsContentGuide as guide } from '@/lib/constants/content/content-guides/memoryCardsContentGuide'
 
 const MemoryCardsPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -46,7 +48,15 @@ const MemoryCardsPage = () => {
       zodSchema={memoryCardsSelectorSchama}
       info={memoryCardsGeneratedInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconMemoryCards classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

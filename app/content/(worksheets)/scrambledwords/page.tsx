@@ -13,6 +13,8 @@ import {
 } from '@/lib/zod/input/baseContentInput.schema'
 import EditWordPairsForm from '@/components/edit/EditWordPairsForm'
 import { WordPairings } from '@/lib/zod/edit/editWordPairs.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { scrambledWordsContentGuide as guide } from '@/lib/constants/content/content-guides/scrambledWordsGuide'
 
 const ScrambledWordsPage = () => {
   const [content, setContent] = useState<WordPairings | null>(null)
@@ -45,7 +47,15 @@ const ScrambledWordsPage = () => {
       zodSchema={baseContentSelectorSchema}
       info={scrambledWordsGeneratedInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconScrambledWords classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

@@ -147,7 +147,7 @@ export function ContentForm<T>({
             {levelSelectionEnabled && (
               <div className='w-[35%] pl-8'>
                 <div className='flex flex-row items-center justify-between'>
-                  <h3 className='label-text mb-0.5'>Content level:</h3>
+                  <h3 className='label-text mb-0.5'>Level:</h3>
                   <ContentInfoButton
                     handleClick={() => handleSelectInfo('levelSelectionInfo')}
                   />

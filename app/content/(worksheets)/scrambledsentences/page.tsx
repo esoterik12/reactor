@@ -12,6 +12,8 @@ import {
   scrambledSentencesFormSchema,
   scrambledSentencesSelectorSchema
 } from '@/lib/zod/input/scrambledSentencesInput.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { scrambledSentencesContentGuide as guide } from '@/lib/constants/content/content-guides/scrambledSentencesGuide'
 
 const ScrambledSentencesPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
@@ -43,7 +45,15 @@ const ScrambledSentencesPage = () => {
       zodSchema={scrambledSentencesSelectorSchema}
       info={scrambledSentencesGeneratedInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconScrambledSentences classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

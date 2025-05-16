@@ -8,7 +8,7 @@ interface ContentGuideProps {
   description: string
   whyUseIt: string
   imageLink: string
-  imageCaption: string
+  imageCaption?: string
   generationOptions: GenerationOptions[]
 }
 
@@ -62,7 +62,9 @@ const ContentGuide = ({
           height={400}
           className='rounded shadow'
         />
-        <p className='paragraph-text mt-2 text-sm'>{imageCaption}</p>
+        {imageCaption && (
+          <p className='paragraph-text mt-2 text-sm'>{imageCaption}</p>
+        )}
       </div>
     </div>
   )
