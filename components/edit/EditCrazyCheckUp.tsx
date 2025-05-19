@@ -15,15 +15,18 @@ import {
   EditCrazyCheckUpFormValues
 } from '@/lib/zod/edit/editCrazyCheckUp.schema'
 import IconXCircle from '../icons/IconXCircle'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditCrazyCheckUpProps {
   generatedContent: CrazyCheckUpCommand[]
   metaData: EditMetaDataProps
+  resetPage: () => void
 }
 
 const EditCrazyCheckUp = ({
   generatedContent,
-  metaData
+  metaData,
+  resetPage
 }: EditCrazyCheckUpProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -74,10 +77,11 @@ const EditCrazyCheckUp = ({
 
   return (
     <div className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='justify-between flex flex-row'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 

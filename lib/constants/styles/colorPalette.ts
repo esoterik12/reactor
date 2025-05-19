@@ -2,6 +2,7 @@ export const PDFColorPallete = {
   // knowledge palette
   black: '#4D4F53',
   gray: '#CBC7BF',
+  lightGray: '#E6E4DF',
   brown: '#432132',
   beige: '#ede8c4',
   // action palette

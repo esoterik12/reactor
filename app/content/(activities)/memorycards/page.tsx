@@ -25,6 +25,14 @@ const MemoryCardsPage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm<WordPairings>
       key='Tab 1'
@@ -70,6 +78,7 @@ const MemoryCardsPage = () => {
           generatedContent={content}
           metaData={metaData}
           shuffleEnabled={true}
+          resetPage={resetPage}
         />
       )}
     </>

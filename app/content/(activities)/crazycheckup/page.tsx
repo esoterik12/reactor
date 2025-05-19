@@ -16,6 +16,8 @@ import {
   baseContentInputSchema,
   baseContentSelectorSchema
 } from '@/lib/zod/input/baseContentInput.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { crazyCheckUpGuide as guide } from '@/lib/constants/content/content-guides/crazyCheckUpGuide'
 
 const CrazyCheckUpPage = () => {
   const [content, setContent] = useState<CrazyCheckUpCommand[] | null>(null)
@@ -23,6 +25,14 @@ const CrazyCheckUpPage = () => {
     title: '',
     contentType: ''
   })
+
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
 
   const tabContent = [
     <ContentForm
@@ -47,15 +57,31 @@ const CrazyCheckUpPage = () => {
       zodSchema={baseContentSelectorSchema}
       info={crazyCheckUpInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconCrazyCheckUp classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (
     <>
       {!content ? (
-        <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
+        <ContentTabs
+          tabs={generateOnlyTabs}
+          tabContent={tabContent}
+        />
       ) : (
-        <EditCrazyCheckUp generatedContent={content} metaData={metaData} />
+        <EditCrazyCheckUp
+          generatedContent={content}
+          metaData={metaData}
+          resetPage={resetPage}
+        />
       )}
     </>
   )

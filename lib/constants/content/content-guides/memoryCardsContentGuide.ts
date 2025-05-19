@@ -23,7 +23,7 @@ export const memoryCardsContentGuide = {
     {
       type: 'Curriculum Selector',
       description:
-        'Select levels, units, and weeks, then choose the type of matching logic—such as synonyms, antonyms, rhymes, or word-picture pairs—to create your memory card set.'
+        'Select levels, units, and weeks, then choose the type of matching logic—such as synonyms, antonyms, or rhymes.'
     }
   ]
 }

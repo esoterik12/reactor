@@ -5,12 +5,17 @@ import {
   contentIconStyles,
   riddlesInfo
 } from '@/lib/constants/content/contentInfo'
-import { baseContentInputSchema, baseContentSelectorSchema } from '@/lib/zod/input/baseContentInput.schema'
+import {
+  baseContentInputSchema,
+  baseContentSelectorSchema
+} from '@/lib/zod/input/baseContentInput.schema'
 import { ContentForm } from '@/components/input/ContentForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import IconRiddles from '@/components/icons/content/IconRiddles'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import EditParagraphsForm from '@/components/edit/EditParagraphsForm'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { riddlesGuide as guide } from '@/lib/constants/content/content-guides/riddlesGuide'
 
 const RiddlesPage = () => {
   const [content, setContent] = useState<string[] | null>(null)
@@ -43,7 +48,16 @@ const RiddlesPage = () => {
       zodSchema={baseContentSelectorSchema}
       info={riddlesInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconRiddles classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

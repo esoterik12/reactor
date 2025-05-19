@@ -13,6 +13,7 @@ import { EditMetaDataProps } from '@/types/input.types'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
 import InlineError from '../shared/InlineError'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditSentencePairsFormProps {
   firstWordLabel: string
@@ -20,6 +21,7 @@ interface EditSentencePairsFormProps {
   zodSchema: ZodSchema
   generatedContent: EditSentencePairs
   metaData: EditMetaDataProps
+  resetPage: () => void
 }
 
 const EditSentencePairsForm = ({
@@ -27,7 +29,8 @@ const EditSentencePairsForm = ({
   secondWordLabel = 'Second word',
   generatedContent,
   zodSchema,
-  metaData
+  metaData,
+  resetPage
 }: EditSentencePairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -64,10 +67,11 @@ const EditSentencePairsForm = ({
 
   return (
     <div className='container-background shadow-border-md flex h-full w-full flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 

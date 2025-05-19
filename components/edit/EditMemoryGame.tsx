@@ -9,6 +9,7 @@ import {
   editPairsSchema,
   WordPairings
 } from '@/lib/zod/edit/editWordPairs.schema'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditMemoryGameProps {
   firstWordLabel: string
@@ -16,6 +17,7 @@ interface EditMemoryGameProps {
   generatedContent: WordPairings
   setStageFunction: React.Dispatch<SetStateAction<'input' | 'game'>>
   setContent: React.Dispatch<SetStateAction<WordPairings | null>>
+  resetPage: () => void
 }
 
 const EditMemoryGame = ({
@@ -23,7 +25,8 @@ const EditMemoryGame = ({
   secondWordLabel = 'Second word',
   generatedContent,
   setStageFunction,
-  setContent
+  setContent,
+  resetPage
 }: EditMemoryGameProps) => {
   const {
     register,
@@ -43,10 +46,11 @@ const EditMemoryGame = ({
 
   return (
     <section className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 

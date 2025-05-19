@@ -14,6 +14,8 @@ import {
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import EditSetsForm from '@/components/edit/EditSetsForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { findYourPartnerGuide as guide } from '@/lib/constants/content/content-guides/findYourPartnerGuide'
 
 const FindYourPartnerPage = () => {
   const [content, setContent] = useState<string[][] | null>(null)
@@ -21,6 +23,14 @@ const FindYourPartnerPage = () => {
     title: '',
     contentType: ''
   })
+
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
 
   const tabContent = [
     <ContentForm
@@ -45,7 +55,16 @@ const FindYourPartnerPage = () => {
       zodSchema={generateFindYourPartnerSelectorSchema}
       info={findYourPartnerGeneratedInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconFindYourPartner classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (
@@ -57,6 +76,7 @@ const FindYourPartnerPage = () => {
           generatedContent={{ data: content }}
           metaData={metaData}
           shuffleEnabled={true}
+          resetPage={resetPage}
         />
       )}
     </>

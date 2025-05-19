@@ -23,6 +23,14 @@ const ScrambledWordsPage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm
       key='Tab 1'
@@ -68,6 +76,7 @@ const ScrambledWordsPage = () => {
           secondWordLabel='Scrambled Word'
           generatedContent={content}
           metaData={metaData}
+          resetPage={resetPage}
         />
       )}
     </>

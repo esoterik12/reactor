@@ -21,7 +21,7 @@ export const findYourPartnerPDFStyles = StyleSheet.create({
   cell: {
     width: '22%',
     height: 130,
-    backgroundColor: colors.gray,
+    backgroundColor: colors.lightGray,
     justifyContent: 'center',
     borderRadius: 5,
     alignItems: 'center',

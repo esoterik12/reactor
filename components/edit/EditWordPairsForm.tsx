@@ -14,12 +14,14 @@ import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditPairsFormProps {
   firstWordLabel: string
   secondWordLabel: string
   generatedContent: WordPairings
   metaData: EditMetaDataProps
+  resetPage: () => void
   shuffleEnabled?: boolean
 }
 
@@ -28,6 +30,7 @@ const EditWordPairsForm = ({
   secondWordLabel = 'Second word',
   generatedContent,
   metaData,
+  resetPage,
   shuffleEnabled = false
 }: EditPairsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -100,10 +103,11 @@ const EditWordPairsForm = ({
 
   return (
     <section className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 
@@ -166,7 +170,7 @@ const EditWordPairsForm = ({
             isDisabled={isLoading}
           >
             {isLoading ? (
-              <span>Loading...</span>
+              <span className='button-text'>Loading...</span>
             ) : (
               <p className='button-text'>Submit</p>
             )}

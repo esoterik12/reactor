@@ -29,6 +29,14 @@ const BingoPage = () => {
     numberOfContent: null
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm
       key='Tab 1'
@@ -41,8 +49,6 @@ const BingoPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-
-    // Manual Input:
     <ContentForm
       key='Tab 2'
       icon={<IconBingo classes={contentIconStyles} />}
@@ -83,7 +89,11 @@ const BingoPage = () => {
       {!content ? (
         <ContentTabs tabs={allTabs} tabContent={tabContent} />
       ) : (
-        <EditBingoForm generatedContent={content} metaData={metaData} />
+        <EditBingoForm
+          generatedContent={content}
+          metaData={metaData}
+          resetPage={resetPage}
+        />
       )}
     </>
   )

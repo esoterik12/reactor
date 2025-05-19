@@ -116,7 +116,7 @@ const EditParagraphsForm = ({
             isDisabled={isLoading}
           >
             {isLoading ? (
-              <span>Loading...</span>
+              <span className='button-text'>Loading...</span>
             ) : (
               <p className='button-text'>Submit</p>
             )}

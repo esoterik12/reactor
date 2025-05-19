@@ -25,6 +25,14 @@ const MemoryGamePage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+  
   const tabContent = [
     <ContentForm<WordPairings>
       key='Tab 1'
@@ -63,6 +71,7 @@ const MemoryGamePage = () => {
           setContent={setContent}
           generatedContent={content}
           setStageFunction={setStage}
+          resetPage={resetPage}
         />
       )}
       {content && stage === 'game' && (

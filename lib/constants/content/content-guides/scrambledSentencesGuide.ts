@@ -16,7 +16,7 @@ export const scrambledSentencesContentGuide = {
     {
       type: 'Curriculum Selector',
       description:
-        'Select levels, units, and weeks to generate scrambled sentences based on curriculum-based vocabulary and sentence patterns.'
+        'Select levels, units, and weeks to generate scrambled sentences based on curriculum-based vocabulary and level-appropriate language patterns.'
     }
   ]
 }

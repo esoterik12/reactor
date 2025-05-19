@@ -23,6 +23,14 @@ const GrammarMistakesPage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm<EditSentencePairs>
       key='Tab 1'
@@ -49,6 +57,7 @@ const GrammarMistakesPage = () => {
           generatedContent={content}
           zodSchema={editSentencePairsSchema}
           metaData={metaData}
+          resetPage={resetPage}
         />
       )}
     </>

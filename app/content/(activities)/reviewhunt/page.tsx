@@ -23,6 +23,14 @@ const ReviewHuntPage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm
       key='Tab 1'
@@ -54,7 +62,11 @@ const ReviewHuntPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditMultipleChoice generatedContent={content} metaData={metaData} />
+        <EditMultipleChoice
+          generatedContent={content}
+          metaData={metaData}
+          resetPage={resetPage}
+        />
       )}
     </>
   )

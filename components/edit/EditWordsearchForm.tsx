@@ -116,7 +116,7 @@ const EditWordsearchForm = ({
               isDisabled={isLoading || incorrectNumberOfWords}
             >
               {isLoading ? (
-                <span>Loading...</span>
+                <span className='button-text'>Loading...</span>
               ) : (
                 <p className='button-text'>Submit</p>
               )}

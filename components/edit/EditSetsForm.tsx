@@ -13,16 +13,19 @@ import { EditMetaDataProps } from '@/types/input.types'
 import InlineError from '../shared/InlineError'
 import { shuffleArray } from '@/lib/utils/shuffleArray'
 import useSubmitPDF from '@/lib/hooks/useSubmitPDF'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditSetsFormProps {
   generatedContent: EditSetsFormValues
   metaData: EditMetaDataProps
+  resetPage: () => void
   shuffleEnabled?: boolean
 }
 
 const EditSetsForm = ({
   generatedContent,
   metaData,
+  resetPage,
   shuffleEnabled = false
 }: EditSetsFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -61,7 +64,7 @@ const EditSetsForm = ({
   const shuffleWords = () => {
     // Important: access the current data in form in case edits are made
     const currentData = watch('data')
-    
+
     const numberOfSets = currentData.length
     const setSize = currentData[0].length
 
@@ -97,11 +100,12 @@ const EditSetsForm = ({
   }
 
   return (
-    <section className='container-background shadow-border-md  flex h-full flex-col rounded-lg'>
-      <div className='flex'>
+    <section className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 
@@ -154,7 +158,7 @@ const EditSetsForm = ({
             isDisabled={isLoading}
           >
             {isLoading ? (
-              <span>Loading...</span>
+              <span className='button-text'>Loading...</span>
             ) : (
               <p className='button-text'>Submit</p>
             )}

@@ -17,7 +17,7 @@ export const scrambledWordsContentGuide = {
     {
       type: 'Curriculum Selector',
       description:
-        'Choose levels, units, and weeks to generate scrambled words that match your curriculum focus, with options to exclude words students already know.'
+        'Choose levels, units, and weeks to generate scrambled words that match your curriculum focus.'
     }
   ]
 }

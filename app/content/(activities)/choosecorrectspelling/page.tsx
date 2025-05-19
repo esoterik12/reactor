@@ -16,6 +16,8 @@ import EditCorrectSpellingForm from '@/components/edit/EditCorrectSpellingForm'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import { SpellingWordPairings } from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { chooseCorrectSpellingGuide as guide } from '@/lib/constants/content/content-guides/chooseCorrectSpellingGuide'
 
 const ChooseCorrectSpellingPage = () => {
   const [content, setContent] = useState<SpellingWordPairings | null>(null)
@@ -23,6 +25,14 @@ const ChooseCorrectSpellingPage = () => {
     title: '',
     contentType: ''
   })
+
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
 
   const tabContent = [
     <ContentForm
@@ -47,7 +57,16 @@ const ChooseCorrectSpellingPage = () => {
       zodSchema={chooseCorrectSpellingSelectorSchema}
       info={chooseSpellingManualInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconChooseCorrectSpelling classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (
@@ -60,6 +79,7 @@ const ChooseCorrectSpellingPage = () => {
           secondWordLabel='Incorrect word'
           generatedContent={content}
           metaData={metaData}
+          resetPage={resetPage}
         />
       )}
     </>

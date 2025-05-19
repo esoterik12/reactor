@@ -59,7 +59,7 @@ export const chooseSpellingManualInfo = {
   primaryInputInfo: {
     title: 'Input words',
     inputInfo:
-      'Provide a comma-separated list of spelling words. With each word being followed by the misspelling you want to use in the activity.',
+      'Provide a comma-separated list of spelling words, with each word being followed by the misspelling you want to use in the activity.',
     inputExample: "For example, 'cat, kat, help, hlep' would create two pairs."
   },
   secondaryInputInfo: spellingSecretMessage

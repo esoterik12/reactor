@@ -14,12 +14,14 @@ import {
   SpellingWordPairings,
   EditCorrectSpellingFormValues
 } from '@/lib/zod/edit/editChooseCorrectSpelling.schema'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditCorrectSpellingFormProps {
   firstWordLabel: string
   secondWordLabel: string
   generatedContent: SpellingWordPairings
   metaData: EditMetaDataProps
+  resetPage: () => void
   shuffleEnabled?: boolean
 }
 
@@ -28,6 +30,7 @@ const EditCorrectSpellingForm = ({
   secondWordLabel = 'Second word',
   generatedContent,
   metaData,
+  resetPage,
   shuffleEnabled = false
 }: EditCorrectSpellingFormProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -97,10 +100,11 @@ const EditCorrectSpellingForm = ({
 
   return (
     <section className='container-background shadow-border-md flex h-full flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 
@@ -164,7 +168,7 @@ const EditCorrectSpellingForm = ({
             isDisabled={isLoading}
           >
             {isLoading ? (
-              <span>Loading...</span>
+              <span className='button-text'>Loading...</span>
             ) : (
               <p className='button-text'>Submit</p>
             )}

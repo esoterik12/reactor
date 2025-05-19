@@ -24,6 +24,14 @@ const InterviewsPage = () => {
     contentType: ''
   })
 
+  const resetPage = () => {
+    setContent(null)
+    setMetaData({
+      title: '',
+      contentType: ''
+    })
+  }
+
   const tabContent = [
     <ContentForm
       key='Tab 1'
@@ -64,7 +72,11 @@ const InterviewsPage = () => {
       {!content ? (
         <ContentTabs tabs={generateOnlyTabs} tabContent={tabContent} />
       ) : (
-        <EditSentencesForm generatedContent={content} metaData={metaData} />
+        <EditSentencesForm
+          generatedContent={content}
+          metaData={metaData}
+          resetPage={resetPage}
+        />
       )}
     </>
   )

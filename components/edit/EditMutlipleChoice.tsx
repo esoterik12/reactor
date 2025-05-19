@@ -13,17 +13,20 @@ import { EditMetaDataProps } from '@/types/input.types'
 import useBlobDownloader from '@/lib/hooks/useBlobDownloader'
 import { capitalizeFirstLetter } from '@/lib/utils/capitalizeFirstLetter'
 import InlineError from '../shared/InlineError'
+import ResetPageButton from '../buttons/ResetPageButton'
 
 interface EditMultipleChoiceProps {
   generatedContent: EditMultipleChoiceValues
   metaData: EditMetaDataProps
+  resetPage: () => void
 }
 
 type EditMultipleChoiceFormValues = z.infer<typeof editMultipleChoiceSchema>
 
 const EditMultipleChoice = ({
   generatedContent,
-  metaData
+  metaData,
+  resetPage
 }: EditMultipleChoiceProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -91,10 +94,11 @@ const EditMultipleChoice = ({
 
   return (
     <div className='container-background shadow-border-md flex flex-col rounded-lg'>
-      <div className='flex'>
+      <div className='flex flex-row justify-between'>
         <p className='z-10 w-[180px] border-b-2 border-sky-500 py-2 text-center'>
           Edit Content
         </p>
+        <ResetPageButton resetPage={resetPage} />
       </div>
       <div className='relative z-0 -my-[2px] flex border-b-2 border-zinc-600'></div>
 
