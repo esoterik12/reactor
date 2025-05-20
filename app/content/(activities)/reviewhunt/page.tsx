@@ -15,6 +15,8 @@ import { generateOnlyTabs } from '@/lib/constants/tabOptions'
 import { CurriculumSelector } from '@/components/input/CurriculumSelector'
 import { baseContentSelectorSchema } from '@/lib/zod/input/baseContentInput.schema'
 import { reviewHuntInputSchema } from '@/lib/zod/input/reviewHuntInput.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { reviewHuntGuide as guide } from '@/lib/constants/content/content-guides/reviewHuntGuide'
 
 const ReviewHuntPage = () => {
   const [content, setContent] = useState<EditMultipleChoiceValues | null>(null)
@@ -54,7 +56,16 @@ const ReviewHuntPage = () => {
       zodSchema={baseContentSelectorSchema}
       info={reviewHuntSelectorInfo}
     />,
-    <p key='Tab 3'>Tab 3</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconReviewHunt classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (

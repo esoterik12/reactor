@@ -15,6 +15,8 @@ import {
   editSentencePairsSchema
 } from '@/lib/zod/edit/editSentencePairs.schema'
 import { grammarMistakesInputSchema } from '@/lib/zod/input/grammarMistakesInput.schema'
+import ContentGuide from '@/components/containers/ContentGuide'
+import { grammarMistakesGuide as guide } from '@/lib/constants/content/content-guides/grammarMistakesGuide'
 
 const GrammarMistakesPage = () => {
   const [content, setContent] = useState<EditSentencePairs | null>(null)
@@ -43,7 +45,16 @@ const GrammarMistakesPage = () => {
       setContent={setContent}
       setMetaData={setMetaData}
     />,
-    <p key='Tab 2'>Tab 2</p>
+    <ContentGuide
+      key='Tab 3'
+      icon={<IconGrammarMistakes classes={contentIconStyles} />}
+      contentTitle={guide.contentTitle}
+      description={guide.description}
+      whyUseIt={guide.whyUseIt}
+      imageLink={guide.imageLink}
+      imageCaption={guide.imageCaption}
+      generationOptions={guide.generationOptions}
+    />
   ]
 
   return (
@@ -74,6 +85,7 @@ They were excited to go on vacation!
 verb or a preposition. Object pronouns include me, you, him, her, it,
 us, and them. Mr. Gupta handed us each a copy of the test
 
+
 Read each sentence and circle the pronoun. Write S on the line if it
 is a subject pronoun. Write O if it is an object pronoun.
 1. My mom does not like him.
@@ -82,7 +94,6 @@ is a subject pronoun. Write O if it is an object pronoun.
 4. Will the captain say hello to us ?
 5. You can ride in the car with Jessie.
 6. The girl did not invite them to the party.
-
 
 A subject pronoun takes the place of a noun in the subject of a
 sentence. An object pronoun takes the place of a noun that follows
