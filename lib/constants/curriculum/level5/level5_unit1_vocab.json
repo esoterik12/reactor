@@ -1,0 +1,114 @@
+{
+  "level": 5,
+  "unit": 1,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "____________ is the scattered remains of something.",
+          "answer": "debris"
+        },
+        {
+          "prompt": "If you say something with ____________ , you use special force or stress.",
+          "answer": "emphasis"
+        },
+        {
+          "prompt": "An ____________ is an unexpected meeting.",
+          "answer": "encounter"
+        },
+        {
+          "prompt": "A son, father, and grandfather are three ____________ who all have a common family ancestor.",
+          "answer": "generations"
+        },
+        {
+          "prompt": "Yesterday he ____________ , or showed a sign, that he was willing to help us.",
+          "answer": "indicated"
+        },
+        {
+          "prompt": "A ____________ is a person who specializes in the study of things in nature.",
+          "answer": "naturalist"
+        },
+        {
+          "prompt": "If a rock ledge is ____________ , it is steep.",
+          "answer": "sheer"
+        },
+        {
+          "prompt": "The magic show was ____________ because it was very impressive.",
+          "answer": "spectacular"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "If you can ____________ something, you have enough money to pay for it.",
+          "answer": "afford"
+        },
+        { "prompt": "A ____________ is money borrowed.", "answer": "loan" },
+        {
+          "prompt": "____________ is the amount of money left after all business costs have been paid.",
+          "answer": "profit"
+        },
+        {
+          "prompt": "When you ____________ , you do well and become successful.",
+          "answer": "prosper"
+        },
+        {
+          "prompt": "____________ is the chance of loss or harm.",
+          "answer": "risk"
+        },
+        {
+          "prompt": "____________ is money set aside for the future.",
+          "answer": "savings"
+        },
+        {
+          "prompt": "When something is ____________ , it is difficult to get or find.",
+          "answer": "scarce"
+        },
+        {
+          "prompt": "____________ are payments received for work done",
+          "answer": "wages"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "If you ____________ information, you get it from a source, such as the Internet.",
+          "answer": "access"
+        },
+        {
+          "prompt": "When you ____________ , you move forward or make progress.",
+          "answer": "advance"
+        },
+        {
+          "prompt": "An ____________ is a careful examination or study of something.",
+          "answer": "analysis"
+        },
+        {
+          "prompt": "When you ____________ something, you mention it as proof or evidence.",
+          "answer": "cite"
+        },
+        {
+          "prompt": "A ____________ is an opposing, or disagreeing, point of view.",
+          "answer": "counterpoint"
+        },
+        {
+          "prompt": "____________ are facts, figures, and other kinds of information.",
+          "answer": "data"
+        },
+        {
+          "prompt": "____________ are problems or disadvantages.",
+          "answer": "drawbacks"
+        },
+        {
+          "prompt": "____________ is having the ability to think in a logical way.",
+          "answer": "reasoning"
+        }
+      ]
+    }
+  ]
+}

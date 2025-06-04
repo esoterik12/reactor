@@ -40,6 +40,8 @@ const colors = [
   }
 ]
 
+const containerClasses = 'rounded-lg p-2 dark:bg-zinc-800 bg-white'
+
 export default function StyleDesignPage() {
   return (
     <PageContainer customClasses='px-4 py-2'>
@@ -100,6 +102,51 @@ export default function StyleDesignPage() {
             </DefaultButton>
           </div>
         </section>
+      </div>
+      <div className='container-border mt-2 flex flex-col gap-y-2'>
+        <div className={containerClasses}>
+          <p>Add heads up heads down</p>
+          <p>
+            For heads, use missing letters, changed letters, use a blank screen
+            for 2-3 seconds while one is removed
+          </p>
+        </div>
+        <div className={containerClasses}>
+          <p>A function to differentiate card in sets may be valuable</p>
+        </div>
+        <div className={containerClasses}>
+          <p>
+            Create a standardized textSizes.ts file for react-pdf - check
+            Refactoring UI
+          </p>
+        </div>
+        <div className={containerClasses}>
+          <p>Add sight words to curriculum selector somehow</p>
+        </div>
+        <div className={containerClasses}>
+          <p>
+            Drag and drop activities: sentence scramble, match pairs, sort sets
+          </p>
+        </div>
+        <div className={containerClasses}>
+          <p>Add a tongue twister functionality with curriculum selector</p>
+          <p>Provide level appropriate content</p>
+        </div>
+        <div className={containerClasses}>
+          <p>Projected Game: Sentence Spot It</p>
+          <p>
+            This produces a sentence and a load of random extra words, players
+            have to try to form a sentence going left to right
+          </p>
+          <p>
+            It can gradually get easier by slightly changing the shade of the
+            color or moving the text into a line
+          </p>
+          <p>Decreasing points as it gets easier</p>
+        </div>
+        <div className={containerClasses}>
+          <p>Minefield two players but with words as the cards</p>
+        </div>
       </div>
     </PageContainer>
   )

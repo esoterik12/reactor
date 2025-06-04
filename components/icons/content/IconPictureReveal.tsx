@@ -7,7 +7,7 @@ export default function IconPictureReveal({ classes }: { classes: string }) {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      stroke-width='1.5'
+      strokeWidth='1.5'
       className={classes}
     >
       <rect width='18' height='18' x='3' y='3' rx='2' ry='2' />

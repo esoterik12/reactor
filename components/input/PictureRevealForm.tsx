@@ -11,6 +11,8 @@ interface PictureRevealFormProps {
 }
 
 const PictureRevealForm = ({ setImages, images }: PictureRevealFormProps) => {
+  // const [error, setError] = useState<null | ''>(null)
+
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || [])
 

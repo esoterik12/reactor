@@ -1,0 +1,114 @@
+{
+  "level": 5,
+  "unit": 2,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "____________ are groups of people chosen to do certain work.",
+          "answer": "committees"
+        },
+        {
+          "prompt": "A ____________ is a meeting for a specific purpose.",
+          "answer": "convention"
+        },
+        {
+          "prompt": "____________ means “to argue or discuss.”",
+          "answer": "debate"
+        },
+        {
+          "prompt": "A ____________ is a plan or suggestion.",
+          "answer": "proposal"
+        },
+        {
+          "prompt": "A ____________ is formed by joining two or more people or things together.",
+          "answer": "union"
+        },
+        {
+          "prompt": "When you ____________ something, you make a choice about how to solve a problem.",
+          "answer": "resolve"
+        },
+        {
+          "prompt": "A ____________ is a condition or state of affairs.",
+          "answer": "situation"
+        },
+        {
+          "prompt": "____________ are people chosen to speak or act for others.",
+          "answer": "representatives"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "When you are ____________ , you are making someone feel certain or sure about something.",
+          "answer": "assuring"
+        },
+        {
+          "prompt": "If you ____________ the smell of smoke, you discovered it or noticed it.",
+          "answer": "detected"
+        },
+        {
+          "prompt": "If something is ____________ , it is coming into view and can be seen.",
+          "answer": "emerging"
+        },
+        {
+          "prompt": "____________ is a feeling of thankfulness.",
+          "answer": "gratitude"
+        },
+        {
+          "prompt": "____________ is leadership or direction.",
+          "answer": "guidance"
+        },
+        {
+          "prompt": "An ____________ is a result or consequence.",
+          "answer": "outcome"
+        },
+        {
+          "prompt": "____________ means “before or earlier.”",
+          "answer": "previous"
+        },
+        { "prompt": "A ____________ is a chase.", "answer": "pursuit" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "If you are ____________ , you have a strong desire to succeed at something.",
+          "answer": "ambitious"
+        },
+        {
+          "prompt": "If you ____________ something, you learned it by heart.",
+          "answer": "memorized"
+        },
+        {
+          "prompt": "____________ is feeling pleased when you accomplish something.",
+          "answer": "satisfaction"
+        },
+        {
+          "prompt": "If you ____________ , you shook or trembled from fear or cold.",
+          "answer": "shuddered"
+        },
+        {
+          "prompt": "____________ poems do not have rhyme.",
+          "answer": "free verse"
+        },
+        {
+          "prompt": "A ____________ poem is a poem that tells a story.",
+          "answer": "narrative"
+        },
+        {
+          "prompt": "____________ is the repeating of words, phrases, or lines in a poem.",
+          "answer": "repetition"
+        },
+        {
+          "prompt": "A poem with ____________ has lines that end with the same sound.",
+          "answer": "rhyme"
+        }
+      ]
+    }
+  ]
+}

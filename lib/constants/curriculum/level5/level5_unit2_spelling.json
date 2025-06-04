@@ -1,0 +1,275 @@
+{
+  "level": 5,
+  "unit": 2,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "The pain is in my elbow __________ .", "answer": "joint" },
+        { "prompt": "A __________ smell filled the room.", "answer": "foul" },
+        {
+          "prompt": "__________ the rope so nobody will trip.",
+          "answer": "coil"
+        },
+        { "prompt": "Just __________ the basket over.", "answer": "hoist" },
+        { "prompt": "She was a __________ woman.", "answer": "stout" },
+        { "prompt": "Let's not __________ along the way.", "answer": "dawdle" },
+        { "prompt": "He chewed a __________ of food.", "answer": "mouthful" },
+        {
+          "prompt": "They ordered ice cream at the __________ .",
+          "answer": "counter"
+        },
+        { "prompt": "The mailman __________ letters.", "answer": "brought" },
+        { "prompt": "The baby started to __________ .", "answer": "bawl" },
+        {
+          "prompt": "We got a drink at the __________ .",
+          "answer": "fountain"
+        },
+        { "prompt": "The cat __________ in the doorway.", "answer": "sprawls" },
+        { "prompt": "__________ your hands in water.", "answer": "douse" },
+        {
+          "prompt": "Check the __________ in the contract.",
+          "answer": "clause"
+        },
+        { "prompt": "Grass __________ from the lawn.", "answer": "sprouts" },
+        {
+          "prompt": "It could be dangerous, so be __________ .",
+          "answer": "cautious"
+        },
+        {
+          "prompt": "There was __________ in the streets.",
+          "answer": "turmoil"
+        },
+        {
+          "prompt": "The __________ dog was always hungry.",
+          "answer": "scrawny"
+        },
+        {
+          "prompt": "The house has a firm __________ .",
+          "answer": "foundation"
+        },
+        { "prompt": "Emma lost her __________ ring.", "answer": "turquoise" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "__________ shake their tails.", "answer": "rattlers" },
+        { "prompt": "Their __________ are powerful tools.", "answer": "fangs" },
+        {
+          "prompt": "I want to visit different __________.",
+          "answer": "countries"
+        },
+        {
+          "prompt": "We give up certain __________ at school.",
+          "answer": "liberties"
+        },
+        {
+          "prompt": "Mashed __________ are my favorite.",
+          "answer": "potatoes"
+        },
+        { "prompt": "We saw cowboys at the __________.", "answer": "rodeos" },
+        {
+          "prompt": "My parents pay __________ every year.",
+          "answer": "taxes"
+        },
+        { "prompt": "Snakes are also __________.", "answer": "reptiles" },
+        { "prompt": "Be aware of your __________.", "answer": "surroundings" },
+        { "prompt": "Sandy has strong __________.", "answer": "beliefs" },
+        { "prompt": "We faced a lot of __________.", "answer": "difficulties" },
+        {
+          "prompt": "I baked three __________ of cookies.",
+          "answer": "batches"
+        },
+        {
+          "prompt": "Dancing is one of her best __________.",
+          "answer": "abilities"
+        },
+        { "prompt": "__________ protect our eyes.", "answer": "lashes" },
+        { "prompt": "A spy can have many __________.", "answer": "identities" },
+        {
+          "prompt": "Our win makes up for all our __________.",
+          "answer": "losses"
+        },
+        {
+          "prompt": "Let's explore all the __________.",
+          "answer": "possibilities"
+        },
+        {
+          "prompt": "The __________ in the tree were made by a woodpecker.",
+          "answer": "notches"
+        },
+        {
+          "prompt": "How many __________ are in a million?",
+          "answer": "zeroes"
+        },
+        { "prompt": "Fish hide in the river's __________.", "answer": "eddies" }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "I like __________ in the park.", "answer": "jogging" },
+        { "prompt": "Please fix the __________ faucet.", "answer": "dripping" },
+        { "prompt": "Julie __________ the chapter.", "answer": "skimmed" },
+        {
+          "prompt": "I __________ the trophy for my team.",
+          "answer": "accepted"
+        },
+        { "prompt": "The comedy show was __________.", "answer": "amusing" },
+        { "prompt": "We began __________ into our seats.", "answer": "easing" },
+        {
+          "prompt": "He __________ saying mean things.",
+          "answer": "regretted"
+        },
+        {
+          "prompt": "His mom was __________ him to play with us.",
+          "answer": "forbidding"
+        },
+        { "prompt": "He __________ to the dictionary.", "answer": "referred" },
+        {
+          "prompt": "The __________ player needs surgery.",
+          "answer": "injured"
+        },
+        { "prompt": "The team __________ to win.", "answer": "deserved" },
+        { "prompt": "We __________ for a scholarship.", "answer": "applied" },
+        { "prompt": "She __________ on their help.", "answer": "relied" },
+        {
+          "prompt": "I'm __________ the book for a week.",
+          "answer": "renewing"
+        },
+        { "prompt": "This machine is __________.", "answer": "complicated" },
+        { "prompt": "Maya is __________ for the job.", "answer": "qualified" },
+        {
+          "prompt": "That squirrel gave me a __________ look.",
+          "answer": "threatening"
+        },
+        { "prompt": "We sat under a __________ tree.", "answer": "gnarled" },
+        { "prompt": "The class __________ her talent.", "answer": "envied" },
+        { "prompt": "The stars __________ him.", "answer": "fascinated" }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "I know __________ eaten already.", "answer": "you've" },
+        {
+          "prompt": "I think __________ like to go with us.",
+          "answer": "she'd"
+        },
+        { "prompt": "__________ a beautiful sweater!", "answer": "that's" },
+        { "prompt": "__________ your middle name?", "answer": "what's" },
+        { "prompt": "He __________ like to swim.", "answer": "doesn't" },
+        {
+          "prompt": "__________ a large boat in the lake.",
+          "answer": "there's"
+        },
+        {
+          "prompt": "__________ going to like that present.",
+          "answer": "you're"
+        },
+        {
+          "prompt": "I __________ sure if I should leave.",
+          "answer": "wasn't"
+        },
+        {
+          "prompt": "I think __________ have a sandwich for lunch.",
+          "answer": "we'll"
+        },
+        {
+          "prompt": "__________ never been late for recess.",
+          "answer": "we've"
+        },
+        {
+          "prompt": "__________ going on a fun field trip.",
+          "answer": "we're"
+        },
+        { "prompt": "I __________ open that jar.", "answer": "couldn't" },
+        {
+          "prompt": "__________ been wanting to go to a movie.",
+          "answer": "I've"
+        },
+        { "prompt": "We __________ like that last movie.", "answer": "didn't" },
+        {
+          "prompt": "__________ playing soccer tomorrow.",
+          "answer": "they're"
+        },
+        {
+          "prompt": "We __________ be late for school.",
+          "answer": "shouldn't"
+        },
+        {
+          "prompt": "I __________ like pickles in my soup.",
+          "answer": "wouldn't"
+        },
+        {
+          "prompt": "I know __________ rather not play today.",
+          "answer": "he'd"
+        },
+        {
+          "prompt": "We __________ need to throw that away.",
+          "answer": "don't"
+        },
+        { "prompt": "Mrs. Sanchez __________ sick today", "answer": "isn't" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "The __________ examined Lisa's teeth.",
+          "answer": "dentist"
+        },
+        { "prompt": "A __________ ran through the park.", "answer": "jogger" },
+        { "prompt": "Joe turns __________ on Tuesday.", "answer": "fifteen" },
+        { "prompt": "__________ her with compliments.", "answer": "flatter" },
+        {
+          "prompt": "Please __________ the library card application on Monday.",
+          "answer": "submit"
+        },
+        {
+          "prompt": "Bob could tell the horse was a __________ .",
+          "answer": "mustang"
+        },
+        { "prompt": "Kate was __________ from school.", "answer": "absent" },
+        {
+          "prompt": "The owl made a home in the __________ tree.",
+          "answer": "hollow"
+        },
+        {
+          "prompt": "The __________ fell after the attack.",
+          "answer": "empire"
+        },
+        {
+          "prompt": "The lights failed during the __________ .",
+          "answer": "blizzard"
+        },
+        {
+          "prompt": "Each __________ has its own traditions.",
+          "answer": "culture"
+        },
+        { "prompt": "He wore __________ to swim.", "answer": "goggles" },
+        { "prompt": "He yelled to __________ the horse.", "answer": "summon" },
+        { "prompt": "The game will __________ me.", "answer": "excite" },
+        { "prompt": "The dog stayed at the __________ .", "answer": "kennel" },
+        {
+          "prompt": "A river curled through the __________ .",
+          "answer": "valley"
+        },
+        {
+          "prompt": "I swept up the __________ of broken glass.",
+          "answer": "fragment"
+        },
+        {
+          "prompt": "The horse took off at a __________ .",
+          "answer": "gallop"
+        },
+        { "prompt": "The __________ circled its prey.", "answer": "vulture" },
+        {
+          "prompt": "The painter mixed __________ into the paint.",
+          "answer": "pigment"
+        }
+      ]
+    }
+  ]
+}

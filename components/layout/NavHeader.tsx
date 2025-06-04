@@ -18,11 +18,8 @@ export default async function NavHeader() {
 
         {/* NavLinks */}
         <div className='mr-8 flex flex-row items-center justify-center gap-x-3'>
-          <NavLink href='/design'>
-            <p>Design</p>
-          </NavLink>
           <NavLink className='' href='/content'>
-            <p>Content</p>
+            <p>Create</p>
           </NavLink>
           <ThemeButton />
           {session && <SignOut />}

@@ -1,0 +1,257 @@
+{
+  "level": 5,
+  "unit": 3,
+  "spelling": [
+    {
+      "week": "1",
+      "words": [
+        { "prompt": "What is forty __________ fourteen?", "answer": "minus" },
+        {
+          "prompt": "The __________ has to start all over.",
+          "answer": "loser"
+        },
+        { "prompt": "He has a silly sense of __________ .", "answer": "humor" },
+        {
+          "prompt": "My coat is hanging in the __________ .",
+          "answer": "closet"
+        },
+        {
+          "prompt": "We found a __________ picture of her.",
+          "answer": "recent"
+        },
+        {
+          "prompt": "There is a new __________ in class.",
+          "answer": "student"
+        },
+        {
+          "prompt": "Twelve inches is __________ to one foot.",
+          "answer": "equal"
+        },
+        { "prompt": "I recognized Ashley’s __________ .", "answer": "profile" },
+        {
+          "prompt": "Most kids go to the __________ school.",
+          "answer": "local"
+        },
+        { "prompt": "The __________ left a bright streak.", "answer": "comet" },
+        { "prompt": "She parked in a __________ lot.", "answer": "vacant" },
+        { "prompt": "They might __________ us for lying.", "answer": "punish" },
+        {
+          "prompt": "Their fort looked like a __________ .",
+          "answer": "cavern"
+        },
+        {
+          "prompt": "The cold made the children __________ .",
+          "answer": "shiver"
+        },
+        { "prompt": "Albert seems like a __________ man.", "answer": "decent" },
+        { "prompt": "Carol ironed her __________ shirt.", "answer": "linen" },
+        {
+          "prompt": "The __________ age to vote is eighteen.",
+          "answer": "legal"
+        },
+        { "prompt": "Remain calm and don’t __________ .", "answer": "panic" },
+        { "prompt": "The air began to turn __________ .", "answer": "smoky" },
+        { "prompt": "People thought he was a __________ .", "answer": "tyrant" }
+      ]
+    },
+    {
+      "week": "2",
+      "words": [
+        { "prompt": "Our class watched a __________ .", "answer": "video" },
+        {
+          "prompt": "The __________ likes to play with words.",
+          "answer": "poet"
+        },
+        {
+          "prompt": "Gold fever almost caused a __________ .",
+          "answer": "riot"
+        },
+        { "prompt": "Mrs. Park gave a __________ recital.", "answer": "piano" },
+        {
+          "prompt": "He wrote about it in his __________ .",
+          "answer": "diary"
+        },
+        { "prompt": "Carmen listened to the __________ .", "answer": "radio" },
+        { "prompt": "Esther had __________ .", "answer": "ideas" },
+        { "prompt": "Nothing could __________ her plan.", "answer": "ruin" },
+        {
+          "prompt": "A healthy __________ includes vegetables.",
+          "answer": "diet"
+        },
+        { "prompt": "The __________ loves his country.", "answer": "patriot" },
+        {
+          "prompt": "Water is the only __________ I drink.",
+          "answer": "fluid"
+        },
+        {
+          "prompt": "There was a crowd at the __________ .",
+          "answer": "rodeo"
+        },
+        { "prompt": "He cannot tolerate __________ acts.", "answer": "cruel" },
+        { "prompt": "His apology was __________ .", "answer": "genuine" },
+        {
+          "prompt": "Wear __________ clothes to the picnic.",
+          "answer": "casual"
+        },
+        {
+          "prompt": "A judge will oversee the __________ .",
+          "answer": "trial"
+        },
+        { "prompt": "They used wood for __________ .", "answer": "fuel" },
+        {
+          "prompt": "The __________ fell outside of town.",
+          "answer": "meteor"
+        },
+        {
+          "prompt": "The hole is 100 feet in __________ .",
+          "answer": "diameter"
+        },
+        {
+          "prompt": "My little brother likes to __________ when we go for walks.",
+          "answer": "meander"
+        }
+      ]
+    },
+    {
+      "week": "3",
+      "words": [
+        { "prompt": "I saw a __________ in the sand.", "answer": "footprint" },
+        {
+          "prompt": "The circus is at the __________ .",
+          "answer": "fairground"
+        },
+        {
+          "prompt": "__________ I wasn’t hungry, I still ate.",
+          "answer": "although"
+        },
+        { "prompt": "Their __________ was contagious.", "answer": "laughter" },
+        { "prompt": "We must __________ a leader.", "answer": "appoint" },
+        { "prompt": "Mike lives in a __________ town.", "answer": "coastal" },
+        { "prompt": "We sat in the __________ .", "answer": "bleachers" },
+        { "prompt": "My dad is a __________ .", "answer": "grownup" },
+        { "prompt": "That was a close __________ .", "answer": "encounter" },
+        {
+          "prompt": "She was __________ after a bad day.",
+          "answer": "grouchy"
+        },
+        { "prompt": "The diamond was __________ .", "answer": "flawless" },
+        { "prompt": "The __________ returned from court.", "answer": "lawyer" },
+        { "prompt": "My mom loves to __________ .", "answer": "entertain" },
+        { "prompt": "The __________  was thunderous.", "answer": "applause" },
+        { "prompt": "The __________ is leaking.", "answer": "faucet" },
+        { "prompt": "Proceed with __________ .", "answer": "caution" },
+        { "prompt": "The tree marks the __________ .", "answer": "boundary" },
+        {
+          "prompt": "She was __________ what she heard.",
+          "answer": "doubting"
+        },
+        {
+          "prompt": "I always take the __________ route.",
+          "answer": "southern"
+        },
+        {
+          "prompt": "I felt the __________ of the rock.",
+          "answer": "roughness"
+        }
+      ]
+    },
+    {
+      "week": "4",
+      "words": [
+        { "prompt": "The horses are in the __________ .", "answer": "stable" },
+        {
+          "prompt": "The woman sat high in her __________ .",
+          "answer": "saddle"
+        },
+        {
+          "prompt": "My family eats at the kitchen __________ .",
+          "answer": "table"
+        },
+        { "prompt": "Singh came from a __________ family.", "answer": "noble" },
+        { "prompt": "I see __________  grazing outside.", "answer": "cattle" },
+        { "prompt": "Be careful not to __________ .", "answer": "stumble" },
+        { "prompt": "We saw a __________ rain storm.", "answer": "terrible" },
+        {
+          "prompt": "Gina observed a __________ and a fly.",
+          "answer": "beetle"
+        },
+        { "prompt": "Grandpa put on the tea __________ .", "answer": "kettle" },
+        { "prompt": "The __________ flew over the river.", "answer": "eagle" },
+        { "prompt": "The __________ family wore crowns.", "answer": "royal" },
+        { "prompt": "The cold can __________ your feet.", "answer": "cripple" },
+        { "prompt": "The nurse is at the __________ .", "answer": "hospital" },
+        { "prompt": "Stealing is not __________ .", "answer": "legal" },
+        {
+          "prompt": "The directions are on the __________ .",
+          "answer": "label"
+        },
+        { "prompt": "A__________ group will sing tonight.", "answer": "vocal" },
+        {
+          "prompt": "I wrote about it in my __________ .",
+          "answer": "journal"
+        },
+        { "prompt": "She won a gold __________ in track.", "answer": "medal" },
+        {
+          "prompt": "I ran in __________ events for my team.",
+          "answer": "several"
+        },
+        { "prompt": "Here is a __________ of my artwork.", "answer": "sample" }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "Sugar gives me energy to __________ .",
+          "answer": "perform"
+        },
+        {
+          "prompt": "This soap is __________ on my skin.",
+          "answer": "gentler"
+        },
+        { "prompt": "Jonah used the __________ .", "answer": "scissors" },
+        {
+          "prompt": "I'm the __________ of the science club.",
+          "answer": "founder"
+        },
+        { "prompt": "Mr. Wu is the __________ .", "answer": "director" },
+        { "prompt": "Beware of __________ !", "answer": "danger" },
+        {
+          "prompt": "I placed the cup on the __________ .",
+          "answer": "saucer"
+        },
+        {
+          "prompt": "Mrs. Lopez paid me for my __________ .",
+          "answer": "labor"
+        },
+        { "prompt": "The __________ went door to door.", "answer": "peddler" },
+        {
+          "prompt": "I corrected the spelling __________ .",
+          "answer": "error"
+        },
+        { "prompt": "A meteorite made that __________ .", "answer": "crater" },
+        { "prompt": "The __________ blocked my view.", "answer": "pillar" },
+        { "prompt": "Stars are shining in __________ .", "answer": "splendor" },
+        {
+          "prompt": "Be sure to set the left __________ correctly.",
+          "answer": "margin"
+        },
+        { "prompt": "The __________ gave a lecture.", "answer": "professor" },
+        {
+          "prompt": "That delicate vase could __________ .",
+          "answer": "shatter"
+        },
+        {
+          "prompt": "Who is the __________ of our state?",
+          "answer": "governor"
+        },
+        { "prompt": "A foul __________ filled the air.", "answer": "vapor" },
+        {
+          "prompt": "Water is warmer along the __________ .",
+          "answer": "equator"
+        },
+        { "prompt": "I am __________ of chocolate.", "answer": "fonder" }
+      ]
+    }
+  ]
+}

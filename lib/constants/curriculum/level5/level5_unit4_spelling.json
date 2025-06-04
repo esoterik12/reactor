@@ -17,7 +17,7 @@
           "prompt": "Rest stops will __________ the trip.",
           "answer": "lengthen"
         },
-        { "prompt": "Darrell is our team’s __________ .", "answer": "captain" },
+        { "prompt": "Darrell is our team's __________ .", "answer": "captain" },
         { "prompt": "Bill saw the __________ peak.", "answer": "mountain" },
         {
           "prompt": "The __________ on her left foot fell off as she ran.",
@@ -54,7 +54,7 @@
         { "prompt": "The project was __________ .", "answer": "unfinished" },
         { "prompt": "Forget the __________ details.", "answer": "unimportant" },
         {
-          "prompt": "I’ll __________ these blueberries.",
+          "prompt": "I'll __________ these blueberries.",
           "answer": "refreeze"
         },
         {
@@ -74,10 +74,10 @@
         },
         { "prompt": "Stealing is __________ .", "answer": "dishonest" },
         { "prompt": "The letter is __________ .", "answer": "nonspecific" },
-        { "prompt": "Don’t __________ your brother.", "answer": "misjudge" },
+        { "prompt": "Don't __________ your brother.", "answer": "misjudge" },
         { "prompt": "The heat can __________ you.", "answer": "overwhelm" },
         {
-          "prompt": "Let’s __________ our feet in the pool!",
+          "prompt": "Let's __________ our feet in the pool!",
           "answer": "submerge"
         }
       ]
@@ -86,7 +86,7 @@
       "week": "3",
       "words": [
         { "prompt": "Maria won the spelling __________.", "answer": "contest" },
-        { "prompt": "I’m __________ with the results.", "answer": "content" },
+        { "prompt": "I'm __________ with the results.", "answer": "content" },
         { "prompt": "There was a __________ downtown.", "answer": "protest" },
         { "prompt": "Dan had to __________ the flu.", "answer": "combat" },
         { "prompt": "A license __________ you to drive.", "answer": "permits" },
@@ -164,7 +164,7 @@
           "prompt": "I enjoy being outdoors in __________ .",
           "answer": "nature"
         },
-        { "prompt": "Tom’s __________ finally healed.", "answer": "fracture" },
+        { "prompt": "Tom's __________ finally healed.", "answer": "fracture" },
         { "prompt": "The __________ made it damp.", "answer": "moisture" },
         { "prompt": "They moved her in a __________ .", "answer": "stretcher" },
         {
@@ -178,7 +178,7 @@
       "week": "5",
       "words": [
         {
-          "prompt": "It’s a short __________  to the lake.",
+          "prompt": "It's a short __________  to the lake.",
           "answer": "distance"
         },
         { "prompt": "Each job has its __________ .", "answer": "importance" },

@@ -1,0 +1,117 @@
+{
+  "level": 5,
+  "unit": 3,
+  "vocabulary": [
+    {
+      "week": "12",
+      "words": [
+        {
+          "prompt": "People have an ____________ for the things they value.",
+          "answer": "appreciation"
+        },
+        {
+          "prompt": "If he ____________ the answer, he said it suddenly.",
+          "answer": "blurted"
+        },
+        {
+          "prompt": "When you say something nice about someone, you are ____________ that person.",
+          "answer": "complimenting"
+        },
+        {
+          "prompt": "____________ means to give praise or good wishes for something that has happened.",
+          "answer": "congratulate"
+        },
+        {
+          "prompt": "The baker's story ____________ , or disagreed with, the butcher's story.",
+          "answer": "contradicted"
+        },
+        {
+          "prompt": "A person who is ____________ will find fault with something or someone.",
+          "answer": "critical"
+        },
+        {
+          "prompt": "When you research your family's ____________ past, you learn about your family customs, beliefs, and traditions.",
+          "answer": "cultural"
+        },
+        {
+          "prompt": "When friends have a ____________ , they fail to understand one another.",
+          "answer": "misunderstanding"
+        }
+      ]
+    },
+    {
+      "week": "34",
+      "words": [
+        {
+          "prompt": "____________ describes a thing not made by nature.",
+          "answer": "artificial"
+        },
+        {
+          "prompt": "When we ____________ , we work together.",
+          "answer": "collaborate"
+        },
+        {
+          "prompt": "If the driver ____________ his time to volunteer, he gave or devoted his time.",
+          "answer": "dedicated"
+        },
+        {
+          "prompt": "Something ____________ is able to bend without breaking.",
+          "answer": "flexible"
+        },
+        {
+          "prompt": "To use a tool, you should understand its ____________ , or its purpose.",
+          "answer": "funtion"
+        },
+        {
+          "prompt": "When you ____________ something, you imitate it.",
+          "answer": "mimic"
+        },
+        {
+          "prompt": "An ____________ stands in the way or blocks progress.",
+          "answer": "obstacle"
+        },
+        {
+          "prompt": "____________ are special ways of doing something to achieve a desired result.",
+          "answer": "techniques"
+        }
+      ]
+    },
+    {
+      "week": "5",
+      "words": [
+        {
+          "prompt": "An ____________ is a person who digs up and studies remains of ancient towns and cities.",
+          "answer": "archaeologist"
+        },
+        {
+          "prompt": "An ____________ is a period of time or history.",
+          "answer": "era"
+        },
+        {
+          "prompt": "____________s are small, broken pieces.",
+          "answer": "fragments"
+        },
+        {
+          "prompt": "A ____________ is a person who knows a great deal about history.",
+          "answer": "historian"
+        },
+        {
+          "prompt": "Something that is ____________ is whole or complete.",
+          "answer": "intact"
+        },
+        {
+          "prompt": "Something that is ____________ is protected so that it does not decay or get damaged.",
+          "answer": "preserved"
+        },
+        {
+          "prompt": "When you ____________ something, you put its parts back together.",
+          "answer": "reconstruct"
+        },
+        {
+          "prompt": "____________ are small pieces or parts of something that are left over.",
+          "answer": "remnants"
+        }
+      ]
+    }
+  ]
+}
