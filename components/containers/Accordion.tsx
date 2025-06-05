@@ -17,8 +17,7 @@ const Accordion = ({ i, links, expanded, setExpanded }: AccordionProps) => {
   // By using `AnimatePresence` to mount and unmount the contents, we can animate
   // them in and out while also only rendering the contents of open accordions
   return (
-    <div className='shadow-border-sm
-     container-background mb-2 rounded-lg'>
+    <div className='shadow-border-sm container-background mb-2 rounded-lg'>
       {/* Header section for selecting accordion */}
       <motion.header
         className={`flex h-10 cursor-pointer flex-row items-center`}

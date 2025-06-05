@@ -1,7 +1,7 @@
 import IconPaperAirplane from '@/components/icons/IconPaperAirplane'
 import IconPuzzle from '@/components/icons/IconPuzzle'
 import IconRocket from '@/components/icons/IconRocket'
-import IconStars from '@/components/icons/IconStars'
+// import IconStars from '@/components/icons/IconStars'
 import { AccordionSidebarContentProps } from '@/types/accordion.types'
 
 const root = '/content'
@@ -88,40 +88,40 @@ export const AccordionSidebarContent: AccordionSidebarContentProps[] = [
         contentTitle: 'Unscramble Words',
         link: `${root}/unscramblewords`
       },
-      {
-        linkId: '3-2',
-        contentTitle: 'Unscramble Sentences',
-        link: `${root}/unscramblesentences`
-      },
+      // {
+      //   linkId: '3-2',
+      //   contentTitle: 'Unscramble Sentences',
+      //   link: `${root}/unscramblesentences`
+      // },
       { linkId: '3-3', contentTitle: 'Spot It!', link: `${root}/spotit` },
-      { linkId: '3-4', contentTitle: 'Jeopardy', link: `${root}/jeopardy` },
+      // { linkId: '3-4', contentTitle: 'Jeopardy', link: `${root}/jeopardy` },
       {
         linkId: '3-5',
         contentTitle: 'Memory Game',
         link: `${root}/memorygame`
       },
-      { linkId: '3-6', contentTitle: 'Minefield', link: `${root}/minefield` },
-      {
-        linkId: '3-7',
-        contentTitle: 'Picture Reveal',
-        link: `${root}/picturereveal`
-      }
+      // { linkId: '3-6', contentTitle: 'Minefield', link: `${root}/minefield` },
+      // {
+      //   linkId: '3-7',
+      //   contentTitle: 'Picture Reveal',
+      //   link: `${root}/picturereveal`
+      // }
     ]
   },
-  {
-    id: 4,
-    title: 'Presentations',
-    icon: <IconStars classes={iconClasses} />,
-    links: [
-      { linkId: '4-1', contentTitle: 'Grammar Explainer', link: '/' },
-      {
-        linkId: '4-2',
-        contentTitle: 'Reading Skill Explainer',
-        link: '/'
-      },
-      { linkId: '4-3', contentTitle: 'Phonics Introduction', link: '/' },
-      { linkId: '4-4', contentTitle: 'General Presentation', link: '/' },
-      { linkId: '4-5', contentTitle: 'Vocabulary Introduction', link: '/' }
-    ]
-  }
+  // {
+  //   id: 4,
+  //   title: 'Presentations',
+  //   icon: <IconStars classes={iconClasses} />,
+  //   links: [
+  //     { linkId: '4-1', contentTitle: 'Grammar Explainer', link: '/' },
+  //     {
+  //       linkId: '4-2',
+  //       contentTitle: 'Reading Skill Explainer',
+  //       link: '/'
+  //     },
+  //     { linkId: '4-3', contentTitle: 'Phonics Introduction', link: '/' },
+  //     { linkId: '4-4', contentTitle: 'General Presentation', link: '/' },
+  //     { linkId: '4-5', contentTitle: 'Vocabulary Introduction', link: '/' }
+  //   ]
+  // }
 ]
